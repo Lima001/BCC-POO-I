@@ -10,6 +10,8 @@ elas:
 - __teste1.cpp__: Inicialização do SDL2, Criação de Janela e Surface;
 - __teste2.cpp__: Realização de desenhos simples, Criação do Renderizador,
                   Desenhar linhas, Desenhar e Movimentar retângulo;
+- __teste3.cpp__: Integração com teclado, Movimentação de elementos baseado
+                  em eventos do teclado, Limitador de FPS.
 
 ## Observações
 
@@ -22,7 +24,5 @@ elas:
 
 ## Próximos Passos
 
-- Verificar melhor maneira de desenhar retângulos (Usar o Renderizador ou Não);
 - Verificar maneira de desenhar figuras geométricas como Círculos e Triângulos;
-- Implementar integração com equipamentos de entrada como Mouse e Teclado;
-- Implementar mecanismo de controle FPS;
+- Explorar mais a integração com equipamentos de entrada como Mouse e Teclado;
