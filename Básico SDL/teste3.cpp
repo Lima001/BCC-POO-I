@@ -3,15 +3,17 @@
 #include <SDL.h>
 #include <iostream>
 
-#define FPS 60                      // Definição de Frames Máximos por Segundo
-#define LARGURA_TELA 800
-#define ALTURA_TELA 600
-#define TITULO_TELA "Básico SDL"
-#define MOVIMENTO 5                 // Quantidade de deslocamento do retângulo
-
 using namespace std;
 
 int main(){
+
+    const int FPS = 60;                 // Definição de Frames Máximos por Segundo
+    const int LARGURA_TELA = 800;
+    const int ALTURA_TELA = 600;
+    
+    char titulo_tela[] = "Básico SDL";
+    int movimento = 5;                  // Quantidade de deslocamento do retângulo
+
 
     if (SDL_Init(SDL_INIT_EVERYTHING) < 0){
         cout << "Erro ao Iniciar SDL - " << SDL_GetError() << endl;
@@ -30,7 +32,7 @@ int main(){
 
     SDL_Event evento;
 
-    janela = SDL_CreateWindow(TITULO_TELA, SDL_WINDOWPOS_CENTERED,
+    janela = SDL_CreateWindow(titulo_tela, SDL_WINDOWPOS_CENTERED,
                               SDL_WINDOWPOS_CENTERED, LARGURA_TELA, ALTURA_TELA, 0);
 
     if (janela == NULL) {
@@ -79,10 +81,10 @@ int main(){
                 // com intuito de locomover o retângulo conforme um padrão determinad
                 switch (evento.key.keysym.sym){
 
-                    case SDLK_LEFT:  retangulo.x-=MOVIMENTO; break;
-                    case SDLK_RIGHT: retangulo.x+=MOVIMENTO; break;
-                    case SDLK_UP:    retangulo.y-=MOVIMENTO; break;
-                    case SDLK_DOWN:  retangulo.y+=MOVIMENTO; break;
+                    case SDLK_LEFT:  retangulo.x-=movimento; break;
+                    case SDLK_RIGHT: retangulo.x+=movimento; break;
+                    case SDLK_UP:    retangulo.y-=movimento; break;
+                    case SDLK_DOWN:  retangulo.y+=movimento; break;
 
                     /*
                     // Código para verificar posição do retângulo
