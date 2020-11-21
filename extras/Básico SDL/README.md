@@ -12,6 +12,7 @@ elas:
                   Desenhar linhas, Desenhar e Movimentar retângulo;
 - __teste3.cpp__: Integração com teclado, Movimentação de elementos baseado
                   em eventos do teclado, Limitador de FPS.
+- __teste3.cpp__: Desenhar e movimentar uma Circunferência.
 
 ## Observações
 

@@ -1,0 +1,41 @@
+\hypertarget{classPlanoCartesiano}{}\doxysection{Plano\+Cartesiano Class Reference}
+\label{classPlanoCartesiano}\index{PlanoCartesiano@{PlanoCartesiano}}
+
+
+Collaboration diagram for Plano\+Cartesiano\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlanoCartesiano_ae1cd7a010a9725a525e3aad09fb1178c}\label{classPlanoCartesiano_ae1cd7a010a9725a525e3aad09fb1178c}} 
+{\bfseries Plano\+Cartesiano} (int espacamento\+\_\+x, int espacamento\+\_\+y, \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} cor\+\_\+eixos, \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} cor\+\_\+grade, int largura\+\_\+tela, int altura\+\_\+tela)
+\item 
+\mbox{\Hypertarget{classPlanoCartesiano_a0b4a637b158657fb95d77607620132a7}\label{classPlanoCartesiano_a0b4a637b158657fb95d77607620132a7}} 
+void {\bfseries desenhar\+Grade} (\mbox{\hyperlink{classRenderizador}{Renderizador}} $\ast$render)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPlanoCartesiano_accf7c773f0a269c9e24639f66e0d282d}\label{classPlanoCartesiano_accf7c773f0a269c9e24639f66e0d282d}} 
+int {\bfseries espacamento\+\_\+x}
+\item 
+\mbox{\Hypertarget{classPlanoCartesiano_a418be3861b8809eadbd43324062b6c61}\label{classPlanoCartesiano_a418be3861b8809eadbd43324062b6c61}} 
+int {\bfseries espacamento\+\_\+y}
+\item 
+\mbox{\Hypertarget{classPlanoCartesiano_a410a6cf620f5b1faf0b40da7a2212eb9}\label{classPlanoCartesiano_a410a6cf620f5b1faf0b40da7a2212eb9}} 
+int {\bfseries largura\+\_\+tela}
+\item 
+\mbox{\Hypertarget{classPlanoCartesiano_a5e2b8c90296d125d63e395bc95dac704}\label{classPlanoCartesiano_a5e2b8c90296d125d63e395bc95dac704}} 
+int {\bfseries altura\+\_\+tela}
+\item 
+\mbox{\Hypertarget{classPlanoCartesiano_a7fc902565765790474c4955618bf48e0}\label{classPlanoCartesiano_a7fc902565765790474c4955618bf48e0}} 
+\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} {\bfseries cor\+\_\+eixos}
+\item 
+\mbox{\Hypertarget{classPlanoCartesiano_ab2307ed6ad9d0dbe84a7dd055d6f9e80}\label{classPlanoCartesiano_ab2307ed6ad9d0dbe84a7dd055d6f9e80}} 
+\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} {\bfseries cor\+\_\+grade}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+plano\+\_\+cartesiano.\+h\end{DoxyCompactItemize}

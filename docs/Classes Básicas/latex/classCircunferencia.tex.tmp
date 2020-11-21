@@ -1,0 +1,41 @@
+\hypertarget{classCircunferencia}{}\doxysection{Circunferencia Class Reference}
+\label{classCircunferencia}\index{Circunferencia@{Circunferencia}}
+
+
+Collaboration diagram for Circunferencia\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCircunferencia_a23905687a38075fbcca8bb3ba2f2c9ba}\label{classCircunferencia_a23905687a38075fbcca8bb3ba2f2c9ba}} 
+{\bfseries Circunferencia} (float raio, \mbox{\hyperlink{classPonto}{Ponto}} centro, int precisao=40)
+\item 
+\mbox{\Hypertarget{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}\label{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}} 
+void {\bfseries gerar\+Demarcacao} ()
+\item 
+\mbox{\Hypertarget{classCircunferencia_a66fb43e140924a8195d09513bb5eda8c}\label{classCircunferencia_a66fb43e140924a8195d09513bb5eda8c}} 
+int {\bfseries get\+Precisao} ()
+\item 
+\mbox{\Hypertarget{classCircunferencia_abc34efdfd53a82c44cb43c0c799731ff}\label{classCircunferencia_abc34efdfd53a82c44cb43c0c799731ff}} 
+\mbox{\hyperlink{classPonto}{Ponto}} $\ast$ {\bfseries get\+Demarcacao} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}\label{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}} 
+int {\bfseries precisao}
+\item 
+\mbox{\Hypertarget{classCircunferencia_a8bc69243976463322985c38e366d2b9d}\label{classCircunferencia_a8bc69243976463322985c38e366d2b9d}} 
+float {\bfseries raio}
+\item 
+\mbox{\Hypertarget{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}\label{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}} 
+\mbox{\hyperlink{classPonto}{Ponto}} {\bfseries centro}
+\item 
+\mbox{\Hypertarget{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}\label{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}} 
+\mbox{\hyperlink{classPonto}{Ponto}} $\ast$ {\bfseries demarcacao}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+circunferencia.\+h\end{DoxyCompactItemize}
