@@ -1,6 +1,6 @@
 # Documentação do Projeto
 
-Repositório destinado para armazenar a documentação do projeto.
+Diretório destinado para armazenar a documentação do projeto.
 
 ## Observações
 - O projeto está em andamento, logo a documentação está incompleta!

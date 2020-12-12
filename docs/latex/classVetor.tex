@@ -1,0 +1,77 @@
+\hypertarget{classVetor}{}\doxysection{Vetor Class Reference}
+\label{classVetor}\index{Vetor@{Vetor}}
+
+
+{\ttfamily \#include $<$vetor.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVetor_a6e2acbd08b7677a3b2b2cbc2fab520ff}\label{classVetor_a6e2acbd08b7677a3b2b2cbc2fab520ff}} 
+{\bfseries Vetor} (float x, float y)
+\item 
+\mbox{\Hypertarget{classVetor_ab37163f68f7f265eedfcf5adba635a68}\label{classVetor_ab37163f68f7f265eedfcf5adba635a68}} 
+{\bfseries Vetor} (const \mbox{\hyperlink{classPonto}{Ponto}} \&inicio, const \mbox{\hyperlink{classPonto}{Ponto}} \&fim)
+\item 
+\mbox{\Hypertarget{classVetor_ac6e55563e56cc598d5cae595e2f234af}\label{classVetor_ac6e55563e56cc598d5cae595e2f234af}} 
+{\bfseries Vetor} (const \mbox{\hyperlink{classVetor}{Vetor}} \&v)
+\item 
+\mbox{\Hypertarget{classVetor_a0f841dc7b4c753e545f966ff44f86435}\label{classVetor_a0f841dc7b4c753e545f966ff44f86435}} 
+{\bfseries Vetor} (\mbox{\hyperlink{classVetor}{Vetor}} \&\&vetor) noexcept
+\item 
+\mbox{\Hypertarget{classVetor_a658aa09baca599180f9d71f5bdaa28c9}\label{classVetor_a658aa09baca599180f9d71f5bdaa28c9}} 
+float {\bfseries get\+Modulo} ()
+\item 
+\mbox{\Hypertarget{classVetor_ad8656f48f69ead91c42dd88b3db99dcb}\label{classVetor_ad8656f48f69ead91c42dd88b3db99dcb}} 
+float {\bfseries get\+Angulo} ()
+\item 
+\mbox{\Hypertarget{classVetor_af5e570aeced45122ffd764ed52a9b66b}\label{classVetor_af5e570aeced45122ffd764ed52a9b66b}} 
+\mbox{\hyperlink{classPonto}{Ponto}} {\bfseries vetor\+To\+Ponto} ()
+\item 
+\mbox{\Hypertarget{classVetor_ae59666bd20761415172191c2afa4decf}\label{classVetor_ae59666bd20761415172191c2afa4decf}} 
+\mbox{\hyperlink{classVetor}{Vetor}} {\bfseries operator+} (const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor)
+\item 
+\mbox{\Hypertarget{classVetor_a530724daa99751287335033b9ccb6b15}\label{classVetor_a530724daa99751287335033b9ccb6b15}} 
+\mbox{\hyperlink{classVetor}{Vetor}} {\bfseries operator-\/} (const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor)
+\item 
+\mbox{\Hypertarget{classVetor_a1c5248703c89084424c75d524aacb931}\label{classVetor_a1c5248703c89084424c75d524aacb931}} 
+int {\bfseries operator$\ast$} (const \mbox{\hyperlink{classVetor}{Vetor}} vetor)
+\item 
+\mbox{\Hypertarget{classVetor_a449c2b429e3a8585546d328afe62c1b3}\label{classVetor_a449c2b429e3a8585546d328afe62c1b3}} 
+\mbox{\hyperlink{classVetor}{Vetor}} \& {\bfseries operator=} (\mbox{\hyperlink{classVetor}{Vetor}} \&\&vetor) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVetor_af652db948695d6bbd7bc81307020f13b}\label{classVetor_af652db948695d6bbd7bc81307020f13b}} 
+float {\bfseries x}
+\item 
+\mbox{\Hypertarget{classVetor_ab430657c16d9b5c321a4b5428a5181ae}\label{classVetor_ab430657c16d9b5c321a4b5428a5181ae}} 
+float {\bfseries y}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classVetor_a915c25c15881d882e5891765f574ff72}\label{classVetor_a915c25c15881d882e5891765f574ff72}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor)
+\item 
+\mbox{\Hypertarget{classVetor_aa83625b0e4fc53fc3fe9cc2a6d98d9b7}\label{classVetor_aa83625b0e4fc53fc3fe9cc2a6d98d9b7}} 
+\mbox{\hyperlink{classVetor}{Vetor}} {\bfseries operator$\ast$} (const float escalar, const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor)
+\item 
+\mbox{\Hypertarget{classVetor_aeb08d22ebcaaa62ae2d4fcbbc5ebf6ee}\label{classVetor_aeb08d22ebcaaa62ae2d4fcbbc5ebf6ee}} 
+\mbox{\hyperlink{classVetor}{Vetor}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor, const float escalar)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+11/11/2020 Classe para Representação de um \mbox{\hyperlink{classVetor}{Vetor}} no Plano Cartesiano 
+\end{DoxyDate}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Base/vetor.\+h\end{DoxyCompactItemize}

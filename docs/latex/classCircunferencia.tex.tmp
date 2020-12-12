@@ -1,0 +1,50 @@
+\hypertarget{classCircunferencia}{}\doxysection{Circunferencia Class Reference}
+\label{classCircunferencia}\index{Circunferencia@{Circunferencia}}
+
+
+Collaboration diagram for Circunferencia\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCircunferencia_a0fee047fbf2fd2bb5e2e1a55621a8382}\label{classCircunferencia_a0fee047fbf2fd2bb5e2e1a55621a8382}} 
+{\bfseries Circunferencia} (float raio, const \mbox{\hyperlink{classPonto}{Ponto}} \&centro, int precisao=60)
+\item 
+\mbox{\Hypertarget{classCircunferencia_a4881f57269816c83d0f3227619aa86e6}\label{classCircunferencia_a4881f57269816c83d0f3227619aa86e6}} 
+{\bfseries Circunferencia} (const \mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&circ)
+\item 
+\mbox{\Hypertarget{classCircunferencia_a117e9d90e4e7d52b7607124e92760db8}\label{classCircunferencia_a117e9d90e4e7d52b7607124e92760db8}} 
+{\bfseries Circunferencia} (\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&\&circ) noexcept
+\item 
+\mbox{\Hypertarget{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}\label{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}} 
+void {\bfseries gerar\+Demarcacao} ()
+\item 
+\mbox{\Hypertarget{classCircunferencia_afa9338b90214535fbce7692dcbfb13af}\label{classCircunferencia_afa9338b90214535fbce7692dcbfb13af}} 
+\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \& {\bfseries operator=} (\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&\&circ) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}\label{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}} 
+int {\bfseries precisao}
+\item 
+\mbox{\Hypertarget{classCircunferencia_a8bc69243976463322985c38e366d2b9d}\label{classCircunferencia_a8bc69243976463322985c38e366d2b9d}} 
+float {\bfseries raio}
+\item 
+\mbox{\Hypertarget{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}\label{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}} 
+\mbox{\hyperlink{classPonto}{Ponto}} {\bfseries centro}
+\item 
+\mbox{\Hypertarget{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}\label{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}} 
+\mbox{\hyperlink{classPonto}{Ponto}} $\ast$ {\bfseries demarcacao}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCircunferencia_a6d2a7faf24be589213523f66fb3de308}\label{classCircunferencia_a6d2a7faf24be589213523f66fb3de308}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, const \mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&circ)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Base/circunferencia.\+h\end{DoxyCompactItemize}
