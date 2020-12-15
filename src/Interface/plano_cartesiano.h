@@ -12,68 +12,59 @@ class PlanoCartesiano {
         int espacamento_y;
         int largura_tela;
         int altura_tela;
+        Ponto origem;
         CorRGBA cor_eixos;
         CorRGBA cor_grade;
 
     public:
 
+        PlanoCartesiano(int espacamento_x, int espacamento_y, const CorRGBA &cor_eixos, 
+                        const CorRGBA &cor_grade, int largura_tela, int altura_tela,
+                        const Ponto &origem=Ponto()):
+                
+                espacamento_x(espacamento_x),
+                espacamento_y(espacamento_y),
+                largura_tela(largura_tela),
+                altura_tela(altura_tela),
+                origem(origem),
+                cor_eixos(cor_eixos),
+                cor_grade(cor_grade){
+            }
+
         void desenharEixo(Renderizador &render){
             render.desenhar_linha(cor_eixos,
+                                  -origem.x,
                                   0,
-                                  altura_tela/2,
-                                  largura_tela,
-                                  altura_tela/2);
+                                  largura_tela-origem.x,
+                                  0);
 
             render.desenhar_linha(cor_eixos,
-                                  largura_tela/2,
-                                   0,
-                                   largura_tela/2,
-                                   altura_tela);
+                                  0,
+                                  -origem.y,
+                                  0,
+                                  altura_tela-origem.y);
         }
 
-        void desenharGradeX(Renderizador &render){
-            for (int i=altura_tela/2; i<=altura_tela; i+=espacamento_x){
+        void desenharGradeY(Renderizador &render){
+            for (int i=-origem.y; i<=altura_tela-origem.y; i+=espacamento_x){
                 
                 render.desenhar_linha(cor_grade,
-                                      0,
+                                      -origem.x,
                                       i,
-                                      largura_tela,
+                                      largura_tela-origem.x,
                                       i);
-                
-                render.desenhar_linha(cor_grade,
-                                      0,
-                                      i- altura_tela/2,
-                                      largura_tela,
-                                      i- altura_tela/2);
             }
         }
         
-        void desenharGradeY(Renderizador &render){
-            for (int i=largura_tela/2; i<=largura_tela; i+=espacamento_y){
+        void desenharGradeX(Renderizador &render){
+            for (int i=-origem.x; i<=largura_tela-origem.x; i+=espacamento_y){
                 
                 render.desenhar_linha(cor_grade,
                                       i,
-                                      0,
+                                      -origem.y,
                                       i,
-                                      altura_tela);
-                
-                render.desenhar_linha(cor_grade,
-                                      i- largura_tela/2,
-                                      0,
-                                      i- largura_tela/2,
-                                      altura_tela);
+                                      altura_tela-origem.y);
             }
-        }
-
-        PlanoCartesiano(int espacamento_x, int espacamento_y, CorRGBA cor_eixos, CorRGBA cor_grade,
-                        int largura_tela, int altura_tela):
-            
-            espacamento_x(espacamento_x),
-            espacamento_y(espacamento_y),
-            largura_tela(largura_tela),
-            altura_tela(altura_tela),
-            cor_eixos(cor_eixos),
-            cor_grade(cor_grade){
         }
 
         void desenharGrade(Renderizador &render){

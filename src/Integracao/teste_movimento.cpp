@@ -43,6 +43,9 @@ int main(){
 
     GerenciadorEvento gerenciador = GerenciadorEvento();
 
+    PlanoCartesiano plano = PlanoCartesiano(20, 20, CorRGBA(0,0,0), CorRGBA(188,188,188),
+                                            800, 600, Ponto(400,300));
+
     bool executar = true;
     while (executar){
         gerenciador.registrarEvento();
@@ -60,6 +63,7 @@ int main(){
         }
         
         janela.preencherFundo(branco);
+        plano.desenharGrade(render);
 
         for (int i=0; i<=3; i++){
             lista_objetos[i].movimentar(static_cast<double>(1)/10);

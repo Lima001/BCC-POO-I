@@ -18,7 +18,7 @@ class Renderizador {
         int sentido_y;
 
     public:
-        Renderizador(SDL_Window* ptr_janela, Ponto origem=Ponto(), int sentido=1):
+        Renderizador(SDL_Window* ptr_janela, const Ponto &origem=Ponto(), int sentido=1):
             origem(origem),
             sentido_y(sentido)
         {
