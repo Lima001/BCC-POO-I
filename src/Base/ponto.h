@@ -1,4 +1,5 @@
 #include <iostream>
+#include "matriz.h"
 
 #ifndef PONTO_H
 #define PONTO_H
@@ -12,8 +13,8 @@
 
 class Ponto {
     public:
-        float x;        //!< Coordenada no eixo X
-        float y;        //!< Coordenada no eixo X
+        float x;        //!< Coordenada no eixo x
+        float y;        //!< Coordenada no eixo y
     
         //! Construtor Default
         /*!
@@ -23,9 +24,7 @@ class Ponto {
             a origem do Plano Cartesiano (0,0)
         */
         Ponto(): 
-            x(0), 
-            y(0)
-        {
+            x(0), y(0){
         }
 
         //! Construtor Base
@@ -35,9 +34,7 @@ class Ponto {
             \param y um float representando a Coordenada Y
         */
         Ponto(float x, float y): 
-            x(x), 
-            y(y)
-        {
+            x(x), y(y){
         }
 
         //! Construtor de Cópia
@@ -46,9 +43,7 @@ class Ponto {
             \param p uma referência constante para um Ponto
         */
         Ponto(const Ponto &p):
-            x(p.x),
-            y(p.y)
-        {
+            x(p.x), y(p.y){
         }
 
         //! Construtor Move
@@ -68,9 +63,31 @@ class Ponto {
         //! Destrutor da Classe
         ~Ponto(){}
 
+        /*!
+            Transforma um ponto para sua representação em matriz
+
+            Cria uma matriz 3x1, onde cada linha representa uma coordenada
+            do ponto. Pelo fato desta classe representar apenas pontos no
+            Plano, a coordenada z na matriz é representada por 1.
+
+            Esse método é importante, uma vez que o ponto em sua forma
+            de matriz pode ser usado para operações de transformação úteis
+            ao processo de representação gráfica de figuras.
+
+            \return uma \ref Matriz 3x1
+        */
+        Matriz pontoToMatriz()const{
+            Matriz tmp = Matriz(3,1);
+            tmp[0][0] = x;
+            tmp[1][0] = y;
+            tmp[2][0] = 1;
+
+            return tmp;
+        }
+
         // Métodos de Sobrecarga de Operadores
 
-        friend std::ostream& operator<< (std::ostream &out, const Ponto &ponto){
+        friend std::ostream& operator<<(std::ostream &out, const Ponto &ponto){
             /*!
                 Função amiga para ter acesso ao atributos protegidos da classe,
                 visando sobscrita do operador << para apresentação de saída ao
@@ -83,7 +100,7 @@ class Ponto {
         }
 
         //! Atribuição por Cópia
-        Ponto& operator= (const Ponto &p){
+        Ponto& operator=(const Ponto &p){
             /*!
                 \param p uma referência constante de um Ponto
                 \return Referência para o Ponto que Invocou o Método
@@ -95,7 +112,7 @@ class Ponto {
         }
 
         //! Atribuição por Movimentação
-        Ponto& operator= (Ponto &&p) noexcept {
+        Ponto& operator=(Ponto &&p) noexcept {
             /*!
                 \param p uma referência rvalue de um Ponto
                 \return Referência para o Ponto que Invocou o Método

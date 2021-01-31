@@ -3,6 +3,7 @@ END += .out
 all:
 	g++ teste_ponto.cpp -o teste_ponto$(END)
 	g++ teste_vetor.cpp -o teste_vetor$(END)
+	g++ teste_linha.cpp -o teste_linha$(END)
 	g++ teste_circunferencia.cpp -o teste_circunferencia$(END)
 	g++ teste_retangulo.cpp -o teste_retangulo$(END)
 	g++ teste_triangulo.cpp -o teste_triangulo$(END)

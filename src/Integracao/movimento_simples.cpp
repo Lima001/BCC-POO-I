@@ -46,7 +46,18 @@ int main(){
     Janela janela = Janela("Movimento Básico", 800, 600);
     janela.iniciarSurface();
     
-    Renderizador render = Renderizador(janela.ptr_janela, Ponto(400,300), -1);
+    Renderizador render = Renderizador(janela.ptr_janela);
+    
+    render.Transformacao = Matriz(3,3);
+    render.Transformacao[0][0] = 1;
+    render.Transformacao[0][1] = 0;
+    render.Transformacao[0][2] = 400;
+    render.Transformacao[1][0] = 0;
+    render.Transformacao[1][1] = -1;
+    render.Transformacao[1][2] = 300;
+    render.Transformacao[2][0] = 0;
+    render.Transformacao[2][1] = 0;
+    render.Transformacao[2][2] = 1;
 
     GerenciadorEvento gerenciador = GerenciadorEvento();
 

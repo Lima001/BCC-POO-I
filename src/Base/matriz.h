@@ -7,6 +7,10 @@
 
 class Matriz {
     protected:
+
+        unsigned int n_linha;
+        unsigned int n_coluna;
+
         void limpar(){
             if (ptr != nullptr){
                 
@@ -47,8 +51,7 @@ class Matriz {
         }
 
     public:
-        unsigned int n_linha;
-        unsigned int n_coluna;
+        
         double **ptr = nullptr;
 
         Matriz(){

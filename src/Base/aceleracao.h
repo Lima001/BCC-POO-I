@@ -28,8 +28,7 @@ class Aceleracao {
 
         ~Aceleracao(){};
 
-
-         Aceleracao& operator= (Aceleracao &aceleracao){
+        Aceleracao& operator= (Aceleracao &aceleracao){
             func_x = aceleracao.func_x;
             func_y = aceleracao.func_y;
 

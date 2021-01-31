@@ -10,42 +10,36 @@ class Circunferencia {
         int precisao;
         float raio;
         Ponto centro;
-        Ponto* demarcacao;
+        //Ponto* demarcacao;
 
         // Construtor Default
         Circunferencia():
-            precisao(1),
-            raio(0),
-            centro(Ponto())
+            precisao(1), raio(0), centro(Ponto())
         {
-            demarcacao = new Ponto[precisao];
-            gerarDemarcacao();
+            //demarcacao = new Ponto[precisao];
+            //gerarDemarcacao();
         }
 
         // Construtor Base
         Circunferencia(float raio, const Ponto &centro, int precisao=60):
-            raio(raio),
-            centro(centro),
-            precisao(precisao)
+            raio(raio), centro(centro), precisao(precisao)
         {
-            demarcacao = new Ponto[precisao];
-            gerarDemarcacao();
+            //demarcacao = new Ponto[precisao];
+            //gerarDemarcacao();
         }
 
         // Destrutor
         ~Circunferencia(){
             // Liberar espaço dinâmicamente alocado
-            delete [] demarcacao;
+            //delete [] demarcacao;
         }
 
         // Construtor de Cópia
         Circunferencia(const Circunferencia& circ):
-            precisao(circ.precisao),
-            raio(circ.raio),
-            centro(circ.centro)
+            precisao(circ.precisao), raio(circ.raio), centro(circ.centro)
         {
-            demarcacao = new Ponto[precisao];
-            gerarDemarcacao();
+            //demarcacao = new Ponto[precisao];
+            //gerarDemarcacao();
         }
 
         // Construtor Move
@@ -53,22 +47,23 @@ class Circunferencia {
             precisao = circ.precisao;
             raio = circ.raio;
             centro = std::move(circ.centro);
-            demarcacao = new Ponto[precisao];
-            gerarDemarcacao();
+            //demarcacao = new Ponto[precisao];
+            //gerarDemarcacao();
         }
 
-        void gerarDemarcacao(){
+        // TODO possível vazamento de memória - delete!
+        Ponto* gerarDemarcacao()const{
+            Ponto* demarcacao = new Ponto[precisao];
             Ponto p = Ponto();
             float angulo = (360/precisao)*(M_PI/180.0f);
-
-            {2 0} x 
-            {0 2.5} y
 
             for (int i=0; i<precisao; i++){
                 p.x = centro.x + cos(angulo*i) * raio;
                 p.y = centro.y + sin(angulo*i) * raio;
                 demarcacao[i] = std::move(p);
-            }
+            };
+
+            return demarcacao;
         }
 
         /*
@@ -82,15 +77,15 @@ class Circunferencia {
 
         // Atribuição por Cópia
         Circunferencia& operator= (Circunferencia &circ){
-            if (demarcacao != nullptr){
-                delete [] demarcacao;
-            }
+            //if (demarcacao != nullptr){
+            //    delete [] demarcacao;
+            //}
 
             precisao = circ.precisao;
             raio = circ.raio;
             centro = std::move(circ.centro);
-            demarcacao = new Ponto[precisao];
-            gerarDemarcacao();
+            //demarcacao = new Ponto[precisao];
+            //gerarDemarcacao();
 
             return *this;
         }
@@ -101,15 +96,15 @@ class Circunferencia {
 			    return *this;
             }
 
-            if (demarcacao != nullptr){
-                delete [] demarcacao;
-            }
+            //if (demarcacao != nullptr){
+            //    delete [] demarcacao;
+            //}
 
             precisao = circ.precisao;
             raio = circ.raio;
             centro = std::move(circ.centro);
-            demarcacao = new Ponto[precisao];
-            gerarDemarcacao();
+            //demarcacao = new Ponto[precisao];
+            //gerarDemarcacao();
 
             return *this;
         }

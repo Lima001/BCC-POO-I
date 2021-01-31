@@ -1,0 +1,5 @@
+As últimas mudanças referem-se ao período de 17/01 até 31/01
+
+Para aqueles que desejam usar os códigos aqui presentes, deixo uma ressalva alertando que possíveis mudanças podem ocorrer, principalmente no que tange ao último foco de desenvolvimento - Referente a detecção de colisões. Dessa forma será necessária uma reavaliação da reusabilidade pela sua parte.
+
+Obs. Nas semanas que sucedem, esse projeto deve estar sendo finalizado - Código + Documentação!

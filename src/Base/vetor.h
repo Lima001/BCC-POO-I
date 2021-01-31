@@ -18,36 +18,28 @@ class Vetor {
         float y;        //!< Componente no eixo Y - Constante Real que Múltiplica o vetor j
 
         //! Construtor Default
-        Vetor():
-            x(0), 
-            y(0)
-        {
         /*!
             Chamado quando nenhum parâmetro de ininicialização for informado.
             
             Cria um objeto com ambas as componentes configuradas para 0, resultando
             em um vetor nulo.
         */
+        Vetor():
+            x(0), y(0){
         }
 
         //! Construtor Base a partir de Coordenadas
-        Vetor(float x, float y):
-            x(x),
-            y(y)
-        {
         /*!
             Cria um objeto com as componentes conforme valores passados por parâmetro
             
             \param x um float representando a Componente X
             \param y um float representando a Componente Y
         */
+        Vetor(float x, float y):
+            x(x), y(y){
         }
 
         //! Construtor a partir de Pontos
-        Vetor(const Ponto &inicio, const Ponto &fim): 
-            x(fim.x - inicio.x),
-            y(fim.y - inicio.y)
-        {
         /*!
             Cria um objeto onde componentes calculadas a partir de
             dois pontos, sendo eles o ponto de Início e de Fim do vetor,
@@ -56,18 +48,18 @@ class Vetor {
             \param inicio uma referência constante a um objeto do tipo \ref Ponto
             \param fim uma referência constante a um objeto do tipo \ref Ponto
         */
+        Vetor(const Ponto &inicio, const Ponto &fim): 
+            x(fim.x - inicio.x), y(fim.y - inicio.y){
         }
 
         //! Construtor de Cópia
-        Vetor(const Vetor &vetor):
-            x(vetor.x), 
-            y(vetor.y)
-        {
         /*!
             Cria um novo objeto copiando as componentes de um vetor informado.
 
             \param vetor uma referência constante para um Vetor
         */
+        Vetor(const Vetor &vetor):
+            x(vetor.x), y(vetor.y){
         }
 
         //! Construtor Move
@@ -115,6 +107,14 @@ class Vetor {
             return Ponto(x,y);
         }
 
+        Matriz vetorToMatriz(){
+            Matriz tmp = Matriz(3,1);
+            tmp[0][0] = x;
+            tmp[1][0] = y;
+            tmp[2][0] = 1;
+
+            return tmp;
+        }
         
         // Métodos de sobrecarga de operadores!
         friend std::ostream& operator<< (std::ostream &out, const Vetor &vetor){

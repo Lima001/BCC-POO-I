@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 #include "../Base/ponto.h"
 #include "../Base/vetor.h"
@@ -21,15 +22,14 @@ double f_const(double t){
 }
 
 int main(){
-    double dt = 0.1f;
+    double dt = 1/5.f;
     double t = 0;
 
-    Objeto lista_objetos[4];
+    int qtd_objetos = 2;
+    Objeto lista_objetos[qtd_objetos];
 
-    lista_objetos[0] = Objeto(10, 10, Vetor(0,-250), Vetor(0,15), Aceleracao(f_const,f_const));
-    lista_objetos[1] = Objeto(10, 10, Vetor(0,250), Vetor(0,-15), Aceleracao(f_const,f_const));
-    lista_objetos[2] = Objeto(10, 10, Vetor(-250,-250), Vetor(20,20), Aceleracao(f_const,f_const));
-    lista_objetos[3] = Objeto(20, 10, Vetor(250,250), Vetor(-20,-20), Aceleracao(f_const,f_const));
+    lista_objetos[0] = Objeto(10, 20, Vetor(0,0), Vetor(-25,-25), Aceleracao(f_const,f_const));
+    lista_objetos[1] = Objeto(10, 50, Vetor(-100,100), Vetor(50,50), Aceleracao(f_const,f_const));
 
     CorRGBA azul = CorRGBA(0,0,255);
     CorRGBA preto = CorRGBA(0,0,0);
@@ -41,7 +41,7 @@ int main(){
 
     Relogio relogio = Relogio(control);
     
-    Janela janela = Janela("Movimento Básico", 800, 600);
+    Janela janela = Janela("Movimento CMUX", 800, 600);
     janela.iniciarSurface();
     
     Renderizador render = Renderizador(janela.ptr_janela);
@@ -62,7 +62,16 @@ int main(){
     PlanoCartesiano plano = PlanoCartesiano(20, 20, CorRGBA(0,0,0), CorRGBA(188,188,188),
                                             800, 600, Ponto(400,300));
 
-    DetectorColisao detector = DetectorColisao(4, lista_objetos);
+    DetectorColisao detector = DetectorColisao(qtd_objetos, lista_objetos);
+
+    Linha lista_linhas[4];
+    
+    // Obrigatório seguir essa ordem!
+    lista_linhas[0] = Linha(Ponto(-400,300), Ponto(400,300));   // Linha horizontal superior
+    lista_linhas[1] = Linha(Ponto(-400,-300), Ponto(400,-300)); // Linha horizontal inferior
+    lista_linhas[2] = Linha(Ponto(-400,300), Ponto(-400,-300)); // Linha vertical esquerda
+    lista_linhas[3] = Linha(Ponto(400,300), Ponto(400,-300));   // Linha vertical direita
+    detector.setInfoLinhas(4,lista_linhas);
 
     bool executar = true;
     while (executar){
@@ -74,8 +83,8 @@ int main(){
         }
         else if (gerenciador.evento.tipo_evento == KEYDOWN){
             if (gerenciador.evento.trigger == T_KP){
-                for (int i=0; i<4; i++){
-                    lista_objetos[i].v = lista_objetos[i].v * -1; 
+                for (int i=0; i<qtd_objetos; i++){
+                    lista_objetos[i].v = lista_objetos[i].v * 0; 
                 }
             }
         }
@@ -83,16 +92,17 @@ int main(){
         janela.preencherFundo(branco);
         plano.desenharGrade(render);
 
-        for (int i=0; i<4; i++){
+        for (int i=0; i<qtd_objetos; i++){
             render.desenhar_circunferencia(azul, lista_objetos[i].getCircunferencia());
             render.desenhar_vetor(preto, lista_objetos[i].v, lista_objetos[i].getCircunferencia().centro);
         }
 
-        for (int i=0; i<4; i++){
+        for (int i=0; i<qtd_objetos; i++){
             lista_objetos[i].movimentar(t,t+dt,dt);
         }
 
-        detector.aplicar_colisao_simples();
+        detector.colisao_borda();
+        detector.aplicar_colisao_teste();
 
         t += dt;
 

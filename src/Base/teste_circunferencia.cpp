@@ -13,8 +13,9 @@ int main(){
     cout << c1 << endl;
     cout << c2 << endl;
 
+    Ponto* demarcacao = c1.gerarDemarcacao();
     for(int i=0; i<c1.precisao; i++){
-        cout << *(c1.demarcacao+i) << endl;
+        cout << *(demarcacao+i) << endl;
     }
 
     return 0;

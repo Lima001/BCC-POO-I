@@ -18,7 +18,18 @@ int main(){
     
     Renderizador render = Renderizador(janela.ptr_janela);
 
-    PlanoCartesiano plano = PlanoCartesiano(20,20,verde,branco,800,600);
+    render.Transformacao = Matriz(3,3);
+    render.Transformacao[0][0] = 1;
+    render.Transformacao[0][1] = 0;
+    render.Transformacao[0][2] = 400;
+    render.Transformacao[1][0] = 0;
+    render.Transformacao[1][1] = -1;
+    render.Transformacao[1][2] = 300;
+    render.Transformacao[2][0] = 0;
+    render.Transformacao[2][1] = 0;
+    render.Transformacao[2][2] = 1;
+
+    PlanoCartesiano plano = PlanoCartesiano(20,20,verde,branco,800,600,Ponto(400,300));
     plano.desenharGrade(render);
 
     render.atualizar();

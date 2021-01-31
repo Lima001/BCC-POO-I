@@ -39,7 +39,7 @@ class Janela {
             ptr_surface = SDL_GetWindowSurface(ptr_janela);
         }
 
-        void preencherFundo(CorRGBA &cor){
+        void preencherFundo(const CorRGBA &cor){
             SDL_FillRect(ptr_surface, NULL, cor.getCor(ptr_surface));
         }
 

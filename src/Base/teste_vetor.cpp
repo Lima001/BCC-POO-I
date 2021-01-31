@@ -45,6 +45,7 @@ int main(){
     cout << "Módulo v3: " << v3.getModulo() << endl;
     cout << "Produto escalar v1 * v2: " << v1*v2 << endl;
     cout << v8.vetorToPonto() << endl;
+    (v8.vetorToMatriz()*2).print();
 
     return 0;
 }

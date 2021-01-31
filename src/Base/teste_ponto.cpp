@@ -33,5 +33,8 @@ int main(){
     cout << p4 << endl;
     cout << p6 << endl;
 
+    // Exibição de um Ponto na forma de Matriz
+    p2.pontoToMatriz().print();
+
     return 0;
 }

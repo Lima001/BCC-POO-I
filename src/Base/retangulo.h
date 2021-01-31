@@ -12,26 +12,17 @@ class Retangulo {
         
         // Construtor Default
         Retangulo():
-            inicio(Ponto()), 
-            largura(0),
-            altura(0)
-        {
+            inicio(Ponto()), largura(0), altura(0){
         }
 
         // Construtor base
         Retangulo(const Ponto &inicio, float largura, float altura):
-            inicio(inicio),
-            largura(largura),
-            altura(altura)
-        {
+            inicio(inicio), largura(largura), altura(altura){
         }
 
         // Construtor de Cópia
         Retangulo(const Retangulo &rect):
-            inicio(rect.inicio),
-            largura(rect.largura),
-            altura(rect.altura)
-        {
+            inicio(rect.inicio), largura(rect.largura), altura(rect.altura){
         }
 
         // Construtor Move

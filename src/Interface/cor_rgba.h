@@ -54,7 +54,7 @@ class CorRGBA {
         {
         }
 
-        Uint32 getCor(SDL_Surface* surface){
+        Uint32 getCor(SDL_Surface* surface)const{
             /*!
                 Função para receber a cor em um formato útil e compatível
                 ao usado por funções da bliblioteca SDL.
