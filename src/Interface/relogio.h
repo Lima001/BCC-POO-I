@@ -12,7 +12,10 @@ class Relogio{
 
     public:
 
-        Relogio(Controlador_SDL &control, int fps=60): control(control), fps(fps){
+        Relogio(Controlador_SDL &control, int fps=60): 
+            control(control), 
+            fps(fps)
+        {
             clock_inicio = 0;
         };
 

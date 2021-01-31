@@ -48,6 +48,15 @@ class Triangulo {
             return out;
         }
 
+        // Atribuição por Cópia
+        Triangulo& operator= (Triangulo &t){
+            p1 = std::move(t.p1);
+            p2 = std::move(t.p2);
+            p3 = std::move(t.p3);
+
+            return *this;
+        }
+
         // Atribuição Move
         Triangulo& operator= (Triangulo &&t) noexcept {
             if (&t == this){

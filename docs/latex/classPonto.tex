@@ -1,50 +1,165 @@
-\hypertarget{classPonto}{}\doxysection{Ponto Class Reference}
+\hypertarget{classPonto}{}\doxysection{Referência da Classe Ponto}
 \label{classPonto}\index{Ponto@{Ponto}}
 
 
 {\ttfamily \#include $<$ponto.\+h$>$}
 
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classPonto_a11562446098bca36d3f759c22a5bf734}\label{classPonto_a11562446098bca36d3f759c22a5bf734}} 
-{\bfseries Ponto} (float x, float y)
-\item 
-\mbox{\Hypertarget{classPonto_ac2d478f0ac64bff3c0f0bcd511d30580}\label{classPonto_ac2d478f0ac64bff3c0f0bcd511d30580}} 
-{\bfseries Ponto} (const \mbox{\hyperlink{classPonto}{Ponto}} \&p)
-\item 
-\mbox{\Hypertarget{classPonto_aef5d85e0bdd420a08024bff4e9ceaf69}\label{classPonto_aef5d85e0bdd420a08024bff4e9ceaf69}} 
-{\bfseries Ponto} (\mbox{\hyperlink{classPonto}{Ponto}} \&\&p) noexcept
-\item 
-\mbox{\Hypertarget{classPonto_a5d665c3cf4788e982e24784e46d252f6}\label{classPonto_a5d665c3cf4788e982e24784e46d252f6}} 
-\mbox{\hyperlink{classPonto}{Ponto}} \& {\bfseries operator=} (\mbox{\hyperlink{classPonto}{Ponto}} \&\&p) noexcept
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
+\mbox{\hyperlink{classPonto_a49b03b00e9ebc01c2011c25f6517b93b}{Ponto}} ()
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPonto_a11562446098bca36d3f759c22a5bf734}{Ponto}} (float \mbox{\hyperlink{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}{x}}, float \mbox{\hyperlink{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}{y}})
+\begin{DoxyCompactList}\small\item\em Construtor Base. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPonto_ac2d478f0ac64bff3c0f0bcd511d30580}{Ponto}} (const \mbox{\hyperlink{classPonto}{Ponto}} \&p)
+\begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPonto_aef5d85e0bdd420a08024bff4e9ceaf69}{Ponto}} (\mbox{\hyperlink{classPonto}{Ponto}} \&\&p) noexcept
+\begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPonto_a3b0e3df470cda29d6bf52e6c11a1e8a6}\label{classPonto_a3b0e3df470cda29d6bf52e6c11a1e8a6}} 
+\mbox{\hyperlink{classPonto_a3b0e3df470cda29d6bf52e6c11a1e8a6}{$\sim$\+Ponto}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPonto}{Ponto}} \& \mbox{\hyperlink{classPonto_a1f1cd02177d47eef370db80b9527ef97}{operator=}} (const \mbox{\hyperlink{classPonto}{Ponto}} \&p)
+\begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPonto}{Ponto}} \& \mbox{\hyperlink{classPonto_a5d665c3cf4788e982e24784e46d252f6}{operator=}} (\mbox{\hyperlink{classPonto}{Ponto}} \&\&p) noexcept
+\begin{DoxyCompactList}\small\item\em Atribuição por Movimentação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}\label{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}} 
-float {\bfseries x}
-\item 
+float \mbox{\hyperlink{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}{x}}
+\begin{DoxyCompactList}\small\item\em Coordenada no eixo X. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}\label{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}} 
-float {\bfseries y}
-\end{DoxyCompactItemize}
-\doxysubsection*{Friends}
+float \mbox{\hyperlink{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}{y}}
+\begin{DoxyCompactList}\small\item\em Coordenada no eixo X. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classPonto_a0f5204c48601e4a1912b6c221028c290}\label{classPonto_a0f5204c48601e4a1912b6c221028c290}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, const \mbox{\hyperlink{classPonto}{Ponto}} \&ponto)
+std\+::ostream \& \mbox{\hyperlink{classPonto_a0f5204c48601e4a1912b6c221028c290}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classPonto}{Ponto}} \&ponto)
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-\begin{DoxyAuthor}{Author}
+\doxysubsection{Descrição detalhada}
+\begin{DoxyAuthor}{Autor}
 Gabriel Eduardo Lima 
 \end{DoxyAuthor}
-\begin{DoxyDate}{Date}
+\begin{DoxyDate}{Data}
 11/11/2020 Classe para Representação de um \mbox{\hyperlink{classPonto}{Ponto}} no Plano Cartesiano 
 \end{DoxyDate}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classPonto_a49b03b00e9ebc01c2011c25f6517b93b}\label{classPonto_a49b03b00e9ebc01c2011c25f6517b93b}} 
+\index{Ponto@{Ponto}!Ponto@{Ponto}}
+\index{Ponto@{Ponto}!Ponto@{Ponto}}
+\doxysubsubsection{\texorpdfstring{Ponto()}{Ponto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Ponto\+::\+Ponto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Chamado quando nenhum parâmetro de ininicialização for informado.
+
+Cria um objeto com ambas as coordenadas configuradas para a origem do Plano Cartesiano (0,0) \mbox{\Hypertarget{classPonto_a11562446098bca36d3f759c22a5bf734}\label{classPonto_a11562446098bca36d3f759c22a5bf734}} 
+\index{Ponto@{Ponto}!Ponto@{Ponto}}
+\index{Ponto@{Ponto}!Ponto@{Ponto}}
+\doxysubsubsection{\texorpdfstring{Ponto()}{Ponto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Ponto\+::\+Ponto (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Base. 
+
+Cria um objeto com as coordenadas passadas como parâmetro 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & um float representando a Coordenada X \\
+\hline
+{\em y} & um float representando a Coordenada Y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPonto_ac2d478f0ac64bff3c0f0bcd511d30580}\label{classPonto_ac2d478f0ac64bff3c0f0bcd511d30580}} 
+\index{Ponto@{Ponto}!Ponto@{Ponto}}
+\index{Ponto@{Ponto}!Ponto@{Ponto}}
+\doxysubsubsection{\texorpdfstring{Ponto()}{Ponto()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Ponto\+::\+Ponto (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor de Cópia. 
+
+Cria um novo objeto copiando as coordenadas de um ponto informado 
+\begin{DoxyParams}{Parâmetros}
+{\em p} & uma referência constante para um \mbox{\hyperlink{classPonto}{Ponto}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPonto_aef5d85e0bdd420a08024bff4e9ceaf69}\label{classPonto_aef5d85e0bdd420a08024bff4e9ceaf69}} 
+\index{Ponto@{Ponto}!Ponto@{Ponto}}
+\index{Ponto@{Ponto}!Ponto@{Ponto}}
+\doxysubsubsection{\texorpdfstring{Ponto()}{Ponto()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Ponto\+::\+Ponto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPonto}{Ponto}} \&\&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construtor Move. 
+
+Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os dados das coordenadas de um ponto para o novo objeto criado. 
+\begin{DoxyParams}{Parâmetros}
+{\em p} & uma referência rvalue de um \mbox{\hyperlink{classPonto}{Ponto}}\\
+\hline
+\end{DoxyParams}
+Para mais detalhe sobre o recurso, consultar documentação da linguagem. 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classPonto_a1f1cd02177d47eef370db80b9527ef97}\label{classPonto_a1f1cd02177d47eef370db80b9527ef97}} 
+\index{Ponto@{Ponto}!operator=@{operator=}}
+\index{operator=@{operator=}!Ponto@{Ponto}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPonto}{Ponto}}\& Ponto\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atribuição por Cópia. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & uma referência constante de um \mbox{\hyperlink{classPonto}{Ponto}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o \mbox{\hyperlink{classPonto}{Ponto}} que Invocou o Método
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPonto_a5d665c3cf4788e982e24784e46d252f6}\label{classPonto_a5d665c3cf4788e982e24784e46d252f6}} 
+\index{Ponto@{Ponto}!operator=@{operator=}}
+\index{operator=@{operator=}!Ponto@{Ponto}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPonto}{Ponto}}\& Ponto\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPonto}{Ponto}} \&\&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Atribuição por Movimentação. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & uma referência rvalue de um \mbox{\hyperlink{classPonto}{Ponto}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o \mbox{\hyperlink{classPonto}{Ponto}} que Invocou o Método
+\end{DoxyReturn}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
+\mbox{\Hypertarget{classPonto_a0f5204c48601e4a1912b6c221028c290}\label{classPonto_a0f5204c48601e4a1912b6c221028c290}} 
+\index{Ponto@{Ponto}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Ponto@{Ponto}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{ponto }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Função amiga para ter acesso ao atributos protegidos da classe, visando sobscrita do operador $<$$<$ para apresentação de saída ao usuário. \begin{DoxyReturn}{Retorna}
+uma string no formato\+: (x,y)
+\end{DoxyReturn}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
 Base/ponto.\+h\end{DoxyCompactItemize}

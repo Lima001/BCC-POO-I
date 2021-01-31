@@ -49,6 +49,15 @@ class Retangulo {
             return out;
         }
 
+        // Atribuição por Cópia
+        Retangulo& operator= (const Retangulo &rect){
+            inicio = std::move(rect.inicio);
+            largura = rect.largura;
+            altura = rect.altura;
+
+            return *this;
+        }
+
         // Atribuição Move
         Retangulo& operator= (Retangulo &&rect) noexcept {
             if (&rect == this){

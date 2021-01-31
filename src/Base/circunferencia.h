@@ -42,9 +42,10 @@ class Circunferencia {
         Circunferencia(const Circunferencia& circ):
             precisao(circ.precisao),
             raio(circ.raio),
-            centro(circ.centro),
-            demarcacao(circ.demarcacao)
+            centro(circ.centro)
         {
+            demarcacao = new Ponto[precisao];
+            gerarDemarcacao();
         }
 
         // Construtor Move
@@ -59,6 +60,9 @@ class Circunferencia {
         void gerarDemarcacao(){
             Ponto p = Ponto();
             float angulo = (360/precisao)*(M_PI/180.0f);
+
+            {2 0} x 
+            {0 2.5} y
 
             for (int i=0; i<precisao; i++){
                 p.x = centro.x + cos(angulo*i) * raio;
@@ -76,13 +80,30 @@ class Circunferencia {
             return out;
         }
 
+        // Atribuição por Cópia
+        Circunferencia& operator= (Circunferencia &circ){
+            if (demarcacao != nullptr){
+                delete [] demarcacao;
+            }
+
+            precisao = circ.precisao;
+            raio = circ.raio;
+            centro = std::move(circ.centro);
+            demarcacao = new Ponto[precisao];
+            gerarDemarcacao();
+
+            return *this;
+        }
+
         // Atribuição Move
         Circunferencia& operator= (Circunferencia &&circ) noexcept {
             if (&circ == this){
 			    return *this;
             }
 
-            delete [] demarcacao;
+            if (demarcacao != nullptr){
+                delete [] demarcacao;
+            }
 
             precisao = circ.precisao;
             raio = circ.raio;

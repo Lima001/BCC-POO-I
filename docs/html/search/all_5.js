@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['planocartesiano_7',['PlanoCartesiano',['../classPlanoCartesiano.html',1,'']]],
-  ['ponto_8',['Ponto',['../classPonto.html',1,'']]]
+  ['finalizar_8',['finalizar',['../classControlador__SDL.html#acae9b200430be5abc032da8041115092',1,'Controlador_SDL']]]
 ];

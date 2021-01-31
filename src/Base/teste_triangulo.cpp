@@ -7,11 +7,16 @@ int main(){
     Triangulo t1, t2, t3;
 
     t1 = Triangulo(Ponto(100,100), Ponto(0,200), Ponto(300,200));
+    t2 = t1;
     t3 = move(t1);
+    Triangulo t4 = t1;
+    Triangulo t5 = move(t2);
 
     cout << t1 << endl;
     cout << t2 << endl;
     cout << t3 << endl;
+    cout << t4 << endl;
+    cout << t5 << endl;
 
     cout << "\n";
 

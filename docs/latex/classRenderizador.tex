@@ -1,46 +1,52 @@
-\hypertarget{classRenderizador}{}\doxysection{Renderizador Class Reference}
+\hypertarget{classRenderizador}{}\doxysection{Referência da Classe Renderizador}
 \label{classRenderizador}\index{Renderizador@{Renderizador}}
 
 
-Collaboration diagram for Renderizador\+:
+Diagrama de colaboração para Renderizador\+:
 % FIG 0
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classRenderizador_ab66a96dc238dc65a60a12f636c88c3e5}\label{classRenderizador_ab66a96dc238dc65a60a12f636c88c3e5}} 
 {\bfseries Renderizador} (S\+D\+L\+\_\+\+Window $\ast$ptr\+\_\+janela, const \mbox{\hyperlink{classPonto}{Ponto}} \&origem=\mbox{\hyperlink{classPonto}{Ponto}}(), int sentido=1)
 \item 
-\mbox{\Hypertarget{classRenderizador_aed7d43a86a1e67a15a68bb203bd97293}\label{classRenderizador_aed7d43a86a1e67a15a68bb203bd97293}} 
-void {\bfseries set\+Cor\+Desenho} (\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor)
+\mbox{\Hypertarget{classRenderizador_ab8992f4244c7e55d9693e085bf0c57fb}\label{classRenderizador_ab8992f4244c7e55d9693e085bf0c57fb}} 
+void {\bfseries set\+Cor\+Desenho} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor)
 \item 
-\mbox{\Hypertarget{classRenderizador_a35f8d21becdec3224436a73d97dee640}\label{classRenderizador_a35f8d21becdec3224436a73d97dee640}} 
-void {\bfseries limpar} (\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor)
+\mbox{\Hypertarget{classRenderizador_af9995385984b68ace19e6655daf8a3ae}\label{classRenderizador_af9995385984b68ace19e6655daf8a3ae}} 
+void {\bfseries limpar} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor)
 \item 
 \mbox{\Hypertarget{classRenderizador_afc2a2bb7e5ada41bca3ffe01274abfbc}\label{classRenderizador_afc2a2bb7e5ada41bca3ffe01274abfbc}} 
 void {\bfseries atualizar} ()
 \item 
-\mbox{\Hypertarget{classRenderizador_a3b8ce665ce1dd9d5ce4e342668cca1c1}\label{classRenderizador_a3b8ce665ce1dd9d5ce4e342668cca1c1}} 
-void {\bfseries desenhar\+\_\+ponto} (\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, \mbox{\hyperlink{classPonto}{Ponto}} \&ponto)
+\mbox{\Hypertarget{classRenderizador_a8feaa3c34823873730ef2d0feebf6c7d}\label{classRenderizador_a8feaa3c34823873730ef2d0feebf6c7d}} 
+void {\bfseries desenhar\+\_\+ponto} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, const \mbox{\hyperlink{classPonto}{Ponto}} \&ponto)
 \item 
-\mbox{\Hypertarget{classRenderizador_ae0dfe886af395c1c7724369c15e6dcbe}\label{classRenderizador_ae0dfe886af395c1c7724369c15e6dcbe}} 
-void {\bfseries desenhar\+\_\+linha} (\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, int xi, int yi, int xf, int yf)
+\mbox{\Hypertarget{classRenderizador_a6120c744af4f4546790c249dfd918688}\label{classRenderizador_a6120c744af4f4546790c249dfd918688}} 
+void {\bfseries desenhar\+\_\+linha} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, int xi, int yi, int xf, int yf)
 \item 
-\mbox{\Hypertarget{classRenderizador_a1c04b69b32a4e9da25a61a0f14039a09}\label{classRenderizador_a1c04b69b32a4e9da25a61a0f14039a09}} 
-void {\bfseries desenhar\+\_\+circunferencia} (\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, \mbox{\hyperlink{classCircunferencia}{Circunferencia}} $\ast$circ)
+\mbox{\Hypertarget{classRenderizador_a97cd301ef2e638a6806b954cb2fb3085}\label{classRenderizador_a97cd301ef2e638a6806b954cb2fb3085}} 
+void {\bfseries desenhar\+\_\+circunferencia} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, const \mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&circ)
 \item 
-\mbox{\Hypertarget{classRenderizador_a523cb5936862539c857ed6374efa3024}\label{classRenderizador_a523cb5936862539c857ed6374efa3024}} 
-void {\bfseries desenhar\+\_\+circunferencia} (\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, \mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&circ)
+\mbox{\Hypertarget{classRenderizador_ad4de411cc9db706fd49d2dec5dc7334a}\label{classRenderizador_ad4de411cc9db706fd49d2dec5dc7334a}} 
+void {\bfseries desenhar\+\_\+triangulo} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, const \mbox{\hyperlink{classTriangulo}{Triangulo}} \&triangulo)
 \item 
-\mbox{\Hypertarget{classRenderizador_a7b1ac148b7f08b8ce9348e2cbf6c8918}\label{classRenderizador_a7b1ac148b7f08b8ce9348e2cbf6c8918}} 
-void {\bfseries desenhar\+\_\+triangulo} (\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, \mbox{\hyperlink{classTriangulo}{Triangulo}} \&triangulo)
+\mbox{\Hypertarget{classRenderizador_ae8edd632b63923d0b2397df4d2940669}\label{classRenderizador_ae8edd632b63923d0b2397df4d2940669}} 
+void {\bfseries desenhar\+\_\+retangulo} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&rect)
 \item 
-\mbox{\Hypertarget{classRenderizador_a6f15d0d6972197d77c7314c0bc1841ce}\label{classRenderizador_a6f15d0d6972197d77c7314c0bc1841ce}} 
-void {\bfseries desenhar\+\_\+retangulo} (\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, \mbox{\hyperlink{classRetangulo}{Retangulo}} \&rect)
+\mbox{\Hypertarget{classRenderizador_a70ca92e1cae39b02e5d329a0852fda69}\label{classRenderizador_a70ca92e1cae39b02e5d329a0852fda69}} 
+void {\bfseries desenhar\+\_\+vetor} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor, const \mbox{\hyperlink{classPonto}{Ponto}} \&inicio)
 \item 
-\mbox{\Hypertarget{classRenderizador_a558c3c71f29abfff56dc67a67e0f08e3}\label{classRenderizador_a558c3c71f29abfff56dc67a67e0f08e3}} 
-void {\bfseries desenhar\+\_\+vetor} (\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, \mbox{\hyperlink{classVetor}{Vetor}} \&vetor, \mbox{\hyperlink{classPonto}{Ponto}} inicio)
+\mbox{\Hypertarget{classRenderizador_a943509fd5c8fd7da6ec54c0b8d19c01d}\label{classRenderizador_a943509fd5c8fd7da6ec54c0b8d19c01d}} 
+bool {\bfseries Circunferenciais\+Out\+Render} (\mbox{\hyperlink{classObjeto}{Objeto}} \&obj, int largura, int altura)
 \end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRenderizador_a856a947398f06f7f74021f108773156e}\label{classRenderizador_a856a947398f06f7f74021f108773156e}} 
+float {\bfseries escala} = 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classRenderizador_a975351e3ea6895bd3ff29b22699d0d81}\label{classRenderizador_a975351e3ea6895bd3ff29b22699d0d81}} 
@@ -54,6 +60,6 @@ int {\bfseries sentido\+\_\+y}
 \end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
 Interface/renderizador.\+h\end{DoxyCompactItemize}

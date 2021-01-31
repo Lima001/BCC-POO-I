@@ -9,7 +9,6 @@ int main(){
 
     branco = CorRGBA();
     azul = CorRGBA(0,0,255);
-    verde = CorRGBA(0,255,0);
     preto = CorRGBA(0,0,0);
 
     control = Controlador_SDL();
@@ -17,32 +16,27 @@ int main(){
 
     Janela janela = Janela("Testando", 800, 600);
     janela.iniciarSurface();
-    Renderizador render = Renderizador(janela.ptr_janela);
+
+    Ponto origem = Ponto(400,300);
+    Renderizador render = Renderizador(janela.ptr_janela,origem,-1);
 
     janela.preencherFundo(branco);
-    render.desenhar_linha(verde, 0,300,800,300);
+    
+    render.desenhar_linha(CorRGBA(0,255,0), -400,0,400,0);
 
-    Ponto p1,p2,p3;
-    p1 = Ponto(400,290);
-    p2 = Ponto(400,300);
-    p3 = Ponto(400,310);
+    //render.escala = 2.f;
 
-    render.desenhar_ponto(preto, p1);
-    render.desenhar_ponto(preto, p2);
-    render.desenhar_ponto(preto, p3);
+    render.desenhar_ponto(preto, Ponto(50,50));
+    render.desenhar_ponto(CorRGBA(255,0,0), Ponto(-50,-50));
+    render.desenhar_ponto(preto, Ponto(0,0));
 
-    Circunferencia circ = Circunferencia(50, Ponto(400,300));
-    render.desenhar_circunferencia(azul, &circ);
+    render.desenhar_circunferencia(azul, Circunferencia(50, Ponto(0,10)));
 
-    Triangulo triangulo = Triangulo(Ponto(200.5,200), Ponto(100,400), Ponto(300,400));
-    render.desenhar_triangulo(preto, triangulo);
+    render.desenhar_triangulo(preto, Triangulo(Ponto(-50,0), Ponto(50,0), Ponto(0,100)));
 
-    Retangulo rect = Retangulo(Ponto(10,10),25,25);
-    render.desenhar_retangulo(preto, rect);
+    render.desenhar_retangulo(preto, Retangulo(Ponto(0,50),25,25));
 
-    Ponto centro = Ponto(400,300);
-    Vetor vetor = Vetor(0,80);
-    render.desenhar_vetor(preto, vetor, centro);
+    render.desenhar_vetor(preto, Vetor(0,80), Ponto(0,0));
     
     render.atualizar();
     janela.atualizar();

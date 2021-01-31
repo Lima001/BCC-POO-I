@@ -1,12 +1,13 @@
+END += .out
 FLAG += `pkg-config --cflags --libs sdl2`
 
 all:
-	g++ teste_controlador.cpp -o teste_controlador $(FLAG)
-	g++ teste_janela.cpp -o teste_janela $(FLAG)
-	g++ teste_cor.cpp -o teste_cor $(FLAG)
-	g++ teste_renderizador.cpp -o teste_renderizador $(FLAG)
-	g++ teste_plano_cartseiano.cpp -o teste_plano_cartseiano $(FLAG)
-	g++ teste_eventos.cpp -o teste_eventos $(FLAG)
+	g++ teste_controlador.cpp -o teste_controlador$(END) $(FLAG)
+	g++ teste_janela.cpp -o teste_janela$(END) $(FLAG)
+	g++ teste_cor.cpp -o teste_cor$(END) $(FLAG)
+	g++ teste_renderizador.cpp -o teste_renderizador$(END) $(FLAG)
+	g++ teste_plano_cartseiano.cpp -o teste_plano_cartseiano$(END) $(FLAG)
+	g++ teste_eventos.cpp -o teste_eventos$(END) $(FLAG)
 
 clean:
-	rm teste_controlador  teste_janela teste_cor teste_plano_cartseiano teste_renderizador teste_eventos
+	rm *$(END)

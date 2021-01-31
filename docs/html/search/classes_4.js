@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['objeto_20',['Objeto',['../classObjeto.html',1,'']]]
+  ['gerenciadorevento_45',['GerenciadorEvento',['../classGerenciadorEvento.html',1,'']]]
 ];

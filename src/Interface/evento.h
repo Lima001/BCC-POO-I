@@ -36,7 +36,8 @@ class Evento{
         Evento(TipoEvento te, Trigger tr):
             tipo_evento(tipo_evento),
             trigger(tr)
-            {};
+        {    
+        };
         
         ~Evento(){}
 

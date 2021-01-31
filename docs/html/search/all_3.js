@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['janela_5',['Janela',['../classJanela.html',1,'']]]
+  ['detectorcolisao_6',['DetectorColisao',['../classDetectorColisao.html',1,'']]]
 ];
