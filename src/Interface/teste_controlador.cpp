@@ -4,6 +4,7 @@
 using namespace std;
 
 int main(){
+    // Criação de um objeto Controlador_SDL e testes de seus métodos
     Controlador_SDL control;
     
     control = Controlador_SDL();

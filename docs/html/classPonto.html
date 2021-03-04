@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -72,6 +79,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Classe para Representação de um <a class="el" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano.">Ponto</a> no Plano Cartesiano.  
+ <a href="classPonto.html#details">Mais...</a></p>
+
 <p><code>#include &lt;<a class="el" href="ponto_8h_source.html">ponto.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -92,6 +102,9 @@ Membros Públicos</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPonto.html#a3b0e3df470cda29d6bf52e6c11a1e8a6">~Ponto</a> ()</td></tr>
 <tr class="memdesc:a3b0e3df470cda29d6bf52e6c11a1e8a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da Classe. <br /></td></tr>
 <tr class="separator:a3b0e3df470cda29d6bf52e6c11a1e8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95aef665ea1fb3e9b82b8508ab05cf1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPonto.html#ad95aef665ea1fb3e9b82b8508ab05cf1">pontoToMatriz</a> () const</td></tr>
+<tr class="memdesc:ad95aef665ea1fb3e9b82b8508ab05cf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforma um ponto para sua representação em <a class="el" href="classMatriz.html">Matriz</a>.  <a href="classPonto.html#ad95aef665ea1fb3e9b82b8508ab05cf1">Mais...</a><br /></td></tr>
+<tr class="separator:ad95aef665ea1fb3e9b82b8508ab05cf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f1cd02177d47eef370db80b9527ef97"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPonto.html">Ponto</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPonto.html#a1f1cd02177d47eef370db80b9527ef97">operator=</a> (const <a class="el" href="classPonto.html">Ponto</a> &amp;p)</td></tr>
 <tr class="memdesc:a1f1cd02177d47eef370db80b9527ef97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribuição por Cópia.  <a href="classPonto.html#a1f1cd02177d47eef370db80b9527ef97">Mais...</a><br /></td></tr>
 <tr class="separator:a1f1cd02177d47eef370db80b9527ef97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -103,21 +116,23 @@ Membros Públicos</h2></td></tr>
 Atributos Públicos</h2></td></tr>
 <tr class="memitem:ac72a5274f1b887279fe959d0eca1eaa8"><td class="memItemLeft" align="right" valign="top"><a id="ac72a5274f1b887279fe959d0eca1eaa8"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a></td></tr>
-<tr class="memdesc:ac72a5274f1b887279fe959d0eca1eaa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada no eixo X. <br /></td></tr>
+<tr class="memdesc:ac72a5274f1b887279fe959d0eca1eaa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada no eixo das abscissas. <br /></td></tr>
 <tr class="separator:ac72a5274f1b887279fe959d0eca1eaa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3d21f6f0e8a9fb0591c982f03cbb26a"><td class="memItemLeft" align="right" valign="top"><a id="aa3d21f6f0e8a9fb0591c982f03cbb26a"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a></td></tr>
-<tr class="memdesc:aa3d21f6f0e8a9fb0591c982f03cbb26a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada no eixo X. <br /></td></tr>
+<tr class="memdesc:aa3d21f6f0e8a9fb0591c982f03cbb26a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coordenada no eixo das ordenadas. <br /></td></tr>
 <tr class="separator:aa3d21f6f0e8a9fb0591c982f03cbb26a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
 <tr class="memitem:a0f5204c48601e4a1912b6c221028c290"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPonto.html#a0f5204c48601e4a1912b6c221028c290">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classPonto.html">Ponto</a> &amp;ponto)</td></tr>
+<tr class="memdesc:a0f5204c48601e4a1912b6c221028c290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do Insertion Operator para Saída de Dados.  <a href="classPonto.html#a0f5204c48601e4a1912b6c221028c290">Mais...</a><br /></td></tr>
 <tr class="separator:a0f5204c48601e4a1912b6c221028c290"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
-<dl class="section date"><dt>Data</dt><dd>11/11/2020 Classe para Representação de um <a class="el" href="classPonto.html">Ponto</a> no Plano Cartesiano </dd></dl>
+<div class="textblock"><p>Classe para Representação de um <a class="el" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano.">Ponto</a> no Plano Cartesiano. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última Modificação: 27/02/2001 </dd></dl>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
 <a id="a49b03b00e9ebc01c2011c25f6517b93b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49b03b00e9ebc01c2011c25f6517b93b">&#9670;&nbsp;</a></span>Ponto() <span class="overload">[1/4]</span></h2>
@@ -144,7 +159,7 @@ Amigas</h2></td></tr>
 
 <p>Construtor Default. </p>
 <p>Chamado quando nenhum parâmetro de ininicialização for informado.</p>
-<p>Cria um objeto com ambas as coordenadas configuradas para a origem do Plano Cartesiano (0,0) </p>
+<p>Cria um objeto com ambas as coordenadas configuradas para a origem do Plano Cartesiano \( O(0,0)\). </p>
 
 </div>
 </div>
@@ -183,10 +198,11 @@ Amigas</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor Base. </p>
-<p>Cria um objeto com as coordenadas passadas como parâmetro </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Cria um objeto com as coordenadas passadas como parâmetro.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>um float representando a Coordenada X </td></tr>
-    <tr><td class="paramname">y</td><td>um float representando a Coordenada Y </td></tr>
+    <tr><td class="paramname">x</td><td>usado para inicializar atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">y</td><td>usado para inicializar atributo de mesma nomenclatura </td></tr>
   </table>
   </dd>
 </dl>
@@ -218,9 +234,10 @@ Amigas</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor de Cópia. </p>
-<p>Cria um novo objeto copiando as coordenadas de um ponto informado </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Cria um novo objeto copiando as coordenadas de um <a class="el" href="classPonto.html">Ponto</a> informado.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p</td><td>uma referência constante para um <a class="el" href="classPonto.html">Ponto</a> </td></tr>
+    <tr><td class="paramname">p</td><td>Referência constante para o <a class="el" href="classPonto.html">Ponto</a> que será copiado </td></tr>
   </table>
   </dd>
 </dl>
@@ -252,13 +269,14 @@ Amigas</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor Move. </p>
-<p>Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os dados das coordenadas de um ponto para o novo objeto criado. </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os dados das coordenadas de um <a class="el" href="classPonto.html">Ponto</a> para o novo objeto criado.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p</td><td>uma referência rvalue de um <a class="el" href="classPonto.html">Ponto</a></td></tr>
+    <tr><td class="paramname">p</td><td>Referência rvalue para um <a class="el" href="classPonto.html">Ponto</a></td></tr>
   </table>
   </dd>
 </dl>
-<p>Para mais detalhe sobre o recurso, consultar documentação da linguagem. </p>
+<p>Para mais detalhe sobre o recurso, consultar documentação da linguagem </p>
 
 </div>
 </div>
@@ -288,13 +306,14 @@ Amigas</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Atribuição por Cópia. </p>
+<p>Copia o valor dos atributos do <a class="el" href="classPonto.html">Ponto</a> passado por parâmetro para o <a class="el" href="classPonto.html">Ponto</a> que invocou o operador.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p</td><td>uma referência constante de um <a class="el" href="classPonto.html">Ponto</a> </td></tr>
+    <tr><td class="paramname">p</td><td>Referência constante do <a class="el" href="classPonto.html">Ponto</a> que deseja-se copiar </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classPonto.html">Ponto</a> que Invocou o Método</dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classPonto.html">Ponto</a> que invocou o operador </dd></dl>
 
 </div>
 </div>
@@ -325,11 +344,44 @@ Amigas</h2></td></tr>
 <p>Atribuição por Movimentação. </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p</td><td>uma referência rvalue de um <a class="el" href="classPonto.html">Ponto</a> </td></tr>
+    <tr><td class="paramname">p</td><td>Referência rvalue de um <a class="el" href="classPonto.html">Ponto</a> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classPonto.html">Ponto</a> que Invocou o Método</dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classPonto.html">Ponto</a> que Invocou o operador </dd></dl>
+
+</div>
+</div>
+<a id="ad95aef665ea1fb3e9b82b8508ab05cf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95aef665ea1fb3e9b82b8508ab05cf1">&#9670;&nbsp;</a></span>pontoToMatriz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a> Ponto::pontoToMatriz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforma um ponto para sua representação em <a class="el" href="classMatriz.html">Matriz</a>. </p>
+<p>Considere o ponto \( P(x,y)\). A representação em forma de matriz de \( P \) é dada como:</p>
+<p class="formulaDsp">
+\[ M = \begin{bmatrix} x \\ y \\ 1 \end{bmatrix} \]
+</p>
+<p>Esse método é importante, uma vez que um ponto em sua forma de matriz pode ser usado para operações de transformação úteis ao processo de representação gráfica de figuras. Para mais detalhes </p><dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a></dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classMatriz.html">Matriz</a> 3x1 \( M \) </dd></dl>
 
 </div>
 </div>
@@ -367,7 +419,9 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Função amiga para ter acesso ao atributos protegidos da classe, visando sobscrita do operador &lt;&lt; para apresentação de saída ao usuário. </p><dl class="section return"><dt>Retorna</dt><dd>uma string no formato: (x,y)</dd></dl>
+
+<p>Sobrecarga do Insertion Operator para Saída de Dados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>string no formato: "Ponto(x,y)" onde x e y são respectivamente os valores dos atributos de mesmo nome do objeto </dd></dl>
 
 </div>
 </div>

@@ -3,7 +3,8 @@
 
 
 int main(){
-    
+    // Testes referente a renderiazção de figuras usando a classe Renderizador
+
     Controlador_SDL control;
     CorRGBA branco, azul, verde, preto;
 
@@ -20,6 +21,7 @@ int main(){
 
     Renderizador render = Renderizador(janela.ptr_janela);
 
+    // Definição de uma Matriz de Transformação para o processo de Renderização
     render.Transformacao = Matriz(3,3);
     render.Transformacao[0][0] = 1;
     render.Transformacao[0][1] = 0;
@@ -33,6 +35,7 @@ int main(){
 
     janela.preencherFundo(CorRGBA(25,25,25));
 
+    // Chamada aos métodos do Renderizador
     render.desenhar_ponto(azul, Ponto(50,50));
     render.desenhar_ponto(CorRGBA(255,0,0), Ponto(-50,-50));
     render.desenhar_ponto(verde, Ponto(0,0));
@@ -45,6 +48,7 @@ int main(){
 
     render.desenhar_retangulo(branco, Retangulo(Ponto(0,150),25,25));
     
+    // Alteração da Matriz de Transformação para mudança no processo de renderização
     render.Transformacao[0][0] = 2/10.f;
     render.Transformacao[1][1] = -2/10.f;
     render.desenhar_vetor(branco, Vetor(60,80), Ponto(0,0));

@@ -2,7 +2,8 @@
 #include "janela.h"
 
 int main(){
-    
+    // Criação de objetos auxiliares e objeto Janela para teste de seus métodos
+
     Controlador_SDL control;
     CorRGBA branco, azul, verde;
 

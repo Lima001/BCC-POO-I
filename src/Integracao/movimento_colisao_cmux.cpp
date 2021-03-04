@@ -86,7 +86,7 @@ int main(){
             lista_objetos[i].movimentar(t,t+dt,dt);
         }
 
-        detector.aplicar_colisao_teste();
+        detector.aplicar_colisao_cm();
 
         t += dt;
 

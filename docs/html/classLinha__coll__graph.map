@@ -1,0 +1,5 @@
+<map id="Linha" name="Linha">
+<area shape="rect" id="node1" title="Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ..." alt="" coords="45,109,102,136"/>
+<area shape="rect" id="node2" href="$classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano." alt="" coords="5,5,61,32"/>
+<area shape="rect" id="node3" href="$classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano." alt="" coords="85,5,144,32"/>
+</map>

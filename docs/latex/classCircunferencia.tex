@@ -2,4 +2,239 @@
 \label{classCircunferencia}\index{Circunferencia@{Circunferencia}}
 
 
+Classe para Representação de uma Circunferência. É a forma considerada como padrão para os objetos \mbox{\hyperlink{classObjeto}{Objeto}} da simulação.  
+
+
+
+
+{\ttfamily \#include $<$circunferencia.\+h$>$}
+
+
+
 Diagrama de colaboração para Circunferencia\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classCircunferencia__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCircunferencia_a03fdd2e99f3645b65c15331b5315c16d}{Circunferencia}} ()
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCircunferencia_a0fee047fbf2fd2bb5e2e1a55621a8382}{Circunferencia}} (float \mbox{\hyperlink{classCircunferencia_a8bc69243976463322985c38e366d2b9d}{raio}}, const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}{centro}}, int \mbox{\hyperlink{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}{precisao}}=60)
+\begin{DoxyCompactList}\small\item\em Construtor Base. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCircunferencia_a137be2950c55c3848343a263c955b4c2}{$\sim$\+Circunferencia}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCircunferencia_a4881f57269816c83d0f3227619aa86e6}{Circunferencia}} (const \mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&circ)
+\begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCircunferencia_a117e9d90e4e7d52b7607124e92760db8}{Circunferencia}} (\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&\&circ) noexcept
+\begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}{gerar\+Demarcacao}} ()
+\begin{DoxyCompactList}\small\item\em Método usado para criar a demarcacao da \mbox{\hyperlink{classCircunferencia}{Circunferencia}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \& \mbox{\hyperlink{classCircunferencia_ac3edc74f5a0dbe2da89d4a946e70b24a}{operator=}} (\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&circ)
+\begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \& \mbox{\hyperlink{classCircunferencia_afa9338b90214535fbce7692dcbfb13af}{operator=}} (\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&\&circ) noexcept
+\begin{DoxyCompactList}\small\item\em Atribuição Move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}\label{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}} 
+int \mbox{\hyperlink{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}{precisao}}
+\begin{DoxyCompactList}\small\item\em Definição da quantidade de pontos usados para gerar a demarcação da circunferência. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCircunferencia_a8bc69243976463322985c38e366d2b9d}\label{classCircunferencia_a8bc69243976463322985c38e366d2b9d}} 
+float \mbox{\hyperlink{classCircunferencia_a8bc69243976463322985c38e366d2b9d}{raio}}
+\begin{DoxyCompactList}\small\item\em Raio da Circunferência. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}\label{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}} 
+\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}{centro}}
+\begin{DoxyCompactList}\small\item\em Centro da Circunferência. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}\label{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}} 
+\mbox{\hyperlink{classPonto}{Ponto}} $\ast$ \mbox{\hyperlink{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}{demarcacao}} = nullptr
+\begin{DoxyCompactList}\small\item\em Ponteiro que guarda as demarcações da circunferência -\/ Usado para representação Gráfica. Por padrão é configurado para nullptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classCircunferencia_a6d2a7faf24be589213523f66fb3de308}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&circ)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do Insertion Operator para Saída de Dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para Representação de uma Circunferência. É a forma considerada como padrão para os objetos \mbox{\hyperlink{classObjeto}{Objeto}} da simulação. 
+
+\begin{DoxyAuthor}{Autor}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Última Modificação\+: 27/02/2002 
+\end{DoxyDate}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classCircunferencia_a03fdd2e99f3645b65c15331b5315c16d}\label{classCircunferencia_a03fdd2e99f3645b65c15331b5315c16d}} 
+\index{Circunferencia@{Circunferencia}!Circunferencia@{Circunferencia}}
+\index{Circunferencia@{Circunferencia}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{Circunferencia()}{Circunferencia()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Circunferencia\+::\+Circunferencia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Chamado quando nenhum parâmetro de ininicialização for informado.
+
+Cria um objeto com os valores numéricos ( \mbox{\hyperlink{classCircunferencia_a8bc69243976463322985c38e366d2b9d}{raio}} e \mbox{\hyperlink{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}{precisao}}) configurados para 0; Define como centro a Origem do Plano Cartesiano e {\bfseries{não}} gera \mbox{\hyperlink{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}{demarcacao}}! Deve ser usado somente para declarar variáveis que serão configuradas posteriormente.
+
+\begin{DoxyWarning}{Aviso}
+Deve-\/se cuidar com o fato da \mbox{\hyperlink{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}{demarcacao}} não ser inicializada na chamada desse construtor. Observado isso, no momento de configuração do objeto deve-\/se incocar o método membro \mbox{\hyperlink{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}{gerar\+Demarcacao()}} para alocar espaço na memória para o uso correto do atributo 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classCircunferencia_a0fee047fbf2fd2bb5e2e1a55621a8382}\label{classCircunferencia_a0fee047fbf2fd2bb5e2e1a55621a8382}} 
+\index{Circunferencia@{Circunferencia}!Circunferencia@{Circunferencia}}
+\index{Circunferencia@{Circunferencia}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{Circunferencia()}{Circunferencia()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Circunferencia\+::\+Circunferencia (\begin{DoxyParamCaption}\item[{float}]{raio,  }\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{centro,  }\item[{int}]{precisao = {\ttfamily 60} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Base. 
+
+Cria um objeto \mbox{\hyperlink{classCircunferencia}{Circunferencia}} com os atributos configurados conforme informado por parâmetro.
+
+Observação\+: A demarcação não é gerada ao chamar esse método para evitar alocação de memória desnecessária. Caso seja necessário pode-\/se chamar o método membro \mbox{\hyperlink{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}{gerar\+Demarcacao()}} para configurar o atributo membro demarcacao adequadamente.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em raio} & usado para inicializar o atributo de memsma nomenclatura \\
+\hline
+{\em centro} & usado para inicializar o atributo de memsma nomenclatura \\
+\hline
+{\em precisao} & usado para inicializar o atributo de memsma nomenclatura. Em caso de omissão do valor, esse atributo será configurado para um valor de {\bfseries{60}}, permitindo que a \mbox{\hyperlink{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}{demarcacao}} seja gerada com um mínimo de qualidade julgada necessária \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCircunferencia_a137be2950c55c3848343a263c955b4c2}\label{classCircunferencia_a137be2950c55c3848343a263c955b4c2}} 
+\index{Circunferencia@{Circunferencia}!````~Circunferencia@{$\sim$Circunferencia}}
+\index{````~Circunferencia@{$\sim$Circunferencia}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{$\sim$Circunferencia()}{~Circunferencia()}}
+{\footnotesize\ttfamily Circunferencia\+::$\sim$\+Circunferencia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da Classe. 
+
+Como destaque deve-\/se observar que esse método está encarregado de desalocar os espaços de memória dinamicamente alocados para a construção da \mbox{\hyperlink{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}{demarcacao}} da \mbox{\hyperlink{classCircunferencia}{Circunferencia}} \mbox{\Hypertarget{classCircunferencia_a4881f57269816c83d0f3227619aa86e6}\label{classCircunferencia_a4881f57269816c83d0f3227619aa86e6}} 
+\index{Circunferencia@{Circunferencia}!Circunferencia@{Circunferencia}}
+\index{Circunferencia@{Circunferencia}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{Circunferencia()}{Circunferencia()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Circunferencia\+::\+Circunferencia (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&}]{circ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor de Cópia. 
+
+Cria um novo objeto copiando todos os atributos de uma \mbox{\hyperlink{classCircunferencia}{Circunferencia}} informada. Deve-\/se esclarecer que nesse caso, a demarcacao da circunferencia também será \char`\"{}copiada\char`\"{} uma vez que o método \mbox{\hyperlink{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}{gerar\+Demarcacao()}} é chamado após inicialização dos atributos básicos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em circ} & Referência constante para a Circunferência que será copiado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCircunferencia_a117e9d90e4e7d52b7607124e92760db8}\label{classCircunferencia_a117e9d90e4e7d52b7607124e92760db8}} 
+\index{Circunferencia@{Circunferencia}!Circunferencia@{Circunferencia}}
+\index{Circunferencia@{Circunferencia}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{Circunferencia()}{Circunferencia()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Circunferencia\+::\+Circunferencia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&\&}]{circ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construtor Move. 
+
+Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os dados de uma \mbox{\hyperlink{classCircunferencia}{Circunferencia}} para o novo objeto criado. Da mesma forma que ocorre no Construtor por cópia, a demarcacao da \mbox{\hyperlink{classCircunferencia}{Circunferencia}} também será \char`\"{}copiada\char`\"{} através de cálculo ao final da inicialização dos outros atributos básicos.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em circ} & Referência rvalue de uma \mbox{\hyperlink{classCircunferencia}{Circunferencia}}\\
+\hline
+\end{DoxyParams}
+Para mais detalhe sobre o recurso, consultar documentação da linguagem 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}\label{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}} 
+\index{Circunferencia@{Circunferencia}!gerarDemarcacao@{gerarDemarcacao}}
+\index{gerarDemarcacao@{gerarDemarcacao}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{gerarDemarcacao()}{gerarDemarcacao()}}
+{\footnotesize\ttfamily void Circunferencia\+::gerar\+Demarcacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método usado para criar a demarcacao da \mbox{\hyperlink{classCircunferencia}{Circunferencia}}. 
+
+A demarcacao de uma \mbox{\hyperlink{classCircunferencia}{Circunferencia}} pode ser entendido como os pontos que fazem parte daquela circunferência. Conhecer esses pontos permitem que a circunferência seja desenhada por um objeto \mbox{\hyperlink{classRenderizador}{Renderizador}}.
+
+A demarcacao é gerada de maneira estática e será sempre referente ao estado da \mbox{\hyperlink{classCircunferencia}{Circunferencia}} quando o método foi invocado. Isso siginifica que mudanças em qualquer outro atributo de um objeto \mbox{\hyperlink{classCircunferencia}{Circunferencia}} não alterará a demarcacao e essa manterá o seu último estado.
+
+Em caso de mudanças nos atributos de um objeto \mbox{\hyperlink{classCircunferencia}{Circunferencia}}, recomenda-\/se analisar se existe a necessidade de manter uma demarcacao para esse objeto, uma vez que caso não seja necessário é possível economizar recursos como tempo e memória
+
+Outro aspecto é a Criação de objetos \mbox{\hyperlink{classCircunferencia}{Circunferencia}}. Conforme é possível ver na documentação desses Métodos, a demarcacao não é gerada automática para fins de otimização. Dessa forma deve-\/se estar atento para a chamada ao atributo demarcacao que pode ser um {\ttfamily nullptr} \mbox{\Hypertarget{classCircunferencia_afa9338b90214535fbce7692dcbfb13af}\label{classCircunferencia_afa9338b90214535fbce7692dcbfb13af}} 
+\index{Circunferencia@{Circunferencia}!operator=@{operator=}}
+\index{operator=@{operator=}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCircunferencia}{Circunferencia}}\& Circunferencia\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&\&}]{circ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Atribuição Move. 
+
+Observação\+: a demarcacao não é movida e a \mbox{\hyperlink{classCircunferencia}{Circunferencia}} que incovou o método tem esse atributo configurado para {\ttfamily nullptr} e a memória desalocada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em vetor} & Referência rvalue do \mbox{\hyperlink{classCircunferencia}{Circunferencia}} base para a operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o \mbox{\hyperlink{classCircunferencia}{Circunferencia}} que invocou o operador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCircunferencia_ac3edc74f5a0dbe2da89d4a946e70b24a}\label{classCircunferencia_ac3edc74f5a0dbe2da89d4a946e70b24a}} 
+\index{Circunferencia@{Circunferencia}!operator=@{operator=}}
+\index{operator=@{operator=}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCircunferencia}{Circunferencia}}\& Circunferencia\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&}]{circ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atribuição por Cópia. 
+
+Copia os atributos de uma Circunferência para a \mbox{\hyperlink{classCircunferencia}{Circunferencia}} que chamou a operação.
+
+Observação\+: a \mbox{\hyperlink{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}{demarcacao}} não copiada e a \mbox{\hyperlink{classCircunferencia}{Circunferencia}} que incovou o método tem esse atributo configurado para {\ttfamily nullptr} e a memória desalocada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em circ} & Referência constante da \mbox{\hyperlink{classCircunferencia}{Circunferencia}} que será Copiada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para a \mbox{\hyperlink{classCircunferencia}{Circunferencia}} que invocou o operador 
+\end{DoxyReturn}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
+\mbox{\Hypertarget{classCircunferencia_a6d2a7faf24be589213523f66fb3de308}\label{classCircunferencia_a6d2a7faf24be589213523f66fb3de308}} 
+\index{Circunferencia@{Circunferencia}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&}]{circ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do Insertion Operator para Saída de Dados. 
+
+\begin{DoxyReturn}{Retorna}
+uma string no formato\+: \char`\"{}\+Circunferencia(precisao,raio,\+Ponto(x,y))\char`\"{} onde \mbox{\hyperlink{classPonto}{Ponto}} refere-\/se ao \mbox{\hyperlink{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}{centro}} da \mbox{\hyperlink{classCircunferencia}{Circunferencia}} 
+\end{DoxyReturn}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+Base/\mbox{\hyperlink{circunferencia_8h}{circunferencia.\+h}}\end{DoxyCompactItemize}

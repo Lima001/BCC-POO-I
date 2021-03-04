@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -71,67 +78,549 @@ $(function() {
 <div class="title">Referência da Classe Renderizador</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da janela.  
+ <a href="classRenderizador.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="renderizador_8h_source.html">renderizador.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de colaboração para Renderizador:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRenderizador__coll__graph.png" border="0" usemap="#Renderizador_coll__map" alt="Collaboration graph"/></div>
-<!-- MAP 0 -->
+<map name="Renderizador_coll__map" id="Renderizador_coll__map">
+<area shape="rect" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j..." alt="" coords="5,95,113,121"/>
+<area shape="rect" href="classMatriz.html" title="Classe para Representação de Matrizes." alt="" coords="28,5,91,32"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:ab66a96dc238dc65a60a12f636c88c3e5"><td class="memItemLeft" align="right" valign="top"><a id="ab66a96dc238dc65a60a12f636c88c3e5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Renderizador</b> (SDL_Window *ptr_janela, const <a class="el" href="classPonto.html">Ponto</a> &amp;origem=<a class="el" href="classPonto.html">Ponto</a>(), int sentido=1)</td></tr>
-<tr class="separator:ab66a96dc238dc65a60a12f636c88c3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8992f4244c7e55d9693e085bf0c57fb"><td class="memItemLeft" align="right" valign="top"><a id="ab8992f4244c7e55d9693e085bf0c57fb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCorDesenho</b> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor)</td></tr>
+<tr class="memitem:a189c6c7467daf916b03b6cb4aa69891e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#a189c6c7467daf916b03b6cb4aa69891e">Renderizador</a> (SDL_Window *ptr_janela)</td></tr>
+<tr class="memdesc:a189c6c7467daf916b03b6cb4aa69891e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a> 3x3 usada para Transformações Geométricas nas Figuras.  <a href="classRenderizador.html#a189c6c7467daf916b03b6cb4aa69891e">Mais...</a><br /></td></tr>
+<tr class="separator:a189c6c7467daf916b03b6cb4aa69891e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a850cb0b57d0a7f6cf20293165782e795"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#a850cb0b57d0a7f6cf20293165782e795">~Renderizador</a> ()</td></tr>
+<tr class="separator:a850cb0b57d0a7f6cf20293165782e795"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8992f4244c7e55d9693e085bf0c57fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#ab8992f4244c7e55d9693e085bf0c57fb">setCorDesenho</a> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor)</td></tr>
+<tr class="memdesc:ab8992f4244c7e55d9693e085bf0c57fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define uma cor para a renderização.  <a href="classRenderizador.html#ab8992f4244c7e55d9693e085bf0c57fb">Mais...</a><br /></td></tr>
 <tr class="separator:ab8992f4244c7e55d9693e085bf0c57fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9995385984b68ace19e6655daf8a3ae"><td class="memItemLeft" align="right" valign="top"><a id="af9995385984b68ace19e6655daf8a3ae"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>limpar</b> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor)</td></tr>
+<tr class="memitem:af9995385984b68ace19e6655daf8a3ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#af9995385984b68ace19e6655daf8a3ae">limpar</a> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor)</td></tr>
+<tr class="memdesc:af9995385984b68ace19e6655daf8a3ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limpa a o <a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a>.  <a href="classRenderizador.html#af9995385984b68ace19e6655daf8a3ae">Mais...</a><br /></td></tr>
 <tr class="separator:af9995385984b68ace19e6655daf8a3ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc2a2bb7e5ada41bca3ffe01274abfbc"><td class="memItemLeft" align="right" valign="top"><a id="afc2a2bb7e5ada41bca3ffe01274abfbc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>atualizar</b> ()</td></tr>
+<tr class="memitem:afc2a2bb7e5ada41bca3ffe01274abfbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#afc2a2bb7e5ada41bca3ffe01274abfbc">atualizar</a> ()</td></tr>
+<tr class="memdesc:afc2a2bb7e5ada41bca3ffe01274abfbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza o estado do <a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> SDL.  <a href="classRenderizador.html#afc2a2bb7e5ada41bca3ffe01274abfbc">Mais...</a><br /></td></tr>
 <tr class="separator:afc2a2bb7e5ada41bca3ffe01274abfbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8feaa3c34823873730ef2d0feebf6c7d"><td class="memItemLeft" align="right" valign="top"><a id="a8feaa3c34823873730ef2d0feebf6c7d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desenhar_ponto</b> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, const <a class="el" href="classPonto.html">Ponto</a> &amp;ponto)</td></tr>
+<tr class="memitem:a8feaa3c34823873730ef2d0feebf6c7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#a8feaa3c34823873730ef2d0feebf6c7d">desenhar_ponto</a> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, const <a class="el" href="classPonto.html">Ponto</a> &amp;ponto)</td></tr>
+<tr class="memdesc:a8feaa3c34823873730ef2d0feebf6c7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que um <a class="el" href="classPonto.html">Ponto</a> seja desenhado.  <a href="classRenderizador.html#a8feaa3c34823873730ef2d0feebf6c7d">Mais...</a><br /></td></tr>
 <tr class="separator:a8feaa3c34823873730ef2d0feebf6c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6120c744af4f4546790c249dfd918688"><td class="memItemLeft" align="right" valign="top"><a id="a6120c744af4f4546790c249dfd918688"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desenhar_linha</b> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, int xi, int yi, int xf, int yf)</td></tr>
+<tr class="memitem:a6120c744af4f4546790c249dfd918688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#a6120c744af4f4546790c249dfd918688">desenhar_linha</a> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, int xi, int yi, int xf, int yf)</td></tr>
+<tr class="memdesc:a6120c744af4f4546790c249dfd918688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que uma linha seja desenhada.  <a href="classRenderizador.html#a6120c744af4f4546790c249dfd918688">Mais...</a><br /></td></tr>
 <tr class="separator:a6120c744af4f4546790c249dfd918688"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97cd301ef2e638a6806b954cb2fb3085"><td class="memItemLeft" align="right" valign="top"><a id="a97cd301ef2e638a6806b954cb2fb3085"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desenhar_circunferencia</b> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, const <a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;circ)</td></tr>
+<tr class="memitem:a97cd301ef2e638a6806b954cb2fb3085"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#a97cd301ef2e638a6806b954cb2fb3085">desenhar_circunferencia</a> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, const <a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;circ)</td></tr>
+<tr class="memdesc:a97cd301ef2e638a6806b954cb2fb3085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que uma <a class="el" href="classCircunferencia.html">Circunferencia</a> seja desenhada.  <a href="classRenderizador.html#a97cd301ef2e638a6806b954cb2fb3085">Mais...</a><br /></td></tr>
 <tr class="separator:a97cd301ef2e638a6806b954cb2fb3085"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4de411cc9db706fd49d2dec5dc7334a"><td class="memItemLeft" align="right" valign="top"><a id="ad4de411cc9db706fd49d2dec5dc7334a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desenhar_triangulo</b> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, const <a class="el" href="classTriangulo.html">Triangulo</a> &amp;triangulo)</td></tr>
+<tr class="memitem:ad4de411cc9db706fd49d2dec5dc7334a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#ad4de411cc9db706fd49d2dec5dc7334a">desenhar_triangulo</a> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, const <a class="el" href="classTriangulo.html">Triangulo</a> &amp;triangulo)</td></tr>
+<tr class="memdesc:ad4de411cc9db706fd49d2dec5dc7334a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que um <a class="el" href="classTriangulo.html">Triangulo</a> seja desenhada.  <a href="classRenderizador.html#ad4de411cc9db706fd49d2dec5dc7334a">Mais...</a><br /></td></tr>
 <tr class="separator:ad4de411cc9db706fd49d2dec5dc7334a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8edd632b63923d0b2397df4d2940669"><td class="memItemLeft" align="right" valign="top"><a id="ae8edd632b63923d0b2397df4d2940669"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desenhar_retangulo</b> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;rect)</td></tr>
+<tr class="memitem:ae8edd632b63923d0b2397df4d2940669"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#ae8edd632b63923d0b2397df4d2940669">desenhar_retangulo</a> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;rect)</td></tr>
+<tr class="memdesc:ae8edd632b63923d0b2397df4d2940669"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que um <a class="el" href="classRetangulo.html">Retangulo</a> seja desenhada.  <a href="classRenderizador.html#ae8edd632b63923d0b2397df4d2940669">Mais...</a><br /></td></tr>
 <tr class="separator:ae8edd632b63923d0b2397df4d2940669"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70ca92e1cae39b02e5d329a0852fda69"><td class="memItemLeft" align="right" valign="top"><a id="a70ca92e1cae39b02e5d329a0852fda69"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desenhar_vetor</b> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, const <a class="el" href="classVetor.html">Vetor</a> &amp;vetor, const <a class="el" href="classPonto.html">Ponto</a> &amp;inicio)</td></tr>
+<tr class="memitem:a70ca92e1cae39b02e5d329a0852fda69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#a70ca92e1cae39b02e5d329a0852fda69">desenhar_vetor</a> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor, const <a class="el" href="classVetor.html">Vetor</a> &amp;vetor, const <a class="el" href="classPonto.html">Ponto</a> &amp;inicio)</td></tr>
+<tr class="memdesc:a70ca92e1cae39b02e5d329a0852fda69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que um <a class="el" href="classVetor.html">Vetor</a> seja desenhada.  <a href="classRenderizador.html#a70ca92e1cae39b02e5d329a0852fda69">Mais...</a><br /></td></tr>
 <tr class="separator:a70ca92e1cae39b02e5d329a0852fda69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a943509fd5c8fd7da6ec54c0b8d19c01d"><td class="memItemLeft" align="right" valign="top"><a id="a943509fd5c8fd7da6ec54c0b8d19c01d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>CircunferenciaisOutRender</b> (<a class="el" href="classObjeto.html">Objeto</a> &amp;obj, int largura, int altura)</td></tr>
-<tr class="separator:a943509fd5c8fd7da6ec54c0b8d19c01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atributos Públicos</h2></td></tr>
-<tr class="memitem:a856a947398f06f7f74021f108773156e"><td class="memItemLeft" align="right" valign="top"><a id="a856a947398f06f7f74021f108773156e"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>escala</b> = 1</td></tr>
-<tr class="separator:a856a947398f06f7f74021f108773156e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2403609733952d8ce2524491292db85"><td class="memItemLeft" align="right" valign="top"><a id="ab2403609733952d8ce2524491292db85"></a>
+<a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Transformacao</b></td></tr>
+<tr class="separator:ab2403609733952d8ce2524491292db85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Atributos Protegidos</h2></td></tr>
 <tr class="memitem:a975351e3ea6895bd3ff29b22699d0d81"><td class="memItemLeft" align="right" valign="top"><a id="a975351e3ea6895bd3ff29b22699d0d81"></a>
-SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><b>ptr_renderizador</b> = NULL</td></tr>
+SDL_Renderer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRenderizador.html#a975351e3ea6895bd3ff29b22699d0d81">ptr_renderizador</a> = nullptr</td></tr>
+<tr class="memdesc:a975351e3ea6895bd3ff29b22699d0d81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ponteiro para o elemento <a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> SDL que permite a chamada de funções de renderização. <br /></td></tr>
 <tr class="separator:a975351e3ea6895bd3ff29b22699d0d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a828f6cced006a3b2652e7b61326cd4"><td class="memItemLeft" align="right" valign="top"><a id="a5a828f6cced006a3b2652e7b61326cd4"></a>
-<a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><b>origem</b></td></tr>
-<tr class="separator:a5a828f6cced006a3b2652e7b61326cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bf0c601f82369c584c31ffb87bf3db9"><td class="memItemLeft" align="right" valign="top"><a id="a3bf0c601f82369c584c31ffb87bf3db9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>sentido_y</b></td></tr>
-<tr class="separator:a3bf0c601f82369c584c31ffb87bf3db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da janela. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última alteração: 28/02/2021 </dd></dl>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a189c6c7467daf916b03b6cb4aa69891e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a189c6c7467daf916b03b6cb4aa69891e">&#9670;&nbsp;</a></span>Renderizador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Renderizador::Renderizador </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Window *&#160;</td>
+          <td class="paramname"><em>ptr_janela</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a> 3x3 usada para Transformações Geométricas nas Figuras. </p>
+<p>Construtor Default</p>
+<p>Usado para inicializar um rederizador para um janela especificada por parâmetro. É nesse método que o <a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> SDL é criado através da função SDL_CreateRenderer(). A título de especificação, o <a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> SDL é criado com a flag SDL_RENDERER_SOFTWARE. Para mais detalhes verifique a documentação da biblioteca SDL2.</p>
+<p>Observação: Em caso de problema no processo de criação do <a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> SDL, uma mensagem de erro será disparada contendo o conteúdo retornado pela função SDL_GetError().</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr_janela</td><td>Ponteiro para a <a class="el" href="classJanela.html" title="Classe responsável pela criação e controle da Janela gráfica e seus elementos associados.">Janela</a> Gráfica SDL</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classJanela.html" title="Classe responsável pela criação e controle da Janela gráfica e seus elementos associados.">Janela</a> </dd></dl>
+
+</div>
+</div>
+<a id="a850cb0b57d0a7f6cf20293165782e795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a850cb0b57d0a7f6cf20293165782e795">&#9670;&nbsp;</a></span>~Renderizador()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Renderizador::~Renderizador </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Responsável por chamar a função SDL_DestroyRenderer() que destroi o <a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> SDL criado. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="afc2a2bb7e5ada41bca3ffe01274abfbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc2a2bb7e5ada41bca3ffe01274abfbc">&#9670;&nbsp;</a></span>atualizar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderizador::atualizar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atualiza o estado do <a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> SDL. </p>
+<p>Esse método permite que as operações de renderização sejam passadas para a Área de renderização da <a class="el" href="classJanela.html" title="Classe responsável pela criação e controle da Janela gráfica e seus elementos associados.">Janela</a> SDL. Caso esse método não seja chamado não será possível observar as ações de renderização desejadas pelo desenvolvedor.</p>
+<p>Observação: Recomenda-se a sua invocação ao final da definição de todos os processos de renderização para evitar chamadas desnecessárais. Além disso deve ser usado em conjunto com o método de atualização presente em <a class="el" href="classJanela.html">Janela</a> .</p>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classJanela.html" title="Classe responsável pela criação e controle da Janela gráfica e seus elementos associados.">Janela</a> </dd></dl>
+
+</div>
+</div>
+<a id="a97cd301ef2e638a6806b954cb2fb3085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97cd301ef2e638a6806b954cb2fb3085">&#9670;&nbsp;</a></span>desenhar_circunferencia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderizador::desenhar_circunferencia </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;&#160;</td>
+          <td class="paramname"><em>cor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&#160;</td>
+          <td class="paramname"><em>circ</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que uma <a class="el" href="classCircunferencia.html">Circunferencia</a> seja desenhada. </p>
+<p>Dada uma cor e uma circunferência, essa será desenhado conforme especificado por suas coordenadas de centro e demarcacao transformadas pela <a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a> de Transformação .</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cor</td><td>Referência constante para objeto do tipo <a class="el" href="classCorRGBA.html">CorRGBA</a> que define a cor da renderização do ponto </td></tr>
+    <tr><td class="paramname">circ</td><td>Referência constante para objeto do tipo <a class="el" href="classCircunferencia.html">Circunferencia</a> que será renderizador</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classCircunferencia.html" title="Classe para Representação de uma Circunferência. É a forma considerada como padrão para os objetos Ob...">Circunferencia</a> </dd></dl>
+
+</div>
+</div>
+<a id="a6120c744af4f4546790c249dfd918688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6120c744af4f4546790c249dfd918688">&#9670;&nbsp;</a></span>desenhar_linha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderizador::desenhar_linha </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;&#160;</td>
+          <td class="paramname"><em>cor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>yi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>yf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que uma linha seja desenhada. </p>
+<p>Dada uma cor e um as posições de inicio e fim de uma linha, essa será desenhada conforme os parâmetros transformados pela <a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a> de Transformação .</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cor</td><td>Referência constante para objeto do tipo <a class="el" href="classCorRGBA.html">CorRGBA</a> que define a cor da renderização da linha </td></tr>
+    <tr><td class="paramname">xi</td><td>coordenada x do ponto inicial da <a class="el" href="classLinha.html" title="Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ...">Linha</a> </td></tr>
+    <tr><td class="paramname">yi</td><td>coordenada y do ponto inicial da <a class="el" href="classLinha.html" title="Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ...">Linha</a> </td></tr>
+    <tr><td class="paramname">xf</td><td>coordenada x do ponto final da <a class="el" href="classLinha.html" title="Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ...">Linha</a> </td></tr>
+    <tr><td class="paramname">yf</td><td>coordenada y do ponto final da <a class="el" href="classLinha.html" title="Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ...">Linha</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8feaa3c34823873730ef2d0feebf6c7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8feaa3c34823873730ef2d0feebf6c7d">&#9670;&nbsp;</a></span>desenhar_ponto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderizador::desenhar_ponto </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;&#160;</td>
+          <td class="paramname"><em>cor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPonto.html">Ponto</a> &amp;&#160;</td>
+          <td class="paramname"><em>ponto</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que um <a class="el" href="classPonto.html">Ponto</a> seja desenhado. </p>
+<p>Dada uma cor e um ponto, esse será desenhado conforme especificado por suas coordenadas transformadas pela <a class="el" href="classMatriz.html">Matriz</a> de Transformação .</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cor</td><td>Referência constante para objeto do tipo <a class="el" href="classCorRGBA.html">CorRGBA</a> que define a cor da renderização do ponto </td></tr>
+    <tr><td class="paramname">ponto</td><td>Referência constante para objeto do tipo <a class="el" href="classPonto.html">Ponto</a> que será renderizador</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano.">Ponto</a> </dd></dl>
+
+</div>
+</div>
+<a id="ae8edd632b63923d0b2397df4d2940669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8edd632b63923d0b2397df4d2940669">&#9670;&nbsp;</a></span>desenhar_retangulo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderizador::desenhar_retangulo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;&#160;</td>
+          <td class="paramname"><em>cor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que um <a class="el" href="classRetangulo.html">Retangulo</a> seja desenhada. </p>
+<p>Dada uma cor e um retângulo, essa será desenhado conforme especificado por seus vértices calculados a partir do <a class="el" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano.">Ponto</a> inicial e das medidas de altura e largura transformados pela <a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a> de Transformação .</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cor</td><td>Referência constante para objeto do tipo <a class="el" href="classCorRGBA.html">CorRGBA</a> que define a cor da renderização do ponto </td></tr>
+    <tr><td class="paramname">triangulo</td><td>Referência constante para objeto do tipo <a class="el" href="classTriangulo.html">Triangulo</a> que será renderizador</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classRetangulo.html" title="Classe para Representação de um Retângulo.">Retangulo</a> </dd></dl>
+
+</div>
+</div>
+<a id="ad4de411cc9db706fd49d2dec5dc7334a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4de411cc9db706fd49d2dec5dc7334a">&#9670;&nbsp;</a></span>desenhar_triangulo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderizador::desenhar_triangulo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;&#160;</td>
+          <td class="paramname"><em>cor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classTriangulo.html">Triangulo</a> &amp;&#160;</td>
+          <td class="paramname"><em>triangulo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que um <a class="el" href="classTriangulo.html">Triangulo</a> seja desenhada. </p>
+<p>Dada uma cor e um triângulo, essa será desenhado conforme especificado por seus vértices transformados pela <a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a> de Transformação</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cor</td><td>Referência constante para objeto do tipo <a class="el" href="classCorRGBA.html">CorRGBA</a> que define a cor da renderização do ponto </td></tr>
+    <tr><td class="paramname">triangulo</td><td>Referência constante para objeto do tipo <a class="el" href="classTriangulo.html">Triangulo</a> que será renderizador</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classTriangulo.html" title="Classe para Representação de um Triangulo.">Triangulo</a> </dd></dl>
+
+</div>
+</div>
+<a id="a70ca92e1cae39b02e5d329a0852fda69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70ca92e1cae39b02e5d329a0852fda69">&#9670;&nbsp;</a></span>desenhar_vetor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderizador::desenhar_vetor </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;&#160;</td>
+          <td class="paramname"><em>cor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVetor.html">Vetor</a> &amp;&#160;</td>
+          <td class="paramname"><em>vetor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPonto.html">Ponto</a> &amp;&#160;</td>
+          <td class="paramname"><em>inicio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solicita ao <a class="el" href="classRenderizador.html">Renderizador</a> que um <a class="el" href="classVetor.html">Vetor</a> seja desenhada. </p>
+<p>Dada uma cor e um vetor, esse será desenhado conforme especificado por suas coordenadas a partir de um ponto de início informado e será transformado pela <a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a> de Transformação .</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cor</td><td>Referência constante para objeto do tipo <a class="el" href="classCorRGBA.html">CorRGBA</a> que define a cor da renderização do ponto </td></tr>
+    <tr><td class="paramname">vetor</td><td>Referência constante para objeto do tipo <a class="el" href="classVetor.html">Vetor</a> que será renderizador </td></tr>
+    <tr><td class="paramname">inicio</td><td>Referência constante para objeto do tipo <a class="el" href="classPonto.html">Ponto</a> que define o ponto de início para renderização do <a class="el" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano.">Vetor</a>, observado que esse é armazenado pela classe <a class="el" href="classVetor.html">Vetor</a> como sempre em relação a Origem do plano cartesiano </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af9995385984b68ace19e6655daf8a3ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9995385984b68ace19e6655daf8a3ae">&#9670;&nbsp;</a></span>limpar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderizador::limpar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;&#160;</td>
+          <td class="paramname"><em>cor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Limpa a o <a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a>. </p>
+<p>Configura o <a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> para um cor padrão e apaga qualquer renderização presente na Área de renderização da janela SDL.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cor</td><td>Referência constante para objeto do tipo <a class="el" href="classCorRGBA.html">CorRGBA</a> <br  />
+ que especifica a cor de configuração do <a class="el" href="classRenderizador.html">Renderizador</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab8992f4244c7e55d9693e085bf0c57fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8992f4244c7e55d9693e085bf0c57fb">&#9670;&nbsp;</a></span>setCorDesenho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Renderizador::setCorDesenho </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;&#160;</td>
+          <td class="paramname"><em>cor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define uma cor para a renderização. </p>
+<p>Define a cor que deve ser usada para o processo de renderização. Uma vez configurada a cor será usada até que outra chamada seja realizada a esse mesmo método especificando uma nova cor.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cor</td><td>Referência constante para objeto do tipo <a class="el" href="classCorRGBA.html">CorRGBA</a> <br  />
+ que especifica a cor de renderização </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
 <li>Interface/<a class="el" href="renderizador_8h_source.html">renderizador.h</a></li>
 </ul>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['inicializar_63',['inicializar',['../classControlador__SDL.html#a58e158a1ee9311bbd63c336f9b8cc4c1',1,'Controlador_SDL']]]
+  ['evento_215',['Evento',['../classEvento.html#a784ca75439e527cbd03b84e50e54e017',1,'Evento']]],
+  ['exibirobjetos_216',['exibirObjetos',['../classDetectorColisao.html#aab2f496a09ee3ede00105853141e635b',1,'DetectorColisao']]]
 ];

@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -70,59 +77,63 @@ $(function() {
 <div class="title">controlador_SDL.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<a href="controlador__SDL_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef CONTROLADOR_SDL_H</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#define CONTROLADOR_SDL_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classControlador__SDL.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classControlador__SDL.html">Controlador_SDL</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">   16</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a>; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#ab9eb55d41466f50793e26fa80d44eba0">   23</a></span>&#160;        <a class="code" href="classControlador__SDL.html#ab9eb55d41466f50793e26fa80d44eba0">Controlador_SDL</a>(){};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#afe1314444a7db563c5bdbe222142c6ec">   26</a></span>&#160;        <a class="code" href="classControlador__SDL.html#afe1314444a7db563c5bdbe222142c6ec">~Controlador_SDL</a>(){}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#a58e158a1ee9311bbd63c336f9b8cc4c1">   44</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classControlador__SDL.html#a58e158a1ee9311bbd63c336f9b8cc4c1">inicializar</a>(){</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_EVERYTHING) &lt; 0){</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;Erro ao Iniciar SDL - &quot;</span> &lt;&lt; SDL_GetError() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <a class="code" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;SDL Inicializado...\n&quot;</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <a class="code" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }   </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#a4d1faad690db1e539853605119eada3b">   65</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classControlador__SDL.html#a4d1faad690db1e539853605119eada3b">pausar</a>(<span class="keywordtype">int</span> milissegundos){</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;SDL Pausado...\n&quot;</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            SDL_Delay(milissegundos);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#acae9b200430be5abc032da8041115092">   78</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classControlador__SDL.html#acae9b200430be5abc032da8041115092">finalizar</a>(){</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;SDL Finalizado...\n&quot;</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <a class="code" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            SDL_Quit();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#ae190d2109862257555103015095c43ba">   88</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classControlador__SDL.html#ae190d2109862257555103015095c43ba">getInicializado</a>(){</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a>;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classControlador__SDL.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classControlador__SDL.html">Controlador_SDL</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">   17</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a>;          </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#ab9eb55d41466f50793e26fa80d44eba0">   35</a></span>&#160;        <a class="code" href="classControlador__SDL.html#ab9eb55d41466f50793e26fa80d44eba0">Controlador_SDL</a>(){};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#afe1314444a7db563c5bdbe222142c6ec">   38</a></span>&#160;        <a class="code" href="classControlador__SDL.html#afe1314444a7db563c5bdbe222142c6ec">~Controlador_SDL</a>(){}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#a58e158a1ee9311bbd63c336f9b8cc4c1">   61</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classControlador__SDL.html#a58e158a1ee9311bbd63c336f9b8cc4c1">inicializar</a>(){</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">if</span> (SDL_Init(SDL_INIT_EVERYTHING) &lt; 0){</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;Erro ao Iniciar SDL - &quot;</span> &lt;&lt; SDL_GetError() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <a class="code" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;SDL Inicializado...\n&quot;</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <a class="code" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }   </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#a4d1faad690db1e539853605119eada3b">   83</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classControlador__SDL.html#a4d1faad690db1e539853605119eada3b">pausar</a>(<span class="keywordtype">int</span> milissegundos){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;SDL Pausado...\n&quot;</span>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            SDL_Delay(milissegundos);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#acae9b200430be5abc032da8041115092">   97</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classControlador__SDL.html#acae9b200430be5abc032da8041115092">finalizar</a>(){</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;SDL Finalizado...\n&quot;</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <a class="code" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            SDL_Quit();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="classControlador__SDL.html#ae190d2109862257555103015095c43ba">  108</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classControlador__SDL.html#ae190d2109862257555103015095c43ba">getInicializado</a>(){</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassControlador__SDL_html_acae9b200430be5abc032da8041115092"><div class="ttname"><a href="classControlador__SDL.html#acae9b200430be5abc032da8041115092">Controlador_SDL::finalizar</a></div><div class="ttdeci">void finalizar()</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:78</div></div>
-<div class="ttc" id="aclassControlador__SDL_html_afe1314444a7db563c5bdbe222142c6ec"><div class="ttname"><a href="classControlador__SDL.html#afe1314444a7db563c5bdbe222142c6ec">Controlador_SDL::~Controlador_SDL</a></div><div class="ttdeci">~Controlador_SDL()</div><div class="ttdoc">Destrutor da Classe.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:26</div></div>
-<div class="ttc" id="aclassControlador__SDL_html_aadf0682a32bea80257020017a68dac41"><div class="ttname"><a href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">Controlador_SDL::inicializado</a></div><div class="ttdeci">bool inicializado</div><div class="ttdoc">Indicador de inicialização. Um valor True -&gt; SDL Inicializado.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:16</div></div>
-<div class="ttc" id="aclassControlador__SDL_html_ab9eb55d41466f50793e26fa80d44eba0"><div class="ttname"><a href="classControlador__SDL.html#ab9eb55d41466f50793e26fa80d44eba0">Controlador_SDL::Controlador_SDL</a></div><div class="ttdeci">Controlador_SDL()</div><div class="ttdoc">Construtor Default.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:23</div></div>
-<div class="ttc" id="aclassControlador__SDL_html_ae190d2109862257555103015095c43ba"><div class="ttname"><a href="classControlador__SDL.html#ae190d2109862257555103015095c43ba">Controlador_SDL::getInicializado</a></div><div class="ttdeci">bool getInicializado()</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:88</div></div>
-<div class="ttc" id="aclassControlador__SDL_html_a4d1faad690db1e539853605119eada3b"><div class="ttname"><a href="classControlador__SDL.html#a4d1faad690db1e539853605119eada3b">Controlador_SDL::pausar</a></div><div class="ttdeci">void pausar(int milissegundos)</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:65</div></div>
-<div class="ttc" id="aclassControlador__SDL_html"><div class="ttname"><a href="classControlador__SDL.html">Controlador_SDL</a></div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:14</div></div>
-<div class="ttc" id="aclassControlador__SDL_html_a58e158a1ee9311bbd63c336f9b8cc4c1"><div class="ttname"><a href="classControlador__SDL.html#a58e158a1ee9311bbd63c336f9b8cc4c1">Controlador_SDL::inicializar</a></div><div class="ttdeci">void inicializar()</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:44</div></div>
+<div class="ttc" id="aclassControlador__SDL_html_acae9b200430be5abc032da8041115092"><div class="ttname"><a href="classControlador__SDL.html#acae9b200430be5abc032da8041115092">Controlador_SDL::finalizar</a></div><div class="ttdeci">void finalizar()</div><div class="ttdoc">Finaliza a biblioteca SDL.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:97</div></div>
+<div class="ttc" id="aclassControlador__SDL_html_afe1314444a7db563c5bdbe222142c6ec"><div class="ttname"><a href="classControlador__SDL.html#afe1314444a7db563c5bdbe222142c6ec">Controlador_SDL::~Controlador_SDL</a></div><div class="ttdeci">~Controlador_SDL()</div><div class="ttdoc">Destrutor da Classe.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:38</div></div>
+<div class="ttc" id="aclassControlador__SDL_html_aadf0682a32bea80257020017a68dac41"><div class="ttname"><a href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">Controlador_SDL::inicializado</a></div><div class="ttdeci">bool inicializado</div><div class="ttdoc">Indicador de inicialização. Um valor True implica em SDL Inicializado.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:17</div></div>
+<div class="ttc" id="aclassControlador__SDL_html_ab9eb55d41466f50793e26fa80d44eba0"><div class="ttname"><a href="classControlador__SDL.html#ab9eb55d41466f50793e26fa80d44eba0">Controlador_SDL::Controlador_SDL</a></div><div class="ttdeci">Controlador_SDL()</div><div class="ttdoc">Construtor Default e Base.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:35</div></div>
+<div class="ttc" id="aclassControlador__SDL_html_ae190d2109862257555103015095c43ba"><div class="ttname"><a href="classControlador__SDL.html#ae190d2109862257555103015095c43ba">Controlador_SDL::getInicializado</a></div><div class="ttdeci">bool getInicializado()</div><div class="ttdoc">Retorna se a biblioteca foi ou não inicializada.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:108</div></div>
+<div class="ttc" id="aclassControlador__SDL_html_a4d1faad690db1e539853605119eada3b"><div class="ttname"><a href="classControlador__SDL.html#a4d1faad690db1e539853605119eada3b">Controlador_SDL::pausar</a></div><div class="ttdeci">void pausar(int milissegundos)</div><div class="ttdoc">Pausa a aplicação SDL.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:83</div></div>
+<div class="ttc" id="aclassControlador__SDL_html"><div class="ttname"><a href="classControlador__SDL.html">Controlador_SDL</a></div><div class="ttdoc">Classe responsável pela inicialização e possibilitar a operação da biblioteca SDL.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:15</div></div>
+<div class="ttc" id="aclassControlador__SDL_html_a58e158a1ee9311bbd63c336f9b8cc4c1"><div class="ttname"><a href="classControlador__SDL.html#a58e158a1ee9311bbd63c336f9b8cc4c1">Controlador_SDL::inicializar</a></div><div class="ttdeci">void inicializar()</div><div class="ttdoc">Inicializa a biblioteca SDL.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:61</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado por &#160;<a href="http://www.doxygen.org/index.html">

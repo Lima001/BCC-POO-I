@@ -1,37 +1,133 @@
 \hypertarget{classJanela}{}\doxysection{Referência da Classe Janela}
 \label{classJanela}\index{Janela@{Janela}}
+
+
+Classe responsável pela criação e controle da \mbox{\hyperlink{classJanela}{Janela}} gráfica e seus elementos associados.  
+
+
+
+
+{\ttfamily \#include $<$janela.\+h$>$}
+
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classJanela_a0808bfc9f11824820da4f7d246eb0e68}\label{classJanela_a0808bfc9f11824820da4f7d246eb0e68}} 
-{\bfseries Janela} (const char titulo\mbox{[}$\,$\mbox{]}, int largura, int altura)
-\item 
-\mbox{\Hypertarget{classJanela_afecf007f98faaa349664e6e2c13463c9}\label{classJanela_afecf007f98faaa349664e6e2c13463c9}} 
-void {\bfseries iniciar\+Surface} ()
-\item 
-\mbox{\Hypertarget{classJanela_aca4f782386c2f80a6b726c849c488b78}\label{classJanela_aca4f782386c2f80a6b726c849c488b78}} 
-void {\bfseries preencher\+Fundo} (\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor)
-\item 
-\mbox{\Hypertarget{classJanela_ae1743ea3afd721298e031480d9dec95c}\label{classJanela_ae1743ea3afd721298e031480d9dec95c}} 
-void {\bfseries atualizar} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classJanela_a0808bfc9f11824820da4f7d246eb0e68}{Janela}} (const char titulo\mbox{[}$\,$\mbox{]}, int \mbox{\hyperlink{classJanela_a573f824f777ea90de7af09fa7ee8919a}{largura}}, int \mbox{\hyperlink{classJanela_ac4535f602aeb08e63e72c44e4a1e947b}{altura}})
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classJanela_a60212eb57108f5fc838bb1ba2eb04f40}{$\sim$\+Janela}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJanela_afecf007f98faaa349664e6e2c13463c9}{iniciar\+Surface}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa a área de renderização gráfica da janela. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJanela_af0ac21701758313e61f3ae6d196c30db}{preencher\+Fundo}} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor)
+\begin{DoxyCompactList}\small\item\em Define uma cor de fundo para a Área de renderização gráfica da janela. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classJanela_ae1743ea3afd721298e031480d9dec95c}{atualizar}} ()
+\begin{DoxyCompactList}\small\item\em Atualiza a Área de Renderização. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classJanela_a573f824f777ea90de7af09fa7ee8919a}\label{classJanela_a573f824f777ea90de7af09fa7ee8919a}} 
-int {\bfseries largura}
-\item 
+int \mbox{\hyperlink{classJanela_a573f824f777ea90de7af09fa7ee8919a}{largura}}
+\begin{DoxyCompactList}\small\item\em Largura da janela a ser criada. Não deve ser alterado durante a aplicação. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classJanela_ac4535f602aeb08e63e72c44e4a1e947b}\label{classJanela_ac4535f602aeb08e63e72c44e4a1e947b}} 
-int {\bfseries altura}
-\item 
+int \mbox{\hyperlink{classJanela_ac4535f602aeb08e63e72c44e4a1e947b}{altura}}
+\begin{DoxyCompactList}\small\item\em Altura da janela a ser criada. Não deve ser alterado durante a aplicação. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classJanela_a7db027b0d0917be8a5c0ad368fdfbd33}\label{classJanela_a7db027b0d0917be8a5c0ad368fdfbd33}} 
-S\+D\+L\+\_\+\+Window $\ast$ {\bfseries ptr\+\_\+janela} = N\+U\+LL
-\item 
+S\+D\+L\+\_\+\+Window $\ast$ \mbox{\hyperlink{classJanela_a7db027b0d0917be8a5c0ad368fdfbd33}{ptr\+\_\+janela}} = nullptr
+\begin{DoxyCompactList}\small\item\em Ponteiro para o objeto S\+D\+L\+\_\+\+Window. Permite acesso a janela gráfica gerada por essa biblioteca. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classJanela_a463ac510287b1da2be6afce7ae8a492d}\label{classJanela_a463ac510287b1da2be6afce7ae8a492d}} 
-S\+D\+L\+\_\+\+Surface $\ast$ {\bfseries ptr\+\_\+surface} = N\+U\+LL
-\end{DoxyCompactItemize}
+S\+D\+L\+\_\+\+Surface $\ast$ \mbox{\hyperlink{classJanela_a463ac510287b1da2be6afce7ae8a492d}{ptr\+\_\+surface}} = nullptr
+\begin{DoxyCompactList}\small\item\em Ponteiro para o objeto S\+D\+L\+\_\+\+Surface. Permite acesso a área de renderização gerada por essa biblioteca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe responsável pela criação e controle da \mbox{\hyperlink{classJanela}{Janela}} gráfica e seus elementos associados. 
+
+\begin{DoxyAuthor}{Autor}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Última alteração\+: 28/02/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classJanela_a0808bfc9f11824820da4f7d246eb0e68}\label{classJanela_a0808bfc9f11824820da4f7d246eb0e68}} 
+\index{Janela@{Janela}!Janela@{Janela}}
+\index{Janela@{Janela}!Janela@{Janela}}
+\doxysubsubsection{\texorpdfstring{Janela()}{Janela()}}
+{\footnotesize\ttfamily Janela\+::\+Janela (\begin{DoxyParamCaption}\item[{const char}]{titulo\mbox{[}$\,$\mbox{]},  }\item[{int}]{largura,  }\item[{int}]{altura }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Usado para criar um objeto janela conforme parâmetros informados. Não incializa o ponteiro para S\+D\+L\+\_\+\+Surface do objeto, sendo que esse deve ser inicializados somente através de seu métodos membros implementados, nas situações julgadas necessárias.
+
+Em caso de erros durante o processo de criação da janela gráfica pelo S\+DL, o erro será exibido conforme retorno da função S\+D\+L\+\_\+\+Get\+Error().
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em titulo} & Uma string estilo C. É usado para criar a janela atavés da função S\+D\+L\+\_\+\+Create\+Window() que solicita um título \\
+\hline
+{\em largura} & Inicializa atributo de mesma nomenclatura \\
+\hline
+{\em altura} & Inicializa atributo de mesma nomenclatura \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classJanela_a60212eb57108f5fc838bb1ba2eb04f40}\label{classJanela_a60212eb57108f5fc838bb1ba2eb04f40}} 
+\index{Janela@{Janela}!````~Janela@{$\sim$Janela}}
+\index{````~Janela@{$\sim$Janela}!Janela@{Janela}}
+\doxysubsubsection{\texorpdfstring{$\sim$Janela()}{~Janela()}}
+{\footnotesize\ttfamily Janela\+::$\sim$\+Janela (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da Classe. 
+
+Verifica se alguma janela gráfica foi construída a partir do S\+DL. Em caso de existência de algo do tipo, a janela é destruída por esse método. 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classJanela_ae1743ea3afd721298e031480d9dec95c}\label{classJanela_ae1743ea3afd721298e031480d9dec95c}} 
+\index{Janela@{Janela}!atualizar@{atualizar}}
+\index{atualizar@{atualizar}!Janela@{Janela}}
+\doxysubsubsection{\texorpdfstring{atualizar()}{atualizar()}}
+{\footnotesize\ttfamily void Janela\+::atualizar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atualiza a Área de Renderização. 
+
+Esse método deve ser usado logo após todas as definições de renderização tiverem sido concluidas. Caso o método não seja chamado, não será possível observar os efeitos gráficos produzidos. \mbox{\Hypertarget{classJanela_afecf007f98faaa349664e6e2c13463c9}\label{classJanela_afecf007f98faaa349664e6e2c13463c9}} 
+\index{Janela@{Janela}!iniciarSurface@{iniciarSurface}}
+\index{iniciarSurface@{iniciarSurface}!Janela@{Janela}}
+\doxysubsubsection{\texorpdfstring{iniciarSurface()}{iniciarSurface()}}
+{\footnotesize\ttfamily void Janela\+::iniciar\+Surface (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicializa a área de renderização gráfica da janela. 
+
+Esse método é usado para inicializar o ponteiro \mbox{\hyperlink{classJanela_a463ac510287b1da2be6afce7ae8a492d}{ptr\+\_\+surface}} que permite acesso a área de renderização gráfica da janela criada.
+
+Observação\+: Deve-\/se somente chamar esse método se a janela gráfica S\+DL já tiver sido criada, podendo resultar erro em caso contrário. \mbox{\Hypertarget{classJanela_af0ac21701758313e61f3ae6d196c30db}\label{classJanela_af0ac21701758313e61f3ae6d196c30db}} 
+\index{Janela@{Janela}!preencherFundo@{preencherFundo}}
+\index{preencherFundo@{preencherFundo}!Janela@{Janela}}
+\doxysubsubsection{\texorpdfstring{preencherFundo()}{preencherFundo()}}
+{\footnotesize\ttfamily void Janela\+::preencher\+Fundo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&}]{cor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Define uma cor de fundo para a Área de renderização gráfica da janela. 
+
+Método usado quando deseja-\/se resetar o gráfico da área de renderização usando-\/se da definição de uma cor de fundo padrão.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cor} & Referência constante para um objeto \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} que será usado para gerar a cor compreendida pelas funções S\+DL e que representa a cor de fundo desejada pelo desenvolvedor \\
+\hline
+\end{DoxyParams}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Interface/janela.\+h\end{DoxyCompactItemize}
+Interface/\mbox{\hyperlink{janela_8h}{janela.\+h}}\end{DoxyCompactItemize}

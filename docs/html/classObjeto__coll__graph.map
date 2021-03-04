@@ -1,0 +1,5 @@
+<map id="Objeto" name="Objeto">
+<area shape="rect" id="node1" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar&#45;se." alt="" coords="50,109,115,136"/>
+<area shape="rect" id="node2" href="$classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano." alt="" coords="5,5,61,32"/>
+<area shape="rect" id="node3" href="$classAceleracao.html" title=" " alt="" coords="86,5,181,32"/>
+</map>

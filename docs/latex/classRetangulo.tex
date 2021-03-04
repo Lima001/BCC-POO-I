@@ -2,46 +2,195 @@
 \label{classRetangulo}\index{Retangulo@{Retangulo}}
 
 
+Classe para Representação de um Retângulo.  
+
+
+
+
+{\ttfamily \#include $<$retangulo.\+h$>$}
+
+
+
 Diagrama de colaboração para Retangulo\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classRetangulo__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRetangulo_a2a6b2863847d97303b8e5e3992a69b82}\label{classRetangulo_a2a6b2863847d97303b8e5e3992a69b82}} 
-{\bfseries Retangulo} (const \mbox{\hyperlink{classPonto}{Ponto}} \&inicio, float largura, float altura)
-\item 
-\mbox{\Hypertarget{classRetangulo_a00dd3d5f324f753448e7ef8fb70e1c8b}\label{classRetangulo_a00dd3d5f324f753448e7ef8fb70e1c8b}} 
-{\bfseries Retangulo} (const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&rect)
-\item 
-\mbox{\Hypertarget{classRetangulo_ab29cdc63380ed0cc1f4568e91a8fcb30}\label{classRetangulo_ab29cdc63380ed0cc1f4568e91a8fcb30}} 
-{\bfseries Retangulo} (\mbox{\hyperlink{classRetangulo}{Retangulo}} \&\&rect) noexcept
-\item 
-\mbox{\Hypertarget{classRetangulo_a7e52f891a519cdd0e480ed70be0a36d7}\label{classRetangulo_a7e52f891a519cdd0e480ed70be0a36d7}} 
-\mbox{\hyperlink{classRetangulo}{Retangulo}} \& {\bfseries operator=} (const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&rect)
-\item 
-\mbox{\Hypertarget{classRetangulo_a8d470ef6fc2c5c57e07eb747dce64f78}\label{classRetangulo_a8d470ef6fc2c5c57e07eb747dce64f78}} 
-\mbox{\hyperlink{classRetangulo}{Retangulo}} \& {\bfseries operator=} (\mbox{\hyperlink{classRetangulo}{Retangulo}} \&\&rect) noexcept
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classRetangulo_ac21a81cae046920c8bee401bcb879562}{Retangulo}} ()
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRetangulo_a2a6b2863847d97303b8e5e3992a69b82}{Retangulo}} (const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classRetangulo_a23839310726426373d115180884c03e5}{inicio}}, float \mbox{\hyperlink{classRetangulo_a7dc902283835c9a9e4302a628f43d382}{largura}}, float \mbox{\hyperlink{classRetangulo_a80a55ad677f16d52118d16127e5b9207}{altura}})
+\begin{DoxyCompactList}\small\item\em Construtor base. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRetangulo_a00dd3d5f324f753448e7ef8fb70e1c8b}{Retangulo}} (const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&rect)
+\begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRetangulo_ab29cdc63380ed0cc1f4568e91a8fcb30}{Retangulo}} (\mbox{\hyperlink{classRetangulo}{Retangulo}} \&\&rect) noexcept
+\begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRetangulo}{Retangulo}} \& \mbox{\hyperlink{classRetangulo_a7e52f891a519cdd0e480ed70be0a36d7}{operator=}} (const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&rect)
+\begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRetangulo}{Retangulo}} \& \mbox{\hyperlink{classRetangulo_a8d470ef6fc2c5c57e07eb747dce64f78}{operator=}} (\mbox{\hyperlink{classRetangulo}{Retangulo}} \&\&rect) noexcept
+\begin{DoxyCompactList}\small\item\em Atribuição Move. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classRetangulo_a23839310726426373d115180884c03e5}\label{classRetangulo_a23839310726426373d115180884c03e5}} 
-\mbox{\hyperlink{classPonto}{Ponto}} {\bfseries inicio}
-\item 
+\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classRetangulo_a23839310726426373d115180884c03e5}{inicio}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPonto}{Ponto}} de início do retângulo -\/ Considerar ponto Superior Esquerdo da Figura. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRetangulo_a7dc902283835c9a9e4302a628f43d382}\label{classRetangulo_a7dc902283835c9a9e4302a628f43d382}} 
-float {\bfseries largura}
-\item 
+float \mbox{\hyperlink{classRetangulo_a7dc902283835c9a9e4302a628f43d382}{largura}}
+\begin{DoxyCompactList}\small\item\em Medida da Largura do retângulo. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classRetangulo_a80a55ad677f16d52118d16127e5b9207}\label{classRetangulo_a80a55ad677f16d52118d16127e5b9207}} 
-float {\bfseries altura}
-\end{DoxyCompactItemize}
+float \mbox{\hyperlink{classRetangulo_a80a55ad677f16d52118d16127e5b9207}{altura}}
+\begin{DoxyCompactList}\small\item\em Medida da Altura do retangulo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
+std\+::ostream \& \mbox{\hyperlink{classRetangulo_a585a1a12eee2b5c94e6bf56b1e25369e}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&rect)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do Insertion Operator para Saída de Dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para Representação de um Retângulo. 
+
+\begin{DoxyAuthor}{Autor}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Última Modificação\+: 27/02/2001 
+\end{DoxyDate}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classRetangulo_ac21a81cae046920c8bee401bcb879562}\label{classRetangulo_ac21a81cae046920c8bee401bcb879562}} 
+\index{Retangulo@{Retangulo}!Retangulo@{Retangulo}}
+\index{Retangulo@{Retangulo}!Retangulo@{Retangulo}}
+\doxysubsubsection{\texorpdfstring{Retangulo()}{Retangulo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Retangulo\+::\+Retangulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Chamado quando nenhum parâmetro de ininicialização for informado.
+
+Cria um objeto do tipo \mbox{\hyperlink{classRetangulo}{Retangulo}} com perímetro nulo. Usar somente para declaração de variaveis. Não esquecer de modificar os atributos para fazer o correto uso do objeto. \mbox{\Hypertarget{classRetangulo_a2a6b2863847d97303b8e5e3992a69b82}\label{classRetangulo_a2a6b2863847d97303b8e5e3992a69b82}} 
+\index{Retangulo@{Retangulo}!Retangulo@{Retangulo}}
+\index{Retangulo@{Retangulo}!Retangulo@{Retangulo}}
+\doxysubsubsection{\texorpdfstring{Retangulo()}{Retangulo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Retangulo\+::\+Retangulo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{inicio,  }\item[{float}]{largura,  }\item[{float}]{altura }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor base. 
+
+Cria um objeto a partir dos parâmetros informados.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em inicio} & Referência constante a um \mbox{\hyperlink{classPonto}{Ponto}} usado para inicializar o atributo de mesma nomenclatura \\
+\hline
+{\em largura} & usado para inicializar o atributo de mesma nomenclatura \\
+\hline
+{\em float} & usado para inicializar o atributo de mesma nomenclatura \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRetangulo_a00dd3d5f324f753448e7ef8fb70e1c8b}\label{classRetangulo_a00dd3d5f324f753448e7ef8fb70e1c8b}} 
+\index{Retangulo@{Retangulo}!Retangulo@{Retangulo}}
+\index{Retangulo@{Retangulo}!Retangulo@{Retangulo}}
+\doxysubsubsection{\texorpdfstring{Retangulo()}{Retangulo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Retangulo\+::\+Retangulo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor de Cópia. 
+
+Cria um novo objeto copiando os atributos de um \mbox{\hyperlink{classRetangulo}{Retangulo}} informado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em t} & Referência constante para o \mbox{\hyperlink{classRetangulo}{Retangulo}} que deseja-\/se copiar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRetangulo_ab29cdc63380ed0cc1f4568e91a8fcb30}\label{classRetangulo_ab29cdc63380ed0cc1f4568e91a8fcb30}} 
+\index{Retangulo@{Retangulo}!Retangulo@{Retangulo}}
+\index{Retangulo@{Retangulo}!Retangulo@{Retangulo}}
+\doxysubsubsection{\texorpdfstring{Retangulo()}{Retangulo()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Retangulo\+::\+Retangulo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRetangulo}{Retangulo}} \&\&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construtor Move. 
+
+Cria um novo objeto fazendo uso do recurso de movimentação Transfere de maneira eficiente os dados de um \mbox{\hyperlink{classRetangulo}{Retangulo}} para o novo objeto criado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em t} & Referência rvalue de um \mbox{\hyperlink{classRetangulo}{Retangulo}}\\
+\hline
+\end{DoxyParams}
+Para mais detalhe sobre o recurso, consultar documentação da linguagem 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classRetangulo_a7e52f891a519cdd0e480ed70be0a36d7}\label{classRetangulo_a7e52f891a519cdd0e480ed70be0a36d7}} 
+\index{Retangulo@{Retangulo}!operator=@{operator=}}
+\index{operator=@{operator=}!Retangulo@{Retangulo}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRetangulo}{Retangulo}}\& Retangulo\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atribuição por Cópia. 
+
+Copia o valor dos atributos do \mbox{\hyperlink{classRetangulo}{Retangulo}} passado por parâmetro para o \mbox{\hyperlink{classRetangulo}{Retangulo}} que invocou o operador.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em rect} & Referência constante do \mbox{\hyperlink{classRetangulo}{Retangulo}} que deseja-\/se copiar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o \mbox{\hyperlink{classRetangulo}{Retangulo}} que invocou o operador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRetangulo_a8d470ef6fc2c5c57e07eb747dce64f78}\label{classRetangulo_a8d470ef6fc2c5c57e07eb747dce64f78}} 
+\index{Retangulo@{Retangulo}!operator=@{operator=}}
+\index{operator=@{operator=}!Retangulo@{Retangulo}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRetangulo}{Retangulo}}\& Retangulo\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRetangulo}{Retangulo}} \&\&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Atribuição Move. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em rect} & Referência rvalue de um \mbox{\hyperlink{classRetangulo}{Retangulo}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o \mbox{\hyperlink{classRetangulo}{Retangulo}} que Invocou o operador 
+\end{DoxyReturn}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
 \mbox{\Hypertarget{classRetangulo_a585a1a12eee2b5c94e6bf56b1e25369e}\label{classRetangulo_a585a1a12eee2b5c94e6bf56b1e25369e}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&rect)
-\end{DoxyCompactItemize}
+\index{Retangulo@{Retangulo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Retangulo@{Retangulo}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&}]{rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do Insertion Operator para Saída de Dados. 
+
+\begin{DoxyReturn}{Retorna}
+string no formato\+: \char`\"{}\+Retangulo(\+Ponto(x,y),largura,altura)\char`\"{} onde cada elemento refere-\/se aos valores dos atributos. 
+\end{DoxyReturn}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Base/retangulo.\+h\end{DoxyCompactItemize}
+Base/\mbox{\hyperlink{retangulo_8h}{retangulo.\+h}}\end{DoxyCompactItemize}

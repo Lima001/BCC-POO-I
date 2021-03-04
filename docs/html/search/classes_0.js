@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['aceleracao_39',['Aceleracao',['../classAceleracao.html',1,'']]]
+  ['aceleracao_152',['Aceleracao',['../classAceleracao.html',1,'']]],
+  ['acelerecao_153',['Acelerecao',['../classAcelerecao.html',1,'']]]
 ];

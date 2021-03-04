@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -70,147 +77,198 @@ $(function() {
 <div class="title">objeto.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;vetor.h&quot;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;circunferencia.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;aceleracao.h&quot;</span></div>
+<a href="objeto_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vetor_8h.html">vetor.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="circunferencia_8h.html">circunferencia.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="aceleracao_8h.html">aceleracao.h</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef OBJETO_H</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define OBJETO_H</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classObjeto.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classObjeto.html">Objeto</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> contagem_id;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">int</span> id;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">float</span> raio_circunferencia;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">float</span> m;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="classVetor.html">Vetor</a> r;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="classVetor.html">Vetor</a> v;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="classAceleracao.html">Aceleracao</a> a;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="classObjeto.html">Objeto</a>():</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            raio_circunferencia(0),</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            m(0),</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            r(<a class="code" href="classVetor.html">Vetor</a>()),</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            v(<a class="code" href="classVetor.html">Vetor</a>()),</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            a(<a class="code" href="classAceleracao.html">Aceleracao</a>())</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordtype">id</span> = contagem_id++;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">// Construtor Base</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classObjeto.html">Objeto</a>(<span class="keywordtype">float</span> raio, <span class="keywordtype">float</span> massa, <span class="keyword">const</span> <a class="code" href="classVetor.html">Vetor</a> posicao, <span class="keyword">const</span> <a class="code" href="classVetor.html">Vetor</a> movimento, <span class="keyword">const</span> <a class="code" href="classAceleracao.html">Aceleracao</a> aceleracao):</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            m(massa),</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            raio_circunferencia(raio),</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            r(posicao),</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            v(movimento),</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            a(aceleracao)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordtype">id</span> = contagem_id++;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// Construtor de Cópia</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="classObjeto.html">Objeto</a>(<span class="keyword">const</span> <a class="code" href="classObjeto.html">Objeto</a> &amp;obj):</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            raio_circunferencia(obj.raio_circunferencia),</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            m(obj.m),</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            r(obj.r),</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            v(obj.v),</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            a(obj.a)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordtype">id</span> = contagem_id++;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// Construtor Move</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classObjeto.html">Objeto</a>(<a class="code" href="classObjeto.html">Objeto</a> &amp;&amp;obj) noexcept{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordtype">id</span> = contagem_id++;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            raio_circunferencia = obj.raio_circunferencia;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            m = obj.m;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            r = std::move(obj.r);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            v = std::move(obj.v);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            a = std::move(obj.a);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="classCircunferencia.html">Circunferencia</a> getCircunferencia(){</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classCircunferencia.html">Circunferencia</a>(raio_circunferencia, r.<a class="code" href="classVetor.html#af9ec833987134211b666458ac33811fe">vetorToPonto</a>());</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">void</span> movimentar(<span class="keywordtype">double</span> ti, <span class="keywordtype">double</span> tf, <span class="keywordtype">double</span> dt){</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="comment">// Uso do Integrador de Euler</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordtype">int</span> n_passos = 10000;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordtype">double</span> h =  (1.f/n_passos) / (1.f/dt);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordtype">double</span> r0_x = r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordtype">double</span> r0_y = r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordtype">double</span> v0_x = v.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordtype">double</span> v0_y = v.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">for</span> (ti; ti&lt;tf; ti+=h){</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                v0_x = v0_x + h*(a.func_x(ti));</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                v0_y = v0_y + h*(a.func_y(ti));</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                r0_x = r0_x + h*(v0_x);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                r0_y = r0_y + h*(v0_y);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            v.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> = v0_x;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            v.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> = v0_y;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> = r0_x;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> = r0_y;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">/*</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">            Métodos de sobrecarga de operadores!</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">        */</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">friend</span> std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, <a class="code" href="classObjeto.html">Objeto</a> &amp;objeto){</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            out &lt;&lt; objeto.id &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                    objeto.r.<a class="code" href="classVetor.html#af9ec833987134211b666458ac33811fe">vetorToPonto</a>() &lt;&lt; <span class="stringliteral">&quot;; &quot;</span> &lt;&lt; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    objeto.v.<a class="code" href="classVetor.html#af9ec833987134211b666458ac33811fe">vetorToPonto</a>();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">// Atribuição por Cópia</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="classObjeto.html">Objeto</a>&amp; operator= (<a class="code" href="classObjeto.html">Objeto</a> &amp;obj){</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordtype">id</span> = obj.id;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            raio_circunferencia = obj.raio_circunferencia;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            m = obj.m;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            r = std::move(obj.r);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            v = std::move(obj.v);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            a = std::move(obj.a);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="comment">// Atribuição Move</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="classObjeto.html">Objeto</a>&amp; operator= (<a class="code" href="classObjeto.html">Objeto</a> &amp;&amp;obj) noexcept {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">if</span> (&amp;obj == <span class="keyword">this</span>){</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            raio_circunferencia = obj.raio_circunferencia;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            m = obj.m;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            r = std::move(obj.r);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            v = std::move(obj.v);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            a = std::move(obj.a);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keywordtype">int</span> Objeto::contagem_id = 0;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classObjeto.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classObjeto.html">Objeto</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> contagem_id;             </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classObjeto.html#aa722a7b9c4a9d19d7a1d9be413be06fc">   22</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classObjeto.html#aa722a7b9c4a9d19d7a1d9be413be06fc">id</a>;                             </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">   23</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a>;          </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">   24</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a>;                            </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">   25</a></span>&#160;        <a class="code" href="classVetor.html">Vetor</a> <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>;                            </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">   26</a></span>&#160;        <a class="code" href="classVetor.html">Vetor</a> <a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a>;                            </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">   27</a></span>&#160;        <a class="code" href="classAceleracao.html">Aceleracao</a> <a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a>;                       </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classObjeto.html#a5608071f995c220f0f1a0e5887c2d11d">   38</a></span>&#160;        <a class="code" href="classObjeto.html#a5608071f995c220f0f1a0e5887c2d11d">Objeto</a>():</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a>(0),</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <a class="code" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a>(0),</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>(<a class="code" href="classVetor.html">Vetor</a>()),</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a>(<a class="code" href="classVetor.html">Vetor</a>()),</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a>(<a class="code" href="classAceleracao.html">Aceleracao</a>())</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="comment">// Atualização do id automáticamente</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordtype">id</span> = contagem_id++;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classObjeto.html#a2907a62f11eee76e74ba9c9bf50aba24">   62</a></span>&#160;        <a class="code" href="classObjeto.html#a2907a62f11eee76e74ba9c9bf50aba24">Objeto</a>(<span class="keywordtype">float</span> raio, <span class="keywordtype">float</span> massa, <span class="keyword">const</span> <a class="code" href="classVetor.html">Vetor</a> &amp;posicao, <span class="keyword">const</span> <a class="code" href="classVetor.html">Vetor</a> &amp;movimento, <span class="keyword">const</span> <a class="code" href="classAceleracao.html">Aceleracao</a> &amp;aceleracao=<a class="code" href="classAceleracao.html">Aceleracao</a>()):</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a>(massa),</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a>(raio),</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>(posicao),</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a>(movimento),</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a>(aceleracao)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="comment">// Atualização do id automáticamente</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordtype">id</span> = contagem_id++;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="classObjeto.html#a523081addb09a4198bd04c2c353a51dd">   82</a></span>&#160;        <a class="code" href="classObjeto.html#a523081addb09a4198bd04c2c353a51dd">Objeto</a>(<span class="keyword">const</span> <a class="code" href="classObjeto.html">Objeto</a> &amp;obj):</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a>(obj.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a>),</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a>(obj.<a class="code" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a>),</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>(obj.<a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>),</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a>(obj.<a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a>),</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a>(obj.<a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a>)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <span class="comment">// Atualização do id automáticamente</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordtype">id</span> = contagem_id++;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classObjeto.html#abedf7f8e2c1ea6c0fbdf61788d1480f9">  105</a></span>&#160;        <a class="code" href="classObjeto.html#abedf7f8e2c1ea6c0fbdf61788d1480f9">Objeto</a>(<a class="code" href="classObjeto.html">Objeto</a> &amp;&amp;obj) noexcept{</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="comment">// Atualização do id automáticamente</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordtype">id</span> = contagem_id++;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> = obj.raio_circunferencia;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <a class="code" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a> = obj.m;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="comment">// Uso da atribuição Move implementada no Vetor para Otimização</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a> = std::move(obj.r);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a> = std::move(obj.v); </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a> = std::move(obj.a);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classObjeto.html#a299fa0655eb78b2f214d2fcea25224af">  132</a></span>&#160;        <a class="code" href="classCircunferencia.html">Circunferencia</a> <a class="code" href="classObjeto.html#a299fa0655eb78b2f214d2fcea25224af">getCircunferencia</a>(){</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classCircunferencia.html">Circunferencia</a>(<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a>, <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#af9ec833987134211b666458ac33811fe">vetorToPonto</a>());</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classObjeto.html#abc74b2353fce9ed0385a99dca5345800">  152</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classObjeto.html#abc74b2353fce9ed0385a99dca5345800">movimentar</a>(<span class="keywordtype">double</span> ti, <span class="keywordtype">double</span> tf, <span class="keywordtype">double</span> dt){</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            <span class="comment">// Uso do Integrador de Euler</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="comment">// Definição da quantidade de passos, bem como o incremento em cada passo</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordtype">int</span> n_passos = 10000;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordtype">double</span> h =  (1.f/n_passos) / (1.f/dt);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="comment">// Armazenamento dos dados da posição e velocidade inciais em cada eixo</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordtype">double</span> r0_x = <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            <span class="keywordtype">double</span> r0_y = <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordtype">double</span> v0_x = <a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a>.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordtype">double</span> v0_y = <a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a>.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="comment">// Integração da Velocidade e da Posição</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">for</span> (ti; ti&lt;tf; ti+=h){</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                v0_x = v0_x + h*(<a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a>.<a class="code" href="classAceleracao.html#ac4fd5808f4d2b4494b5fe38c21fc2878">func_x</a>(ti));</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                v0_y = v0_y + h*(<a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a>.<a class="code" href="classAceleracao.html#a19862ca7ea1deddd7f8510132454629e">func_y</a>(ti));</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                r0_x = r0_x + h*(v0_x);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                r0_y = r0_y + h*(v0_y);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            <span class="comment">// Atualização da Velocidade com o valor calculado por Integração</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a>.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> = v0_x;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a>.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> = v0_y;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="comment">// Atualização da Posição com o valor calculado por Integração</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> = r0_x;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> = r0_y;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="comment">// Métodos de sobrecarga de operadores!</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="classObjeto.html#aeb698ee407fad88811a0ace453e800a1">  193</a></span>&#160;        <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classObjeto.html#aeb698ee407fad88811a0ace453e800a1">operator&lt;&lt; </a>(std::ostream&amp; out, <a class="code" href="classObjeto.html">Objeto</a> &amp;objeto){</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            out &lt;&lt; <span class="stringliteral">&quot;Objeto(&quot;</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                &lt;&lt; objeto.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> &lt;&lt; <span class="stringliteral">&quot;;&quot;</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                &lt;&lt; objeto.<a class="code" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a> &lt;&lt; <span class="stringliteral">&quot;;&quot;</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                &lt;&lt; objeto.<a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a> &lt;&lt; <span class="stringliteral">&quot;;&quot;</span></div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                &lt;&lt; objeto.<a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a> &lt;&lt; <span class="stringliteral">&quot;;&quot;</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                &lt;&lt; objeto.<a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">return</span> out; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno"><a class="line" href="classObjeto.html#a56b39714b99ab866d96c1de567140dcd">  223</a></span>&#160;        <a class="code" href="classObjeto.html">Objeto</a>&amp; <a class="code" href="classObjeto.html#a56b39714b99ab866d96c1de567140dcd">operator= </a>(<a class="code" href="classObjeto.html">Objeto</a> &amp;obj){</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            <span class="keywordtype">id</span> = obj.<a class="code" href="classObjeto.html#aa722a7b9c4a9d19d7a1d9be413be06fc">id</a>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            <a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> = obj.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a>;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            <a class="code" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a> = obj.<a class="code" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a>;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="comment">// Uso da atribuição por movimentação implementada na classe Ponto</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a> = std::move(obj.<a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a> = std::move(obj.<a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a>);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a> = std::move(obj.<a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="classObjeto.html#abf41379166eadad232c7910a96c5de34">  246</a></span>&#160;        <a class="code" href="classObjeto.html">Objeto</a>&amp; <a class="code" href="classObjeto.html#a56b39714b99ab866d96c1de567140dcd">operator= </a>(<a class="code" href="classObjeto.html">Objeto</a> &amp;&amp;obj) noexcept {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="comment">/*</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment">                Verifica se o parâmetro referencia o próprio objeto.</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="comment">                Em caso de verdade, retorno a referência para o objeto</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">                atual. Em caso de falsidade, significa que a referência</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="comment">                é para outro objeto e a movimentação dos atributos ocorre.</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="comment">            */</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordflow">if</span> (&amp;obj == <span class="keyword">this</span>){</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> = obj.raio_circunferencia;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <a class="code" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a> = obj.m;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="comment">// Uso da atribuição por movimentação implementada na classe Ponto</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a> = std::move(obj.r);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <a class="code" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a> = std::move(obj.v);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <a class="code" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a> = std::move(obj.a);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;};</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="comment">// Inicializar a contagem a partir de 0</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keywordtype">int</span> Objeto::contagem_id = 0;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassObjeto_html"><div class="ttname"><a href="classObjeto.html">Objeto</a></div><div class="ttdef"><b>Definition:</b> objeto.h:8</div></div>
-<div class="ttc" id="aclassVetor_html_af9ec833987134211b666458ac33811fe"><div class="ttname"><a href="classVetor.html#af9ec833987134211b666458ac33811fe">Vetor::vetorToPonto</a></div><div class="ttdeci">const Ponto vetorToPonto()</div><div class="ttdef"><b>Definition:</b> vetor.h:107</div></div>
-<div class="ttc" id="aclassCircunferencia_html"><div class="ttname"><a href="classCircunferencia.html">Circunferencia</a></div><div class="ttdef"><b>Definition:</b> circunferencia.h:8</div></div>
-<div class="ttc" id="aclassVetor_html"><div class="ttname"><a href="classVetor.html">Vetor</a></div><div class="ttdef"><b>Definition:</b> vetor.h:15</div></div>
-<div class="ttc" id="aclassVetor_html_af652db948695d6bbd7bc81307020f13b"><div class="ttname"><a href="classVetor.html#af652db948695d6bbd7bc81307020f13b">Vetor::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Componente no eixo X - Constante Real que Múltiplica o vetor i.</div><div class="ttdef"><b>Definition:</b> vetor.h:17</div></div>
-<div class="ttc" id="aclassVetor_html_ab430657c16d9b5c321a4b5428a5181ae"><div class="ttname"><a href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">Vetor::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Componente no eixo Y - Constante Real que Múltiplica o vetor j.</div><div class="ttdef"><b>Definition:</b> vetor.h:18</div></div>
-<div class="ttc" id="aclassAceleracao_html"><div class="ttname"><a href="classAceleracao.html">Aceleracao</a></div><div class="ttdef"><b>Definition:</b> aceleracao.h:4</div></div>
+<div class="ttc" id="aclassObjeto_html"><div class="ttname"><a href="classObjeto.html">Objeto</a></div><div class="ttdoc">Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.</div><div class="ttdef"><b>Definition:</b> objeto.h:17</div></div>
+<div class="ttc" id="aclassAceleracao_html_ac4fd5808f4d2b4494b5fe38c21fc2878"><div class="ttname"><a href="classAceleracao.html#ac4fd5808f4d2b4494b5fe38c21fc2878">Aceleracao::func_x</a></div><div class="ttdeci">double(* func_x)(double)</div><div class="ttdoc">Ponteiro para uma função do tipo double function(double) - Usado para calcular a aceleração no eixo x...</div><div class="ttdef"><b>Definition:</b> aceleracao.h:19</div></div>
+<div class="ttc" id="aclassObjeto_html_a5608071f995c220f0f1a0e5887c2d11d"><div class="ttname"><a href="classObjeto.html#a5608071f995c220f0f1a0e5887c2d11d">Objeto::Objeto</a></div><div class="ttdeci">Objeto()</div><div class="ttdoc">Construtor Default.</div><div class="ttdef"><b>Definition:</b> objeto.h:38</div></div>
+<div class="ttc" id="aclassObjeto_html_aeb698ee407fad88811a0ace453e800a1"><div class="ttname"><a href="classObjeto.html#aeb698ee407fad88811a0ace453e800a1">Objeto::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, Objeto &amp;objeto)</div><div class="ttdoc">Sobrecarga do Insertion Operator para Saída de Dados.</div><div class="ttdef"><b>Definition:</b> objeto.h:193</div></div>
+<div class="ttc" id="avetor_8h_html"><div class="ttname"><a href="vetor_8h.html">vetor.h</a></div></div>
+<div class="ttc" id="aclassVetor_html_af9ec833987134211b666458ac33811fe"><div class="ttname"><a href="classVetor.html#af9ec833987134211b666458ac33811fe">Vetor::vetorToPonto</a></div><div class="ttdeci">const Ponto vetorToPonto()</div><div class="ttdoc">Transforma um Vetor para sua representação em Ponto.</div><div class="ttdef"><b>Definition:</b> vetor.h:117</div></div>
+<div class="ttc" id="aclassObjeto_html_a911f3eedef2be0b7c5b9969e046e8cbd"><div class="ttname"><a href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">Objeto::m</a></div><div class="ttdeci">float m</div><div class="ttdoc">Massa do Objeto.</div><div class="ttdef"><b>Definition:</b> objeto.h:24</div></div>
+<div class="ttc" id="aclassObjeto_html_ace60283c1fb4b980ea25ca0e93e0aaac"><div class="ttname"><a href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">Objeto::raio_circunferencia</a></div><div class="ttdeci">float raio_circunferencia</div><div class="ttdoc">Raio da circunferencia do Objeto.</div><div class="ttdef"><b>Definition:</b> objeto.h:23</div></div>
+<div class="ttc" id="aclassObjeto_html_a299fa0655eb78b2f214d2fcea25224af"><div class="ttname"><a href="classObjeto.html#a299fa0655eb78b2f214d2fcea25224af">Objeto::getCircunferencia</a></div><div class="ttdeci">Circunferencia getCircunferencia()</div><div class="ttdoc">Retorna a Circunferência do Objeto.</div><div class="ttdef"><b>Definition:</b> objeto.h:132</div></div>
+<div class="ttc" id="aclassObjeto_html_abedf7f8e2c1ea6c0fbdf61788d1480f9"><div class="ttname"><a href="classObjeto.html#abedf7f8e2c1ea6c0fbdf61788d1480f9">Objeto::Objeto</a></div><div class="ttdeci">Objeto(Objeto &amp;&amp;obj) noexcept</div><div class="ttdoc">Construtor Move.</div><div class="ttdef"><b>Definition:</b> objeto.h:105</div></div>
+<div class="ttc" id="aclassObjeto_html_a523081addb09a4198bd04c2c353a51dd"><div class="ttname"><a href="classObjeto.html#a523081addb09a4198bd04c2c353a51dd">Objeto::Objeto</a></div><div class="ttdeci">Objeto(const Objeto &amp;obj)</div><div class="ttdoc">Construtor de Cópia.</div><div class="ttdef"><b>Definition:</b> objeto.h:82</div></div>
+<div class="ttc" id="aclassObjeto_html_abc74b2353fce9ed0385a99dca5345800"><div class="ttname"><a href="classObjeto.html#abc74b2353fce9ed0385a99dca5345800">Objeto::movimentar</a></div><div class="ttdeci">void movimentar(double ti, double tf, double dt)</div><div class="ttdoc">Movimenta o Objeto alterando possivelmente sua velocidade e posição.</div><div class="ttdef"><b>Definition:</b> objeto.h:152</div></div>
+<div class="ttc" id="aclassObjeto_html_aa91369eaf35a47d09053b10b8d33bf6d"><div class="ttname"><a href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">Objeto::v</a></div><div class="ttdeci">Vetor v</div><div class="ttdoc">Vetor velocidade do Objeto.</div><div class="ttdef"><b>Definition:</b> objeto.h:26</div></div>
+<div class="ttc" id="aclassObjeto_html_a5475cb519dfa55af127beb2624e74871"><div class="ttname"><a href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">Objeto::a</a></div><div class="ttdeci">Aceleracao a</div><div class="ttdoc">Aceleração do Objeto - Conjunto de Funções que definem aceleração nos eixos x e y.</div><div class="ttdef"><b>Definition:</b> objeto.h:27</div></div>
+<div class="ttc" id="acircunferencia_8h_html"><div class="ttname"><a href="circunferencia_8h.html">circunferencia.h</a></div></div>
+<div class="ttc" id="aclassCircunferencia_html"><div class="ttname"><a href="classCircunferencia.html">Circunferencia</a></div><div class="ttdoc">Classe para Representação de uma Circunferência. É a forma considerada como padrão para os objetos Ob...</div><div class="ttdef"><b>Definition:</b> circunferencia.h:18</div></div>
+<div class="ttc" id="aclassObjeto_html_a2907a62f11eee76e74ba9c9bf50aba24"><div class="ttname"><a href="classObjeto.html#a2907a62f11eee76e74ba9c9bf50aba24">Objeto::Objeto</a></div><div class="ttdeci">Objeto(float raio, float massa, const Vetor &amp;posicao, const Vetor &amp;movimento, const Aceleracao &amp;aceleracao=Aceleracao())</div><div class="ttdoc">Construtor Base.</div><div class="ttdef"><b>Definition:</b> objeto.h:62</div></div>
+<div class="ttc" id="aclassVetor_html"><div class="ttname"><a href="classVetor.html">Vetor</a></div><div class="ttdoc">Classe para Representação de um Vetor no Plano Cartesiano.</div><div class="ttdef"><b>Definition:</b> vetor.h:16</div></div>
+<div class="ttc" id="aclassObjeto_html_a56b39714b99ab866d96c1de567140dcd"><div class="ttname"><a href="classObjeto.html#a56b39714b99ab866d96c1de567140dcd">Objeto::operator=</a></div><div class="ttdeci">Objeto &amp; operator=(Objeto &amp;obj)</div><div class="ttdoc">Atribuição por Cópia.</div><div class="ttdef"><b>Definition:</b> objeto.h:223</div></div>
+<div class="ttc" id="aclassAceleracao_html_a19862ca7ea1deddd7f8510132454629e"><div class="ttname"><a href="classAceleracao.html#a19862ca7ea1deddd7f8510132454629e">Aceleracao::func_y</a></div><div class="ttdeci">double(* func_y)(double)</div><div class="ttdoc">Ponteiro para uma função do tipo double function(double) - Usado para calcular a aceleração no eixo y...</div><div class="ttdef"><b>Definition:</b> aceleracao.h:20</div></div>
+<div class="ttc" id="aclassObjeto_html_aa722a7b9c4a9d19d7a1d9be413be06fc"><div class="ttname"><a href="classObjeto.html#aa722a7b9c4a9d19d7a1d9be413be06fc">Objeto::id</a></div><div class="ttdeci">int id</div><div class="ttdoc">Atributo de identificação única de cada Objeto.</div><div class="ttdef"><b>Definition:</b> objeto.h:22</div></div>
+<div class="ttc" id="aclassObjeto_html_ac46abc31b29690263c366ed34ed8b5c6"><div class="ttname"><a href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">Objeto::r</a></div><div class="ttdeci">Vetor r</div><div class="ttdoc">Vetor posição do Objeto.</div><div class="ttdef"><b>Definition:</b> objeto.h:25</div></div>
+<div class="ttc" id="aclassVetor_html_af652db948695d6bbd7bc81307020f13b"><div class="ttname"><a href="classVetor.html#af652db948695d6bbd7bc81307020f13b">Vetor::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Componente no eixo das Abscissas.</div><div class="ttdef"><b>Definition:</b> vetor.h:18</div></div>
+<div class="ttc" id="aclassVetor_html_ab430657c16d9b5c321a4b5428a5181ae"><div class="ttname"><a href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">Vetor::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Componente no eixo das Ordendas.</div><div class="ttdef"><b>Definition:</b> vetor.h:19</div></div>
+<div class="ttc" id="aaceleracao_8h_html"><div class="ttname"><a href="aceleracao_8h.html">aceleracao.h</a></div></div>
+<div class="ttc" id="aclassAceleracao_html"><div class="ttname"><a href="classAceleracao.html">Aceleracao</a></div><div class="ttdef"><b>Definition:</b> aceleracao.h:16</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado por &#160;<a href="http://www.doxygen.org/index.html">

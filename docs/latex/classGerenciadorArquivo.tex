@@ -1,0 +1,133 @@
+\hypertarget{classGerenciadorArquivo}{}\doxysection{Referência da Classe Gerenciador\+Arquivo}
+\label{classGerenciadorArquivo}\index{GerenciadorArquivo@{GerenciadorArquivo}}
+
+
+Classe para manipulação de arquivos visando a persitência de dados relacionados a objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}}.  
+
+
+
+
+{\ttfamily \#include $<$gerenciador\+\_\+arquivo.\+h$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGerenciadorArquivo_aa3fa8801d2ccbf1739267f49e6727f0f}{Gerenciador\+Arquivo}} (string endereco\+\_\+arquivo)
+\begin{DoxyCompactList}\small\item\em Construtor default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGerenciadorArquivo_a657f00fee4b2db7b9ce2224a7f161f2f}\label{classGerenciadorArquivo_a657f00fee4b2db7b9ce2224a7f161f2f}} 
+void \mbox{\hyperlink{classGerenciadorArquivo_a657f00fee4b2db7b9ce2224a7f161f2f}{criar\+Arquivo}} ()
+\begin{DoxyCompactList}\small\item\em Cria o arquivo informado ao gerenciador. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGerenciadorArquivo_a8a0aca8a1630472d00b1c4fb0f2a0838}\label{classGerenciadorArquivo_a8a0aca8a1630472d00b1c4fb0f2a0838}} 
+void \mbox{\hyperlink{classGerenciadorArquivo_a8a0aca8a1630472d00b1c4fb0f2a0838}{limpar\+Arquivo}} ()
+\begin{DoxyCompactList}\small\item\em Apaga todo o conteúdo informado ao gerenciador. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classGerenciadorArquivo_aa78c70153d8b0b91b4de291babd15409}{get\+LinhaN}} (int n\+\_\+linha)
+\begin{DoxyCompactList}\small\item\em Retorna uma linha específica conforme informado. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGerenciadorArquivo_a10b2231507873c84cbe2bf09313144bc}\label{classGerenciadorArquivo_a10b2231507873c84cbe2bf09313144bc}} 
+void \mbox{\hyperlink{classGerenciadorArquivo_a10b2231507873c84cbe2bf09313144bc}{ler\+Arquivo}} ()
+\begin{DoxyCompactList}\small\item\em Exibe todas as linhas do arquivo do gerenciador na ordem em que estiverem armazenadas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGerenciadorArquivo_ad89595c0984b660119789b5961c99ebc}{salvar\+Objetos}} (int qtd\+\_\+objetos, \mbox{\hyperlink{classObjeto}{Objeto}} $\ast$lista\+\_\+objetos)
+\begin{DoxyCompactList}\small\item\em Escreve os \mbox{\hyperlink{classObjeto}{Objeto}} no arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGerenciadorArquivo_aee7333bb6180e378965c3bfa345822e0}{recuperar\+Objetos}} (\mbox{\hyperlink{classObjeto}{Objeto}} $\ast$lista\+\_\+objetos)
+\begin{DoxyCompactList}\small\item\em Recupera todos \mbox{\hyperlink{classObjeto}{Objeto}} do arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para manipulação de arquivos visando a persitência de dados relacionados a objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}}. 
+
+\begin{DoxyAuthor}{Autor}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Última Modificação\+: 27/02/2001 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classObjeto}{Objeto}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classGerenciadorArquivo_aa3fa8801d2ccbf1739267f49e6727f0f}\label{classGerenciadorArquivo_aa3fa8801d2ccbf1739267f49e6727f0f}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!GerenciadorArquivo@{GerenciadorArquivo}}
+\index{GerenciadorArquivo@{GerenciadorArquivo}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{GerenciadorArquivo()}{GerenciadorArquivo()}}
+{\footnotesize\ttfamily Gerenciador\+Arquivo\+::\+Gerenciador\+Arquivo (\begin{DoxyParamCaption}\item[{string}]{endereco\+\_\+arquivo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor default. 
+
+Cria um objeto preparado para realizar manipulações sobre o arquivo no endereço informado por parâmetro.
+
+Observação\+: Não inicia nenhum processo de manipulação no arquivo!
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em endereco\+\_\+arquivo} & usado para inicializar atributo de mesma nomenclatura \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classGerenciadorArquivo_aa78c70153d8b0b91b4de291babd15409}\label{classGerenciadorArquivo_aa78c70153d8b0b91b4de291babd15409}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!getLinhaN@{getLinhaN}}
+\index{getLinhaN@{getLinhaN}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{getLinhaN()}{getLinhaN()}}
+{\footnotesize\ttfamily string Gerenciador\+Arquivo\+::get\+LinhaN (\begin{DoxyParamCaption}\item[{int}]{n\+\_\+linha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna uma linha específica conforme informado. 
+
+Retorna uma linha {\bfseries{n}} do arquivo do gerenciador. Em caso do número da linha informado não ser condizente com o conteúdo do arquivo, uma mensagem de erro será exibida e a operação retornará uma {\ttfamily string} vazia ao final
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n\+\_\+linha} & número da linha que será retornada \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGerenciadorArquivo_aee7333bb6180e378965c3bfa345822e0}\label{classGerenciadorArquivo_aee7333bb6180e378965c3bfa345822e0}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!recuperarObjetos@{recuperarObjetos}}
+\index{recuperarObjetos@{recuperarObjetos}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{recuperarObjetos()}{recuperarObjetos()}}
+{\footnotesize\ttfamily void Gerenciador\+Arquivo\+::recuperar\+Objetos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObjeto}{Objeto}} $\ast$}]{lista\+\_\+objetos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Recupera todos \mbox{\hyperlink{classObjeto}{Objeto}} do arquivo. 
+
+Esse método é usado para recuperar os \mbox{\hyperlink{classObjeto}{Objeto}} presentes no arquivo passado para o gerenciador. Esse método é útil, pois permite a inicialização de diversos objetos usando como base um arquivo.
+
+Observação\+: Devido ao fato de um \mbox{\hyperlink{classObjeto}{Objeto}} possuir um atributo {\itshape a} que referese-\/se a um objeto \mbox{\hyperlink{classAceleracao}{Aceleracao}} e que esse obejto é constítuido por funções e seus endereços de memória no momento da instaciação, não é possível recuperar a função usada nos objetos. Dessa forma, todo \mbox{\hyperlink{classObjeto}{Objeto}} recuperado de um arquivo terá sua aceleração definida pelo construtor default de \mbox{\hyperlink{classAceleracao}{Aceleracao}}, devendo o desenvolvedor alterar esse atributo posteriormente conforme necessidade.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em lista\+\_\+objetos} & Ponteiro para um array de \mbox{\hyperlink{classObjeto}{Objeto}} que deve possuir alocado ao mínimo a quantidade de \mbox{\hyperlink{classObjeto}{Objeto}} salvos no arquivo para que esses possam ser recuperados e inseridos nesse array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGerenciadorArquivo_ad89595c0984b660119789b5961c99ebc}\label{classGerenciadorArquivo_ad89595c0984b660119789b5961c99ebc}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!salvarObjetos@{salvarObjetos}}
+\index{salvarObjetos@{salvarObjetos}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{salvarObjetos()}{salvarObjetos()}}
+{\footnotesize\ttfamily void Gerenciador\+Arquivo\+::salvar\+Objetos (\begin{DoxyParamCaption}\item[{int}]{qtd\+\_\+objetos,  }\item[{\mbox{\hyperlink{classObjeto}{Objeto}} $\ast$}]{lista\+\_\+objetos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Escreve os \mbox{\hyperlink{classObjeto}{Objeto}} no arquivo. 
+
+Dada uma quantidade de objetos e um array de \mbox{\hyperlink{classObjeto}{Objeto}} com essa quantidade, esse método irá escrever cada \mbox{\hyperlink{classObjeto}{Objeto}} em uma linha do arquivo conforme especifcado pela sobrecarga do operador $<$$<$ em \mbox{\hyperlink{classObjeto}{Objeto}} .
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qtd\+\_\+objetos} & quantidade de objetos a serem salvos no arquivo \\
+\hline
+{\em lista\+\_\+objetos} & objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}} que serão salvos no arquivo\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classObjeto}{Objeto}} 
+\end{DoxySeeAlso}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+Arquivo/\mbox{\hyperlink{gerenciador__arquivo_8h}{gerenciador\+\_\+arquivo.\+h}}\end{DoxyCompactItemize}

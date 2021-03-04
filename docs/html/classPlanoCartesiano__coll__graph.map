@@ -1,0 +1,5 @@
+<map id="PlanoCartesiano" name="PlanoCartesiano">
+<area shape="rect" id="node1" title="Classe responsável pela representação gráfica do Plano Cartesiano." alt="" coords="17,109,145,136"/>
+<area shape="rect" id="node2" href="$classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano." alt="" coords="5,5,64,32"/>
+<area shape="rect" id="node3" href="$classCorRGBA.html" title="Classe responsável por representar cores RGBA para uso em conjunto aos elementos gráficos da interfac..." alt="" coords="89,5,170,32"/>
+</map>

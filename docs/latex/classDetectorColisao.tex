@@ -2,43 +2,207 @@
 \label{classDetectorColisao}\index{DetectorColisao@{DetectorColisao}}
 
 
+Classe para Cálculo e Aplicação de Colisão entre objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}} e entre um \mbox{\hyperlink{classObjeto}{Objeto}} e uma \mbox{\hyperlink{classLinha}{Linha}}.  
+
+
+
+
+{\ttfamily \#include $<$detector\+\_\+colisao.\+h$>$}
+
+
+
 Diagrama de colaboração para Detector\+Colisao\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{classDetectorColisao__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDetectorColisao_a962d89d6a13fcfc01e41cd65b56d657d}\label{classDetectorColisao_a962d89d6a13fcfc01e41cd65b56d657d}} 
-{\bfseries Detector\+Colisao} (int qtd\+\_\+objetos, \mbox{\hyperlink{classObjeto}{Objeto}} $\ast$lista\+\_\+objetos)
-\item 
-\mbox{\Hypertarget{classDetectorColisao_aab2f496a09ee3ede00105853141e635b}\label{classDetectorColisao_aab2f496a09ee3ede00105853141e635b}} 
-void {\bfseries exibir\+Objetos} ()
-\item 
-\mbox{\Hypertarget{classDetectorColisao_af481fb29fdcb71ba912fad097dd35f2a}\label{classDetectorColisao_af481fb29fdcb71ba912fad097dd35f2a}} 
-vector$<$ pair$<$ \mbox{\hyperlink{classObjeto}{Objeto}} $\ast$, \mbox{\hyperlink{classObjeto}{Objeto}} $\ast$ $>$ $>$ {\bfseries detectar} ()
-\item 
-\mbox{\Hypertarget{classDetectorColisao_a949191c2e8b5da6da8e1f8d9f94dcd09}\label{classDetectorColisao_a949191c2e8b5da6da8e1f8d9f94dcd09}} 
-void {\bfseries aplicar\+\_\+colisao\+\_\+simples} ()
-\item 
-\mbox{\Hypertarget{classDetectorColisao_aedfa9219212bd1e609fe0987983b2d97}\label{classDetectorColisao_aedfa9219212bd1e609fe0987983b2d97}} 
-void {\bfseries verificar\+\_\+colisao\+\_\+borda} (\mbox{\hyperlink{classRenderizador}{Renderizador}} \&render, int largura, int altura)
-\end{DoxyCompactItemize}
-\doxysubsection*{Atributos Públicos}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{classDetectorColisao_a967938cc9909604128fa9704921b6d9a}\label{classDetectorColisao_a967938cc9909604128fa9704921b6d9a}} 
-float {\bfseries escala}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classDetectorColisao_a962d89d6a13fcfc01e41cd65b56d657d}{Detector\+Colisao}} (int \mbox{\hyperlink{classDetectorColisao_a28c67b8f21da38597a36f9775e14fa71}{qtd\+\_\+objetos}}, \mbox{\hyperlink{classObjeto}{Objeto}} $\ast$lista\+\_\+objetos)
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectorColisao_aa190671298c489ce9853c803c2465c57}\label{classDetectorColisao_aa190671298c489ce9853c803c2465c57}} 
+\mbox{\hyperlink{classDetectorColisao_aa190671298c489ce9853c803c2465c57}{$\sim$\+Detector\+Colisao}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDetectorColisao_aab2f496a09ee3ede00105853141e635b}{exibir\+Objetos}} ()
+\begin{DoxyCompactList}\small\item\em Exibe todos os objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}} considerados no \mbox{\hyperlink{classDetectorColisao}{Detector\+Colisao}}. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ \mbox{\hyperlink{classObjeto}{Objeto}} $\ast$, \mbox{\hyperlink{classObjeto}{Objeto}} $\ast$ $>$ $>$ \mbox{\hyperlink{classDetectorColisao_af481fb29fdcb71ba912fad097dd35f2a}{detectar}} ()
+\begin{DoxyCompactList}\small\item\em Detecta a colisão entre objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDetectorColisao_a949191c2e8b5da6da8e1f8d9f94dcd09}{aplicar\+\_\+colisao\+\_\+simples}} ()
+\begin{DoxyCompactList}\small\item\em Aplicar Regra de Colisão Simples. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDetectorColisao_a26a18c8f076b90fd81e9d0ed52175b1c}{aplicar\+\_\+colisao\+\_\+cm}} ()
+\begin{DoxyCompactList}\small\item\em Aplicar Colisão com Conservação do Momento Bidimensional. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDetectorColisao_a53cfb2a01f410da48e43b1dd47a933a2}{aplicar\+\_\+colisao\+\_\+borda}} ()
+\begin{DoxyCompactList}\small\item\em Detectar e Aplicar Colisão com as Bordas da \mbox{\hyperlink{classJanela}{Janela}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDetectorColisao_ab2bc447b74a4be053c2a655f2bcac927}{set\+Info\+Linhas}} (int qtd, \mbox{\hyperlink{classLinha}{Linha}} $\ast$lista\+\_\+linhas)
+\begin{DoxyCompactList}\small\item\em Configura os atributos relacionados aos objetos do tipo \mbox{\hyperlink{classLinha}{Linha}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classDetectorColisao_a28c67b8f21da38597a36f9775e14fa71}\label{classDetectorColisao_a28c67b8f21da38597a36f9775e14fa71}} 
-int {\bfseries qtd\+\_\+objetos}
-\item 
+int \mbox{\hyperlink{classDetectorColisao_a28c67b8f21da38597a36f9775e14fa71}{qtd\+\_\+objetos}}
+\begin{DoxyCompactList}\small\item\em Atributo de controle da quantidade de Objetos considerados no cálculo de colisão. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDetectorColisao_a6ba6fee2ba97948912d8bbcc52374fb5}\label{classDetectorColisao_a6ba6fee2ba97948912d8bbcc52374fb5}} 
-\mbox{\hyperlink{classObjeto}{Objeto}} $\ast$ {\bfseries ptr\+\_\+lista\+\_\+objetos}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classObjeto}{Objeto}} $\ast$ \mbox{\hyperlink{classDetectorColisao_a6ba6fee2ba97948912d8bbcc52374fb5}{ptr\+\_\+lista\+\_\+objetos}} = nullptr
+\begin{DoxyCompactList}\small\item\em Ponteiro para um Array de Objetos que sofreram a Colisão. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectorColisao_ac592605fa8776ad1e91e2cf7b0cff90f}\label{classDetectorColisao_ac592605fa8776ad1e91e2cf7b0cff90f}} 
+int \mbox{\hyperlink{classDetectorColisao_ac592605fa8776ad1e91e2cf7b0cff90f}{qtd\+\_\+linhas}}
+\begin{DoxyCompactList}\small\item\em Atributo de controle da quantidade de linhas considerados no cálculo de colisão. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDetectorColisao_a44149d2414afd34851e873b5b93b93a1}\label{classDetectorColisao_a44149d2414afd34851e873b5b93b93a1}} 
+\mbox{\hyperlink{classLinha}{Linha}} $\ast$ \mbox{\hyperlink{classDetectorColisao_a44149d2414afd34851e873b5b93b93a1}{ptr\+\_\+lista\+\_\+linhas}} = nullptr
+\begin{DoxyCompactList}\small\item\em Ponteiro para um Array de Linhas que aplicam a Colisão aos Objetos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para Cálculo e Aplicação de Colisão entre objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}} e entre um \mbox{\hyperlink{classObjeto}{Objeto}} e uma \mbox{\hyperlink{classLinha}{Linha}}. 
+
+\begin{DoxyAuthor}{Autor}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Última Modificação\+: 27/02/2002 
+\end{DoxyDate}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classDetectorColisao_a962d89d6a13fcfc01e41cd65b56d657d}\label{classDetectorColisao_a962d89d6a13fcfc01e41cd65b56d657d}} 
+\index{DetectorColisao@{DetectorColisao}!DetectorColisao@{DetectorColisao}}
+\index{DetectorColisao@{DetectorColisao}!DetectorColisao@{DetectorColisao}}
+\doxysubsubsection{\texorpdfstring{DetectorColisao()}{DetectorColisao()}}
+{\footnotesize\ttfamily Detector\+Colisao\+::\+Detector\+Colisao (\begin{DoxyParamCaption}\item[{int}]{qtd\+\_\+objetos,  }\item[{\mbox{\hyperlink{classObjeto}{Objeto}} $\ast$}]{lista\+\_\+objetos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Inicializa todos os atributos relacionados a colisão entre objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}} através dos valores informados por parâmetro. No que tange a inicialização de atributos relacionados a colisão entre \mbox{\hyperlink{classObjeto}{Objeto}} e \mbox{\hyperlink{classLinha}{Linha}}, olhar o método membro \mbox{\hyperlink{classDetectorColisao_ab2bc447b74a4be053c2a655f2bcac927}{set\+Info\+Linhas()}} .
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qtd\+\_\+objetos} & usado para inicializar o atributo de mesma nomenclatura \\
+\hline
+{\em lista\+\_\+objetos} & usado para inicializar o atributo \mbox{\hyperlink{classDetectorColisao_a6ba6fee2ba97948912d8bbcc52374fb5}{ptr\+\_\+lista\+\_\+objetos}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classDetectorColisao_a53cfb2a01f410da48e43b1dd47a933a2}\label{classDetectorColisao_a53cfb2a01f410da48e43b1dd47a933a2}} 
+\index{DetectorColisao@{DetectorColisao}!aplicar\_colisao\_borda@{aplicar\_colisao\_borda}}
+\index{aplicar\_colisao\_borda@{aplicar\_colisao\_borda}!DetectorColisao@{DetectorColisao}}
+\doxysubsubsection{\texorpdfstring{aplicar\_colisao\_borda()}{aplicar\_colisao\_borda()}}
+{\footnotesize\ttfamily void Detector\+Colisao\+::aplicar\+\_\+colisao\+\_\+borda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Detectar e Aplicar Colisão com as Bordas da \mbox{\hyperlink{classJanela}{Janela}}. 
+
+Esse método detecta quando um \mbox{\hyperlink{classObjeto}{Objeto}} colide com uma \mbox{\hyperlink{classLinha}{Linha}}, e aplica a regra de reflexão especular. Uma linha por sua vez pode ser usada como indicador das extremidas da \mbox{\hyperlink{classJanela}{Janela}} Gráfica e por isso pode-\/se calcular a colisão com as Bordas.
+
+Observação\+: Devido ao fato da movimentação de um objeto poder fazer com que esse transponha os limites definidos pelas linhas, antes de aplicar a reflexão especular ocorre um reposicionamento do \mbox{\hyperlink{classObjeto}{Objeto}} na posição exata da primeira colisão com a \mbox{\hyperlink{classLinha}{Linha}}
+
+A título de especificação, o cálculo de reposicionamento pode ser analisado da seguinte forma, considerando os seguintes elementos\+:
+
+\begin{DoxyItemize}
+\item $ \vec{r}: vetor posição do Objeto $ \item $ \vec{v}: vetor velocidade do Objeto $ \item $ \alpha: menor ângulo entre \vec{v} e o eixo das Ordenadas $ \item $ d: Distância entre o ponto mais externo da Circunferencia em relação a em que colidiu $ \item $ t: \tan{\alpha}. Em casos de indefinição da tangente devido ao ângulo \alpha, considerar t=0 $ \item $ \vec{c}: Vetor para Reposicionamento $\end{DoxyItemize}
+Para saber quem é a \mbox{\hyperlink{classVetor}{Vetor}} para Reposicionamento deve-\/se seguir\+:
+
+\begin{DoxyItemize}
+\item Caso a \mbox{\hyperlink{classCircunferencia}{Circunferencia}} transpassar a linha horizontal superior $ \vec{c} = (d*t,d)$ \item Caso a \mbox{\hyperlink{classCircunferencia}{Circunferencia}} transpassar a linha horizontal inferior $ \vec{c} = (-d*t,-d)$ \item Caso a \mbox{\hyperlink{classCircunferencia}{Circunferencia}} transpassar a linha vertical esquerda $ \vec{c} = (-d,-d*t)$ \item Caso a \mbox{\hyperlink{classCircunferencia}{Circunferencia}} transpassar a linha horizontal direita, $ \vec{c} = (d,d*t)$\end{DoxyItemize}
+O reposicionamento ocorre simplesmente atraveś de\+: $ \vec{r} = \vec{r} - \vec{c}$
+
+Para mais detalhes \begin{DoxySeeAlso}{Veja também}
+\href{https://en.wikipedia.org/wiki/Specular_reflection}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Specular\+\_\+reflection}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classDetectorColisao_a26a18c8f076b90fd81e9d0ed52175b1c}\label{classDetectorColisao_a26a18c8f076b90fd81e9d0ed52175b1c}} 
+\index{DetectorColisao@{DetectorColisao}!aplicar\_colisao\_cm@{aplicar\_colisao\_cm}}
+\index{aplicar\_colisao\_cm@{aplicar\_colisao\_cm}!DetectorColisao@{DetectorColisao}}
+\doxysubsubsection{\texorpdfstring{aplicar\_colisao\_cm()}{aplicar\_colisao\_cm()}}
+{\footnotesize\ttfamily void Detector\+Colisao\+::aplicar\+\_\+colisao\+\_\+cm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Aplicar Colisão com Conservação do Momento Bidimensional. 
+
+Esse método aplica uma regra de colisão mais complexa que simula a realidade de um sistema elástico.
+
+Através desse método, após a detecção dos objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}} através do método \mbox{\hyperlink{classDetectorColisao_af481fb29fdcb71ba912fad097dd35f2a}{detectar()}} aplica-\/se a regra da colisão elástica Bidimensional.
+
+Para mais detalhes \begin{DoxySeeAlso}{Veja também}
+\href{https://en.wikipedia.org/wiki/Elastic_collision}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Elastic\+\_\+collision}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classDetectorColisao_a949191c2e8b5da6da8e1f8d9f94dcd09}\label{classDetectorColisao_a949191c2e8b5da6da8e1f8d9f94dcd09}} 
+\index{DetectorColisao@{DetectorColisao}!aplicar\_colisao\_simples@{aplicar\_colisao\_simples}}
+\index{aplicar\_colisao\_simples@{aplicar\_colisao\_simples}!DetectorColisao@{DetectorColisao}}
+\doxysubsubsection{\texorpdfstring{aplicar\_colisao\_simples()}{aplicar\_colisao\_simples()}}
+{\footnotesize\ttfamily void Detector\+Colisao\+::aplicar\+\_\+colisao\+\_\+simples (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Aplicar Regra de Colisão Simples. 
+
+Esse método aplica uma regra de colisão básica e não condizente com os casos da realidade. Deve ser usada com muito cuidado e em contextos específico.\+s
+
+Através desse método, após a detecção dos objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}} através do método \mbox{\hyperlink{classDetectorColisao_af481fb29fdcb71ba912fad097dd35f2a}{detectar()}} aplica-\/se a seguinte regra\+: Todo \mbox{\hyperlink{classObjeto}{Objeto}} que colidiu terá o sentido de sua velocidade invertida em ambos os eixos. \mbox{\Hypertarget{classDetectorColisao_af481fb29fdcb71ba912fad097dd35f2a}\label{classDetectorColisao_af481fb29fdcb71ba912fad097dd35f2a}} 
+\index{DetectorColisao@{DetectorColisao}!detectar@{detectar}}
+\index{detectar@{detectar}!DetectorColisao@{DetectorColisao}}
+\doxysubsubsection{\texorpdfstring{detectar()}{detectar()}}
+{\footnotesize\ttfamily vector$<$pair$<$\mbox{\hyperlink{classObjeto}{Objeto}}$\ast$,\mbox{\hyperlink{classObjeto}{Objeto}}$\ast$$>$ $>$ Detector\+Colisao\+::detectar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Detecta a colisão entre objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}}. 
+
+Cálcula se houve colisão entre algum \mbox{\hyperlink{classObjeto}{Objeto}} com outro \mbox{\hyperlink{classObjeto}{Objeto}} através da distância entre os centros e análise desse valor com o raio dos \mbox{\hyperlink{classObjeto}{Objeto}}.
+
+Essa abordagem pode ser escrita da seguinte forma\+: Considera os pontos $ P1(x1,y1) $ e $ P2(x2,y2) $ como sendo o centro dos respectivos \mbox{\hyperlink{classObjeto}{Objeto}} Ob1 e \mbox{\hyperlink{classObjeto}{Objeto}} Ob2, e considere $ r1 $ e $ r2 $ sendo seus respectivos raios. A distãncia entre os centros $ d$ é dada por\+:
+
+$ d = sqrt{(x2-x1)^2 + (y2-y1)^2} $, onde através da analise abaixo é possível concluir se houve ou não colisão.
+
+$ d > r1 +r2 \implication Não houve colisão$ $ d = r1 +r2 \implication Houve colisão em um Ponto$ $ d < r1 +r2 \implication Houve Colisão em mais de um Ponto$
+
+\begin{DoxyReturn}{Retorna}
+A partir desse método é possível obter um vetor contendo um dupla de Referências para \mbox{\hyperlink{classObjeto}{Objeto}} que representam objetos que colidiram um com o outro. Esse dado pode ser usado para aplicação de regras após a colisão de objetos 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDetectorColisao_aab2f496a09ee3ede00105853141e635b}\label{classDetectorColisao_aab2f496a09ee3ede00105853141e635b}} 
+\index{DetectorColisao@{DetectorColisao}!exibirObjetos@{exibirObjetos}}
+\index{exibirObjetos@{exibirObjetos}!DetectorColisao@{DetectorColisao}}
+\doxysubsubsection{\texorpdfstring{exibirObjetos()}{exibirObjetos()}}
+{\footnotesize\ttfamily void Detector\+Colisao\+::exibir\+Objetos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Exibe todos os objetos do tipo \mbox{\hyperlink{classObjeto}{Objeto}} considerados no \mbox{\hyperlink{classDetectorColisao}{Detector\+Colisao}}. 
+
+Itera sobre o ponteiro como um array e chama o método sobrecarregado do operador {\bfseries{$<$$<$}} para exibir as informações conforme definido em \mbox{\hyperlink{classObjeto}{Objeto}} .
+
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classObjeto}{Objeto}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classDetectorColisao_ab2bc447b74a4be053c2a655f2bcac927}\label{classDetectorColisao_ab2bc447b74a4be053c2a655f2bcac927}} 
+\index{DetectorColisao@{DetectorColisao}!setInfoLinhas@{setInfoLinhas}}
+\index{setInfoLinhas@{setInfoLinhas}!DetectorColisao@{DetectorColisao}}
+\doxysubsubsection{\texorpdfstring{setInfoLinhas()}{setInfoLinhas()}}
+{\footnotesize\ttfamily void Detector\+Colisao\+::set\+Info\+Linhas (\begin{DoxyParamCaption}\item[{int}]{qtd,  }\item[{\mbox{\hyperlink{classLinha}{Linha}} $\ast$}]{lista\+\_\+linhas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configura os atributos relacionados aos objetos do tipo \mbox{\hyperlink{classLinha}{Linha}}. 
+
+Esse método deve ser usado para configurar as \mbox{\hyperlink{classLinha}{Linha}} que apliacrão colisão com os \mbox{\hyperlink{classObjeto}{Objeto}} .
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qtd} & utilziado para configurar o atributo \mbox{\hyperlink{classDetectorColisao_ac592605fa8776ad1e91e2cf7b0cff90f}{qtd\+\_\+linhas}} \\
+\hline
+{\em lista\+\_\+linhas} & utilziado para configurar o atributo \mbox{\hyperlink{classDetectorColisao_a44149d2414afd34851e873b5b93b93a1}{ptr\+\_\+lista\+\_\+linhas}} \\
+\hline
+\end{DoxyParams}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Base/detector\+\_\+colisao.\+h\end{DoxyCompactItemize}
+Base/\mbox{\hyperlink{detector__colisao_8h}{detector\+\_\+colisao.\+h}}\end{DoxyCompactItemize}

@@ -5,26 +5,39 @@
 #define CONTROLADOR_SDL_H
 
 /*!
+    \file controlador_SDL.h
     \class Controlador_SDL
     \author Gabriel Eduardo Lima
-    \date 1/1/1
-    Classe Responsável pela Inicialização e Possibilitar a Operação da biblioteca SDL
+    \date Última alteração: 28/02/2021
+    \brief Classe responsável pela inicialização e possibilitar a operação da biblioteca SDL
 */
 
 class Controlador_SDL {
     protected:
-        bool inicializado; //!< Indicador de inicialização. Um valor True -> SDL Inicializado
+        bool inicializado;          //!< Indicador de inicialização. Um valor True implica em SDL Inicializado
 
     public:
-        //! Construtor Default
+        //! Construtor Default e Base
         /*!
             Não é necessário a passagem de parâmetros!
+
+            Cria um objeto do tipo \ref Controlador_SDL permitindo
+            ao desenvolvedor a inicialização da biblioteca
+            e por consequência o uso de todas as outras
+            funcionalidades gráficas desenvolvidas usando os recursos
+            dessa biblioteca.
+
+            Observação: Recomenda-se que esse seja a primeira
+            classe com um objeto para o uso dos recursos gráficos.
+            Recomenda-se também que seja criado apenas um objeto desse
+            tipo para a aplicação para evitar uso desnecessário de memória.
         */
         Controlador_SDL(){};
         
         //! Destrutor da Classe
         ~Controlador_SDL(){}
 
+        //! Inicializa a biblioteca SDL
         /*! Método utilizado para inicializar a biblioteca SDL e 
             permitir o uso de suas funcionalidades.
 
@@ -40,6 +53,10 @@ class Controlador_SDL {
             Caso o processo de inicialização seja bem sucedido, uma mensagem é exibida
             no console informando o usuário. Nesse caso, o atributo \ref inicializado
             receberá o valor booleano true.
+
+            Esse método deve ser obrigatoriamente chamado antes da execução dos
+            recursos implementados por outras classes gráficas, causando em caso
+            contrário erro na execução do programa.
         */
         void inicializar(){
             if (SDL_Init(SDL_INIT_EVERYTHING) < 0){
@@ -52,6 +69,7 @@ class Controlador_SDL {
             }   
         }
 
+        //! Pausa a aplicação SDL
         /*! Método utilizado para pausar a execução do programa em uma
             determinada quantidade de tempo.
 
@@ -67,6 +85,7 @@ class Controlador_SDL {
             SDL_Delay(milissegundos);
         }
 
+        //! Finaliza a biblioteca SDL
         /*! Método utilizado para finalizar a biblioteca SDL. Deve ser usado
             ao final do programa para garantir que todos os elementos sejam
             finalizados sem problemas.
@@ -81,9 +100,10 @@ class Controlador_SDL {
             SDL_Quit();
         }
 
+        //! Retorna se a biblioteca foi ou não inicializada
         /*! Método utilizado para saber o status do controlador SDL.
 
-            \return um boolenano referente ao atributo \ref inicializado
+            \return Boolenano referente ao atributo \ref inicializado
         */
         bool getInicializado(){
             return inicializado;

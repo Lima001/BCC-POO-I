@@ -3,32 +3,164 @@
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAceleracao_a814335e1e30666a8864e14caf96bd086}\label{classAceleracao_a814335e1e30666a8864e14caf96bd086}} 
-{\bfseries Aceleracao} (double($\ast$func\+\_\+x\+\_\+)(double), double($\ast$func\+\_\+y\+\_\+)(double))
-\item 
-\mbox{\Hypertarget{classAceleracao_a08ad3c93cbf5407314467eb5f6c2842e}\label{classAceleracao_a08ad3c93cbf5407314467eb5f6c2842e}} 
-{\bfseries Aceleracao} (const \mbox{\hyperlink{classAceleracao}{Aceleracao}} \&aceleracao)
-\item 
-\mbox{\Hypertarget{classAceleracao_aafe414f2f33524797faabf063248e585}\label{classAceleracao_aafe414f2f33524797faabf063248e585}} 
-{\bfseries Aceleracao} (\mbox{\hyperlink{classAceleracao}{Aceleracao}} \&\&aceleracao) noexcept
-\item 
-\mbox{\Hypertarget{classAceleracao_ab64c1021c28cfd8539b7771d97ec7b71}\label{classAceleracao_ab64c1021c28cfd8539b7771d97ec7b71}} 
-\mbox{\hyperlink{classAceleracao}{Aceleracao}} \& {\bfseries operator=} (\mbox{\hyperlink{classAceleracao}{Aceleracao}} \&aceleracao)
-\item 
-\mbox{\Hypertarget{classAceleracao_a9feb97f3492a1ced9261c8af49090885}\label{classAceleracao_a9feb97f3492a1ced9261c8af49090885}} 
-\mbox{\hyperlink{classAceleracao}{Aceleracao}} \& {\bfseries operator=} (\mbox{\hyperlink{classAceleracao}{Aceleracao}} \&\&aceleracao) noexcept
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classAceleracao_a447fb00037a6801c4a41b5010a01bb86}{Aceleracao}} ()
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAceleracao_a814335e1e30666a8864e14caf96bd086}{Aceleracao}} (double($\ast$func\+\_\+x\+\_\+)(double), double($\ast$func\+\_\+y\+\_\+)(double))
+\begin{DoxyCompactList}\small\item\em Construtor Base. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAceleracao_a08ad3c93cbf5407314467eb5f6c2842e}{Aceleracao}} (const \mbox{\hyperlink{classAceleracao}{Aceleracao}} \&aceleracao)
+\begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAceleracao_aafe414f2f33524797faabf063248e585}{Aceleracao}} (\mbox{\hyperlink{classAceleracao}{Aceleracao}} \&\&aceleracao) noexcept
+\begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAceleracao_aaea6614292b13d70114ad5ed6f5f2a4c}\label{classAceleracao_aaea6614292b13d70114ad5ed6f5f2a4c}} 
+\mbox{\hyperlink{classAceleracao_aaea6614292b13d70114ad5ed6f5f2a4c}{$\sim$\+Aceleracao}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAceleracao}{Aceleracao}} \& \mbox{\hyperlink{classAceleracao_ab64c1021c28cfd8539b7771d97ec7b71}{operator=}} (\mbox{\hyperlink{classAceleracao}{Aceleracao}} \&aceleracao)
+\begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAceleracao}{Aceleracao}} \& \mbox{\hyperlink{classAceleracao_a9feb97f3492a1ced9261c8af49090885}{operator=}} (\mbox{\hyperlink{classAceleracao}{Aceleracao}} \&\&aceleracao) noexcept
+\begin{DoxyCompactList}\small\item\em Atribuição por Movimentação. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classAceleracao_ac4fd5808f4d2b4494b5fe38c21fc2878}\label{classAceleracao_ac4fd5808f4d2b4494b5fe38c21fc2878}} 
-double($\ast$ {\bfseries func\+\_\+x} )(double) = nullptr
-\item 
+double($\ast$ \mbox{\hyperlink{classAceleracao_ac4fd5808f4d2b4494b5fe38c21fc2878}{func\+\_\+x}} )(double) = nullptr
+\begin{DoxyCompactList}\small\item\em Ponteiro para uma função do tipo double function(double) -\/ Usado para calcular a aceleração no eixo x. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classAceleracao_a19862ca7ea1deddd7f8510132454629e}\label{classAceleracao_a19862ca7ea1deddd7f8510132454629e}} 
-double($\ast$ {\bfseries func\+\_\+y} )(double) = nullptr
-\end{DoxyCompactItemize}
+double($\ast$ \mbox{\hyperlink{classAceleracao_a19862ca7ea1deddd7f8510132454629e}{func\+\_\+y}} )(double) = nullptr
+\begin{DoxyCompactList}\small\item\em Ponteiro para uma função do tipo double function(double) -\/ Usado para calcular a aceleração no eixo y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classAceleracao_a854aad0036411597034b45b8ca79d1bb}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classAceleracao}{Aceleracao}} \&a)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do Insertion Operator para Saída de Dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classAceleracao_a447fb00037a6801c4a41b5010a01bb86}\label{classAceleracao_a447fb00037a6801c4a41b5010a01bb86}} 
+\index{Aceleracao@{Aceleracao}!Aceleracao@{Aceleracao}}
+\index{Aceleracao@{Aceleracao}!Aceleracao@{Aceleracao}}
+\doxysubsubsection{\texorpdfstring{Aceleracao()}{Aceleracao()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Aceleracao\+::\+Aceleracao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Chamado quando nenhum parâmetro de ininicialização for informado.
+
+Cria um objeto com os atributos não modificados. Isso significa que os ponteiros estarão configurados como {\ttfamily nullptr}. Esse construtor deve ser somente usado quando deseja-\/se declarar uma variável que serve de referência a um objeto Aceleração, onde a configuração de seus atributos será realizada posteriormente.
+
+Objetos gerados por esse construtor não estão aptos a serem usados como parâmetro em classes que fazem seu uso! \mbox{\Hypertarget{classAceleracao_a814335e1e30666a8864e14caf96bd086}\label{classAceleracao_a814335e1e30666a8864e14caf96bd086}} 
+\index{Aceleracao@{Aceleracao}!Aceleracao@{Aceleracao}}
+\index{Aceleracao@{Aceleracao}!Aceleracao@{Aceleracao}}
+\doxysubsubsection{\texorpdfstring{Aceleracao()}{Aceleracao()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Aceleracao\+::\+Aceleracao (\begin{DoxyParamCaption}\item[{double($\ast$)(double)}]{func\+\_\+x\+\_\+,  }\item[{double($\ast$)(double)}]{func\+\_\+y\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Base. 
+
+Cria um objeto com os ponteiros configurados para apontar para o endereço de funções passados como parâmetro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em double} & ($\ast$func\+\_\+x\+\_\+)(double) usado para inicializar double ($\ast$func\+\_\+x)(double) \\
+\hline
+{\em double} & ($\ast$func\+\_\+y\+\_\+)(double) usado para inicializar double ($\ast$func\+\_\+y)(double) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAceleracao_a08ad3c93cbf5407314467eb5f6c2842e}\label{classAceleracao_a08ad3c93cbf5407314467eb5f6c2842e}} 
+\index{Aceleracao@{Aceleracao}!Aceleracao@{Aceleracao}}
+\index{Aceleracao@{Aceleracao}!Aceleracao@{Aceleracao}}
+\doxysubsubsection{\texorpdfstring{Aceleracao()}{Aceleracao()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Aceleracao\+::\+Aceleracao (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAceleracao}{Aceleracao}} \&}]{aceleracao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor de Cópia. 
+
+Cria um novo objeto copiando os enedereços das funções de um objeto Aceleração informado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em aceleracao} & Referência constante para a Aceleração que será copiado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAceleracao_aafe414f2f33524797faabf063248e585}\label{classAceleracao_aafe414f2f33524797faabf063248e585}} 
+\index{Aceleracao@{Aceleracao}!Aceleracao@{Aceleracao}}
+\index{Aceleracao@{Aceleracao}!Aceleracao@{Aceleracao}}
+\doxysubsubsection{\texorpdfstring{Aceleracao()}{Aceleracao()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Aceleracao\+::\+Aceleracao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAceleracao}{Aceleracao}} \&\&}]{aceleracao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construtor Move. 
+
+Cria um novo objeto fazendo uso do recurso de movimentação Transfere de maneira eficiente os endereços de um objeto para o novo objeto criado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em aceleracao} & Referência rvalue para uma \mbox{\hyperlink{classAceleracao}{Aceleracao}}\\
+\hline
+\end{DoxyParams}
+Para mais detalhe sobre o recurso, consultar documentação da linguagem 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classAceleracao_a9feb97f3492a1ced9261c8af49090885}\label{classAceleracao_a9feb97f3492a1ced9261c8af49090885}} 
+\index{Aceleracao@{Aceleracao}!operator=@{operator=}}
+\index{operator=@{operator=}!Aceleracao@{Aceleracao}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAceleracao}{Aceleracao}}\& Aceleracao\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAceleracao}{Aceleracao}} \&\&}]{aceleracao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Atribuição por Movimentação. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em aceleracao} & Referência rvalue de um \mbox{\hyperlink{classAceleracao}{Aceleracao}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o objeto \mbox{\hyperlink{classAceleracao}{Aceleracao}} que invocou o operador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAceleracao_ab64c1021c28cfd8539b7771d97ec7b71}\label{classAceleracao_ab64c1021c28cfd8539b7771d97ec7b71}} 
+\index{Aceleracao@{Aceleracao}!operator=@{operator=}}
+\index{operator=@{operator=}!Aceleracao@{Aceleracao}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAceleracao}{Aceleracao}}\& Aceleracao\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAceleracao}{Aceleracao}} \&}]{aceleracao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atribuição por Cópia. 
+
+Copia o valor dos atributos da \mbox{\hyperlink{classAceleracao}{Aceleracao}} passado por parâmetro para a que invocou o operador.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em aceleracao} & Referência constante da \mbox{\hyperlink{classAceleracao}{Aceleracao}} que deseja-\/se copiar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para a \mbox{\hyperlink{classAceleracao}{Aceleracao}} que invocou o operador 
+\end{DoxyReturn}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
+\mbox{\Hypertarget{classAceleracao_a854aad0036411597034b45b8ca79d1bb}\label{classAceleracao_a854aad0036411597034b45b8ca79d1bb}} 
+\index{Aceleracao@{Aceleracao}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Aceleracao@{Aceleracao}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classAceleracao}{Aceleracao}} \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do Insertion Operator para Saída de Dados. 
+
+\begin{DoxyReturn}{Retorna}
+string no formato\+: \char`\"{}\+Acelerecao(endereco\+\_\+funcao\+\_\+x,endereco\+\_\+funcao\+\_\+y)\char`\"{} onde endereco\+\_\+funcao\+\_\+\mbox{[}x/y\mbox{]} referem-\/se ao endereços da memória das respectivas funções que os ponteiros apontam 
+\end{DoxyReturn}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Base/aceleracao.\+h\end{DoxyCompactItemize}
+Base/\mbox{\hyperlink{aceleracao_8h}{aceleracao.\+h}}\end{DoxyCompactItemize}

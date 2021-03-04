@@ -2,6 +2,11 @@
 \label{classCorRGBA}\index{CorRGBA@{CorRGBA}}
 
 
+Classe responsável por representar cores R\+G\+BA para uso em conjunto aos elementos gráficos da interface S\+DL.  
+
+
+
+
 {\ttfamily \#include $<$cor\+\_\+rgba.\+h$>$}
 
 \doxysubsection*{Membros Públicos}
@@ -11,8 +16,8 @@
 \begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classCorRGBA_aa3d9084d0dd2a5764b0a1de212ba8815}{Cor\+R\+G\+BA}} (int \mbox{\hyperlink{classCorRGBA_afa21e7ce0c1e53644f50c6280167a53e}{r}}, int \mbox{\hyperlink{classCorRGBA_a62bc218e68ab6782f1b4167488642391}{g}}, int \mbox{\hyperlink{classCorRGBA_a90c5cb9376fdba3a7e0bf68ff64944ff}{b}}, int \mbox{\hyperlink{classCorRGBA_a2b44e4f88c51e58f504a77b068a6622c}{a}}=255)
 \begin{DoxyCompactList}\small\item\em Construtor Base. \end{DoxyCompactList}\item 
-Uint32 \mbox{\hyperlink{classCorRGBA_afab420128af1f66f7fa96cc142d496f5}{get\+Cor}} (S\+D\+L\+\_\+\+Surface $\ast$surface)
-\end{DoxyCompactItemize}
+Uint32 \mbox{\hyperlink{classCorRGBA_a4cc388d91caab51128a0ad2694e9ee81}{get\+Cor}} (S\+D\+L\+\_\+\+Surface $\ast$surface) const
+\begin{DoxyCompactList}\small\item\em Retorna a cor R\+G\+BA. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,15 +37,17 @@ int \mbox{\hyperlink{classCorRGBA_a2b44e4f88c51e58f504a77b068a6622c}{a}}
 \begin{DoxyCompactItemize}
 \item 
 std\+::ostream \& \mbox{\hyperlink{classCorRGBA_a50724d32585456bbc13d33b82bd6229f}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sobrecarga do Insertion Operator para Saída de Dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
+Classe responsável por representar cores R\+G\+BA para uso em conjunto aos elementos gráficos da interface S\+DL. 
+
 \begin{DoxyAuthor}{Autor}
 Gabriel Eduardo Lima 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Data}
-1/1/1 Classe Responsável por representar cores R\+G\+BA para uso em conjunto aos elementos gráficos da interface S\+DL. 
+Última modificação\+: 28/02/2021 
 \end{DoxyDate}
 
 
@@ -67,29 +74,35 @@ Cria um objeto com todos os atributos configurados para o valor de máximo, resu
 
 Construtor Base. 
 
-Cria um objeto com os valores passados por parâmetro 
+Cria um objeto com os valores passados por parâmetro.
+
+
 \begin{DoxyParams}{Parâmetros}
-{\em r} & um inteiro para configurar o atributo \mbox{\hyperlink{classCorRGBA_afa21e7ce0c1e53644f50c6280167a53e}{r}} \\
+{\em r} & um inteiro para configurar o atributo de mesma nomenclatura \\
 \hline
-{\em g} & um inteiro para configurar o atributo \mbox{\hyperlink{classCorRGBA_a62bc218e68ab6782f1b4167488642391}{g}} \\
+{\em g} & um inteiro para configurar o atributo de mesma nomenclatura \\
 \hline
-{\em b} & um inteiro para configurar o atributo \mbox{\hyperlink{classCorRGBA_a90c5cb9376fdba3a7e0bf68ff64944ff}{b}} \\
+{\em b} & um inteiro para configurar o atributo de mesma nomenclatura \\
 \hline
-{\em a} & um inteiro para configurar o atributo \mbox{\hyperlink{classCorRGBA_a2b44e4f88c51e58f504a77b068a6622c}{a}}\\
+{\em a} & um inteiro para configurar o atributo de mesma nomenclatura\\
 \hline
 \end{DoxyParams}
-O parâmetro {\bfseries{a}} pode ser omitido no processo de invocação do método. Nesse caso, o valor será configurado automáticamente para o seu máximo. 
+O parâmetro {\bfseries{a}} pode ser omitido no processo de invocação do método. Nesse caso, o valor será configurado automáticamente para o seu máximo (255). 
 
 \doxysubsection{Funções membros}
-\mbox{\Hypertarget{classCorRGBA_afab420128af1f66f7fa96cc142d496f5}\label{classCorRGBA_afab420128af1f66f7fa96cc142d496f5}} 
+\mbox{\Hypertarget{classCorRGBA_a4cc388d91caab51128a0ad2694e9ee81}\label{classCorRGBA_a4cc388d91caab51128a0ad2694e9ee81}} 
 \index{CorRGBA@{CorRGBA}!getCor@{getCor}}
 \index{getCor@{getCor}!CorRGBA@{CorRGBA}}
 \doxysubsubsection{\texorpdfstring{getCor()}{getCor()}}
-{\footnotesize\ttfamily Uint32 Cor\+R\+G\+B\+A\+::get\+Cor (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{surface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Uint32 Cor\+R\+G\+B\+A\+::get\+Cor (\begin{DoxyParamCaption}\item[{S\+D\+L\+\_\+\+Surface $\ast$}]{surface }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Função para receber a cor em um formato útil e compatível ao usado por funções da bliblioteca S\+DL.
 
-Faz uso da função S\+D\+L\+\_\+\+Map\+R\+G\+B()
+
+Retorna a cor R\+G\+BA. 
+
+Método para receber a cor em um formato útil e compatível ao usado por funções da bliblioteca S\+DL.
+
+Faz uso da função S\+D\+L\+\_\+\+Map\+R\+G\+B().
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -97,7 +110,7 @@ Faz uso da função S\+D\+L\+\_\+\+Map\+R\+G\+B()
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-a cor no formato Uint32
+cor no formato {\ttfamily Uint32} 
 \end{DoxyReturn}
 
 
@@ -108,11 +121,15 @@ a cor no formato Uint32
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
 {\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&}]{cor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-Função amiga para ter acesso ao atributos protegidos da classe, visando sobscrita do operador $<$$<$ para apresentação de saída ao usuário. \begin{DoxyReturn}{Retorna}
-uma string no formato\+: (r,g,b,a)
+
+
+Sobrecarga do Insertion Operator para Saída de Dados. 
+
+\begin{DoxyReturn}{Retorna}
+string no formato\+: \char`\"{}\+Cor(r,g,b,a)\char`\"{} onde cada elemento refere-\/se aos valores dos respectivos atributos do objeto 
 \end{DoxyReturn}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Interface/cor\+\_\+rgba.\+h\end{DoxyCompactItemize}
+Interface/\mbox{\hyperlink{cor__rgba_8h}{cor\+\_\+rgba.\+h}}\end{DoxyCompactItemize}

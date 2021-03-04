@@ -1,0 +1,16 @@
+<map id="Base/detector_colisao.h" name="Base/detector_colisao.h">
+<area shape="rect" id="node1" title=" " alt="" coords="221,5,398,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="237,379,317,405"/>
+<area shape="rect" id="node3" title=" " alt="" coords="523,379,586,405"/>
+<area shape="rect" id="node4" title=" " alt="" coords="593,80,653,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="43,229,111,256"/>
+<area shape="rect" id="node6" href="$linha_8h.html" title=" " alt="" coords="324,80,391,107"/>
+<area shape="rect" id="node12" href="$objeto_8h.html" title=" " alt="" coords="225,80,300,107"/>
+<area shape="rect" id="node7" href="$vetor_8h.html" title=" " alt="" coords="319,155,385,181"/>
+<area shape="rect" id="node8" href="$ponto_8h.html" title=" " alt="" coords="317,229,387,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="241,304,314,331"/>
+<area shape="rect" id="node10" href="$matriz_8h.html" title=" " alt="" coords="441,304,517,331"/>
+<area shape="rect" id="node11" title=" " alt="" coords="424,379,499,405"/>
+<area shape="rect" id="node13" href="$circunferencia_8h.html" title=" " alt="" coords="105,155,231,181"/>
+<area shape="rect" id="node14" href="$aceleracao_8h.html" title=" " alt="" coords="187,229,293,256"/>
+</map>

@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -70,58 +77,95 @@ $(function() {
 <div class="title">evento.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef EVENTO_H</span></div>
+<a href="evento_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef EVENTO_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define EVENTO_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">enum</span> TipoEvento{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    QUIT,</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    KEYDOWN,</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    KEYUP,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    UNDEFINED,</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    NONE</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">enum</span> Trigger{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    T_NONE,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    T_UNDEFINED,</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    T_CLOSE,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    T_KQ,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    T_KP,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    T_KW,</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    T_KS,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    T_KA,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    T_KD,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    T_KLEFT,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    T_KDOWN,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    T_KRIGHT,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    T_KUP</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classEvento.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEvento.html">Evento</a>{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        TipoEvento tipo_evento;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        Trigger trigger;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classEvento.html">Evento</a>(TipoEvento te, Trigger tr):</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            tipo_evento(tipo_evento),</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            trigger(tr)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {    </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        };</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        ~<a class="code" href="classEvento.html">Evento</a>(){}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">friend</span> std::ostream&amp; operator&lt;&lt; (std::ostream &amp;out, <span class="keyword">const</span> <a class="code" href="classEvento.html">Evento</a> &amp;evento){</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            out &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; evento.tipo_evento &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; evento.trigger &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> out;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        };</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// Definição dos tipos de eventos aceitos pelo Sistema</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    Segue-se a seguinte interpretação:</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    QUIT - Evento de saída. Um exemplo é o fechamento da Janela Gráfica</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    KEYDOWN - Pressionamento de uma tecla</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">    KEYUP - Despressionamento de uma tecla</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">    UNDEFINED - Evento não interpretado e definido pelo Sistema</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">    NONE - Representa a ausência de eventos. Importante para controle de Eventos - Considerado Estado Padrão</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">enum</span> TipoEvento{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    QUIT,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    KEYDOWN,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    KEYUP,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    UNDEFINED,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    NONE</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// Definição dos atividadores de eventos aceitos pelo sistema</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">    Segue-se a seguinte interpretação:</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">    T_NONE - Nenhum ativador - Gera um TipoEvento NONE - Considerado Estado Padrão</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">    T_UNDEFINED - Ativador indefinido - Gera um TipoEvento UNDEFINED</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    T_CLOSE -  Fechamento da Janela Gráfica - Gera um TipoEvento QUIT</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    T_KQ - Tecla &quot;Q&quot; do teclado - Pode gerar os TipoEvento de KEYDOWN e KEYUP</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">    T_KP - Tecla &quot;P&quot; do teclado - Pode gerar os TipoEvento de KEYDOWN e KEYUP</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">    T_KW - Tecla &quot;W&quot; do teclado - Pode gerar os TipoEvento de KEYDOWN e KEYUP</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    T_KS - Tecla &quot;S&quot; do teclado - Pode gerar os TipoEvento de KEYDOWN e KEYUP</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">    T_KA - Tecla &quot;A&quot; do teclado - Pode gerar os TipoEvento de KEYDOWN e KEYUP</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">    T_KD - Tecla &quot;D&quot; do teclado - Pode gerar os TipoEvento de KEYDOWN e KEYUP</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">    T_KLEFT - Tecla seta para esquerda do teclado - Pode gerar os TipoEvento de KEYDOWN e KEYUP</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">    T_KDOWN - Tecla seta para baixo do teclado - Pode gerar os TipoEvento de KEYDOWN e KEYUP</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">    T_KRIGHT - Tecla seta para direita do teclado - Pode gerar os TipoEvento de KEYDOWN e KEYUP</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">    T_KUP - Tecla seta para cima do teclado - Pode gerar os TipoEvento de KEYDOWN e KEYUP</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">enum</span> Trigger{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    T_NONE,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    T_UNDEFINED,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    T_CLOSE,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    T_KQ,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    T_KP,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    T_KW,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    T_KS,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    T_KA,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    T_KD,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    T_KLEFT,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    T_KDOWN,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    T_KRIGHT,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    T_KUP</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classEvento.html">   68</a></span>&#160;<span class="keyword">class </span><a class="code" href="classEvento.html">Evento</a>{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classEvento.html#a048ab9016192065b90e7ece0f398038e">   71</a></span>&#160;        TipoEvento <a class="code" href="classEvento.html#a048ab9016192065b90e7ece0f398038e">tipo_evento</a>;             </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classEvento.html#ae3eb67534a6a105f1e76fdebd5ffb4fb">   72</a></span>&#160;        Trigger <a class="code" href="classEvento.html#ae3eb67534a6a105f1e76fdebd5ffb4fb">trigger</a>;                    </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classEvento.html#a784ca75439e527cbd03b84e50e54e017">   83</a></span>&#160;        <a class="code" href="classEvento.html#a784ca75439e527cbd03b84e50e54e017">Evento</a>(TipoEvento te, Trigger tr):</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="classEvento.html#a048ab9016192065b90e7ece0f398038e">tipo_evento</a>(<a class="code" href="classEvento.html#a048ab9016192065b90e7ece0f398038e">tipo_evento</a>),</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="classEvento.html#ae3eb67534a6a105f1e76fdebd5ffb4fb">trigger</a>(tr){    </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        };</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="classEvento.html#a1fe5f7549736a17562670d0ac3941bec">   89</a></span>&#160;        <a class="code" href="classEvento.html#a1fe5f7549736a17562670d0ac3941bec">~Evento</a>(){}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="comment">// Sobrecarga de Operadores</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="classEvento.html#a9548eaaa114d1d6c3cbee159831cc064">   99</a></span>&#160;        <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classEvento.html#a9548eaaa114d1d6c3cbee159831cc064">operator&lt;&lt; </a>(std::ostream &amp;out, <span class="keyword">const</span> <a class="code" href="classEvento.html">Evento</a> &amp;evento){</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            out &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; evento.<a class="code" href="classEvento.html#a048ab9016192065b90e7ece0f398038e">tipo_evento</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; evento.<a class="code" href="classEvento.html#ae3eb67534a6a105f1e76fdebd5ffb4fb">trigger</a> &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">return</span> out;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        };</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;};</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassEvento_html"><div class="ttname"><a href="classEvento.html">Evento</a></div><div class="ttdef"><b>Definition:</b> evento.h:30</div></div>
+<div class="ttc" id="aclassEvento_html_ae3eb67534a6a105f1e76fdebd5ffb4fb"><div class="ttname"><a href="classEvento.html#ae3eb67534a6a105f1e76fdebd5ffb4fb">Evento::trigger</a></div><div class="ttdeci">Trigger trigger</div><div class="ttdoc">Define quem gerou o evento. Para ver os ativadores permitidos olhe o arquivo da Classe.</div><div class="ttdef"><b>Definition:</b> evento.h:72</div></div>
+<div class="ttc" id="aclassEvento_html_a048ab9016192065b90e7ece0f398038e"><div class="ttname"><a href="classEvento.html#a048ab9016192065b90e7ece0f398038e">Evento::tipo_evento</a></div><div class="ttdeci">TipoEvento tipo_evento</div><div class="ttdoc">Define o tipo do evento gerado. Para ver os tipos permitidos olhe o arquivo da Classe.</div><div class="ttdef"><b>Definition:</b> evento.h:71</div></div>
+<div class="ttc" id="aclassEvento_html"><div class="ttname"><a href="classEvento.html">Evento</a></div><div class="ttdoc">Classe Responsável pela representação de um evento único capaz de ser processado por um objeto do tip...</div><div class="ttdef"><b>Definition:</b> evento.h:68</div></div>
+<div class="ttc" id="aclassEvento_html_a784ca75439e527cbd03b84e50e54e017"><div class="ttname"><a href="classEvento.html#a784ca75439e527cbd03b84e50e54e017">Evento::Evento</a></div><div class="ttdeci">Evento(TipoEvento te, Trigger tr)</div><div class="ttdoc">Construtor Default.</div><div class="ttdef"><b>Definition:</b> evento.h:83</div></div>
+<div class="ttc" id="aclassEvento_html_a1fe5f7549736a17562670d0ac3941bec"><div class="ttname"><a href="classEvento.html#a1fe5f7549736a17562670d0ac3941bec">Evento::~Evento</a></div><div class="ttdeci">~Evento()</div><div class="ttdoc">Destrutor da Classe.</div><div class="ttdef"><b>Definition:</b> evento.h:89</div></div>
+<div class="ttc" id="aclassEvento_html_a9548eaaa114d1d6c3cbee159831cc064"><div class="ttname"><a href="classEvento.html#a9548eaaa114d1d6c3cbee159831cc064">Evento::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, const Evento &amp;evento)</div><div class="ttdoc">Sobrecarga do Insertion Operator para Saída de Dados.</div><div class="ttdef"><b>Definition:</b> evento.h:99</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado por &#160;<a href="http://www.doxygen.org/index.html">

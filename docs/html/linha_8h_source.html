@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto POO - Simulação Física 2D: Código-Fonte de Base/linha.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto POO - Simulação Física 2D
+   </div>
+   <div id="projectbrief">Projeto desenvolvido para apresentação na disciplina de  Programação Orientada a Objetos I - Bacharelado em Ciência da Computação - IFC Blumenau</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_628593db0cdce5a76fb85526ae5aa762.html">Base</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">linha.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="linha_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LINHA_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LINHA_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="vetor_8h.html">vetor.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classLinha.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLinha.html">Linha</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">   21</a></span>&#160;        <a class="code" href="classPonto.html">Ponto</a> <a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>;               </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classLinha.html#a411fb41aa85dbc9a2068e09f308b4c21">   22</a></span>&#160;        <a class="code" href="classPonto.html">Ponto</a> <a class="code" href="classLinha.html#a411fb41aa85dbc9a2068e09f308b4c21">p2</a>;               </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">   23</a></span>&#160;        <a class="code" href="classVetor.html">Vetor</a> <a class="code" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a>;           </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classLinha.html#aace7b025f21c57ac832b0e29dd267e7e">   32</a></span>&#160;        <a class="code" href="classLinha.html#aace7b025f21c57ac832b0e29dd267e7e">Linha</a>():</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>(<a class="code" href="classPonto.html">Ponto</a>()), <a class="code" href="classLinha.html#a411fb41aa85dbc9a2068e09f308b4c21">p2</a>(<a class="code" href="classPonto.html">Ponto</a>()), <a class="code" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a>(<a class="code" href="classVetor.html">Vetor</a>()){</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classLinha.html#a7adb000240f20df22cb72c6e38c1b2ba">   52</a></span>&#160;        <a class="code" href="classLinha.html#a7adb000240f20df22cb72c6e38c1b2ba">Linha</a>(<span class="keyword">const</span> <a class="code" href="classPonto.html">Ponto</a> &amp;<a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>, <span class="keyword">const</span> <a class="code" href="classPonto.html">Ponto</a> &amp;<a class="code" href="classLinha.html#a411fb41aa85dbc9a2068e09f308b4c21">p2</a>):</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>(<a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>), <a class="code" href="classLinha.html#a411fb41aa85dbc9a2068e09f308b4c21">p2</a>(<a class="code" href="classLinha.html#a411fb41aa85dbc9a2068e09f308b4c21">p2</a>){</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="classVetor.html">Vetor</a> d = <a class="code" href="classVetor.html">Vetor</a>(<a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>,<a class="code" href="classLinha.html#a411fb41aa85dbc9a2068e09f308b4c21">p2</a>);                     <span class="comment">// Vetor diretor da Reta/Segmento de Reta criado</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <a class="code" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a> = <a class="code" href="classVetor.html">Vetor</a>(-d.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a>,d.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a>);                   <span class="comment">// Cálculo do Vetor Normal</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <a class="code" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a> = <a class="code" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a> * (1.f/<a class="code" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a>.<a class="code" href="classVetor.html#a2279b65fbde9427cb721ba3ff748adb6">getModulo</a>()); <span class="comment">// Tranformação do Vetor Normal em Unitário a fins de simplificação</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classLinha.html#a8a7774ff6d4bd717c457cdb3d182464b">   61</a></span>&#160;        <a class="code" href="classLinha.html#a8a7774ff6d4bd717c457cdb3d182464b">~Linha</a>(){}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassLinha_html_aace7b025f21c57ac832b0e29dd267e7e"><div class="ttname"><a href="classLinha.html#aace7b025f21c57ac832b0e29dd267e7e">Linha::Linha</a></div><div class="ttdeci">Linha()</div><div class="ttdoc">Construtor Default.</div><div class="ttdef"><b>Definition:</b> linha.h:32</div></div>
+<div class="ttc" id="aclassLinha_html_ade241efb0c59630bbd712ab9f06b9a7e"><div class="ttname"><a href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">Linha::p1</a></div><div class="ttdeci">Ponto p1</div><div class="ttdoc">ponto de Início do segmento de Reta</div><div class="ttdef"><b>Definition:</b> linha.h:21</div></div>
+<div class="ttc" id="aclassLinha_html_a8a7774ff6d4bd717c457cdb3d182464b"><div class="ttname"><a href="classLinha.html#a8a7774ff6d4bd717c457cdb3d182464b">Linha::~Linha</a></div><div class="ttdeci">~Linha()</div><div class="ttdoc">Destrutor da Classe.</div><div class="ttdef"><b>Definition:</b> linha.h:61</div></div>
+<div class="ttc" id="avetor_8h_html"><div class="ttname"><a href="vetor_8h.html">vetor.h</a></div></div>
+<div class="ttc" id="aclassLinha_html_aed4bdaaa18ebf2aa4dfc44855dca1303"><div class="ttname"><a href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">Linha::normal</a></div><div class="ttdeci">Vetor normal</div><div class="ttdoc">vetor normal a Linha direcionado ao Centro da Tela</div><div class="ttdef"><b>Definition:</b> linha.h:23</div></div>
+<div class="ttc" id="aclassPonto_html"><div class="ttname"><a href="classPonto.html">Ponto</a></div><div class="ttdoc">Classe para Representação de um Ponto no Plano Cartesiano.</div><div class="ttdef"><b>Definition:</b> ponto.h:16</div></div>
+<div class="ttc" id="aclassVetor_html"><div class="ttname"><a href="classVetor.html">Vetor</a></div><div class="ttdoc">Classe para Representação de um Vetor no Plano Cartesiano.</div><div class="ttdef"><b>Definition:</b> vetor.h:16</div></div>
+<div class="ttc" id="aclassLinha_html_a7adb000240f20df22cb72c6e38c1b2ba"><div class="ttname"><a href="classLinha.html#a7adb000240f20df22cb72c6e38c1b2ba">Linha::Linha</a></div><div class="ttdeci">Linha(const Ponto &amp;p1, const Ponto &amp;p2)</div><div class="ttdoc">Construtor Base.</div><div class="ttdef"><b>Definition:</b> linha.h:52</div></div>
+<div class="ttc" id="aclassLinha_html"><div class="ttname"><a href="classLinha.html">Linha</a></div><div class="ttdoc">Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ...</div><div class="ttdef"><b>Definition:</b> linha.h:18</div></div>
+<div class="ttc" id="aclassVetor_html_a2279b65fbde9427cb721ba3ff748adb6"><div class="ttname"><a href="classVetor.html#a2279b65fbde9427cb721ba3ff748adb6">Vetor::getModulo</a></div><div class="ttdeci">float getModulo() const</div><div class="ttdoc">Método para cálcular o módulo do objeto Vetor.</div><div class="ttdef"><b>Definition:</b> vetor.h:95</div></div>
+<div class="ttc" id="aclassLinha_html_a411fb41aa85dbc9a2068e09f308b4c21"><div class="ttname"><a href="classLinha.html#a411fb41aa85dbc9a2068e09f308b4c21">Linha::p2</a></div><div class="ttdeci">Ponto p2</div><div class="ttdoc">ponto de Fim do segmento de Reta</div><div class="ttdef"><b>Definition:</b> linha.h:22</div></div>
+<div class="ttc" id="aclassVetor_html_af652db948695d6bbd7bc81307020f13b"><div class="ttname"><a href="classVetor.html#af652db948695d6bbd7bc81307020f13b">Vetor::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Componente no eixo das Abscissas.</div><div class="ttdef"><b>Definition:</b> vetor.h:18</div></div>
+<div class="ttc" id="aclassVetor_html_ab430657c16d9b5c321a4b5428a5181ae"><div class="ttname"><a href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">Vetor::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Componente no eixo das Ordendas.</div><div class="ttdef"><b>Definition:</b> vetor.h:19</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

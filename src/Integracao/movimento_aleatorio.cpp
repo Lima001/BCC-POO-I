@@ -17,10 +17,12 @@
 
 using namespace std;
 
+// Função para definir aceleração nula
 double f(double x){
     return 0;
 }
 
+// Função para definir vetores aleatórios, visando usar esses para movimentar objetos
 Vetor gerarVetor(){
     switch (rand() % 7 + 1){
         case 1:
@@ -51,9 +53,11 @@ Vetor gerarVetor(){
 
 int main(){
     
+    // Definição de medidas de tempo - Importante para Integração e Movimentação dos Objetos
     double t = 0;
     double dt = 1/10.f;
 
+    // Criação dos Objeto da simulação a partir de um Modelo
     Objeto modelo = Objeto(10, 10, Vetor(0,0), Vetor(0,0), Aceleracao(f,f));
     
     int qtd_objetos = 50;
@@ -63,9 +67,10 @@ int main(){
         lista_objetos[i] = move(modelo);
     }
     
+    // objeto auxiliar para armazenar informações das Circunferencias dos Objetos
     Circunferencia circ;
-    //cout << circ << endl;
 
+    // Declaração e Inicialização de objetos para manipulação da interface gráfica
     CorRGBA azul = CorRGBA(0,0,255);
     CorRGBA preto = CorRGBA(0,0,0);
     CorRGBA branco = CorRGBA();
@@ -81,6 +86,7 @@ int main(){
     
     Renderizador render = Renderizador(janela.ptr_janela);
 
+    // Definição da Matriz de Transformação para processo de Renderização
     render.Transformacao = Matriz(3,3);
     render.Transformacao[0][0] = 1;
     render.Transformacao[0][1] = 0;
@@ -98,8 +104,10 @@ int main(){
                                             800, 600, Ponto(400,300));
 
 
+    // Laço principal da Simulação
     bool executar = true;
     while (executar){
+        // Registrar e interpretar Eventos
         gerenciador.registrarEvento();
 
         if (gerenciador.evento.tipo_evento == QUIT){
@@ -107,27 +115,38 @@ int main(){
             break;
         }
         
+        // Renderizar fundo gráfico da Simulação
         janela.preencherFundo(branco);
         plano.desenharGrade(render);
 
+        // Movimentar Objetos
         for (int i=0; i<qtd_objetos; i++){
+            // Definir sua velocidade de maneira aleatória
             lista_objetos[i].v = move(gerarVetor());
            
+            // Movimentar considerando a nova velocidade
             lista_objetos[i].movimentar(t,t+dt,dt);
             
+            // Armazenar dados de sua Circunferencia para renderização
             circ = move(lista_objetos[i].getCircunferencia());
             
+            // Rendereização do Objeto - Circunferencia + Vetor velocidade
             render.desenhar_circunferencia(azul, circ);
             render.desenhar_vetor(preto, lista_objetos[i].v, circ.centro);
         }
         
+        // Atualização do tempo da Simulação
         t += dt;
 
+        // Atualização dos elementos gráficos para exibição dos resultados
         render.atualizar();
         janela.atualizar();
+        
+        // Controle de fps
         relogio.tick();
     }
     
+    // Finalização SDL
     control.finalizar();
 
     return 0;

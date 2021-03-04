@@ -2,61 +2,269 @@
 \label{classObjeto}\index{Objeto@{Objeto}}
 
 
+Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-\/se.  
+
+
+
+
+{\ttfamily \#include $<$objeto.\+h$>$}
+
+
+
 Diagrama de colaboração para Objeto\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classObjeto__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classObjeto_a9def8813c7908fea800a53fa7412549a}\label{classObjeto_a9def8813c7908fea800a53fa7412549a}} 
-{\bfseries Objeto} (float raio, float massa, const \mbox{\hyperlink{classVetor}{Vetor}} posicao, const \mbox{\hyperlink{classVetor}{Vetor}} movimento, const \mbox{\hyperlink{classAceleracao}{Aceleracao}} aceleracao)
-\item 
-\mbox{\Hypertarget{classObjeto_a523081addb09a4198bd04c2c353a51dd}\label{classObjeto_a523081addb09a4198bd04c2c353a51dd}} 
-{\bfseries Objeto} (const \mbox{\hyperlink{classObjeto}{Objeto}} \&obj)
-\item 
-\mbox{\Hypertarget{classObjeto_abedf7f8e2c1ea6c0fbdf61788d1480f9}\label{classObjeto_abedf7f8e2c1ea6c0fbdf61788d1480f9}} 
-{\bfseries Objeto} (\mbox{\hyperlink{classObjeto}{Objeto}} \&\&obj) noexcept
-\item 
-\mbox{\Hypertarget{classObjeto_a299fa0655eb78b2f214d2fcea25224af}\label{classObjeto_a299fa0655eb78b2f214d2fcea25224af}} 
-\mbox{\hyperlink{classCircunferencia}{Circunferencia}} {\bfseries get\+Circunferencia} ()
-\item 
-\mbox{\Hypertarget{classObjeto_abc74b2353fce9ed0385a99dca5345800}\label{classObjeto_abc74b2353fce9ed0385a99dca5345800}} 
-void {\bfseries movimentar} (double ti, double tf, double dt)
-\item 
-\mbox{\Hypertarget{classObjeto_a56b39714b99ab866d96c1de567140dcd}\label{classObjeto_a56b39714b99ab866d96c1de567140dcd}} 
-\mbox{\hyperlink{classObjeto}{Objeto}} \& {\bfseries operator=} (\mbox{\hyperlink{classObjeto}{Objeto}} \&obj)
-\item 
-\mbox{\Hypertarget{classObjeto_abf41379166eadad232c7910a96c5de34}\label{classObjeto_abf41379166eadad232c7910a96c5de34}} 
-\mbox{\hyperlink{classObjeto}{Objeto}} \& {\bfseries operator=} (\mbox{\hyperlink{classObjeto}{Objeto}} \&\&obj) noexcept
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classObjeto_a5608071f995c220f0f1a0e5887c2d11d}{Objeto}} ()
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjeto_a2907a62f11eee76e74ba9c9bf50aba24}{Objeto}} (float raio, float massa, const \mbox{\hyperlink{classVetor}{Vetor}} \&posicao, const \mbox{\hyperlink{classVetor}{Vetor}} \&movimento, const \mbox{\hyperlink{classAceleracao}{Aceleracao}} \&aceleracao=\mbox{\hyperlink{classAceleracao}{Aceleracao}}())
+\begin{DoxyCompactList}\small\item\em Construtor Base. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjeto_a523081addb09a4198bd04c2c353a51dd}{Objeto}} (const \mbox{\hyperlink{classObjeto}{Objeto}} \&obj)
+\begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjeto_abedf7f8e2c1ea6c0fbdf61788d1480f9}{Objeto}} (\mbox{\hyperlink{classObjeto}{Objeto}} \&\&obj) noexcept
+\begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCircunferencia}{Circunferencia}} \mbox{\hyperlink{classObjeto_a299fa0655eb78b2f214d2fcea25224af}{get\+Circunferencia}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a Circunferência do \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObjeto_abc74b2353fce9ed0385a99dca5345800}{movimentar}} (double ti, double tf, double dt)
+\begin{DoxyCompactList}\small\item\em Movimenta o \mbox{\hyperlink{classObjeto}{Objeto}} alterando possivelmente sua velocidade e posição. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjeto}{Objeto}} \& \mbox{\hyperlink{classObjeto_a56b39714b99ab866d96c1de567140dcd}{operator=}} (\mbox{\hyperlink{classObjeto}{Objeto}} \&obj)
+\begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classObjeto}{Objeto}} \& \mbox{\hyperlink{classObjeto_abf41379166eadad232c7910a96c5de34}{operator=}} (\mbox{\hyperlink{classObjeto}{Objeto}} \&\&obj) noexcept
+\begin{DoxyCompactList}\small\item\em ! Atribuição Move \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classObjeto_aa722a7b9c4a9d19d7a1d9be413be06fc}\label{classObjeto_aa722a7b9c4a9d19d7a1d9be413be06fc}} 
-int {\bfseries id}
-\item 
+int \mbox{\hyperlink{classObjeto_aa722a7b9c4a9d19d7a1d9be413be06fc}{id}}
+\begin{DoxyCompactList}\small\item\em Atributo de identificação única de cada \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classObjeto_ace60283c1fb4b980ea25ca0e93e0aaac}\label{classObjeto_ace60283c1fb4b980ea25ca0e93e0aaac}} 
-float {\bfseries raio\+\_\+circunferencia}
-\item 
+float \mbox{\hyperlink{classObjeto_ace60283c1fb4b980ea25ca0e93e0aaac}{raio\+\_\+circunferencia}}
+\begin{DoxyCompactList}\small\item\em Raio da circunferencia do \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classObjeto_a911f3eedef2be0b7c5b9969e046e8cbd}\label{classObjeto_a911f3eedef2be0b7c5b9969e046e8cbd}} 
-float {\bfseries m}
-\item 
+float \mbox{\hyperlink{classObjeto_a911f3eedef2be0b7c5b9969e046e8cbd}{m}}
+\begin{DoxyCompactList}\small\item\em Massa do \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classObjeto_ac46abc31b29690263c366ed34ed8b5c6}\label{classObjeto_ac46abc31b29690263c366ed34ed8b5c6}} 
-\mbox{\hyperlink{classVetor}{Vetor}} {\bfseries r}
-\item 
+\mbox{\hyperlink{classVetor}{Vetor}} \mbox{\hyperlink{classObjeto_ac46abc31b29690263c366ed34ed8b5c6}{r}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVetor}{Vetor}} posição do \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classObjeto_aa91369eaf35a47d09053b10b8d33bf6d}\label{classObjeto_aa91369eaf35a47d09053b10b8d33bf6d}} 
-\mbox{\hyperlink{classVetor}{Vetor}} {\bfseries v}
-\item 
+\mbox{\hyperlink{classVetor}{Vetor}} \mbox{\hyperlink{classObjeto_aa91369eaf35a47d09053b10b8d33bf6d}{v}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVetor}{Vetor}} velocidade do \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classObjeto_a5475cb519dfa55af127beb2624e74871}\label{classObjeto_a5475cb519dfa55af127beb2624e74871}} 
-\mbox{\hyperlink{classAceleracao}{Aceleracao}} {\bfseries a}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classAceleracao}{Aceleracao}} \mbox{\hyperlink{classObjeto_a5475cb519dfa55af127beb2624e74871}{a}}
+\begin{DoxyCompactList}\small\item\em Aceleração do \mbox{\hyperlink{classObjeto}{Objeto}} -\/ Conjunto de Funções que definem aceleração nos eixos x e y. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
+std\+::ostream \& \mbox{\hyperlink{classObjeto_aeb698ee407fad88811a0ace453e800a1}{operator$<$$<$}} (std\+::ostream \&out, \mbox{\hyperlink{classObjeto}{Objeto}} \&objeto)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do Insertion Operator para Saída de Dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-\/se. 
+
+\begin{DoxyAuthor}{Autor}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Última Modificação\+: 27/02/2002 
+\end{DoxyDate}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classObjeto_a5608071f995c220f0f1a0e5887c2d11d}\label{classObjeto_a5608071f995c220f0f1a0e5887c2d11d}} 
+\index{Objeto@{Objeto}!Objeto@{Objeto}}
+\index{Objeto@{Objeto}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{Objeto()}{Objeto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Objeto\+::\+Objeto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Inicializa o \mbox{\hyperlink{classObjeto}{Objeto}} com todos os valor numéricos nulos, e faz uso dos construtores default das outras classes para criar os objetos membros em um estado padrão.
+
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classVetor}{Vetor}} 
+
+\mbox{\hyperlink{classAceleracao}{Aceleracao}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classObjeto_a2907a62f11eee76e74ba9c9bf50aba24}\label{classObjeto_a2907a62f11eee76e74ba9c9bf50aba24}} 
+\index{Objeto@{Objeto}!Objeto@{Objeto}}
+\index{Objeto@{Objeto}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{Objeto()}{Objeto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Objeto\+::\+Objeto (\begin{DoxyParamCaption}\item[{float}]{raio,  }\item[{float}]{massa,  }\item[{const \mbox{\hyperlink{classVetor}{Vetor}} \&}]{posicao,  }\item[{const \mbox{\hyperlink{classVetor}{Vetor}} \&}]{movimento,  }\item[{const \mbox{\hyperlink{classAceleracao}{Aceleracao}} \&}]{aceleracao = {\ttfamily \mbox{\hyperlink{classAceleracao}{Aceleracao}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Base. 
+
+Cria um \mbox{\hyperlink{classObjeto}{Objeto}} conforme dados passados por parâmetro
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em raio} & usado para inicializar o atributo \mbox{\hyperlink{classObjeto_ace60283c1fb4b980ea25ca0e93e0aaac}{raio\+\_\+circunferencia}} \\
+\hline
+{\em massa} & usado para inicializar o atributo \mbox{\hyperlink{classObjeto_a911f3eedef2be0b7c5b9969e046e8cbd}{m}} \\
+\hline
+{\em posicao} & usado para inicializar o atributo \mbox{\hyperlink{classObjeto_ac46abc31b29690263c366ed34ed8b5c6}{r}} \\
+\hline
+{\em movimento} & usado para inicializar o atributo \mbox{\hyperlink{classObjeto_aa91369eaf35a47d09053b10b8d33bf6d}{v}} \\
+\hline
+{\em aceleracao} & usado para inicializar o atributo \mbox{\hyperlink{classObjeto_a5475cb519dfa55af127beb2624e74871}{a}}. Em caso de omissão do parâmetro, o atributo é inicializado com um objeto \mbox{\hyperlink{classAceleracao}{Aceleracao}} construido com o método construtor default ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classObjeto_a523081addb09a4198bd04c2c353a51dd}\label{classObjeto_a523081addb09a4198bd04c2c353a51dd}} 
+\index{Objeto@{Objeto}!Objeto@{Objeto}}
+\index{Objeto@{Objeto}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{Objeto()}{Objeto()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Objeto\+::\+Objeto (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classObjeto}{Objeto}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor de Cópia. 
+
+Cria um novo objeto copiando as componentes de um \mbox{\hyperlink{classObjeto}{Objeto}} informado.
+
+Observação\+: O \mbox{\hyperlink{classObjeto_aa722a7b9c4a9d19d7a1d9be413be06fc}{id}} não é copiado, uma vez que deve ser único para cada \mbox{\hyperlink{classObjeto}{Objeto}} do sistema.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em obj} & Referência constante para o \mbox{\hyperlink{classObjeto}{Objeto}} que será copiado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classObjeto_abedf7f8e2c1ea6c0fbdf61788d1480f9}\label{classObjeto_abedf7f8e2c1ea6c0fbdf61788d1480f9}} 
+\index{Objeto@{Objeto}!Objeto@{Objeto}}
+\index{Objeto@{Objeto}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{Objeto()}{Objeto()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Objeto\+::\+Objeto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObjeto}{Objeto}} \&\&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construtor Move. 
+
+Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os dados de um \mbox{\hyperlink{classObjeto}{Objeto}} para o novo objeto criado. A título de especificação, a operação de movimentação é chamada ao longo do processo para a atribuição Move dos atributos do tipo \mbox{\hyperlink{classVetor}{Vetor}}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em obj} & Referência rvalue de um \mbox{\hyperlink{classObjeto}{Objeto}}\\
+\hline
+\end{DoxyParams}
+Para mais detalhe sobre o recurso, consultar documentação da linguagem 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classObjeto_a299fa0655eb78b2f214d2fcea25224af}\label{classObjeto_a299fa0655eb78b2f214d2fcea25224af}} 
+\index{Objeto@{Objeto}!getCircunferencia@{getCircunferencia}}
+\index{getCircunferencia@{getCircunferencia}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{getCircunferencia()}{getCircunferencia()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCircunferencia}{Circunferencia}} Objeto\+::get\+Circunferencia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna a Circunferência do \mbox{\hyperlink{classObjeto}{Objeto}}. 
+
+A partir dos atributos \mbox{\hyperlink{classObjeto_ace60283c1fb4b980ea25ca0e93e0aaac}{raio\+\_\+circunferencia}} e \mbox{\hyperlink{classObjeto_ac46abc31b29690263c366ed34ed8b5c6}{r}} é possível descrever um circunferência que representa a forma geométrica do \mbox{\hyperlink{classObjeto}{Objeto}} .
+
+Esse método nada mais faz do que retorar um objeto \mbox{\hyperlink{classCircunferencia}{Circunferencia}} dessa representação.
+
+Importante principalmente para a renderização de um \mbox{\hyperlink{classObjeto}{Objeto}} na tela.
+
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classRenderizador}{Renderizador}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classObjeto_abc74b2353fce9ed0385a99dca5345800}\label{classObjeto_abc74b2353fce9ed0385a99dca5345800}} 
+\index{Objeto@{Objeto}!movimentar@{movimentar}}
+\index{movimentar@{movimentar}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{movimentar()}{movimentar()}}
+{\footnotesize\ttfamily void Objeto\+::movimentar (\begin{DoxyParamCaption}\item[{double}]{ti,  }\item[{double}]{tf,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Movimenta o \mbox{\hyperlink{classObjeto}{Objeto}} alterando possivelmente sua velocidade e posição. 
+
+Esse método deve ser usado quando deseja-\/se calcular o movimento realizado pelo \mbox{\hyperlink{classObjeto}{Objeto}} em um determinado intervalo de tempo.
+
+Os cálculos são realizados através da Implementação de um Integrador de Euler, onde de maneira resumida pode-\/se calcular a velocidade através da integração da aceleração em um intervalo de tempo, bem como calcular a posição do \mbox{\hyperlink{classObjeto}{Objeto}} usando-\/se da integração da velocidade do objeto
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ti} & tempo incial do Intervalo \\
+\hline
+{\em tf} & tempo final do Intervalo \\
+\hline
+{\em dt} & delta tempo -\/$>$ diferença tf-\/ti\\
+\hline
+\end{DoxyParams}
+Para mais detalhes acessar\+: \begin{DoxySeeAlso}{Veja também}
+\href{https://en.wikipedia.org/wiki/Euler_method}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Euler\+\_\+method}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classObjeto_abf41379166eadad232c7910a96c5de34}\label{classObjeto_abf41379166eadad232c7910a96c5de34}} 
+\index{Objeto@{Objeto}!operator=@{operator=}}
+\index{operator=@{operator=}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjeto}{Objeto}}\& Objeto\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObjeto}{Objeto}} \&\&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+! Atribuição Move 
+
+Movimenta todos os atributos de um \mbox{\hyperlink{classObjeto}{Objeto}} passado como parâmetro para o \mbox{\hyperlink{classObjeto}{Objeto}} atual. Nesse caso cada objeto terá o seu \mbox{\hyperlink{classObjeto_aa722a7b9c4a9d19d7a1d9be413be06fc}{id}} único mantido e apenas os atibutos mais gerais são copiados.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em obj} & Referência constante do \mbox{\hyperlink{classObjeto}{Objeto}} que será Copiado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o \mbox{\hyperlink{classObjeto}{Objeto}} que invocou o operador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classObjeto_a56b39714b99ab866d96c1de567140dcd}\label{classObjeto_a56b39714b99ab866d96c1de567140dcd}} 
+\index{Objeto@{Objeto}!operator=@{operator=}}
+\index{operator=@{operator=}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classObjeto}{Objeto}}\& Objeto\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObjeto}{Objeto}} \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atribuição por Cópia. 
+
+Copia todos os atributos de um \mbox{\hyperlink{classObjeto}{Objeto}} passado como parâmetro para o \mbox{\hyperlink{classObjeto}{Objeto}} atual. Observe que a partir desse momento, o \mbox{\hyperlink{classObjeto}{Objeto}} atual torna-\/se \char`\"{}praticamente\char`\"{} o mesmo \mbox{\hyperlink{classObjeto}{Objeto}} copiado, tendo o mesmo id. Por essa razão não recomenda-\/se realizar a Atribuição por cópia e manter os dois Objetos na Simulação, uma vez que implicações no que tange a aplicação de colisão a partir do id pode gerar resultados inesperados.
+
+Caso seja necessária uma \char`\"{}cópia\char`\"{} mais superficial onde somente os atributos gerais como raio, massa e atributos numéricos sejam copiados para o \mbox{\hyperlink{classObjeto}{Objeto}}, recomenda-\/se o uso da Atribuição por Movimentação, implementada já nessa classe.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em obj} & Referência constante do \mbox{\hyperlink{classObjeto}{Objeto}} que será Copiado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o \mbox{\hyperlink{classObjeto}{Objeto}} que invocou o operador 
+\end{DoxyReturn}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
 \mbox{\Hypertarget{classObjeto_aeb698ee407fad88811a0ace453e800a1}\label{classObjeto_aeb698ee407fad88811a0ace453e800a1}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, \mbox{\hyperlink{classObjeto}{Objeto}} \&objeto)
-\end{DoxyCompactItemize}
+\index{Objeto@{Objeto}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{\mbox{\hyperlink{classObjeto}{Objeto}} \&}]{objeto }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do Insertion Operator para Saída de Dados. 
+
+\begin{DoxyReturn}{Retorna}
+uma string no formato\+: \char`\"{}\+Objeto(raio\+\_\+circunferencia,massa,r,v,a)\char`\"{} onde cada elemento refere-\/se ao valor dos respectivos atributos do objeto 
+\end{DoxyReturn}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Base/objeto.\+h\end{DoxyCompactItemize}
+Base/\mbox{\hyperlink{objeto_8h}{objeto.\+h}}\end{DoxyCompactItemize}

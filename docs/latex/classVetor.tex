@@ -2,6 +2,11 @@
 \label{classVetor}\index{Vetor@{Vetor}}
 
 
+Classe para Representação de um \mbox{\hyperlink{classVetor}{Vetor}} no Plano Cartesiano.  
+
+
+
+
 {\ttfamily \#include $<$vetor.\+h$>$}
 
 \doxysubsection*{Membros Públicos}
@@ -12,23 +17,25 @@
 \mbox{\hyperlink{classVetor_a6e2acbd08b7677a3b2b2cbc2fab520ff}{Vetor}} (float \mbox{\hyperlink{classVetor_af652db948695d6bbd7bc81307020f13b}{x}}, float \mbox{\hyperlink{classVetor_ab430657c16d9b5c321a4b5428a5181ae}{y}})
 \begin{DoxyCompactList}\small\item\em Construtor Base a partir de Coordenadas. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVetor_ab37163f68f7f265eedfcf5adba635a68}{Vetor}} (const \mbox{\hyperlink{classPonto}{Ponto}} \&inicio, const \mbox{\hyperlink{classPonto}{Ponto}} \&fim)
-\begin{DoxyCompactList}\small\item\em Construtor a partir de Pontos. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor a partir de pontos. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVetor_a2bcdf7f558b9c6768697a50ba1f8e260}{Vetor}} (const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor)
 \begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVetor_a0f841dc7b4c753e545f966ff44f86435}{Vetor}} (\mbox{\hyperlink{classVetor}{Vetor}} \&\&vetor) noexcept
 \begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classVetor_a2279b65fbde9427cb721ba3ff748adb6}{get\+Modulo}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Método para cálcular o módulo do objeto \mbox{\hyperlink{classVetor}{Vetor}}. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classVetor_ab7291e5e93996a98b74e79781198b25c}{get\+Angulo}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Método para cálcular o ângulo formado pelo vetor em relação ao eixo x. \end{DoxyCompactList}\item 
 const \mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classVetor_af9ec833987134211b666458ac33811fe}{vetor\+To\+Ponto}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Transforma um \mbox{\hyperlink{classVetor}{Vetor}} para sua representação em \mbox{\hyperlink{classPonto}{Ponto}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{classVetor_afb04f83b5a33990856ad6809772943ca}{vetor\+To\+Matriz}} ()
+\begin{DoxyCompactList}\small\item\em Transforma um \mbox{\hyperlink{classVetor}{Vetor}} para sua representação em \mbox{\hyperlink{classMatriz}{Matriz}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVetor}{Vetor}} \mbox{\hyperlink{classVetor_ae59666bd20761415172191c2afa4decf}{operator+}} (const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor)
-\item 
+\begin{DoxyCompactList}\small\item\em Soma de vetores. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVetor}{Vetor}} \mbox{\hyperlink{classVetor_a530724daa99751287335033b9ccb6b15}{operator-\/}} (const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor)
-\item 
+\begin{DoxyCompactList}\small\item\em Subtração de Vetores. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classVetor_a7da569260dc42ea384335cce2c11fafb}{operator$\ast$}} (const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor)
-\item 
+\begin{DoxyCompactList}\small\item\em Produto escalar de vetores. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVetor}{Vetor}} \& \mbox{\hyperlink{classVetor_a37935eaf0267708f702daccc9f39e953}{operator=}} (const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor)
 \begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVetor}{Vetor}} \& \mbox{\hyperlink{classVetor_a449c2b429e3a8585546d328afe62c1b3}{operator=}} (\mbox{\hyperlink{classVetor}{Vetor}} \&\&vetor) noexcept
@@ -38,27 +45,29 @@ float \mbox{\hyperlink{classVetor_a7da569260dc42ea384335cce2c11fafb}{operator$\a
 \item 
 \mbox{\Hypertarget{classVetor_af652db948695d6bbd7bc81307020f13b}\label{classVetor_af652db948695d6bbd7bc81307020f13b}} 
 float \mbox{\hyperlink{classVetor_af652db948695d6bbd7bc81307020f13b}{x}}
-\begin{DoxyCompactList}\small\item\em Componente no eixo X -\/ Constante Real que Múltiplica o vetor i. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Componente no eixo das Abscissas. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classVetor_ab430657c16d9b5c321a4b5428a5181ae}\label{classVetor_ab430657c16d9b5c321a4b5428a5181ae}} 
 float \mbox{\hyperlink{classVetor_ab430657c16d9b5c321a4b5428a5181ae}{y}}
-\begin{DoxyCompactList}\small\item\em Componente no eixo Y -\/ Constante Real que Múltiplica o vetor j. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Componente no eixo das Ordendas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
 std\+::ostream \& \mbox{\hyperlink{classVetor_a915c25c15881d882e5891765f574ff72}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor)
-\item 
+\begin{DoxyCompactList}\small\item\em Sobrecarga do Insertion Operator para Saída de Dados. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVetor}{Vetor}} \mbox{\hyperlink{classVetor_aa83625b0e4fc53fc3fe9cc2a6d98d9b7}{operator$\ast$}} (const float escalar, const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor)
-\item 
+\begin{DoxyCompactList}\small\item\em Multiplicação de um \mbox{\hyperlink{classVetor}{Vetor}} por um escalar. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVetor}{Vetor}} \mbox{\hyperlink{classVetor_aeb08d22ebcaaa62ae2d4fcbbc5ebf6ee}{operator$\ast$}} (const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor, const float escalar)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Multiplicação de um \mbox{\hyperlink{classVetor}{Vetor}} por um escalar. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
+Classe para Representação de um \mbox{\hyperlink{classVetor}{Vetor}} no Plano Cartesiano. 
+
 \begin{DoxyAuthor}{Autor}
 Gabriel Eduardo Lima 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Data}
-11/11/2020 Classe para Representação de um \mbox{\hyperlink{classVetor}{Vetor}} no Plano Cartesiano 
+Última Modificação\+: 27/02/2002 
 \end{DoxyDate}
 
 
@@ -75,7 +84,7 @@ Construtor Default.
 
 Chamado quando nenhum parâmetro de ininicialização for informado.
 
-Cria um objeto com ambas as componentes configuradas para 0, resultando em um vetor nulo.\mbox{\Hypertarget{classVetor_a6e2acbd08b7677a3b2b2cbc2fab520ff}\label{classVetor_a6e2acbd08b7677a3b2b2cbc2fab520ff}} 
+Cria um objeto com ambas as componentes configuradas para 0, resultando em um vetor nulo. \mbox{\Hypertarget{classVetor_a6e2acbd08b7677a3b2b2cbc2fab520ff}\label{classVetor_a6e2acbd08b7677a3b2b2cbc2fab520ff}} 
 \index{Vetor@{Vetor}!Vetor@{Vetor}}
 \index{Vetor@{Vetor}!Vetor@{Vetor}}
 \doxysubsubsection{\texorpdfstring{Vetor()}{Vetor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
@@ -85,13 +94,13 @@ Cria um objeto com ambas as componentes configuradas para 0, resultando em um ve
 
 Construtor Base a partir de Coordenadas. 
 
-Cria um objeto com as componentes conforme valores passados por parâmetro
+Cria um objeto com as componentes conforme valores passados por parâmetro.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em x} & um float representando a Componente X \\
+{\em x} & usado para inicializar atributo de mesmo nomenclatura \\
 \hline
-{\em y} & um float representando a Componente Y\\
+{\em y} & usado para inicializar atributo de mesmo nomenclatura \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classVetor_ab37163f68f7f265eedfcf5adba635a68}\label{classVetor_ab37163f68f7f265eedfcf5adba635a68}} 
@@ -102,15 +111,17 @@ Cria um objeto com as componentes conforme valores passados por parâmetro
 
 
 
-Construtor a partir de Pontos. 
+Construtor a partir de pontos. 
 
-Cria um objeto onde componentes calculadas a partir de dois pontos, sendo eles o ponto de Início e de Fim do vetor, inforamados por parâmetro.
+Cria um objeto onde as componentes são calculadas a partir de dois pontos, sendo eles o ponto de Início e de Fim do vetor, inforamados por parâmetro.
+
+O cálculo do vetor dá-\/se da seguinte forma\+: Considere os Pontos $ I(xi,yi) $ e $ F(xf,yf) $ representando respectivamente os parâmetros inicio e fim. As componentes do vetor dá-\/se da forma\+: $ \vec{v} = (xf-xi, yf-yi) $.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em inicio} & uma referência constante a um objeto do tipo \mbox{\hyperlink{classPonto}{Ponto}} \\
+{\em inicio} & Referência constante a um \mbox{\hyperlink{classPonto}{Ponto}} \\
 \hline
-{\em fim} & uma referência constante a um objeto do tipo \mbox{\hyperlink{classPonto}{Ponto}}\\
+{\em fim} & Referência constante a um \mbox{\hyperlink{classPonto}{Ponto}} \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classVetor_a2bcdf7f558b9c6768697a50ba1f8e260}\label{classVetor_a2bcdf7f558b9c6768697a50ba1f8e260}} 
@@ -127,7 +138,7 @@ Cria um novo objeto copiando as componentes de um vetor informado.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em vetor} & uma referência constante para um \mbox{\hyperlink{classVetor}{Vetor}}\\
+{\em vetor} & Referência constante para o \mbox{\hyperlink{classVetor}{Vetor}} que será copiado \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classVetor_a0f841dc7b4c753e545f966ff44f86435}\label{classVetor_a0f841dc7b4c753e545f966ff44f86435}} 
@@ -144,10 +155,10 @@ Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de manei
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em vetor} & uma referência rvalue de um \mbox{\hyperlink{classVetor}{Vetor}}\\
+{\em vetor} & Referência rvalue de um \mbox{\hyperlink{classVetor}{Vetor}}\\
 \hline
 \end{DoxyParams}
-Para mais detalhe sobre o recurso, consultar documentação da linguagem.
+Para mais detalhe sobre o recurso, consultar documentação da linguagem 
 
 \doxysubsection{Funções membros}
 \mbox{\Hypertarget{classVetor_ab7291e5e93996a98b74e79781198b25c}\label{classVetor_ab7291e5e93996a98b74e79781198b25c}} 
@@ -156,10 +167,14 @@ Para mais detalhe sobre o recurso, consultar documentação da linguagem.
 \doxysubsubsection{\texorpdfstring{getAngulo()}{getAngulo()}}
 {\footnotesize\ttfamily float Vetor\+::get\+Angulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Método para cálcular o angulo formado pelo \mbox{\hyperlink{classVetor}{Vetor}} em relação ao eixo x.
+
+
+Método para cálcular o ângulo formado pelo vetor em relação ao eixo x. 
+
+Cálculo efetuado através de $\alpha = \arctan{(y/x)}$.
 
 \begin{DoxyReturn}{Retorna}
-um número float
+O ângulo $\alpha$ em Radianos 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classVetor_a2279b65fbde9427cb721ba3ff748adb6}\label{classVetor_a2279b65fbde9427cb721ba3ff748adb6}} 
 \index{Vetor@{Vetor}!getModulo@{getModulo}}
@@ -167,10 +182,14 @@ um número float
 \doxysubsubsection{\texorpdfstring{getModulo()}{getModulo()}}
 {\footnotesize\ttfamily float Vetor\+::get\+Modulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Método para cálcular o módulo do objeto vetor.
+
+
+Método para cálcular o módulo do objeto \mbox{\hyperlink{classVetor}{Vetor}}. 
+
+Cálculo efetuado através de\+: $ |v| = \sqrt{x^2 + y^2}$.
 
 \begin{DoxyReturn}{Retorna}
-um número float
+O valor do módulo $|v|$ 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classVetor_a7da569260dc42ea384335cce2c11fafb}\label{classVetor_a7da569260dc42ea384335cce2c11fafb}} 
 \index{Vetor@{Vetor}!operator$\ast$@{operator$\ast$}}
@@ -178,17 +197,19 @@ um número float
 \doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
 {\footnotesize\ttfamily float Vetor\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVetor}{Vetor}} \&}]{vetor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Produto Escalar de Vetores.
 
-Multiplica as componentes respesctivas dos Vetores, onde os valores do produto são somados e retornados.
+
+Produto escalar de vetores. 
+
+Multiplica as respesctivas componentes dos vetores, sendo que os valores resultantes desses produtos são somados e retornados.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em vetor} & uma referência constante a um \mbox{\hyperlink{classVetor}{Vetor}}\\
+{\em vetor} & Referência constante a um \mbox{\hyperlink{classVetor}{Vetor}} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-um número int
+O resutlado {\ttfamily float} da Operação 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classVetor_ae59666bd20761415172191c2afa4decf}\label{classVetor_ae59666bd20761415172191c2afa4decf}} 
 \index{Vetor@{Vetor}!operator+@{operator+}}
@@ -196,15 +217,19 @@ um número int
 \doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classVetor}{Vetor}} Vetor\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVetor}{Vetor}} \&}]{vetor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Soma de Vetores. Soma as componentes dos Vetores criando assim um novo objeto.
+
+
+Soma de vetores. 
+
+Soma as respectivas componentes dos vetores criando assim um novo objeto \mbox{\hyperlink{classVetor}{Vetor}}.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em vetor} & uma referência constante a um \mbox{\hyperlink{classVetor}{Vetor}} \\
+{\em vetor} & Referência constante ao \mbox{\hyperlink{classVetor}{Vetor}} referente a parcela direita da Operação \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-um objeto do tipo \mbox{\hyperlink{classVetor}{Vetor}}
+\mbox{\hyperlink{classVetor}{Vetor}} resultante da Operação 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classVetor_a530724daa99751287335033b9ccb6b15}\label{classVetor_a530724daa99751287335033b9ccb6b15}} 
 \index{Vetor@{Vetor}!operator-\/@{operator-\/}}
@@ -212,15 +237,19 @@ um objeto do tipo \mbox{\hyperlink{classVetor}{Vetor}}
 \doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classVetor}{Vetor}} Vetor\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVetor}{Vetor}} \&}]{vetor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Subtração de Vetores. Subtrai as componentes dos Vetores criando assim um novo objeto.
+
+
+Subtração de Vetores. 
+
+Subtrai as respectivas componentes dos vetores criando assim um novo objeto \mbox{\hyperlink{classVetor}{Vetor}}.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em vetor} & uma referência constante a um \mbox{\hyperlink{classVetor}{Vetor}}\\
+{\em vetor} & Referência constante a um \mbox{\hyperlink{classVetor}{Vetor}} referente a parcela direita da Operação \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-um objeto do tipo \mbox{\hyperlink{classVetor}{Vetor}}
+\mbox{\hyperlink{classVetor}{Vetor}} resultante da Operação 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classVetor_a37935eaf0267708f702daccc9f39e953}\label{classVetor_a37935eaf0267708f702daccc9f39e953}} 
 \index{Vetor@{Vetor}!operator=@{operator=}}
@@ -234,11 +263,11 @@ Atribuição por Cópia.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em vetor} & uma referência constante de um \mbox{\hyperlink{classVetor}{Vetor}} \\
+{\em vetor} & Referência constante do \mbox{\hyperlink{classVetor}{Vetor}} que será Copiado \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-Referência para o \mbox{\hyperlink{classVetor}{Vetor}} que Invocou o Método
+Referência para o \mbox{\hyperlink{classVetor}{Vetor}} que Invocou o operador 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classVetor_a449c2b429e3a8585546d328afe62c1b3}\label{classVetor_a449c2b429e3a8585546d328afe62c1b3}} 
 \index{Vetor@{Vetor}!operator=@{operator=}}
@@ -252,11 +281,28 @@ Atribuição Move.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em vetor} & uma referência rvalue de um \mbox{\hyperlink{classVetor}{Vetor}} \\
+{\em vetor} & Referência rvalue do \mbox{\hyperlink{classVetor}{Vetor}} Base para a operação \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-Referência para o \mbox{\hyperlink{classVetor}{Vetor}} que Invocou o Método
+Referência para o \mbox{\hyperlink{classVetor}{Vetor}} que Invocou o operador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVetor_afb04f83b5a33990856ad6809772943ca}\label{classVetor_afb04f83b5a33990856ad6809772943ca}} 
+\index{Vetor@{Vetor}!vetorToMatriz@{vetorToMatriz}}
+\index{vetorToMatriz@{vetorToMatriz}!Vetor@{Vetor}}
+\doxysubsubsection{\texorpdfstring{vetorToMatriz()}{vetorToMatriz()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}} Vetor\+::vetor\+To\+Matriz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transforma um \mbox{\hyperlink{classVetor}{Vetor}} para sua representação em \mbox{\hyperlink{classMatriz}{Matriz}}. 
+
+Considere o vetor $ \vec{v} = (x,y) $. A representação em forma de matriz de $ v $ é dada como\+:
+
+\[ M = \begin{bmatrix} x \\ y \\ 1 \end{bmatrix} \]
+
+\begin{DoxyReturn}{Retorna}
+\mbox{\hyperlink{classMatriz}{Matriz}} 3x1 M 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classVetor_af9ec833987134211b666458ac33811fe}\label{classVetor_af9ec833987134211b666458ac33811fe}} 
 \index{Vetor@{Vetor}!vetorToPonto@{vetorToPonto}}
@@ -264,10 +310,14 @@ Referência para o \mbox{\hyperlink{classVetor}{Vetor}} que Invocou o Método
 \doxysubsubsection{\texorpdfstring{vetorToPonto()}{vetorToPonto()}}
 {\footnotesize\ttfamily const \mbox{\hyperlink{classPonto}{Ponto}} Vetor\+::vetor\+To\+Ponto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-Método para obter uma formatação do \mbox{\hyperlink{classVetor}{Vetor}} para um \mbox{\hyperlink{classPonto}{Ponto}} com coordenadas x e y respectivamente iguais ás componentes x e y
+
+
+Transforma um \mbox{\hyperlink{classVetor}{Vetor}} para sua representação em \mbox{\hyperlink{classPonto}{Ponto}}. 
+
+Considere o vetor $ \vec{v} = (x,y) $. Diz-\/se que sua representação em como um ponto pode ser dada por $ P(x,y) $.
 
 \begin{DoxyReturn}{Retorna}
-um \mbox{\hyperlink{classPonto}{Ponto}}
+\mbox{\hyperlink{classPonto}{Ponto}} conforme P 
 \end{DoxyReturn}
 
 
@@ -278,17 +328,21 @@ um \mbox{\hyperlink{classPonto}{Ponto}}
 \doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classVetor}{Vetor}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const float}]{escalar,  }\item[{const \mbox{\hyperlink{classVetor}{Vetor}} \&}]{vetor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-Multiplicação de um \mbox{\hyperlink{classVetor}{Vetor}} por um escalar. Multiplica as componentes do \mbox{\hyperlink{classVetor}{Vetor}} por um escalar a esquerda da operação {\bfseries{$\ast$}} criando assim um novo objeto.
+
+
+Multiplicação de um \mbox{\hyperlink{classVetor}{Vetor}} por um escalar. 
+
+Cria um novo objeto do tipo \mbox{\hyperlink{classVetor}{Vetor}} através da multiplicação entre as componentes de um \mbox{\hyperlink{classVetor}{Vetor}} por um escalar a esquerda da operação {\bfseries{$\ast$}} .
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em escalar} & um valor float constante \\
+{\em escalar} & valor {\ttfamily float} constante \\
 \hline
-{\em vetor} & uma referência constante a um \mbox{\hyperlink{classVetor}{Vetor}}\\
+{\em vetor} & Referência constante ao \mbox{\hyperlink{classVetor}{Vetor}} base para a Multplicação \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-um objeto do tipo \mbox{\hyperlink{classVetor}{Vetor}}
+\mbox{\hyperlink{classVetor}{Vetor}} resultante da Operação 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classVetor_aeb08d22ebcaaa62ae2d4fcbbc5ebf6ee}\label{classVetor_aeb08d22ebcaaa62ae2d4fcbbc5ebf6ee}} 
 \index{Vetor@{Vetor}!operator$\ast$@{operator$\ast$}}
@@ -296,17 +350,21 @@ um objeto do tipo \mbox{\hyperlink{classVetor}{Vetor}}
 \doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classVetor}{Vetor}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVetor}{Vetor}} \&}]{vetor,  }\item[{const float}]{escalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-Multiplicação de um \mbox{\hyperlink{classVetor}{Vetor}} por um escalar. Multiplica as componentes do \mbox{\hyperlink{classVetor}{Vetor}} por um escalar a direita da operação {\bfseries{$\ast$}} criando assim um novo objeto.
+
+
+Multiplicação de um \mbox{\hyperlink{classVetor}{Vetor}} por um escalar. 
+
+Cria um novo objeto do tipo \mbox{\hyperlink{classVetor}{Vetor}} através da multiplicação entre as componentes de um \mbox{\hyperlink{classVetor}{Vetor}} por um escalar a direita da operação {\bfseries{$\ast$}} .
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em escalar} & um valor float constante \\
+{\em escalar} & valor {\ttfamily float} constante \\
 \hline
-{\em vetor} & uma referência constante a um \mbox{\hyperlink{classVetor}{Vetor}}\\
+{\em vetor} & Referência constante ao \mbox{\hyperlink{classVetor}{Vetor}} base para a Multplicação \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-um objeto do tipo \mbox{\hyperlink{classVetor}{Vetor}}
+\mbox{\hyperlink{classVetor}{Vetor}} resultante da Operação 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classVetor_a915c25c15881d882e5891765f574ff72}\label{classVetor_a915c25c15881d882e5891765f574ff72}} 
 \index{Vetor@{Vetor}!operator$<$$<$@{operator$<$$<$}}
@@ -314,13 +372,15 @@ um objeto do tipo \mbox{\hyperlink{classVetor}{Vetor}}
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
 {\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classVetor}{Vetor}} \&}]{vetor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-Função amiga para ter acesso ao atributos protegidos da classe, visando sobscrita do operador $<$$<$ para apresentação de saída ao usuário.
+
+
+Sobrecarga do Insertion Operator para Saída de Dados. 
 
 \begin{DoxyReturn}{Retorna}
-uma string no formato\+: xi + yj
+uma string no formato\+: \char`\"{}\+Vetor(x,y)\char`\"{} onde x e y são respectivamentes os valores dos atributos de mesmo nome do objeto 
 \end{DoxyReturn}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Base/vetor.\+h\end{DoxyCompactItemize}
+Base/\mbox{\hyperlink{vetor_8h}{vetor.\+h}}\end{DoxyCompactItemize}

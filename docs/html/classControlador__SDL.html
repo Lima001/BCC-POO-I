@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -71,36 +78,44 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Classe responsável pela inicialização e possibilitar a operação da biblioteca SDL.  
+ <a href="classControlador__SDL.html#details">Mais...</a></p>
+
 <p><code>#include &lt;<a class="el" href="controlador__SDL_8h_source.html">controlador_SDL.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
 <tr class="memitem:ab9eb55d41466f50793e26fa80d44eba0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador__SDL.html#ab9eb55d41466f50793e26fa80d44eba0">Controlador_SDL</a> ()</td></tr>
-<tr class="memdesc:ab9eb55d41466f50793e26fa80d44eba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default.  <a href="classControlador__SDL.html#ab9eb55d41466f50793e26fa80d44eba0">Mais...</a><br /></td></tr>
+<tr class="memdesc:ab9eb55d41466f50793e26fa80d44eba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default e Base.  <a href="classControlador__SDL.html#ab9eb55d41466f50793e26fa80d44eba0">Mais...</a><br /></td></tr>
 <tr class="separator:ab9eb55d41466f50793e26fa80d44eba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe1314444a7db563c5bdbe222142c6ec"><td class="memItemLeft" align="right" valign="top"><a id="afe1314444a7db563c5bdbe222142c6ec"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador__SDL.html#afe1314444a7db563c5bdbe222142c6ec">~Controlador_SDL</a> ()</td></tr>
 <tr class="memdesc:afe1314444a7db563c5bdbe222142c6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da Classe. <br /></td></tr>
 <tr class="separator:afe1314444a7db563c5bdbe222142c6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58e158a1ee9311bbd63c336f9b8cc4c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador__SDL.html#a58e158a1ee9311bbd63c336f9b8cc4c1">inicializar</a> ()</td></tr>
+<tr class="memdesc:a58e158a1ee9311bbd63c336f9b8cc4c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa a biblioteca SDL.  <a href="classControlador__SDL.html#a58e158a1ee9311bbd63c336f9b8cc4c1">Mais...</a><br /></td></tr>
 <tr class="separator:a58e158a1ee9311bbd63c336f9b8cc4c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d1faad690db1e539853605119eada3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador__SDL.html#a4d1faad690db1e539853605119eada3b">pausar</a> (int milissegundos)</td></tr>
+<tr class="memdesc:a4d1faad690db1e539853605119eada3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pausa a aplicação SDL.  <a href="classControlador__SDL.html#a4d1faad690db1e539853605119eada3b">Mais...</a><br /></td></tr>
 <tr class="separator:a4d1faad690db1e539853605119eada3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acae9b200430be5abc032da8041115092"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador__SDL.html#acae9b200430be5abc032da8041115092">finalizar</a> ()</td></tr>
+<tr class="memdesc:acae9b200430be5abc032da8041115092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finaliza a biblioteca SDL.  <a href="classControlador__SDL.html#acae9b200430be5abc032da8041115092">Mais...</a><br /></td></tr>
 <tr class="separator:acae9b200430be5abc032da8041115092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae190d2109862257555103015095c43ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador__SDL.html#ae190d2109862257555103015095c43ba">getInicializado</a> ()</td></tr>
+<tr class="memdesc:ae190d2109862257555103015095c43ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna se a biblioteca foi ou não inicializada.  <a href="classControlador__SDL.html#ae190d2109862257555103015095c43ba">Mais...</a><br /></td></tr>
 <tr class="separator:ae190d2109862257555103015095c43ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Atributos Protegidos</h2></td></tr>
 <tr class="memitem:aadf0682a32bea80257020017a68dac41"><td class="memItemLeft" align="right" valign="top"><a id="aadf0682a32bea80257020017a68dac41"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a></td></tr>
-<tr class="memdesc:aadf0682a32bea80257020017a68dac41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicador de inicialização. Um valor True -&gt; SDL Inicializado. <br /></td></tr>
+<tr class="memdesc:aadf0682a32bea80257020017a68dac41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicador de inicialização. Um valor True implica em SDL Inicializado. <br /></td></tr>
 <tr class="separator:aadf0682a32bea80257020017a68dac41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
-<dl class="section date"><dt>Data</dt><dd>1/1/1 Classe Responsável pela Inicialização e Possibilitar a Operação da biblioteca SDL </dd></dl>
+<div class="textblock"><p>Classe responsável pela inicialização e possibilitar a operação da biblioteca SDL. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última alteração: 28/02/2021 </dd></dl>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
 <a id="ab9eb55d41466f50793e26fa80d44eba0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9eb55d41466f50793e26fa80d44eba0">&#9670;&nbsp;</a></span>Controlador_SDL()</h2>
@@ -125,8 +140,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table>
 </div><div class="memdoc">
 
-<p>Construtor Default. </p>
-<p>Não é necessário a passagem de parâmetros! </p>
+<p>Construtor Default e Base. </p>
+<p>Não é necessário a passagem de parâmetros!</p>
+<p>Cria um objeto do tipo <a class="el" href="classControlador__SDL.html">Controlador_SDL</a> permitindo ao desenvolvedor a inicialização da biblioteca e por consequência o uso de todas as outras funcionalidades gráficas desenvolvidas usando os recursos dessa biblioteca.</p>
+<p>Observação: Recomenda-se que esse seja a primeira classe com um objeto para o uso dos recursos gráficos. Recomenda-se também que seja criado apenas um objeto desse tipo para a aplicação para evitar uso desnecessário de memória. </p>
 
 </div>
 </div>
@@ -153,6 +170,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Finaliza a biblioteca SDL. </p>
 <p>Método utilizado para finalizar a biblioteca SDL. Deve ser usado ao final do programa para garantir que todos os elementos sejam finalizados sem problemas.</p>
 <p>Ao ser invocado, o método chama a função de saída da bilbioteca SDL - SDL_Quit(), e exibe uma mensagem no console informando o ato de finalização. </p>
 
@@ -180,8 +199,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Retorna se a biblioteca foi ou não inicializada. </p>
 <p>Método utilizado para saber o status do controlador SDL.</p>
-<dl class="section return"><dt>Retorna</dt><dd>um boolenano referente ao atributo <a class="el" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a> </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>Boolenano referente ao atributo <a class="el" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a> </dd></dl>
 
 </div>
 </div>
@@ -207,10 +228,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Inicializa a biblioteca SDL. </p>
 <p>Método utilizado para inicializar a biblioteca SDL e permitir o uso de suas funcionalidades.</p>
 <p>Faz uso da Função SDL_Init() com a flag SDL_INIT_EVERYTHING para iniciar todos os modulos SDL. Os erros são capturados a partir do uso da função SDL_GetError().</p>
 <p>Caso ocorra algum erro durante o processo de inicialização, uma mensagem é exibida no console informando o acontecido, bem como o erro retornado pelo SDL. Nesse caso, o atributo <a class="el" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a> receberá o valor booleano false.</p>
-<p>Caso o processo de inicialização seja bem sucedido, uma mensagem é exibida no console informando o usuário. Nesse caso, o atributo <a class="el" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a> receberá o valor booleano true. </p>
+<p>Caso o processo de inicialização seja bem sucedido, uma mensagem é exibida no console informando o usuário. Nesse caso, o atributo <a class="el" href="classControlador__SDL.html#aadf0682a32bea80257020017a68dac41">inicializado</a> receberá o valor booleano true.</p>
+<p>Esse método deve ser obrigatoriamente chamado antes da execução dos recursos implementados por outras classes gráficas, causando em caso contrário erro na execução do programa. </p>
 
 </div>
 </div>
@@ -237,6 +261,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Pausa a aplicação SDL. </p>
 <p>Método utilizado para pausar a execução do programa em uma determinada quantidade de tempo.</p>
 <p>Ao ser invocado, o método pausa a execução fazendo o uso da função SDL_Delay(), e exibe uma mensagem no console informando o estado atual de pausa.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>

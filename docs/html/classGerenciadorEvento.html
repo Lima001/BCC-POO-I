@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -72,37 +79,150 @@ $(function() {
 <div class="title">Referência da Classe GerenciadorEvento</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe Responsável pelo processamento dos objetos do tipo <a class="el" href="classEvento.html">Evento</a>.  
+ <a href="classGerenciadorEvento.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="gerenciador__evento_8h_source.html">gerenciador_evento.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de colaboração para GerenciadorEvento:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGerenciadorEvento__coll__graph.png" border="0" usemap="#GerenciadorEvento_coll__map" alt="Collaboration graph"/></div>
-<!-- MAP 0 -->
+<map name="GerenciadorEvento_coll__map" id="GerenciadorEvento_coll__map">
+<area shape="rect" title="Classe Responsável pelo processamento dos objetos do tipo Evento." alt="" coords="5,95,152,121"/>
+<area shape="rect" href="classEvento.html" title="Classe Responsável pela representação de um evento único capaz de ser processado por um objeto do tip..." alt="" coords="45,5,112,32"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:aa8a6581cc3638c04f6de4f388a2617c8"><td class="memItemLeft" align="right" valign="top"><a id="aa8a6581cc3638c04f6de4f388a2617c8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>registrarEvento</b> ()</td></tr>
+<tr class="memitem:a86d2a4d9ab0c857405bad096eeb9ef79"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGerenciadorEvento.html#a86d2a4d9ab0c857405bad096eeb9ef79">GerenciadorEvento</a> ()</td></tr>
+<tr class="memdesc:a86d2a4d9ab0c857405bad096eeb9ef79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default.  <a href="classGerenciadorEvento.html#a86d2a4d9ab0c857405bad096eeb9ef79">Mais...</a><br /></td></tr>
+<tr class="separator:a86d2a4d9ab0c857405bad096eeb9ef79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a6581cc3638c04f6de4f388a2617c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGerenciadorEvento.html#aa8a6581cc3638c04f6de4f388a2617c8">registrarEvento</a> ()</td></tr>
+<tr class="memdesc:aa8a6581cc3638c04f6de4f388a2617c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registra e Interpreta os eventos captados.  <a href="classGerenciadorEvento.html#aa8a6581cc3638c04f6de4f388a2617c8">Mais...</a><br /></td></tr>
 <tr class="separator:aa8a6581cc3638c04f6de4f388a2617c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atributos Públicos</h2></td></tr>
 <tr class="memitem:a93123d4d0f6595cecbd6bb832782b14d"><td class="memItemLeft" align="right" valign="top"><a id="a93123d4d0f6595cecbd6bb832782b14d"></a>
-<a class="el" href="classEvento.html">Evento</a>&#160;</td><td class="memItemRight" valign="bottom"><b>evento</b> = <a class="el" href="classEvento.html">Evento</a>(NONE,T_NONE)</td></tr>
+<a class="el" href="classEvento.html">Evento</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGerenciadorEvento.html#a93123d4d0f6595cecbd6bb832782b14d">evento</a> = <a class="el" href="classEvento.html">Evento</a>(NONE,T_NONE)</td></tr>
+<tr class="memdesc:a93123d4d0f6595cecbd6bb832782b14d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usado para armazenar o objeto <a class="el" href="classEvento.html" title="Classe Responsável pela representação de um evento único capaz de ser processado por um objeto do tip...">Evento</a> que está sendo processado no momento. <br /></td></tr>
 <tr class="separator:a93123d4d0f6595cecbd6bb832782b14d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Membros Protegidos</h2></td></tr>
-<tr class="memitem:a456fcbd8d4375b5a3948a094ea2854be"><td class="memItemLeft" align="right" valign="top"><a id="a456fcbd8d4375b5a3948a094ea2854be"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getEvento</b> ()</td></tr>
+<tr class="memitem:a456fcbd8d4375b5a3948a094ea2854be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGerenciadorEvento.html#a456fcbd8d4375b5a3948a094ea2854be">getEvento</a> ()</td></tr>
+<tr class="memdesc:a456fcbd8d4375b5a3948a094ea2854be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interpreta o evento gerado pela biblioteca SDL.  <a href="classGerenciadorEvento.html#a456fcbd8d4375b5a3948a094ea2854be">Mais...</a><br /></td></tr>
 <tr class="separator:a456fcbd8d4375b5a3948a094ea2854be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Atributos Protegidos</h2></td></tr>
 <tr class="memitem:a4ec60acb9c89e1fab3d2ddd4148547db"><td class="memItemLeft" align="right" valign="top"><a id="a4ec60acb9c89e1fab3d2ddd4148547db"></a>
-SDL_Event&#160;</td><td class="memItemRight" valign="bottom"><b>registro</b></td></tr>
+SDL_Event&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGerenciadorEvento.html#a4ec60acb9c89e1fab3d2ddd4148547db">registro</a></td></tr>
+<tr class="memdesc:a4ec60acb9c89e1fab3d2ddd4148547db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usado para registrar os eventos gerados pelo SDL para futura intepretação. <br /></td></tr>
 <tr class="separator:a4ec60acb9c89e1fab3d2ddd4148547db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe Responsável pelo processamento dos objetos do tipo <a class="el" href="classEvento.html">Evento</a>. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última alteração: 28/02/2021 </dd></dl>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a86d2a4d9ab0c857405bad096eeb9ef79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d2a4d9ab0c857405bad096eeb9ef79">&#9670;&nbsp;</a></span>GerenciadorEvento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GerenciadorEvento::GerenciadorEvento </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Default. </p>
+<p>Não necessita de passagem de parâmetros. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a456fcbd8d4375b5a3948a094ea2854be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a456fcbd8d4375b5a3948a094ea2854be">&#9670;&nbsp;</a></span>getEvento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GerenciadorEvento::getEvento </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interpreta o evento gerado pela biblioteca SDL. </p>
+<p>Uma vez o evento tendo sido armazenado no registro, esse pode ser interpretado visando gerar uma forma mais amigável de apresentação ao desenvolvedor.</p>
+<p>A intepretação do evento pode ser verificada no atributo <a class="el" href="classGerenciadorEvento.html#a93123d4d0f6595cecbd6bb832782b14d">evento</a>. Observe que cada vez que um evento for interpretado esse atributo será alterado, o que implica o acesso somente ao evento específico. Após interpretação de outro evento da fila de eventos, não será possível resgatar os eventos anteriores.</p>
+<p>A título de especificação, os eventos serão interpretados da seguinte forma:</p>
+<ul>
+<li>SDL_QUIT - Resulta um <a class="el" href="classEvento.html">Evento</a> do TipoEvento QUIT e Trigger T_CLOSE </li>
+<li>SDL_KEYDOWN - Resulta um <a class="el" href="classEvento.html">Evento</a> do TipoEvento KEYDOWN e Trigger referente a tecla Pressionada e definida em Trigger. Caso a tecla não esteja em definida, gera um Trigger T_UNDEFINED</li>
+</ul>
+<p>Caso qualquer outro evento seja gerado, tem-se como resultante o <a class="el" href="classEvento.html" title="Classe Responsável pela representação de um evento único capaz de ser processado por um objeto do tip...">Evento</a> do TipoEvento UNDEFINED e Trigger T_UNDEFINED.</p>
+<p>Observação: No que tange a reutilização de códigos, o desenvolvedor pode facilmente adicionar interpretações necessárias a sua aplicação através da modificação desse método e da alteração (se necessária) das estruturas TipoEvento e Trigger definidos em <a class="el" href="classEvento.html">Evento</a> conforme contexto da aplicação. </p><dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classEvento.html" title="Classe Responsável pela representação de um evento único capaz de ser processado por um objeto do tip...">Evento</a> </dd></dl>
+
+</div>
+</div>
+<a id="aa8a6581cc3638c04f6de4f388a2617c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a6581cc3638c04f6de4f388a2617c8">&#9670;&nbsp;</a></span>registrarEvento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GerenciadorEvento::registrarEvento </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Registra e Interpreta os eventos captados. </p>
+<p>Registra os eventos da fila de eventos observada pelo SDL e permite que esses sejam intepretados e gerem um objeto do tipo <a class="el" href="classEvento.html">Evento</a> através do método membro <a class="el" href="classGerenciadorEvento.html#a456fcbd8d4375b5a3948a094ea2854be">getEvento()</a> que será armazenado no atributo <a class="el" href="classGerenciadorEvento.html#a93123d4d0f6595cecbd6bb832782b14d">evento</a> .</p>
+<p>Caso nenhum evento esteja na fila de eventos, o atributo que armazena esses eventos é resetado para o seu estado padrão.</p>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classEvento.html" title="Classe Responsável pela representação de um evento único capaz de ser processado por um objeto do tip...">Evento</a> </dd></dl>
+
+</div>
+</div>
 <hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
 <li>Interface/<a class="el" href="gerenciador__evento_8h_source.html">gerenciador_evento.h</a></li>
 </ul>

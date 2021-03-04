@@ -1,0 +1,105 @@
+\hypertarget{classLinha}{}\doxysection{Referência da Classe Linha}
+\label{classLinha}\index{Linha@{Linha}}
+
+
+Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites nos quais os objetos da simulação colidem, e principalmente para o cálculo da reflexão especular.  
+
+
+
+
+{\ttfamily \#include $<$linha.\+h$>$}
+
+
+
+Diagrama de colaboração para Linha\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classLinha__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLinha_aace7b025f21c57ac832b0e29dd267e7e}{Linha}} ()
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinha_a7adb000240f20df22cb72c6e38c1b2ba}{Linha}} (const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classLinha_ade241efb0c59630bbd712ab9f06b9a7e}{p1}}, const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classLinha_a411fb41aa85dbc9a2068e09f308b4c21}{p2}})
+\begin{DoxyCompactList}\small\item\em Construtor Base. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLinha_a8a7774ff6d4bd717c457cdb3d182464b}\label{classLinha_a8a7774ff6d4bd717c457cdb3d182464b}} 
+\mbox{\hyperlink{classLinha_a8a7774ff6d4bd717c457cdb3d182464b}{$\sim$\+Linha}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLinha_ade241efb0c59630bbd712ab9f06b9a7e}\label{classLinha_ade241efb0c59630bbd712ab9f06b9a7e}} 
+\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classLinha_ade241efb0c59630bbd712ab9f06b9a7e}{p1}}
+\begin{DoxyCompactList}\small\item\em ponto de Início do segmento de Reta \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLinha_a411fb41aa85dbc9a2068e09f308b4c21}\label{classLinha_a411fb41aa85dbc9a2068e09f308b4c21}} 
+\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classLinha_a411fb41aa85dbc9a2068e09f308b4c21}{p2}}
+\begin{DoxyCompactList}\small\item\em ponto de Fim do segmento de Reta \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLinha_aed4bdaaa18ebf2aa4dfc44855dca1303}\label{classLinha_aed4bdaaa18ebf2aa4dfc44855dca1303}} 
+\mbox{\hyperlink{classVetor}{Vetor}} \mbox{\hyperlink{classLinha_aed4bdaaa18ebf2aa4dfc44855dca1303}{normal}}
+\begin{DoxyCompactList}\small\item\em vetor normal a \mbox{\hyperlink{classLinha}{Linha}} direcionado ao Centro da Tela \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites nos quais os objetos da simulação colidem, e principalmente para o cálculo da reflexão especular. 
+
+\begin{DoxyAuthor}{Autor}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Última Modificação\+: 27/02/2001 
+\end{DoxyDate}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classDetectorColisao}{Detector\+Colisao}} 
+
+\href{https://en.wikipedia.org/wiki/Specular_reflection}{\texttt{ https\+://en.\+wikipedia.\+org/wiki/\+Specular\+\_\+reflection}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classLinha_aace7b025f21c57ac832b0e29dd267e7e}\label{classLinha_aace7b025f21c57ac832b0e29dd267e7e}} 
+\index{Linha@{Linha}!Linha@{Linha}}
+\index{Linha@{Linha}!Linha@{Linha}}
+\doxysubsubsection{\texorpdfstring{Linha()}{Linha()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Linha\+::\+Linha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Chamado quando nenhum parâmetro de ininicialização for informado.
+
+Cria um objeto com ambas atributos construídos usando o seu respectivo construtor Default. \begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classVetor}{Vetor}} 
+
+\mbox{\hyperlink{classPonto}{Ponto}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classLinha_a7adb000240f20df22cb72c6e38c1b2ba}\label{classLinha_a7adb000240f20df22cb72c6e38c1b2ba}} 
+\index{Linha@{Linha}!Linha@{Linha}}
+\index{Linha@{Linha}!Linha@{Linha}}
+\doxysubsubsection{\texorpdfstring{Linha()}{Linha()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Linha\+::\+Linha (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{p1,  }\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Base. 
+
+Cria um objeto a partir dos objetos \mbox{\hyperlink{classPonto}{Ponto}} passados como parâmetro. Observação\+: Não é necessário/possível informar o \mbox{\hyperlink{classVetor}{Vetor}} normal no processo de Construção e Inicialização do objeto, uma vez que esse atributo é automáticamente calculado pelo Método.
+
+A título de especificação, o cálculo de um vetor normal pode ser dado da seguinte forma\+: Considere a reta {\itshape r} definida pelo vetor diretor $ \vec{d} = (x,y) $. Pode-\/se definir um vetor normal a essa reta como $ \vec{n} = (-y,x) $
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p1} & usado para inicializar atributo de mesmo nomenclatura \\
+\hline
+{\em p2} & usado para inicializar atributo de mesmo nomenclatura \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+Base/\mbox{\hyperlink{linha_8h}{linha.\+h}}\end{DoxyCompactItemize}

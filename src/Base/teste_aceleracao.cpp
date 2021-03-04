@@ -20,6 +20,7 @@ double dobro(double x){
 
 int main(){
 
+    // Criação de objetos do tipo Aceleracao
     Aceleracao a1;
     a1 = Aceleracao(constante_5, dobro);
 
@@ -30,6 +31,7 @@ int main(){
     a4 = a1;
     a5 = move(a1);
 
+    // Chamada às funções as quais o objeto a5 possui ponteiros apontado
     for (int i=0; i<=10; i++){
         cout << a5.func_x(i) << endl;
         cout << a5.func_y(i) << endl;

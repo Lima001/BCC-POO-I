@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pausar_25',['pausar',['../classControlador__SDL.html#a4d1faad690db1e539853605119eada3b',1,'Controlador_SDL']]],
-  ['planocartesiano_26',['PlanoCartesiano',['../classPlanoCartesiano.html',1,'']]],
-  ['ponto_27',['Ponto',['../classPonto.html',1,'Ponto'],['../classPonto.html#a49b03b00e9ebc01c2011c25f6517b93b',1,'Ponto::Ponto()'],['../classPonto.html#a11562446098bca36d3f759c22a5bf734',1,'Ponto::Ponto(float x, float y)'],['../classPonto.html#ac2d478f0ac64bff3c0f0bcd511d30580',1,'Ponto::Ponto(const Ponto &amp;p)'],['../classPonto.html#aef5d85e0bdd420a08024bff4e9ceaf69',1,'Ponto::Ponto(Ponto &amp;&amp;p) noexcept']]]
+  ['n_5fcoluna_80',['n_coluna',['../classMatriz.html#a75de113513435223ef020229d301660a',1,'Matriz']]],
+  ['n_5flinha_81',['n_linha',['../classMatriz.html#a7a47f20a2888676639b85a103f1f0acc',1,'Matriz']]],
+  ['normal_82',['normal',['../classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303',1,'Linha']]]
 ];

@@ -2,46 +2,195 @@
 \label{classTriangulo}\index{Triangulo@{Triangulo}}
 
 
+Classe para Representação de um \mbox{\hyperlink{classTriangulo}{Triangulo}}.  
+
+
+
+
+{\ttfamily \#include $<$triangulo.\+h$>$}
+
+
+
 Diagrama de colaboração para Triangulo\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{classTriangulo__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTriangulo_a2c66c151b6935fdc15a68a451b393fdd}\label{classTriangulo_a2c66c151b6935fdc15a68a451b393fdd}} 
-{\bfseries Triangulo} (const \mbox{\hyperlink{classPonto}{Ponto}} \&p1, const \mbox{\hyperlink{classPonto}{Ponto}} \&p2, const \mbox{\hyperlink{classPonto}{Ponto}} \&p3)
-\item 
-\mbox{\Hypertarget{classTriangulo_ad8ab372b4f25683fbf5cd7968acb503d}\label{classTriangulo_ad8ab372b4f25683fbf5cd7968acb503d}} 
-{\bfseries Triangulo} (const \mbox{\hyperlink{classTriangulo}{Triangulo}} \&t)
-\item 
-\mbox{\Hypertarget{classTriangulo_ae74b966b436967f9536ed21353f10f14}\label{classTriangulo_ae74b966b436967f9536ed21353f10f14}} 
-{\bfseries Triangulo} (\mbox{\hyperlink{classTriangulo}{Triangulo}} \&\&t) noexcept
-\item 
-\mbox{\Hypertarget{classTriangulo_a2388dd3d42a7519142a7ef69a66a2ab2}\label{classTriangulo_a2388dd3d42a7519142a7ef69a66a2ab2}} 
-\mbox{\hyperlink{classTriangulo}{Triangulo}} \& {\bfseries operator=} (\mbox{\hyperlink{classTriangulo}{Triangulo}} \&t)
-\item 
-\mbox{\Hypertarget{classTriangulo_a233a10e4b54c54100d87da85cb1ada37}\label{classTriangulo_a233a10e4b54c54100d87da85cb1ada37}} 
-\mbox{\hyperlink{classTriangulo}{Triangulo}} \& {\bfseries operator=} (\mbox{\hyperlink{classTriangulo}{Triangulo}} \&\&t) noexcept
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classTriangulo_a905d421bd19655a979ccad9e2998db0c}{Triangulo}} ()
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTriangulo_a2c66c151b6935fdc15a68a451b393fdd}{Triangulo}} (const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classTriangulo_ae3185b6adf615dd4b3739d2f36494fa7}{p1}}, const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classTriangulo_abfcdc9f759904824721a74a338eb3540}{p2}}, const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classTriangulo_ae1cb043f7e5d23030f265e7ce398088b}{p3}})
+\begin{DoxyCompactList}\small\item\em Construtor Base. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTriangulo_ad8ab372b4f25683fbf5cd7968acb503d}{Triangulo}} (const \mbox{\hyperlink{classTriangulo}{Triangulo}} \&t)
+\begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTriangulo_ae74b966b436967f9536ed21353f10f14}{Triangulo}} (\mbox{\hyperlink{classTriangulo}{Triangulo}} \&\&t) noexcept
+\begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTriangulo}{Triangulo}} \& \mbox{\hyperlink{classTriangulo_a2388dd3d42a7519142a7ef69a66a2ab2}{operator=}} (\mbox{\hyperlink{classTriangulo}{Triangulo}} \&t)
+\begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTriangulo}{Triangulo}} \& \mbox{\hyperlink{classTriangulo_a233a10e4b54c54100d87da85cb1ada37}{operator=}} (\mbox{\hyperlink{classTriangulo}{Triangulo}} \&\&t) noexcept
+\begin{DoxyCompactList}\small\item\em Atribuição Move. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classTriangulo_ae3185b6adf615dd4b3739d2f36494fa7}\label{classTriangulo_ae3185b6adf615dd4b3739d2f36494fa7}} 
-\mbox{\hyperlink{classPonto}{Ponto}} {\bfseries p1}
-\item 
+\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classTriangulo_ae3185b6adf615dd4b3739d2f36494fa7}{p1}}
+\begin{DoxyCompactList}\small\item\em Vértice 01 do triângulo;. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTriangulo_abfcdc9f759904824721a74a338eb3540}\label{classTriangulo_abfcdc9f759904824721a74a338eb3540}} 
-\mbox{\hyperlink{classPonto}{Ponto}} {\bfseries p2}
-\item 
+\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classTriangulo_abfcdc9f759904824721a74a338eb3540}{p2}}
+\begin{DoxyCompactList}\small\item\em Vértice 02 do triângulo;. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classTriangulo_ae1cb043f7e5d23030f265e7ce398088b}\label{classTriangulo_ae1cb043f7e5d23030f265e7ce398088b}} 
-\mbox{\hyperlink{classPonto}{Ponto}} {\bfseries p3}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classTriangulo_ae1cb043f7e5d23030f265e7ce398088b}{p3}}
+\begin{DoxyCompactList}\small\item\em Vértice 03 do triângulo;. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
+std\+::ostream \& \mbox{\hyperlink{classTriangulo_aa83106bc5b997a97967f5ec78d90a288}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classTriangulo}{Triangulo}} \&t)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do Insertion Operator para Saída de Dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para Representação de um \mbox{\hyperlink{classTriangulo}{Triangulo}}. 
+
+\begin{DoxyAuthor}{Autor}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Última Modificação\+: 27/02/2001 
+\end{DoxyDate}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classTriangulo_a905d421bd19655a979ccad9e2998db0c}\label{classTriangulo_a905d421bd19655a979ccad9e2998db0c}} 
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\doxysubsubsection{\texorpdfstring{Triangulo()}{Triangulo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Triangulo\+::\+Triangulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Chamado quando nenhum parâmetro de ininicialização for informado.
+
+Cria um objeto do tipo \mbox{\hyperlink{classTriangulo}{Triangulo}} com vértices nulo. Usar somente para declaração de variáveis. Não esquecer de modificar os atributos para fazer o correto uso do objeto. \mbox{\Hypertarget{classTriangulo_a2c66c151b6935fdc15a68a451b393fdd}\label{classTriangulo_a2c66c151b6935fdc15a68a451b393fdd}} 
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\doxysubsubsection{\texorpdfstring{Triangulo()}{Triangulo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Triangulo\+::\+Triangulo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{p1,  }\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{p2,  }\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{p3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Base. 
+
+Cria um objeto com os objetos \mbox{\hyperlink{classPonto}{Ponto}} passados como parâmetro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p1} & Referência constante a um \mbox{\hyperlink{classPonto}{Ponto}} usado para inicializar o atributo de mesma nomenclatura \\
+\hline
+{\em p2} & Referência constante a um \mbox{\hyperlink{classPonto}{Ponto}} usado para inicializar o atributo de mesma nomenclatura \\
+\hline
+{\em p3} & Referência constante a um \mbox{\hyperlink{classPonto}{Ponto}} usado para inicializar o atributo de mesma nomenclatura \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTriangulo_ad8ab372b4f25683fbf5cd7968acb503d}\label{classTriangulo_ad8ab372b4f25683fbf5cd7968acb503d}} 
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\doxysubsubsection{\texorpdfstring{Triangulo()}{Triangulo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Triangulo\+::\+Triangulo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTriangulo}{Triangulo}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor de Cópia. 
+
+Cria um novo objeto copiando os pontos de um \mbox{\hyperlink{classTriangulo}{Triangulo}} informado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em t} & Referência constante para o \mbox{\hyperlink{classTriangulo}{Triangulo}} que será copiado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTriangulo_ae74b966b436967f9536ed21353f10f14}\label{classTriangulo_ae74b966b436967f9536ed21353f10f14}} 
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\index{Triangulo@{Triangulo}!Triangulo@{Triangulo}}
+\doxysubsubsection{\texorpdfstring{Triangulo()}{Triangulo()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Triangulo\+::\+Triangulo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTriangulo}{Triangulo}} \&\&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construtor Move. 
+
+Cria um novo objeto fazendo uso do recurso de movimentação Transfere de maneira eficiente os dados dos vertices de um \mbox{\hyperlink{classTriangulo}{Triangulo}} para o novo objeto criado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em t} & Referência rvalue de um \mbox{\hyperlink{classTriangulo}{Triangulo}}\\
+\hline
+\end{DoxyParams}
+Para mais detalhe sobre o recurso, consultar documentação da linguagem 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classTriangulo_a233a10e4b54c54100d87da85cb1ada37}\label{classTriangulo_a233a10e4b54c54100d87da85cb1ada37}} 
+\index{Triangulo@{Triangulo}!operator=@{operator=}}
+\index{operator=@{operator=}!Triangulo@{Triangulo}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTriangulo}{Triangulo}}\& Triangulo\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTriangulo}{Triangulo}} \&\&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Atribuição Move. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em t} & Referência rvalue de um \mbox{\hyperlink{classTriangulo}{Triangulo}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o \mbox{\hyperlink{classTriangulo}{Triangulo}} que invocou o operador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTriangulo_a2388dd3d42a7519142a7ef69a66a2ab2}\label{classTriangulo_a2388dd3d42a7519142a7ef69a66a2ab2}} 
+\index{Triangulo@{Triangulo}!operator=@{operator=}}
+\index{operator=@{operator=}!Triangulo@{Triangulo}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTriangulo}{Triangulo}}\& Triangulo\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTriangulo}{Triangulo}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atribuição por Cópia. 
+
+Copia o valor dos atributos do \mbox{\hyperlink{classTriangulo}{Triangulo}} passado por parâmetro para o \mbox{\hyperlink{classTriangulo}{Triangulo}} que chamou a operação.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em t} & Referência constante do \mbox{\hyperlink{classTriangulo}{Triangulo}} que deseja-\/se copiar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o \mbox{\hyperlink{classTriangulo}{Triangulo}} que invocou o operdador 
+\end{DoxyReturn}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
 \mbox{\Hypertarget{classTriangulo_aa83106bc5b997a97967f5ec78d90a288}\label{classTriangulo_aa83106bc5b997a97967f5ec78d90a288}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, const \mbox{\hyperlink{classTriangulo}{Triangulo}} \&t)
-\end{DoxyCompactItemize}
+\index{Triangulo@{Triangulo}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Triangulo@{Triangulo}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classTriangulo}{Triangulo}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do Insertion Operator para Saída de Dados. 
+
+\begin{DoxyReturn}{Retorna}
+string no formato\+: \char`\"{}\+Triangulo(\+Ponto(x1,y1),\+Ponto(x2,y2),\+Ponto(x3,y3))\char`\"{} onde cada \mbox{\hyperlink{classPonto}{Ponto}} representa os atributos do objeto que invocou o operador 
+\end{DoxyReturn}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Base/triangulo.\+h\end{DoxyCompactItemize}
+Base/\mbox{\hyperlink{triangulo_8h}{triangulo.\+h}}\end{DoxyCompactItemize}

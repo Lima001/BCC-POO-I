@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -71,64 +78,458 @@ $(function() {
 <div class="title">Referência da Classe Objeto</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.  
+ <a href="classObjeto.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="objeto_8h_source.html">objeto.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de colaboração para Objeto:</div>
 <div class="dyncontent">
 <div class="center"><img src="classObjeto__coll__graph.png" border="0" usemap="#Objeto_coll__map" alt="Collaboration graph"/></div>
-<!-- MAP 0 -->
+<map name="Objeto_coll__map" id="Objeto_coll__map">
+<area shape="rect" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar&#45;se." alt="" coords="50,109,115,136"/>
+<area shape="rect" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano." alt="" coords="5,5,61,32"/>
+<area shape="rect" href="classAceleracao.html" title=" " alt="" coords="86,5,181,32"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a9def8813c7908fea800a53fa7412549a"><td class="memItemLeft" align="right" valign="top"><a id="a9def8813c7908fea800a53fa7412549a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Objeto</b> (float raio, float massa, const <a class="el" href="classVetor.html">Vetor</a> posicao, const <a class="el" href="classVetor.html">Vetor</a> movimento, const <a class="el" href="classAceleracao.html">Aceleracao</a> aceleracao)</td></tr>
-<tr class="separator:a9def8813c7908fea800a53fa7412549a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a523081addb09a4198bd04c2c353a51dd"><td class="memItemLeft" align="right" valign="top"><a id="a523081addb09a4198bd04c2c353a51dd"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Objeto</b> (const <a class="el" href="classObjeto.html">Objeto</a> &amp;obj)</td></tr>
+<tr class="memitem:a5608071f995c220f0f1a0e5887c2d11d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#a5608071f995c220f0f1a0e5887c2d11d">Objeto</a> ()</td></tr>
+<tr class="memdesc:a5608071f995c220f0f1a0e5887c2d11d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default.  <a href="classObjeto.html#a5608071f995c220f0f1a0e5887c2d11d">Mais...</a><br /></td></tr>
+<tr class="separator:a5608071f995c220f0f1a0e5887c2d11d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2907a62f11eee76e74ba9c9bf50aba24"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#a2907a62f11eee76e74ba9c9bf50aba24">Objeto</a> (float raio, float massa, const <a class="el" href="classVetor.html">Vetor</a> &amp;posicao, const <a class="el" href="classVetor.html">Vetor</a> &amp;movimento, const <a class="el" href="classAceleracao.html">Aceleracao</a> &amp;aceleracao=<a class="el" href="classAceleracao.html">Aceleracao</a>())</td></tr>
+<tr class="memdesc:a2907a62f11eee76e74ba9c9bf50aba24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Base.  <a href="classObjeto.html#a2907a62f11eee76e74ba9c9bf50aba24">Mais...</a><br /></td></tr>
+<tr class="separator:a2907a62f11eee76e74ba9c9bf50aba24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a523081addb09a4198bd04c2c353a51dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#a523081addb09a4198bd04c2c353a51dd">Objeto</a> (const <a class="el" href="classObjeto.html">Objeto</a> &amp;obj)</td></tr>
+<tr class="memdesc:a523081addb09a4198bd04c2c353a51dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de Cópia.  <a href="classObjeto.html#a523081addb09a4198bd04c2c353a51dd">Mais...</a><br /></td></tr>
 <tr class="separator:a523081addb09a4198bd04c2c353a51dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abedf7f8e2c1ea6c0fbdf61788d1480f9"><td class="memItemLeft" align="right" valign="top"><a id="abedf7f8e2c1ea6c0fbdf61788d1480f9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Objeto</b> (<a class="el" href="classObjeto.html">Objeto</a> &amp;&amp;obj) noexcept</td></tr>
+<tr class="memitem:abedf7f8e2c1ea6c0fbdf61788d1480f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#abedf7f8e2c1ea6c0fbdf61788d1480f9">Objeto</a> (<a class="el" href="classObjeto.html">Objeto</a> &amp;&amp;obj) noexcept</td></tr>
+<tr class="memdesc:abedf7f8e2c1ea6c0fbdf61788d1480f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Move.  <a href="classObjeto.html#abedf7f8e2c1ea6c0fbdf61788d1480f9">Mais...</a><br /></td></tr>
 <tr class="separator:abedf7f8e2c1ea6c0fbdf61788d1480f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a299fa0655eb78b2f214d2fcea25224af"><td class="memItemLeft" align="right" valign="top"><a id="a299fa0655eb78b2f214d2fcea25224af"></a>
-<a class="el" href="classCircunferencia.html">Circunferencia</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getCircunferencia</b> ()</td></tr>
+<tr class="memitem:a299fa0655eb78b2f214d2fcea25224af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCircunferencia.html">Circunferencia</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#a299fa0655eb78b2f214d2fcea25224af">getCircunferencia</a> ()</td></tr>
+<tr class="memdesc:a299fa0655eb78b2f214d2fcea25224af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a Circunferência do <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a>.  <a href="classObjeto.html#a299fa0655eb78b2f214d2fcea25224af">Mais...</a><br /></td></tr>
 <tr class="separator:a299fa0655eb78b2f214d2fcea25224af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc74b2353fce9ed0385a99dca5345800"><td class="memItemLeft" align="right" valign="top"><a id="abc74b2353fce9ed0385a99dca5345800"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>movimentar</b> (double ti, double tf, double dt)</td></tr>
+<tr class="memitem:abc74b2353fce9ed0385a99dca5345800"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#abc74b2353fce9ed0385a99dca5345800">movimentar</a> (double ti, double tf, double dt)</td></tr>
+<tr class="memdesc:abc74b2353fce9ed0385a99dca5345800"><td class="mdescLeft">&#160;</td><td class="mdescRight">Movimenta o <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a> alterando possivelmente sua velocidade e posição.  <a href="classObjeto.html#abc74b2353fce9ed0385a99dca5345800">Mais...</a><br /></td></tr>
 <tr class="separator:abc74b2353fce9ed0385a99dca5345800"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56b39714b99ab866d96c1de567140dcd"><td class="memItemLeft" align="right" valign="top"><a id="a56b39714b99ab866d96c1de567140dcd"></a>
-<a class="el" href="classObjeto.html">Objeto</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classObjeto.html">Objeto</a> &amp;obj)</td></tr>
+<tr class="memitem:a56b39714b99ab866d96c1de567140dcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classObjeto.html">Objeto</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#a56b39714b99ab866d96c1de567140dcd">operator=</a> (<a class="el" href="classObjeto.html">Objeto</a> &amp;obj)</td></tr>
+<tr class="memdesc:a56b39714b99ab866d96c1de567140dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribuição por Cópia.  <a href="classObjeto.html#a56b39714b99ab866d96c1de567140dcd">Mais...</a><br /></td></tr>
 <tr class="separator:a56b39714b99ab866d96c1de567140dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf41379166eadad232c7910a96c5de34"><td class="memItemLeft" align="right" valign="top"><a id="abf41379166eadad232c7910a96c5de34"></a>
-<a class="el" href="classObjeto.html">Objeto</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classObjeto.html">Objeto</a> &amp;&amp;obj) noexcept</td></tr>
+<tr class="memitem:abf41379166eadad232c7910a96c5de34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classObjeto.html">Objeto</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#abf41379166eadad232c7910a96c5de34">operator=</a> (<a class="el" href="classObjeto.html">Objeto</a> &amp;&amp;obj) noexcept</td></tr>
+<tr class="memdesc:abf41379166eadad232c7910a96c5de34"><td class="mdescLeft">&#160;</td><td class="mdescRight">! Atribuição Move  <a href="classObjeto.html#abf41379166eadad232c7910a96c5de34">Mais...</a><br /></td></tr>
 <tr class="separator:abf41379166eadad232c7910a96c5de34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atributos Públicos</h2></td></tr>
 <tr class="memitem:aa722a7b9c4a9d19d7a1d9be413be06fc"><td class="memItemLeft" align="right" valign="top"><a id="aa722a7b9c4a9d19d7a1d9be413be06fc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#aa722a7b9c4a9d19d7a1d9be413be06fc">id</a></td></tr>
+<tr class="memdesc:aa722a7b9c4a9d19d7a1d9be413be06fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atributo de identificação única de cada <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a>. <br /></td></tr>
 <tr class="separator:aa722a7b9c4a9d19d7a1d9be413be06fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace60283c1fb4b980ea25ca0e93e0aaac"><td class="memItemLeft" align="right" valign="top"><a id="ace60283c1fb4b980ea25ca0e93e0aaac"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>raio_circunferencia</b></td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a></td></tr>
+<tr class="memdesc:ace60283c1fb4b980ea25ca0e93e0aaac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raio da circunferencia do <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a>. <br /></td></tr>
 <tr class="separator:ace60283c1fb4b980ea25ca0e93e0aaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a911f3eedef2be0b7c5b9969e046e8cbd"><td class="memItemLeft" align="right" valign="top"><a id="a911f3eedef2be0b7c5b9969e046e8cbd"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>m</b></td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a></td></tr>
+<tr class="memdesc:a911f3eedef2be0b7c5b9969e046e8cbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Massa do <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a>. <br /></td></tr>
 <tr class="separator:a911f3eedef2be0b7c5b9969e046e8cbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac46abc31b29690263c366ed34ed8b5c6"><td class="memItemLeft" align="right" valign="top"><a id="ac46abc31b29690263c366ed34ed8b5c6"></a>
-<a class="el" href="classVetor.html">Vetor</a>&#160;</td><td class="memItemRight" valign="bottom"><b>r</b></td></tr>
+<a class="el" href="classVetor.html">Vetor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a></td></tr>
+<tr class="memdesc:ac46abc31b29690263c366ed34ed8b5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano.">Vetor</a> posição do <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a>. <br /></td></tr>
 <tr class="separator:ac46abc31b29690263c366ed34ed8b5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa91369eaf35a47d09053b10b8d33bf6d"><td class="memItemLeft" align="right" valign="top"><a id="aa91369eaf35a47d09053b10b8d33bf6d"></a>
-<a class="el" href="classVetor.html">Vetor</a>&#160;</td><td class="memItemRight" valign="bottom"><b>v</b></td></tr>
+<a class="el" href="classVetor.html">Vetor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a></td></tr>
+<tr class="memdesc:aa91369eaf35a47d09053b10b8d33bf6d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano.">Vetor</a> velocidade do <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a>. <br /></td></tr>
 <tr class="separator:aa91369eaf35a47d09053b10b8d33bf6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5475cb519dfa55af127beb2624e74871"><td class="memItemLeft" align="right" valign="top"><a id="a5475cb519dfa55af127beb2624e74871"></a>
-<a class="el" href="classAceleracao.html">Aceleracao</a>&#160;</td><td class="memItemRight" valign="bottom"><b>a</b></td></tr>
+<a class="el" href="classAceleracao.html">Aceleracao</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a></td></tr>
+<tr class="memdesc:a5475cb519dfa55af127beb2624e74871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aceleração do <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a> - Conjunto de Funções que definem aceleração nos eixos x e y. <br /></td></tr>
 <tr class="separator:a5475cb519dfa55af127beb2624e74871"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
-<tr class="memitem:aeb698ee407fad88811a0ace453e800a1"><td class="memItemLeft" align="right" valign="top"><a id="aeb698ee407fad88811a0ace453e800a1"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, <a class="el" href="classObjeto.html">Objeto</a> &amp;objeto)</td></tr>
+<tr class="memitem:aeb698ee407fad88811a0ace453e800a1"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classObjeto.html#aeb698ee407fad88811a0ace453e800a1">operator&lt;&lt;</a> (std::ostream &amp;out, <a class="el" href="classObjeto.html">Objeto</a> &amp;objeto)</td></tr>
+<tr class="memdesc:aeb698ee407fad88811a0ace453e800a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do Insertion Operator para Saída de Dados.  <a href="classObjeto.html#aeb698ee407fad88811a0ace453e800a1">Mais...</a><br /></td></tr>
 <tr class="separator:aeb698ee407fad88811a0ace453e800a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última Modificação: 27/02/2002 </dd></dl>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a5608071f995c220f0f1a0e5887c2d11d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5608071f995c220f0f1a0e5887c2d11d">&#9670;&nbsp;</a></span>Objeto() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Objeto::Objeto </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Default. </p>
+<p>Inicializa o <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a> com todos os valor numéricos nulos, e faz uso dos construtores default das outras classes para criar os objetos membros em um estado padrão.</p>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano.">Vetor</a> </dd>
+<dd>
+<a class="el" href="classAceleracao.html">Aceleracao</a> </dd></dl>
+
+</div>
+</div>
+<a id="a2907a62f11eee76e74ba9c9bf50aba24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2907a62f11eee76e74ba9c9bf50aba24">&#9670;&nbsp;</a></span>Objeto() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Objeto::Objeto </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>raio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>massa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVetor.html">Vetor</a> &amp;&#160;</td>
+          <td class="paramname"><em>posicao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classVetor.html">Vetor</a> &amp;&#160;</td>
+          <td class="paramname"><em>movimento</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classAceleracao.html">Aceleracao</a> &amp;&#160;</td>
+          <td class="paramname"><em>aceleracao</em> = <code><a class="el" href="classAceleracao.html">Aceleracao</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Base. </p>
+<p>Cria um <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a> conforme dados passados por parâmetro</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">raio</td><td>usado para inicializar o atributo <a class="el" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> </td></tr>
+    <tr><td class="paramname">massa</td><td>usado para inicializar o atributo <a class="el" href="classObjeto.html#a911f3eedef2be0b7c5b9969e046e8cbd">m</a> </td></tr>
+    <tr><td class="paramname">posicao</td><td>usado para inicializar o atributo <a class="el" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a> </td></tr>
+    <tr><td class="paramname">movimento</td><td>usado para inicializar o atributo <a class="el" href="classObjeto.html#aa91369eaf35a47d09053b10b8d33bf6d">v</a> </td></tr>
+    <tr><td class="paramname">aceleracao</td><td>usado para inicializar o atributo <a class="el" href="classObjeto.html#a5475cb519dfa55af127beb2624e74871">a</a>. Em caso de omissão do parâmetro, o atributo é inicializado com um objeto <a class="el" href="classAceleracao.html">Aceleracao</a> construido com o método construtor default <br  />
+ </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a523081addb09a4198bd04c2c353a51dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a523081addb09a4198bd04c2c353a51dd">&#9670;&nbsp;</a></span>Objeto() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Objeto::Objeto </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classObjeto.html">Objeto</a> &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor de Cópia. </p>
+<p>Cria um novo objeto copiando as componentes de um <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a> informado.</p>
+<p>Observação: O <a class="el" href="classObjeto.html#aa722a7b9c4a9d19d7a1d9be413be06fc">id</a> não é copiado, uma vez que deve ser único para cada <a class="el" href="classObjeto.html">Objeto</a> do sistema.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Referência constante para o <a class="el" href="classObjeto.html">Objeto</a> que será copiado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abedf7f8e2c1ea6c0fbdf61788d1480f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abedf7f8e2c1ea6c0fbdf61788d1480f9">&#9670;&nbsp;</a></span>Objeto() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Objeto::Objeto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classObjeto.html">Objeto</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Move. </p>
+<p>Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os dados de um <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a> para o novo objeto criado. A título de especificação, a operação de movimentação é chamada ao longo do processo para a atribuição Move dos atributos do tipo <a class="el" href="classVetor.html">Vetor</a>.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Referência rvalue de um <a class="el" href="classObjeto.html">Objeto</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Para mais detalhe sobre o recurso, consultar documentação da linguagem </p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a299fa0655eb78b2f214d2fcea25224af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a299fa0655eb78b2f214d2fcea25224af">&#9670;&nbsp;</a></span>getCircunferencia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCircunferencia.html">Circunferencia</a> Objeto::getCircunferencia </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retorna a Circunferência do <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a>. </p>
+<p>A partir dos atributos <a class="el" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> e <a class="el" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a> é possível descrever um circunferência que representa a forma geométrica do <a class="el" href="classObjeto.html">Objeto</a> .</p>
+<p>Esse método nada mais faz do que retorar um objeto <a class="el" href="classCircunferencia.html">Circunferencia</a> dessa representação.</p>
+<p>Importante principalmente para a renderização de um <a class="el" href="classObjeto.html">Objeto</a> na tela.</p>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> </dd></dl>
+
+</div>
+</div>
+<a id="abc74b2353fce9ed0385a99dca5345800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc74b2353fce9ed0385a99dca5345800">&#9670;&nbsp;</a></span>movimentar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Objeto::movimentar </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ti</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Movimenta o <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a> alterando possivelmente sua velocidade e posição. </p>
+<p>Esse método deve ser usado quando deseja-se calcular o movimento realizado pelo <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a> em um determinado intervalo de tempo.</p>
+<p>Os cálculos são realizados através da Implementação de um Integrador de Euler, onde de maneira resumida pode-se calcular a velocidade através da integração da aceleração em um intervalo de tempo, bem como calcular a posição do <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a> usando-se da integração da velocidade do objeto</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ti</td><td>tempo incial do Intervalo </td></tr>
+    <tr><td class="paramname">tf</td><td>tempo final do Intervalo </td></tr>
+    <tr><td class="paramname">dt</td><td>delta tempo -&gt; diferença tf-ti</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Para mais detalhes acessar: </p><dl class="section see"><dt>Veja também</dt><dd><a href="https://en.wikipedia.org/wiki/Euler_method">https://en.wikipedia.org/wiki/Euler_method</a> </dd></dl>
+
+</div>
+</div>
+<a id="abf41379166eadad232c7910a96c5de34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf41379166eadad232c7910a96c5de34">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classObjeto.html">Objeto</a>&amp; Objeto::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classObjeto.html">Objeto</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>! Atribuição Move </p>
+<p>Movimenta todos os atributos de um <a class="el" href="classObjeto.html">Objeto</a> passado como parâmetro para o <a class="el" href="classObjeto.html">Objeto</a> atual. Nesse caso cada objeto terá o seu <a class="el" href="classObjeto.html#aa722a7b9c4a9d19d7a1d9be413be06fc">id</a> único mantido e apenas os atibutos mais gerais são copiados.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Referência constante do <a class="el" href="classObjeto.html">Objeto</a> que será Copiado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classObjeto.html">Objeto</a> que invocou o operador </dd></dl>
+
+</div>
+</div>
+<a id="a56b39714b99ab866d96c1de567140dcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56b39714b99ab866d96c1de567140dcd">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classObjeto.html">Objeto</a>&amp; Objeto::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classObjeto.html">Objeto</a> &amp;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atribuição por Cópia. </p>
+<p>Copia todos os atributos de um <a class="el" href="classObjeto.html">Objeto</a> passado como parâmetro para o <a class="el" href="classObjeto.html">Objeto</a> atual. Observe que a partir desse momento, o <a class="el" href="classObjeto.html">Objeto</a> atual torna-se "praticamente" o mesmo <a class="el" href="classObjeto.html">Objeto</a> copiado, tendo o mesmo id. Por essa razão não recomenda-se realizar a Atribuição por cópia e manter os dois Objetos na Simulação, uma vez que implicações no que tange a aplicação de colisão a partir do id pode gerar resultados inesperados.</p>
+<p>Caso seja necessária uma "cópia" mais superficial onde somente os atributos gerais como raio, massa e atributos numéricos sejam copiados para o <a class="el" href="classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.">Objeto</a>, recomenda-se o uso da Atribuição por Movimentação, implementada já nessa classe.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>Referência constante do <a class="el" href="classObjeto.html">Objeto</a> que será Copiado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classObjeto.html">Objeto</a> que invocou o operador </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Amigas e Funções Relacionadas</h2>
+<a id="aeb698ee407fad88811a0ace453e800a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb698ee407fad88811a0ace453e800a1">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classObjeto.html">Objeto</a> &amp;&#160;</td>
+          <td class="paramname"><em>objeto</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sobrecarga do Insertion Operator para Saída de Dados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>uma string no formato: "Objeto(raio_circunferencia,massa,r,v,a)" onde cada elemento refere-se ao valor dos respectivos atributos do objeto </dd></dl>
+
+</div>
+</div>
 <hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
 <li>Base/<a class="el" href="objeto_8h_source.html">objeto.h</a></li>
 </ul>

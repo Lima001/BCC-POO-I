@@ -5,11 +5,12 @@
 #include <SDL.h>
 
 /*!
+    \file cor_rgba.h
     \class CorRGBA
     \author Gabriel Eduardo Lima
-    \date 1/1/1
-    Classe Responsável por representar cores RGBA para uso em conjunto aos elementos gráficos
-    da interface SDL.
+    \date Última modificação: 28/02/2021
+    \brief Classe responsável por representar cores RGBA para uso em conjunto aos elementos gráficos
+           da interface SDL.
 */
 
 class CorRGBA {
@@ -35,15 +36,16 @@ class CorRGBA {
 
         //! Construtor Base
         /*!
-            Cria um objeto com os valores passados por parâmetro
-            \param r um inteiro para configurar o atributo \ref r
-            \param g um inteiro para configurar o atributo \ref g
-            \param b um inteiro para configurar o atributo \ref b
-            \param a um inteiro para configurar o atributo \ref a
+            Cria um objeto com os valores passados por parâmetro.
 
-            O parâmetro <b>a</b> pode ser omitido no processo de invocação
+            \param r um inteiro para configurar o atributo de mesma nomenclatura
+            \param g um inteiro para configurar o atributo de mesma nomenclatura
+            \param b um inteiro para configurar o atributo de mesma nomenclatura
+            \param a um inteiro para configurar o atributo de mesma nomenclatura
+
+            O parâmetro \b a pode ser omitido no processo de invocação
             do método. Nesse caso, o valor será configurado automáticamente
-            para o seu máximo.
+            para o seu máximo (255).
             
         */
         CorRGBA(int r, int g, int b, int a=255):
@@ -54,29 +56,30 @@ class CorRGBA {
         {
         }
 
-        Uint32 getCor(SDL_Surface* surface)const{
-            /*!
-                Função para receber a cor em um formato útil e compatível
-                ao usado por funções da bliblioteca SDL.
+        //! Retorna a cor RGBA
+        /*!
+            Método para receber a cor em um formato útil e compatível
+            ao usado por funções da bliblioteca SDL.
 
-                Faz uso da função SDL_MapRGB()
+            Faz uso da função SDL_MapRGB().
 
-                \param surface um ponteiro para um objeto SDL_Surface
-                \return a cor no formato Uint32
+            \param surface um ponteiro para um objeto SDL_Surface
+            \return cor no formato \c Uint32
             */
+        Uint32 getCor(SDL_Surface* surface)const{
             return SDL_MapRGB(surface->format,r,g,b);
         }
 
         // Métodos de sobrecarga de operadores
 
+        //! Sobrecarga do Insertion Operator para Saída de Dados
+        /*!
+            \return string no formato: "Cor(r,g,b,a)"
+                    onde cada elemento refere-se aos valores
+                    dos respectivos atributos do objeto
+        */
         friend std::ostream& operator<< (std::ostream &out, const CorRGBA &cor){
-            /*!
-                Função amiga para ter acesso ao atributos protegidos da classe,
-                visando sobscrita do operador << para apresentação de saída ao
-                usuário.
-                \return uma string no formato: (r,g,b,a)
-            */
-            out << "(" << cor.r << ", " << cor.g << ", " << cor.b << ", " << cor.a <<  ")";
+            out << "Cor(" << cor.r << ", " << cor.g << ", " << cor.b << ", " << cor.a <<  ")";
             return out;
         }
 };

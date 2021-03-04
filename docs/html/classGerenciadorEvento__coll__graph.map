@@ -1,0 +1,4 @@
+<map id="GerenciadorEvento" name="GerenciadorEvento">
+<area shape="rect" id="node1" title="Classe Responsável pelo processamento dos objetos do tipo Evento." alt="" coords="5,95,152,121"/>
+<area shape="rect" id="node2" href="$classEvento.html" title="Classe Responsável pela representação de um evento único capaz de ser processado por um objeto do tip..." alt="" coords="45,5,112,32"/>
+</map>

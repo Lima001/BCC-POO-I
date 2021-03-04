@@ -1,0 +1,8 @@
+<map id="DetectorColisao" name="DetectorColisao">
+<area shape="rect" id="node1" title="Classe para Cálculo e Aplicação de Colisão entre objetos do tipo Objeto e entre um Objeto e uma Linha..." alt="" coords="63,199,190,225"/>
+<area shape="rect" id="node2" href="$classLinha.html" title="Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ..." alt="" coords="31,109,89,136"/>
+<area shape="rect" id="node3" href="$classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano." alt="" coords="88,5,144,32"/>
+<area shape="rect" id="node5" href="$classObjeto.html" title="Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar&#45;se." alt="" coords="162,109,227,136"/>
+<area shape="rect" id="node4" href="$classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano." alt="" coords="5,5,64,32"/>
+<area shape="rect" id="node6" href="$classAceleracao.html" title=" " alt="" coords="169,5,263,32"/>
+</map>

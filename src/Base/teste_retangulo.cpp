@@ -4,6 +4,7 @@
 using namespace std;
 
 int main(){
+    // Criação de objetos
     Retangulo rect1, rect2, rect3;
 
     rect1 = Retangulo();
@@ -12,6 +13,7 @@ int main(){
     Retangulo rect4 = rect2;
     Retangulo rect5 = move(rect3);
 
+    // Exibição de objetos do tipo Retangulo
     cout << rect1 << endl;
     cout << rect2 << endl;
     cout << rect3 << endl;
@@ -20,6 +22,7 @@ int main(){
 
     cout << "\n";
 
+    // Acesso aos atributos de um Retangulo
     cout << rect4.inicio << endl;
     cout << rect4.altura << " - ";
     cout << rect4.largura << endl;

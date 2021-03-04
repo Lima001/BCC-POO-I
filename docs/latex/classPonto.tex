@@ -2,6 +2,11 @@
 \label{classPonto}\index{Ponto@{Ponto}}
 
 
+Classe para Representação de um \mbox{\hyperlink{classPonto}{Ponto}} no Plano Cartesiano.  
+
+
+
+
 {\ttfamily \#include $<$ponto.\+h$>$}
 
 \doxysubsection*{Membros Públicos}
@@ -18,6 +23,8 @@
 \mbox{\Hypertarget{classPonto_a3b0e3df470cda29d6bf52e6c11a1e8a6}\label{classPonto_a3b0e3df470cda29d6bf52e6c11a1e8a6}} 
 \mbox{\hyperlink{classPonto_a3b0e3df470cda29d6bf52e6c11a1e8a6}{$\sim$\+Ponto}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{classPonto_ad95aef665ea1fb3e9b82b8508ab05cf1}{ponto\+To\+Matriz}} () const
+\begin{DoxyCompactList}\small\item\em Transforma um ponto para sua representação em \mbox{\hyperlink{classMatriz}{Matriz}}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPonto}{Ponto}} \& \mbox{\hyperlink{classPonto_a1f1cd02177d47eef370db80b9527ef97}{operator=}} (const \mbox{\hyperlink{classPonto}{Ponto}} \&p)
 \begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPonto}{Ponto}} \& \mbox{\hyperlink{classPonto_a5d665c3cf4788e982e24784e46d252f6}{operator=}} (\mbox{\hyperlink{classPonto}{Ponto}} \&\&p) noexcept
@@ -27,23 +34,25 @@
 \item 
 \mbox{\Hypertarget{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}\label{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}} 
 float \mbox{\hyperlink{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}{x}}
-\begin{DoxyCompactList}\small\item\em Coordenada no eixo X. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Coordenada no eixo das abscissas. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}\label{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}} 
 float \mbox{\hyperlink{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}{y}}
-\begin{DoxyCompactList}\small\item\em Coordenada no eixo X. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Coordenada no eixo das ordenadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
 std\+::ostream \& \mbox{\hyperlink{classPonto_a0f5204c48601e4a1912b6c221028c290}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classPonto}{Ponto}} \&ponto)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sobrecarga do Insertion Operator para Saída de Dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
+Classe para Representação de um \mbox{\hyperlink{classPonto}{Ponto}} no Plano Cartesiano. 
+
 \begin{DoxyAuthor}{Autor}
 Gabriel Eduardo Lima 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Data}
-11/11/2020 Classe para Representação de um \mbox{\hyperlink{classPonto}{Ponto}} no Plano Cartesiano 
+Última Modificação\+: 27/02/2001 
 \end{DoxyDate}
 
 
@@ -60,7 +69,7 @@ Construtor Default.
 
 Chamado quando nenhum parâmetro de ininicialização for informado.
 
-Cria um objeto com ambas as coordenadas configuradas para a origem do Plano Cartesiano (0,0) \mbox{\Hypertarget{classPonto_a11562446098bca36d3f759c22a5bf734}\label{classPonto_a11562446098bca36d3f759c22a5bf734}} 
+Cria um objeto com ambas as coordenadas configuradas para a origem do Plano Cartesiano $ O(0,0)$. \mbox{\Hypertarget{classPonto_a11562446098bca36d3f759c22a5bf734}\label{classPonto_a11562446098bca36d3f759c22a5bf734}} 
 \index{Ponto@{Ponto}!Ponto@{Ponto}}
 \index{Ponto@{Ponto}!Ponto@{Ponto}}
 \doxysubsubsection{\texorpdfstring{Ponto()}{Ponto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
@@ -70,11 +79,13 @@ Cria um objeto com ambas as coordenadas configuradas para a origem do Plano Cart
 
 Construtor Base. 
 
-Cria um objeto com as coordenadas passadas como parâmetro 
+Cria um objeto com as coordenadas passadas como parâmetro.
+
+
 \begin{DoxyParams}{Parâmetros}
-{\em x} & um float representando a Coordenada X \\
+{\em x} & usado para inicializar atributo de mesma nomenclatura \\
 \hline
-{\em y} & um float representando a Coordenada Y \\
+{\em y} & usado para inicializar atributo de mesma nomenclatura \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classPonto_ac2d478f0ac64bff3c0f0bcd511d30580}\label{classPonto_ac2d478f0ac64bff3c0f0bcd511d30580}} 
@@ -87,9 +98,11 @@ Cria um objeto com as coordenadas passadas como parâmetro
 
 Construtor de Cópia. 
 
-Cria um novo objeto copiando as coordenadas de um ponto informado 
+Cria um novo objeto copiando as coordenadas de um \mbox{\hyperlink{classPonto}{Ponto}} informado.
+
+
 \begin{DoxyParams}{Parâmetros}
-{\em p} & uma referência constante para um \mbox{\hyperlink{classPonto}{Ponto}} \\
+{\em p} & Referência constante para o \mbox{\hyperlink{classPonto}{Ponto}} que será copiado \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classPonto_aef5d85e0bdd420a08024bff4e9ceaf69}\label{classPonto_aef5d85e0bdd420a08024bff4e9ceaf69}} 
@@ -102,12 +115,14 @@ Cria um novo objeto copiando as coordenadas de um ponto informado
 
 Construtor Move. 
 
-Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os dados das coordenadas de um ponto para o novo objeto criado. 
+Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os dados das coordenadas de um \mbox{\hyperlink{classPonto}{Ponto}} para o novo objeto criado.
+
+
 \begin{DoxyParams}{Parâmetros}
-{\em p} & uma referência rvalue de um \mbox{\hyperlink{classPonto}{Ponto}}\\
+{\em p} & Referência rvalue para um \mbox{\hyperlink{classPonto}{Ponto}}\\
 \hline
 \end{DoxyParams}
-Para mais detalhe sobre o recurso, consultar documentação da linguagem. 
+Para mais detalhe sobre o recurso, consultar documentação da linguagem 
 
 \doxysubsection{Funções membros}
 \mbox{\Hypertarget{classPonto_a1f1cd02177d47eef370db80b9527ef97}\label{classPonto_a1f1cd02177d47eef370db80b9527ef97}} 
@@ -120,13 +135,15 @@ Para mais detalhe sobre o recurso, consultar documentação da linguagem.
 
 Atribuição por Cópia. 
 
+Copia o valor dos atributos do \mbox{\hyperlink{classPonto}{Ponto}} passado por parâmetro para o \mbox{\hyperlink{classPonto}{Ponto}} que invocou o operador.
+
 
 \begin{DoxyParams}{Parâmetros}
-{\em p} & uma referência constante de um \mbox{\hyperlink{classPonto}{Ponto}} \\
+{\em p} & Referência constante do \mbox{\hyperlink{classPonto}{Ponto}} que deseja-\/se copiar \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-Referência para o \mbox{\hyperlink{classPonto}{Ponto}} que Invocou o Método
+Referência para o \mbox{\hyperlink{classPonto}{Ponto}} que invocou o operador 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classPonto_a5d665c3cf4788e982e24784e46d252f6}\label{classPonto_a5d665c3cf4788e982e24784e46d252f6}} 
 \index{Ponto@{Ponto}!operator=@{operator=}}
@@ -140,11 +157,31 @@ Atribuição por Movimentação.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em p} & uma referência rvalue de um \mbox{\hyperlink{classPonto}{Ponto}} \\
+{\em p} & Referência rvalue de um \mbox{\hyperlink{classPonto}{Ponto}} \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-Referência para o \mbox{\hyperlink{classPonto}{Ponto}} que Invocou o Método
+Referência para o \mbox{\hyperlink{classPonto}{Ponto}} que Invocou o operador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPonto_ad95aef665ea1fb3e9b82b8508ab05cf1}\label{classPonto_ad95aef665ea1fb3e9b82b8508ab05cf1}} 
+\index{Ponto@{Ponto}!pontoToMatriz@{pontoToMatriz}}
+\index{pontoToMatriz@{pontoToMatriz}!Ponto@{Ponto}}
+\doxysubsubsection{\texorpdfstring{pontoToMatriz()}{pontoToMatriz()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}} Ponto\+::ponto\+To\+Matriz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transforma um ponto para sua representação em \mbox{\hyperlink{classMatriz}{Matriz}}. 
+
+Considere o ponto $ P(x,y)$. A representação em forma de matriz de $ P $ é dada como\+:
+
+\[ M = \begin{bmatrix} x \\ y \\ 1 \end{bmatrix} \]
+
+Esse método é importante, uma vez que um ponto em sua forma de matriz pode ser usado para operações de transformação úteis ao processo de representação gráfica de figuras. Para mais detalhes \begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classRenderizador}{Renderizador}}
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Retorna}
+\mbox{\hyperlink{classMatriz}{Matriz}} 3x1 $ M $ 
 \end{DoxyReturn}
 
 
@@ -155,11 +192,15 @@ Referência para o \mbox{\hyperlink{classPonto}{Ponto}} que Invocou o Método
 \doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
 {\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{ponto }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-Função amiga para ter acesso ao atributos protegidos da classe, visando sobscrita do operador $<$$<$ para apresentação de saída ao usuário. \begin{DoxyReturn}{Retorna}
-uma string no formato\+: (x,y)
+
+
+Sobrecarga do Insertion Operator para Saída de Dados. 
+
+\begin{DoxyReturn}{Retorna}
+string no formato\+: \char`\"{}\+Ponto(x,y)\char`\"{} onde x e y são respectivamente os valores dos atributos de mesmo nome do objeto 
 \end{DoxyReturn}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Base/ponto.\+h\end{DoxyCompactItemize}
+Base/\mbox{\hyperlink{ponto_8h}{ponto.\+h}}\end{DoxyCompactItemize}

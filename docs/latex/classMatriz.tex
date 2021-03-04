@@ -1,82 +1,470 @@
 \hypertarget{classMatriz}{}\doxysection{Referência da Classe Matriz}
 \label{classMatriz}\index{Matriz@{Matriz}}
+
+
+Classe para Representação de Matrizes.  
+
+
+
+
+{\ttfamily \#include $<$matriz.\+h$>$}
+
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMatriz_adfe53538a1e8865ca934020f4cb7a87b}\label{classMatriz_adfe53538a1e8865ca934020f4cb7a87b}} 
-{\bfseries Matriz} (unsigned int n\+\_\+linha, unsigned int n\+\_\+coluna)
-\item 
-\mbox{\Hypertarget{classMatriz_a6ce231d36fa5a85304933484e14a4426}\label{classMatriz_a6ce231d36fa5a85304933484e14a4426}} 
-{\bfseries Matriz} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
-\item 
-\mbox{\Hypertarget{classMatriz_af8987741da4cabe0aa054f2e8b077a97}\label{classMatriz_af8987741da4cabe0aa054f2e8b077a97}} 
-void {\bfseries print} ()
-\item 
-\mbox{\Hypertarget{classMatriz_a9e7f83c428a54594555dfe7933706645}\label{classMatriz_a9e7f83c428a54594555dfe7933706645}} 
-void {\bfseries definir\+\_\+linha} (unsigned int index, const std\+::vector$<$ double $>$ \&linha)
-\item 
-\mbox{\Hypertarget{classMatriz_ac6ad696598fc80ff8eb1e59dc433c45b}\label{classMatriz_ac6ad696598fc80ff8eb1e59dc433c45b}} 
-\mbox{\hyperlink{classMatriz}{Matriz}} \& {\bfseries operator+=} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
-\item 
-\mbox{\Hypertarget{classMatriz_a64b453c6c27e6189ef8661ab3d242b16}\label{classMatriz_a64b453c6c27e6189ef8661ab3d242b16}} 
-\mbox{\hyperlink{classMatriz}{Matriz}} {\bfseries operator+} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
-\item 
-\mbox{\Hypertarget{classMatriz_a5ab483e63659844df170d87fc1b07faf}\label{classMatriz_a5ab483e63659844df170d87fc1b07faf}} 
-\mbox{\hyperlink{classMatriz}{Matriz}} \& {\bfseries operator-\/=} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
-\item 
-\mbox{\Hypertarget{classMatriz_a60851cf31b1b25d3ce0d3ce4cf65d3fe}\label{classMatriz_a60851cf31b1b25d3ce0d3ce4cf65d3fe}} 
-\mbox{\hyperlink{classMatriz}{Matriz}} {\bfseries operator-\/} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
-\item 
-\mbox{\Hypertarget{classMatriz_a6bca6741b27663fe3b348f3f30ebdbf9}\label{classMatriz_a6bca6741b27663fe3b348f3f30ebdbf9}} 
-\mbox{\hyperlink{classMatriz}{Matriz}} \& {\bfseries operator$\ast$=} (float escalar)
-\item 
-\mbox{\Hypertarget{classMatriz_a8c31d0a74ecad92fbfa5577d960674bf}\label{classMatriz_a8c31d0a74ecad92fbfa5577d960674bf}} 
-\mbox{\hyperlink{classMatriz}{Matriz}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
-\item 
-\mbox{\Hypertarget{classMatriz_a48aaebca919d8d50bacf7e9a184c0021}\label{classMatriz_a48aaebca919d8d50bacf7e9a184c0021}} 
-\mbox{\hyperlink{classMatriz}{Matriz}} \& {\bfseries operator=} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
-\item 
-\mbox{\Hypertarget{classMatriz_a9566df815b81e112f6785f748866ae5f}\label{classMatriz_a9566df815b81e112f6785f748866ae5f}} 
-\mbox{\hyperlink{classMatriz}{Matriz}} \& {\bfseries operator=} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&\&m)
-\item 
-\mbox{\Hypertarget{classMatriz_a337f1572a6fb5bdd65d7e97b7dfd4bf3}\label{classMatriz_a337f1572a6fb5bdd65d7e97b7dfd4bf3}} 
-double $\ast$\& {\bfseries operator\mbox{[}$\,$\mbox{]}} (int index)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classMatriz_a7de756301bddbc4b0b5d2a0f2b1fc695}{Matriz}} ()
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz_adfe53538a1e8865ca934020f4cb7a87b}{Matriz}} (unsigned int \mbox{\hyperlink{classMatriz_a7a47f20a2888676639b85a103f1f0acc}{n\+\_\+linha}}, unsigned int \mbox{\hyperlink{classMatriz_a75de113513435223ef020229d301660a}{n\+\_\+coluna}})
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz_a6ce231d36fa5a85304933484e14a4426}{Matriz}} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
+\begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMatriz_a2092b7a289ecec369e1da407d5839f5a}\label{classMatriz_a2092b7a289ecec369e1da407d5839f5a}} 
+\mbox{\hyperlink{classMatriz_a2092b7a289ecec369e1da407d5839f5a}{$\sim$\+Matriz}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMatriz_af8987741da4cabe0aa054f2e8b077a97}{print}} ()
+\begin{DoxyCompactList}\small\item\em Método usado para exibir a \mbox{\hyperlink{classMatriz}{Matriz}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMatriz_a9e7f83c428a54594555dfe7933706645}{definir\+\_\+linha}} (unsigned int index, const std\+::vector$<$ double $>$ \&linha)
+\begin{DoxyCompactList}\small\item\em Método utilizado para preencher uma linha inteira da \mbox{\hyperlink{classMatriz}{Matriz}} com valores. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \& \mbox{\hyperlink{classMatriz_ac6ad696598fc80ff8eb1e59dc433c45b}{operator+=}} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
+\begin{DoxyCompactList}\small\item\em Operador de Atibuição de Adição. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{classMatriz_a64b453c6c27e6189ef8661ab3d242b16}{operator+}} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
+\begin{DoxyCompactList}\small\item\em Operador de Adição. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \& \mbox{\hyperlink{classMatriz_a5ab483e63659844df170d87fc1b07faf}{operator-\/=}} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
+\begin{DoxyCompactList}\small\item\em Operador de Atibuição de Subtração. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{classMatriz_a60851cf31b1b25d3ce0d3ce4cf65d3fe}{operator-\/}} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
+\begin{DoxyCompactList}\small\item\em Operador de Subtração. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \& \mbox{\hyperlink{classMatriz_a6bca6741b27663fe3b348f3f30ebdbf9}{operator$\ast$=}} (float escalar)
+\begin{DoxyCompactList}\small\item\em Operador de atibuição de multiplicação por escalar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{classMatriz_a8c31d0a74ecad92fbfa5577d960674bf}{operator$\ast$}} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
+\begin{DoxyCompactList}\small\item\em Múltiplicação entre Matrizes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \& \mbox{\hyperlink{classMatriz_a48aaebca919d8d50bacf7e9a184c0021}{operator=}} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
+\begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \& \mbox{\hyperlink{classMatriz_a9566df815b81e112f6785f748866ae5f}{operator=}} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&\&m)
+\begin{DoxyCompactList}\small\item\em Atribuição Move. \end{DoxyCompactList}\item 
+double $\ast$\& \mbox{\hyperlink{classMatriz_a337f1572a6fb5bdd65d7e97b7dfd4bf3}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\begin{DoxyCompactList}\small\item\em Operador de Acesso. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMatriz_a7a47f20a2888676639b85a103f1f0acc}\label{classMatriz_a7a47f20a2888676639b85a103f1f0acc}} 
-unsigned int {\bfseries n\+\_\+linha}
-\item 
-\mbox{\Hypertarget{classMatriz_a75de113513435223ef020229d301660a}\label{classMatriz_a75de113513435223ef020229d301660a}} 
-unsigned int {\bfseries n\+\_\+coluna}
-\item 
 \mbox{\Hypertarget{classMatriz_a23291aa666ef3b2213ed8358a5a640eb}\label{classMatriz_a23291aa666ef3b2213ed8358a5a640eb}} 
-double $\ast$$\ast$ {\bfseries ptr} = nullptr
-\end{DoxyCompactItemize}
+double $\ast$$\ast$ \mbox{\hyperlink{classMatriz_a23291aa666ef3b2213ed8358a5a640eb}{ptr}} = nullptr
+\begin{DoxyCompactList}\small\item\em Ponteiro para Ponteiros usado para representar uma estrutura de Linhas e Colunas ou Array de Arrays. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMatriz_a45b783c49e5a4175487b121f5615790c}\label{classMatriz_a45b783c49e5a4175487b121f5615790c}} 
-void {\bfseries limpar} ()
+void \mbox{\hyperlink{classMatriz_a45b783c49e5a4175487b121f5615790c}{limpar}} ()
+\begin{DoxyCompactList}\small\item\em Método usado para resetar a \mbox{\hyperlink{classMatriz}{Matriz}} a um estado básico sem linhas nem colunas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMatriz_a70efb1a82f5eec412a19f9c4694793a3}{alocar}} (unsigned int n\+\_\+linha\+\_\+, unsigned n\+\_\+coluna\+\_\+)
+\begin{DoxyCompactList}\small\item\em Método usado para alocar memória dinâmica da \mbox{\hyperlink{classMatriz}{Matriz}} que o Invocar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMatriz_af0c567703acae0b472073502b938c42b}{copiar}} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
+\begin{DoxyCompactList}\small\item\em Método usado para copiar os elementos de uma \mbox{\hyperlink{classMatriz}{Matriz}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMatriz_a70efb1a82f5eec412a19f9c4694793a3}\label{classMatriz_a70efb1a82f5eec412a19f9c4694793a3}} 
-void {\bfseries alocar} (unsigned int n\+\_\+linha\+\_\+, unsigned n\+\_\+coluna\+\_\+)
-\item 
-\mbox{\Hypertarget{classMatriz_af0c567703acae0b472073502b938c42b}\label{classMatriz_af0c567703acae0b472073502b938c42b}} 
-void {\bfseries copiar} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classMatriz_a7a47f20a2888676639b85a103f1f0acc}\label{classMatriz_a7a47f20a2888676639b85a103f1f0acc}} 
+unsigned int \mbox{\hyperlink{classMatriz_a7a47f20a2888676639b85a103f1f0acc}{n\+\_\+linha}}
+\begin{DoxyCompactList}\small\item\em Quantidade de linhas da \mbox{\hyperlink{classMatriz}{Matriz}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMatriz_a75de113513435223ef020229d301660a}\label{classMatriz_a75de113513435223ef020229d301660a}} 
+unsigned int \mbox{\hyperlink{classMatriz_a75de113513435223ef020229d301660a}{n\+\_\+coluna}}
+\begin{DoxyCompactList}\small\item\em Quantidade de colunas da \mbox{\hyperlink{classMatriz}{Matriz}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{classMatriz_a871b8637c7b093fd539bca2978ed0fcb}{operator$\ast$}} (const float escalar, const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
+\begin{DoxyCompactList}\small\item\em Operador de atibuição de multiplicação por escalar a esquerda. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{classMatriz_aa2e14cafdab952648bae7f283287e482}{operator$\ast$}} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m, const float escalar)
+\begin{DoxyCompactList}\small\item\em Operador de atibuição de multiplicação por escalar a direita. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para Representação de Matrizes. 
+
+\begin{DoxyAuthor}{Autor}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Última Modificação\+: 27/02/2001 
+\end{DoxyDate}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classMatriz_a7de756301bddbc4b0b5d2a0f2b1fc695}\label{classMatriz_a7de756301bddbc4b0b5d2a0f2b1fc695}} 
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{Matriz()}{Matriz()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Matriz\+::\+Matriz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Chamado quando nenhum parâmetro de ininicialização for informado.
+
+Cria um objeto \mbox{\hyperlink{classMatriz}{Matriz}} sem linhas e nem colunas. Deve ser usado apenas para declaração de variáveis que futuramente terão a quantidade de linhas e colunas configuradas e memória alocada.
+
+Observação\+: Esse caso de objeto não deve ser usado em métodos de outras classes que exigem uma \mbox{\hyperlink{classMatriz}{Matriz}} como parâmetro. A título de exemplo, \begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classRenderizador}{Renderizador}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classMatriz_adfe53538a1e8865ca934020f4cb7a87b}\label{classMatriz_adfe53538a1e8865ca934020f4cb7a87b}} 
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{Matriz()}{Matriz()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Matriz\+::\+Matriz (\begin{DoxyParamCaption}\item[{unsigned int}]{n\+\_\+linha,  }\item[{unsigned int}]{n\+\_\+coluna }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Cria um objeto com a quantidade de linhas e colunas conforme dados passados como parâmetro. Nesse caso a memória será automáticamente alocada para atender a estrutura informada e valores default serão posicionados nas linhas e colunas.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n\+\_\+linha} & usado para inicializar atributo de mesma nomenclatura \\
+\hline
+{\em n\+\_\+coluna} & usado para inicializar atributo de mesma nomenclatura \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMatriz_a6ce231d36fa5a85304933484e14a4426}\label{classMatriz_a6ce231d36fa5a85304933484e14a4426}} 
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\index{Matriz@{Matriz}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{Matriz()}{Matriz()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Matriz\+::\+Matriz (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor de Cópia. 
+
+Cria um novo objeto copiando a estrutura e os valores de uma determinada \mbox{\hyperlink{classMatriz}{Matriz}} informada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & Referência constante para a \mbox{\hyperlink{classMatriz}{Matriz}} que será copiada \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classMatriz_a70efb1a82f5eec412a19f9c4694793a3}\label{classMatriz_a70efb1a82f5eec412a19f9c4694793a3}} 
+\index{Matriz@{Matriz}!alocar@{alocar}}
+\index{alocar@{alocar}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{alocar()}{alocar()}}
+{\footnotesize\ttfamily void Matriz\+::alocar (\begin{DoxyParamCaption}\item[{unsigned int}]{n\+\_\+linha\+\_\+,  }\item[{unsigned}]{n\+\_\+coluna\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Método usado para alocar memória dinâmica da \mbox{\hyperlink{classMatriz}{Matriz}} que o Invocar. 
+
+Caso seja necessário alterar a estrutura da \mbox{\hyperlink{classMatriz}{Matriz}}, será necessário realocar a quantidade de memória disponível para ela.
+
+Uma vez alocados os espaços na memória para a \mbox{\hyperlink{classMatriz}{Matriz}}, os valores que podem ser interpretados como linhas e colunas serão todos preenchidos por 0.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em n\+\_\+linha\+\_\+} & usado para definir a nova quantidade de linhas da \mbox{\hyperlink{classMatriz}{Matriz}} e permir a alocação de Memória \\
+\hline
+{\em n\+\_\+coluna\+\_\+} & usado para definir a nova quantidade de colunas da \mbox{\hyperlink{classMatriz}{Matriz}} e permir a alocação de Memória \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMatriz_af0c567703acae0b472073502b938c42b}\label{classMatriz_af0c567703acae0b472073502b938c42b}} 
+\index{Matriz@{Matriz}!copiar@{copiar}}
+\index{copiar@{copiar}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{copiar()}{copiar()}}
+{\footnotesize\ttfamily void Matriz\+::copiar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Método usado para copiar os elementos de uma \mbox{\hyperlink{classMatriz}{Matriz}}. 
+
+Esse método é usado para copiar apenas os elementos de uma \mbox{\hyperlink{classMatriz}{Matriz}}, isso é os valores de presentes em suas linhas e colunas. Para isso observe que a \mbox{\hyperlink{classMatriz}{Matriz}} que terá a sua estrutura copiada deve obrigatoriamente conter a mesma quantidade de linha e coluna da \mbox{\hyperlink{classMatriz}{Matriz}} de destino.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & \mbox{\hyperlink{classMatriz}{Matriz}} que terá seus elementos copiados \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMatriz_a9e7f83c428a54594555dfe7933706645}\label{classMatriz_a9e7f83c428a54594555dfe7933706645}} 
+\index{Matriz@{Matriz}!definir\_linha@{definir\_linha}}
+\index{definir\_linha@{definir\_linha}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{definir\_linha()}{definir\_linha()}}
+{\footnotesize\ttfamily void Matriz\+::definir\+\_\+linha (\begin{DoxyParamCaption}\item[{unsigned int}]{index,  }\item[{const std\+::vector$<$ double $>$ \&}]{linha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método utilizado para preencher uma linha inteira da \mbox{\hyperlink{classMatriz}{Matriz}} com valores. 
+
+Esse método é usado para tornar a atribuição de valores a \mbox{\hyperlink{classMatriz}{Matriz}} mais cômoda ao desenvolvedor. Através desse método é possível definir os valores de uma linha inteira através de um vetor C++ (vector). Os valores serão copiados conforme sua posição no vetor, \char`\"{}da esquerda para a direita\char`\"{}.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em index} & índice da linha que será alterada -\/ Deve ser um valor $>$= 0 e dentro dos limites da estrutura da \mbox{\hyperlink{classMatriz}{Matriz}} \\
+\hline
+{\em linha} & {\ttfamily vector} contendo os elementos das colunas daquela linha\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Aviso}
+Caso o índice informado não seja válido na \mbox{\hyperlink{classMatriz}{Matriz}}, bem como caso a quantidade de elementos do vetor seja superior a suportada pelo objeto, a operação não será efetuada e o método será finalizado 
+\end{DoxyWarning}
+\mbox{\Hypertarget{classMatriz_a45b783c49e5a4175487b121f5615790c}\label{classMatriz_a45b783c49e5a4175487b121f5615790c}} 
+\index{Matriz@{Matriz}!limpar@{limpar}}
+\index{limpar@{limpar}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{limpar()}{limpar()}}
+{\footnotesize\ttfamily void Matriz\+::limpar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Método usado para resetar a \mbox{\hyperlink{classMatriz}{Matriz}} a um estado básico sem linhas nem colunas. 
+
+Esse método é usado principalmente na necessidade de realocar a quantidade de memória dinâmica disponível para a \mbox{\hyperlink{classMatriz}{Matriz}}. Para isso é necessário antes deletar toda a memória anteriormente alocada para a \mbox{\hyperlink{classMatriz}{Matriz}} para possível configuração conforme contexto. \mbox{\Hypertarget{classMatriz_a8c31d0a74ecad92fbfa5577d960674bf}\label{classMatriz_a8c31d0a74ecad92fbfa5577d960674bf}} 
+\index{Matriz@{Matriz}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}} Matriz\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Múltiplicação entre Matrizes. 
+
+Realiza a múltiplicação entre duas matrizes gerando ao final um novo objeto do tipo \mbox{\hyperlink{classMatriz}{Matriz}} como resultado da operação.
+
+Observação\+: Deve-\/se observar a condição matemática necessária para que a multiplicação entre as matrzies ocorra com sucesso. Considere uma matriz $ A (linha X coluna) $ e a matriz $ B (linha X coluna) $. Para que a multiplicação ocorra deve-\/se observar a seguinte verdade $ A coluna = B linha $
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Referência a \mbox{\hyperlink{classMatriz}{Matriz}} usada na operação de múltiplicação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\mbox{\hyperlink{classMatriz}{Matriz}} resultante da múltplicação de matrizes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatriz_a6bca6741b27663fe3b348f3f30ebdbf9}\label{classMatriz_a6bca6741b27663fe3b348f3f30ebdbf9}} 
+\index{Matriz@{Matriz}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}}\& Matriz\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{float}]{escalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de atibuição de multiplicação por escalar. 
+
+Múltiplica as respectivas linhas e colunas de uma \mbox{\hyperlink{classMatriz}{Matriz}} por um número escalar. Gera alteração da própria \mbox{\hyperlink{classMatriz}{Matriz}}, não criando um novo objeto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em escalar} & {\ttfamily float} usado para múltiplicar os valores da \mbox{\hyperlink{classMatriz}{Matriz}} que Invocou o operador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para a própria \mbox{\hyperlink{classMatriz}{Matriz}} que invocou o operador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatriz_a64b453c6c27e6189ef8661ab3d242b16}\label{classMatriz_a64b453c6c27e6189ef8661ab3d242b16}} 
+\index{Matriz@{Matriz}!operator+@{operator+}}
+\index{operator+@{operator+}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}} Matriz\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de Adição. 
+
+Soma as respectivas linhas e colunas de uma \mbox{\hyperlink{classMatriz}{Matriz}} a \mbox{\hyperlink{classMatriz}{Matriz}} atual gerando ao fim um novo objeto.
+
+Observação\+: Para a soma ser bem sucedida, as matrizes devem possuir o exato número de linhas e colunas. Caso contrário a operação não é realizada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Referência constante a \mbox{\hyperlink{classMatriz}{Matriz}} referente a parcela direita da Operação de Soma \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\mbox{\hyperlink{classMatriz}{Matriz}} resultante da Operação de Soma 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatriz_ac6ad696598fc80ff8eb1e59dc433c45b}\label{classMatriz_ac6ad696598fc80ff8eb1e59dc433c45b}} 
+\index{Matriz@{Matriz}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}}\& Matriz\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de Atibuição de Adição. 
+
+Soma as respectivas linhas e colunas de uma \mbox{\hyperlink{classMatriz}{Matriz}} a \mbox{\hyperlink{classMatriz}{Matriz}} atual. Gera alteração da própria \mbox{\hyperlink{classMatriz}{Matriz}}, não criando um novo objeto.
+
+Observação\+: Para a soma ser bem sucedida, as matrizes devem possuir o exato número de linhas e colunas. Caso contrário a operação não é realizada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Referência constante a \mbox{\hyperlink{classMatriz}{Matriz}} referente a parcela direita da Operação de Atrbuição de Adição \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para a própria \mbox{\hyperlink{classMatriz}{Matriz}} que invocou o método 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatriz_a60851cf31b1b25d3ce0d3ce4cf65d3fe}\label{classMatriz_a60851cf31b1b25d3ce0d3ce4cf65d3fe}} 
+\index{Matriz@{Matriz}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}} Matriz\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de Subtração. 
+
+Suntrai as respectivas linhas e colunas de uma \mbox{\hyperlink{classMatriz}{Matriz}} a \mbox{\hyperlink{classMatriz}{Matriz}} atual gerando ao fim um novo objeto.
+
+Observação\+: Para a operação ser bem sucedida, as matrizes devem possuir o exato número de linhas e colunas. Caso contrário a operação não é realizada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Referência constante a \mbox{\hyperlink{classMatriz}{Matriz}} referente a parcela direita da Operação de Subtração \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\mbox{\hyperlink{classMatriz}{Matriz}} resultante da Operação 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatriz_a5ab483e63659844df170d87fc1b07faf}\label{classMatriz_a5ab483e63659844df170d87fc1b07faf}} 
+\index{Matriz@{Matriz}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}}\& Matriz\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de Atibuição de Subtração. 
+
+Subtrai as respectivas linhas e colunas de uma \mbox{\hyperlink{classMatriz}{Matriz}} a \mbox{\hyperlink{classMatriz}{Matriz}} atual. Gera alteração da própria \mbox{\hyperlink{classMatriz}{Matriz}}, não criando um novo objeto.
+
+Observação\+: Para a operação ser bem sucedida, as matrizes devem possuir o exato número de linhas e colunas. Caso contrário a operação não ér\+Realizada.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Referência constante a \mbox{\hyperlink{classMatriz}{Matriz}} referente a parcela direita da Operação de Atrbuição de Subtração \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para a própria \mbox{\hyperlink{classMatriz}{Matriz}} que invocou o operador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatriz_a9566df815b81e112f6785f748866ae5f}\label{classMatriz_a9566df815b81e112f6785f748866ae5f}} 
+\index{Matriz@{Matriz}!operator=@{operator=}}
+\index{operator=@{operator=}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}}\& Matriz\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatriz}{Matriz}} \&\&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atribuição Move. 
+
+Movimenta a estrutura completa de uma \mbox{\hyperlink{classMatriz}{Matriz}}. Dessa forma pode-\/se usar como parâmetro qualquer \mbox{\hyperlink{classMatriz}{Matriz}}, independente de sua quantidade de linhas e colunas divergirem da quantidade atual da \mbox{\hyperlink{classMatriz}{Matriz}} que invocou o método. Isso deve-\/se ao fato da alocação dinâmica de memória realizada na chamada desse método.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em vetor} & Referência rvalue da \mbox{\hyperlink{classMatriz}{Matriz}} Base para a operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o \mbox{\hyperlink{classMatriz}{Matriz}} que Invocou o Método 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatriz_a48aaebca919d8d50bacf7e9a184c0021}\label{classMatriz_a48aaebca919d8d50bacf7e9a184c0021}} 
+\index{Matriz@{Matriz}!operator=@{operator=}}
+\index{operator=@{operator=}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}}\& Matriz\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atribuição por Cópia. 
+
+Copia a estrutura completa de uma \mbox{\hyperlink{classMatriz}{Matriz}}. Dessa forma pode-\/se copiar qualquer \mbox{\hyperlink{classMatriz}{Matriz}}, independente de sua quantidade de linhas e colunas divergirem da quantidade atual da \mbox{\hyperlink{classMatriz}{Matriz}} que invocou o operador. Isso deve-\/se ao fato da alocação dinâmica de memória realizada na chamada desse método.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Referência constante da \mbox{\hyperlink{classMatriz}{Matriz}} que será Copiado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para a \mbox{\hyperlink{classMatriz}{Matriz}} que invocou o operador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatriz_a337f1572a6fb5bdd65d7e97b7dfd4bf3}\label{classMatriz_a337f1572a6fb5bdd65d7e97b7dfd4bf3}} 
+\index{Matriz@{Matriz}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily double$\ast$\& Matriz\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Operador de Acesso. 
+
+Usado quando é necessário acessar um elemento em um índice específico da \mbox{\hyperlink{classMatriz}{Matriz}}. Permite tanto a leitura quanto a escrita da posição da \mbox{\hyperlink{classMatriz}{Matriz}} .
+
+Observação\+: O índice informado deve ser compatível com a estrutura da \mbox{\hyperlink{classMatriz}{Matriz}}, caso contrário a operação não é realizada a fim de evitar acesso a espaços de memórias não pertencetes a \mbox{\hyperlink{classMatriz}{Matriz}} .
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em index} & índice que deseja-\/se acessar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para o endereço de memória do elemento no índice informado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatriz_af8987741da4cabe0aa054f2e8b077a97}\label{classMatriz_af8987741da4cabe0aa054f2e8b077a97}} 
+\index{Matriz@{Matriz}!print@{print}}
+\index{print@{print}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Matriz\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método usado para exibir a \mbox{\hyperlink{classMatriz}{Matriz}}. 
+
+Exibe as informações de linhas e colunas da \mbox{\hyperlink{classMatriz}{Matriz}} atual, bem como cada linha e coluna no formato usual de representação de matrizes. 
+
+\doxysubsection{Amigas e Funções Relacionadas}
 \mbox{\Hypertarget{classMatriz_a871b8637c7b093fd539bca2978ed0fcb}\label{classMatriz_a871b8637c7b093fd539bca2978ed0fcb}} 
-\mbox{\hyperlink{classMatriz}{Matriz}} {\bfseries operator$\ast$} (const float escalar, const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
-\item 
+\index{Matriz@{Matriz}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const float}]{escalar,  }\item[{const \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operador de atibuição de multiplicação por escalar a esquerda. 
+
+Múltiplica as respectivas linhas e colunas de uma \mbox{\hyperlink{classMatriz}{Matriz}} por um número escalar informado a esquerda de {\bfseries{$\ast$}}. Nesse caso gera uma nova \mbox{\hyperlink{classMatriz}{Matriz}} resultante da operação
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em escalar} & {\ttfamily float} usado para múltiplicar os valores de uma \mbox{\hyperlink{classMatriz}{Matriz}} \\
+\hline
+{\em m} & Referência constante a uma \mbox{\hyperlink{classMatriz}{Matriz}} usada na Operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\mbox{\hyperlink{classMatriz}{Matriz}} resultante do produto entre a \mbox{\hyperlink{classMatriz}{Matriz}} de parâmetro e o escalar 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classMatriz_aa2e14cafdab952648bae7f283287e482}\label{classMatriz_aa2e14cafdab952648bae7f283287e482}} 
-\mbox{\hyperlink{classMatriz}{Matriz}} {\bfseries operator$\ast$} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m, const float escalar)
-\end{DoxyCompactItemize}
+\index{Matriz@{Matriz}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$}{operator*}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatriz}{Matriz}} \&}]{m,  }\item[{const float}]{escalar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operador de atibuição de multiplicação por escalar a direita. 
+
+Múltiplica as respectivas linhas e colunas de uma \mbox{\hyperlink{classMatriz}{Matriz}} por um número escalar informado a direita de {\bfseries{$\ast$}}. Nesse caso gera uma nova \mbox{\hyperlink{classMatriz}{Matriz}} resultante da operação
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em escalar} & {\ttfamily float} usado para múltiplicar os valores de uma \mbox{\hyperlink{classMatriz}{Matriz}} \\
+\hline
+{\em m} & Referência constante a uma \mbox{\hyperlink{classMatriz}{Matriz}} usada na Operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\mbox{\hyperlink{classMatriz}{Matriz}} resultante do produto entre a \mbox{\hyperlink{classMatriz}{Matriz}} de parâmetro e o escalar 
+\end{DoxyReturn}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Base/matriz.\+h\end{DoxyCompactItemize}
+Base/\mbox{\hyperlink{matriz_8h}{matriz.\+h}}\end{DoxyCompactItemize}

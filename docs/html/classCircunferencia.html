@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -71,54 +78,406 @@ $(function() {
 <div class="title">Referência da Classe Circunferencia</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe para Representação de uma Circunferência. É a forma considerada como padrão para os objetos <a class="el" href="classObjeto.html">Objeto</a> da simulação.  
+ <a href="classCircunferencia.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="circunferencia_8h_source.html">circunferencia.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de colaboração para Circunferencia:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCircunferencia__coll__graph.png" border="0" usemap="#Circunferencia_coll__map" alt="Collaboration graph"/></div>
+<map name="Circunferencia_coll__map" id="Circunferencia_coll__map">
+<area shape="rect" title="Classe para Representação de uma Circunferência. É a forma considerada como padrão para os objetos Ob..." alt="" coords="5,109,121,136"/>
+<area shape="rect" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano." alt="" coords="34,5,93,32"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a0fee047fbf2fd2bb5e2e1a55621a8382"><td class="memItemLeft" align="right" valign="top"><a id="a0fee047fbf2fd2bb5e2e1a55621a8382"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Circunferencia</b> (float raio, const <a class="el" href="classPonto.html">Ponto</a> &amp;centro, int precisao=60)</td></tr>
+<tr class="memitem:a03fdd2e99f3645b65c15331b5315c16d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#a03fdd2e99f3645b65c15331b5315c16d">Circunferencia</a> ()</td></tr>
+<tr class="memdesc:a03fdd2e99f3645b65c15331b5315c16d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default.  <a href="classCircunferencia.html#a03fdd2e99f3645b65c15331b5315c16d">Mais...</a><br /></td></tr>
+<tr class="separator:a03fdd2e99f3645b65c15331b5315c16d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fee047fbf2fd2bb5e2e1a55621a8382"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#a0fee047fbf2fd2bb5e2e1a55621a8382">Circunferencia</a> (float <a class="el" href="classCircunferencia.html#a8bc69243976463322985c38e366d2b9d">raio</a>, const <a class="el" href="classPonto.html">Ponto</a> &amp;<a class="el" href="classCircunferencia.html#a7bc8965dd1d3d94ae3cb3208d3d333b2">centro</a>, int <a class="el" href="classCircunferencia.html#a9abde79c099f2b4ce6833787b09b38db">precisao</a>=60)</td></tr>
+<tr class="memdesc:a0fee047fbf2fd2bb5e2e1a55621a8382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Base.  <a href="classCircunferencia.html#a0fee047fbf2fd2bb5e2e1a55621a8382">Mais...</a><br /></td></tr>
 <tr class="separator:a0fee047fbf2fd2bb5e2e1a55621a8382"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4881f57269816c83d0f3227619aa86e6"><td class="memItemLeft" align="right" valign="top"><a id="a4881f57269816c83d0f3227619aa86e6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Circunferencia</b> (const <a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;circ)</td></tr>
+<tr class="memitem:a137be2950c55c3848343a263c955b4c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#a137be2950c55c3848343a263c955b4c2">~Circunferencia</a> ()</td></tr>
+<tr class="memdesc:a137be2950c55c3848343a263c955b4c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da Classe.  <a href="classCircunferencia.html#a137be2950c55c3848343a263c955b4c2">Mais...</a><br /></td></tr>
+<tr class="separator:a137be2950c55c3848343a263c955b4c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4881f57269816c83d0f3227619aa86e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#a4881f57269816c83d0f3227619aa86e6">Circunferencia</a> (const <a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;circ)</td></tr>
+<tr class="memdesc:a4881f57269816c83d0f3227619aa86e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de Cópia.  <a href="classCircunferencia.html#a4881f57269816c83d0f3227619aa86e6">Mais...</a><br /></td></tr>
 <tr class="separator:a4881f57269816c83d0f3227619aa86e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a117e9d90e4e7d52b7607124e92760db8"><td class="memItemLeft" align="right" valign="top"><a id="a117e9d90e4e7d52b7607124e92760db8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Circunferencia</b> (<a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&amp;circ) noexcept</td></tr>
+<tr class="memitem:a117e9d90e4e7d52b7607124e92760db8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#a117e9d90e4e7d52b7607124e92760db8">Circunferencia</a> (<a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&amp;circ) noexcept</td></tr>
+<tr class="memdesc:a117e9d90e4e7d52b7607124e92760db8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Move.  <a href="classCircunferencia.html#a117e9d90e4e7d52b7607124e92760db8">Mais...</a><br /></td></tr>
 <tr class="separator:a117e9d90e4e7d52b7607124e92760db8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addc5b507440da86173d4799b4d2a96d1"><td class="memItemLeft" align="right" valign="top"><a id="addc5b507440da86173d4799b4d2a96d1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>gerarDemarcacao</b> ()</td></tr>
+<tr class="memitem:addc5b507440da86173d4799b4d2a96d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#addc5b507440da86173d4799b4d2a96d1">gerarDemarcacao</a> ()</td></tr>
+<tr class="memdesc:addc5b507440da86173d4799b4d2a96d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método usado para criar a demarcacao da <a class="el" href="classCircunferencia.html" title="Classe para Representação de uma Circunferência. É a forma considerada como padrão para os objetos Ob...">Circunferencia</a>.  <a href="classCircunferencia.html#addc5b507440da86173d4799b4d2a96d1">Mais...</a><br /></td></tr>
 <tr class="separator:addc5b507440da86173d4799b4d2a96d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3edc74f5a0dbe2da89d4a946e70b24a"><td class="memItemLeft" align="right" valign="top"><a id="ac3edc74f5a0dbe2da89d4a946e70b24a"></a>
-<a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;circ)</td></tr>
+<tr class="memitem:ac3edc74f5a0dbe2da89d4a946e70b24a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#ac3edc74f5a0dbe2da89d4a946e70b24a">operator=</a> (<a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;circ)</td></tr>
+<tr class="memdesc:ac3edc74f5a0dbe2da89d4a946e70b24a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribuição por Cópia.  <a href="classCircunferencia.html#ac3edc74f5a0dbe2da89d4a946e70b24a">Mais...</a><br /></td></tr>
 <tr class="separator:ac3edc74f5a0dbe2da89d4a946e70b24a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa9338b90214535fbce7692dcbfb13af"><td class="memItemLeft" align="right" valign="top"><a id="afa9338b90214535fbce7692dcbfb13af"></a>
-<a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&amp;circ) noexcept</td></tr>
+<tr class="memitem:afa9338b90214535fbce7692dcbfb13af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#afa9338b90214535fbce7692dcbfb13af">operator=</a> (<a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&amp;circ) noexcept</td></tr>
+<tr class="memdesc:afa9338b90214535fbce7692dcbfb13af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribuição Move.  <a href="classCircunferencia.html#afa9338b90214535fbce7692dcbfb13af">Mais...</a><br /></td></tr>
 <tr class="separator:afa9338b90214535fbce7692dcbfb13af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atributos Públicos</h2></td></tr>
 <tr class="memitem:a9abde79c099f2b4ce6833787b09b38db"><td class="memItemLeft" align="right" valign="top"><a id="a9abde79c099f2b4ce6833787b09b38db"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>precisao</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#a9abde79c099f2b4ce6833787b09b38db">precisao</a></td></tr>
+<tr class="memdesc:a9abde79c099f2b4ce6833787b09b38db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definição da quantidade de pontos usados para gerar a demarcação da circunferência. <br /></td></tr>
 <tr class="separator:a9abde79c099f2b4ce6833787b09b38db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bc69243976463322985c38e366d2b9d"><td class="memItemLeft" align="right" valign="top"><a id="a8bc69243976463322985c38e366d2b9d"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>raio</b></td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#a8bc69243976463322985c38e366d2b9d">raio</a></td></tr>
+<tr class="memdesc:a8bc69243976463322985c38e366d2b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Raio da Circunferência. <br /></td></tr>
 <tr class="separator:a8bc69243976463322985c38e366d2b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7bc8965dd1d3d94ae3cb3208d3d333b2"><td class="memItemLeft" align="right" valign="top"><a id="a7bc8965dd1d3d94ae3cb3208d3d333b2"></a>
-<a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><b>centro</b></td></tr>
+<a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#a7bc8965dd1d3d94ae3cb3208d3d333b2">centro</a></td></tr>
+<tr class="memdesc:a7bc8965dd1d3d94ae3cb3208d3d333b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Centro da Circunferência. <br /></td></tr>
 <tr class="separator:a7bc8965dd1d3d94ae3cb3208d3d333b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa67c54667dd962a750a3c326bb373c82"><td class="memItemLeft" align="right" valign="top"><a id="aa67c54667dd962a750a3c326bb373c82"></a>
-<a class="el" href="classPonto.html">Ponto</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>demarcacao</b></td></tr>
+<a class="el" href="classPonto.html">Ponto</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#aa67c54667dd962a750a3c326bb373c82">demarcacao</a> = nullptr</td></tr>
+<tr class="memdesc:aa67c54667dd962a750a3c326bb373c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ponteiro que guarda as demarcações da circunferência - Usado para representação Gráfica. Por padrão é configurado para nullptr. <br /></td></tr>
 <tr class="separator:aa67c54667dd962a750a3c326bb373c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
-<tr class="memitem:a6d2a7faf24be589213523f66fb3de308"><td class="memItemLeft" align="right" valign="top"><a id="a6d2a7faf24be589213523f66fb3de308"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;circ)</td></tr>
+<tr class="memitem:a6d2a7faf24be589213523f66fb3de308"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCircunferencia.html#a6d2a7faf24be589213523f66fb3de308">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;circ)</td></tr>
+<tr class="memdesc:a6d2a7faf24be589213523f66fb3de308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do Insertion Operator para Saída de Dados.  <a href="classCircunferencia.html#a6d2a7faf24be589213523f66fb3de308">Mais...</a><br /></td></tr>
 <tr class="separator:a6d2a7faf24be589213523f66fb3de308"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe para Representação de uma Circunferência. É a forma considerada como padrão para os objetos <a class="el" href="classObjeto.html">Objeto</a> da simulação. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última Modificação: 27/02/2002 </dd></dl>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a03fdd2e99f3645b65c15331b5315c16d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03fdd2e99f3645b65c15331b5315c16d">&#9670;&nbsp;</a></span>Circunferencia() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Circunferencia::Circunferencia </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Default. </p>
+<p>Chamado quando nenhum parâmetro de ininicialização for informado.</p>
+<p>Cria um objeto com os valores numéricos ( <a class="el" href="classCircunferencia.html#a8bc69243976463322985c38e366d2b9d">raio</a> e <a class="el" href="classCircunferencia.html#a9abde79c099f2b4ce6833787b09b38db">precisao</a>) configurados para 0; Define como centro a Origem do Plano Cartesiano e <b>não</b> gera <a class="el" href="classCircunferencia.html#aa67c54667dd962a750a3c326bb373c82">demarcacao</a>! Deve ser usado somente para declarar variáveis que serão configuradas posteriormente.</p>
+<dl class="section warning"><dt>Aviso</dt><dd>Deve-se cuidar com o fato da <a class="el" href="classCircunferencia.html#aa67c54667dd962a750a3c326bb373c82">demarcacao</a> não ser inicializada na chamada desse construtor. Observado isso, no momento de configuração do objeto deve-se incocar o método membro <a class="el" href="classCircunferencia.html#addc5b507440da86173d4799b4d2a96d1">gerarDemarcacao()</a> para alocar espaço na memória para o uso correto do atributo </dd></dl>
+
+</div>
+</div>
+<a id="a0fee047fbf2fd2bb5e2e1a55621a8382"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fee047fbf2fd2bb5e2e1a55621a8382">&#9670;&nbsp;</a></span>Circunferencia() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Circunferencia::Circunferencia </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>raio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPonto.html">Ponto</a> &amp;&#160;</td>
+          <td class="paramname"><em>centro</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>precisao</em> = <code>60</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Base. </p>
+<p>Cria um objeto <a class="el" href="classCircunferencia.html">Circunferencia</a> com os atributos configurados conforme informado por parâmetro.</p>
+<p>Observação: A demarcação não é gerada ao chamar esse método para evitar alocação de memória desnecessária. Caso seja necessário pode-se chamar o método membro <a class="el" href="classCircunferencia.html#addc5b507440da86173d4799b4d2a96d1">gerarDemarcacao()</a> para configurar o atributo membro demarcacao adequadamente.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">raio</td><td>usado para inicializar o atributo de memsma nomenclatura </td></tr>
+    <tr><td class="paramname">centro</td><td>usado para inicializar o atributo de memsma nomenclatura </td></tr>
+    <tr><td class="paramname">precisao</td><td>usado para inicializar o atributo de memsma nomenclatura. Em caso de omissão do valor, esse atributo será configurado para um valor de <b>60</b>, permitindo que a <a class="el" href="classCircunferencia.html#aa67c54667dd962a750a3c326bb373c82">demarcacao</a> seja gerada com um mínimo de qualidade julgada necessária </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a137be2950c55c3848343a263c955b4c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137be2950c55c3848343a263c955b4c2">&#9670;&nbsp;</a></span>~Circunferencia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Circunferencia::~Circunferencia </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destrutor da Classe. </p>
+<p>Como destaque deve-se observar que esse método está encarregado de desalocar os espaços de memória dinamicamente alocados para a construção da <a class="el" href="classCircunferencia.html#aa67c54667dd962a750a3c326bb373c82">demarcacao</a> da <a class="el" href="classCircunferencia.html">Circunferencia</a> </p>
+
+</div>
+</div>
+<a id="a4881f57269816c83d0f3227619aa86e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4881f57269816c83d0f3227619aa86e6">&#9670;&nbsp;</a></span>Circunferencia() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Circunferencia::Circunferencia </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&#160;</td>
+          <td class="paramname"><em>circ</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor de Cópia. </p>
+<p>Cria um novo objeto copiando todos os atributos de uma <a class="el" href="classCircunferencia.html">Circunferencia</a> informada. Deve-se esclarecer que nesse caso, a demarcacao da circunferencia também será "copiada" uma vez que o método <a class="el" href="classCircunferencia.html#addc5b507440da86173d4799b4d2a96d1">gerarDemarcacao()</a> é chamado após inicialização dos atributos básicos.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circ</td><td>Referência constante para a Circunferência que será copiado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a117e9d90e4e7d52b7607124e92760db8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a117e9d90e4e7d52b7607124e92760db8">&#9670;&nbsp;</a></span>Circunferencia() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Circunferencia::Circunferencia </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>circ</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Move. </p>
+<p>Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os dados de uma <a class="el" href="classCircunferencia.html">Circunferencia</a> para o novo objeto criado. Da mesma forma que ocorre no Construtor por cópia, a demarcacao da <a class="el" href="classCircunferencia.html">Circunferencia</a> também será "copiada" através de cálculo ao final da inicialização dos outros atributos básicos.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circ</td><td>Referência rvalue de uma <a class="el" href="classCircunferencia.html">Circunferencia</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Para mais detalhe sobre o recurso, consultar documentação da linguagem </p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="addc5b507440da86173d4799b4d2a96d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc5b507440da86173d4799b4d2a96d1">&#9670;&nbsp;</a></span>gerarDemarcacao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Circunferencia::gerarDemarcacao </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método usado para criar a demarcacao da <a class="el" href="classCircunferencia.html" title="Classe para Representação de uma Circunferência. É a forma considerada como padrão para os objetos Ob...">Circunferencia</a>. </p>
+<p>A demarcacao de uma <a class="el" href="classCircunferencia.html">Circunferencia</a> pode ser entendido como os pontos que fazem parte daquela circunferência. Conhecer esses pontos permitem que a circunferência seja desenhada por um objeto <a class="el" href="classRenderizador.html">Renderizador</a>.</p>
+<p>A demarcacao é gerada de maneira estática e será sempre referente ao estado da <a class="el" href="classCircunferencia.html">Circunferencia</a> quando o método foi invocado. Isso siginifica que mudanças em qualquer outro atributo de um objeto <a class="el" href="classCircunferencia.html">Circunferencia</a> não alterará a demarcacao e essa manterá o seu último estado.</p>
+<p>Em caso de mudanças nos atributos de um objeto <a class="el" href="classCircunferencia.html" title="Classe para Representação de uma Circunferência. É a forma considerada como padrão para os objetos Ob...">Circunferencia</a>, recomenda-se analisar se existe a necessidade de manter uma demarcacao para esse objeto, uma vez que caso não seja necessário é possível economizar recursos como tempo e memória</p>
+<p>Outro aspecto é a Criação de objetos <a class="el" href="classCircunferencia.html">Circunferencia</a>. Conforme é possível ver na documentação desses Métodos, a demarcacao não é gerada automática para fins de otimização. Dessa forma deve-se estar atento para a chamada ao atributo demarcacao que pode ser um <code>nullptr</code> </p>
+
+</div>
+</div>
+<a id="afa9338b90214535fbce7692dcbfb13af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa9338b90214535fbce7692dcbfb13af">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCircunferencia.html">Circunferencia</a>&amp; Circunferencia::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>circ</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atribuição Move. </p>
+<p>Observação: a demarcacao não é movida e a <a class="el" href="classCircunferencia.html" title="Classe para Representação de uma Circunferência. É a forma considerada como padrão para os objetos Ob...">Circunferencia</a> que incovou o método tem esse atributo configurado para <code>nullptr</code> e a memória desalocada.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vetor</td><td>Referência rvalue do <a class="el" href="classCircunferencia.html">Circunferencia</a> base para a operação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classCircunferencia.html">Circunferencia</a> que invocou o operador </dd></dl>
+
+</div>
+</div>
+<a id="ac3edc74f5a0dbe2da89d4a946e70b24a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3edc74f5a0dbe2da89d4a946e70b24a">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCircunferencia.html">Circunferencia</a>&amp; Circunferencia::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&#160;</td>
+          <td class="paramname"><em>circ</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atribuição por Cópia. </p>
+<p>Copia os atributos de uma Circunferência para a <a class="el" href="classCircunferencia.html">Circunferencia</a> que chamou a operação.</p>
+<p>Observação: a <a class="el" href="classCircunferencia.html#aa67c54667dd962a750a3c326bb373c82">demarcacao</a> não copiada e a <a class="el" href="classCircunferencia.html">Circunferencia</a> que incovou o método tem esse atributo configurado para <code>nullptr</code> e a memória desalocada.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circ</td><td>Referência constante da <a class="el" href="classCircunferencia.html">Circunferencia</a> que será Copiada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para a <a class="el" href="classCircunferencia.html">Circunferencia</a> que invocou o operador </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Amigas e Funções Relacionadas</h2>
+<a id="a6d2a7faf24be589213523f66fb3de308"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2a7faf24be589213523f66fb3de308">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCircunferencia.html">Circunferencia</a> &amp;&#160;</td>
+          <td class="paramname"><em>circ</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sobrecarga do Insertion Operator para Saída de Dados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>uma string no formato: "Circunferencia(precisao,raio,Ponto(x,y))" onde <a class="el" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano.">Ponto</a> refere-se ao <a class="el" href="classCircunferencia.html#a7bc8965dd1d3d94ae3cb3208d3d333b2">centro</a> da <a class="el" href="classCircunferencia.html">Circunferencia</a> </dd></dl>
+
+</div>
+</div>
 <hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
 <li>Base/<a class="el" href="circunferencia_8h_source.html">circunferencia.h</a></li>
 </ul>

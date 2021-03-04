@@ -1,0 +1,13 @@
+<map id="Base/ponto.h" name="Base/ponto.h">
+<area shape="rect" id="node1" title=" " alt="" coords="419,5,526,32"/>
+<area shape="rect" id="node2" href="$vetor_8h.html" title=" " alt="" coords="145,80,248,107"/>
+<area shape="rect" id="node6" href="$renderizador_8h.html" title=" " alt="" coords="384,237,561,263"/>
+<area shape="rect" id="node9" href="$circunferencia_8h.html" title=" " alt="" coords="273,80,435,107"/>
+<area shape="rect" id="node10" href="$retangulo_8h.html" title=" " alt="" coords="511,155,643,181"/>
+<area shape="rect" id="node11" href="$triangulo_8h.html" title=" " alt="" coords="602,80,730,107"/>
+<area shape="rect" id="node3" href="$objeto_8h.html" title=" " alt="" coords="223,155,333,181"/>
+<area shape="rect" id="node8" href="$linha_8h.html" title=" " alt="" coords="69,155,172,181"/>
+<area shape="rect" id="node4" href="$gerenciador__arquivo_8h.html" title=" " alt="" coords="207,229,360,271"/>
+<area shape="rect" id="node5" href="$detector__colisao_8h.html" title=" " alt="" coords="5,237,183,263"/>
+<area shape="rect" id="node7" href="$plano__cartesiano_8h.html" title=" " alt="" coords="369,319,576,345"/>
+</map>

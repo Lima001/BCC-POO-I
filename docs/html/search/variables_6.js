@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_80',['y',['../classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a',1,'Ponto::y()'],['../classVetor.html#ab430657c16d9b5c321a4b5428a5181ae',1,'Vetor::y()']]]
+  ['g_291',['g',['../classCorRGBA.html#a62bc218e68ab6782f1b4167488642391',1,'CorRGBA']]]
 ];

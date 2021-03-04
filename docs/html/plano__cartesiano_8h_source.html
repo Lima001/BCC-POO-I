@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -70,90 +77,144 @@ $(function() {
 <div class="title">plano_cartesiano.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PLANO_CARTESIANO_H</span></div>
+<a href="plano__cartesiano_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef PLANO_CARTESIANO_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define PLANO_CARTESIANO_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SDL.h&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;renderizador.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="renderizador_8h.html">renderizador.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPlanoCartesiano.html">PlanoCartesiano</a> {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keywordtype">int</span> espacamento_x;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordtype">int</span> espacamento_y;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">int</span> largura_tela;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">int</span> altura_tela;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="classPonto.html">Ponto</a> origem;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="classCorRGBA.html">CorRGBA</a> cor_eixos;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="classCorRGBA.html">CorRGBA</a> cor_grade;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="classPlanoCartesiano.html">PlanoCartesiano</a>(<span class="keywordtype">int</span> espacamento_x, <span class="keywordtype">int</span> espacamento_y, <span class="keyword">const</span> <a class="code" href="classCorRGBA.html">CorRGBA</a> &amp;cor_eixos, </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                        <span class="keyword">const</span> <a class="code" href="classCorRGBA.html">CorRGBA</a> &amp;cor_grade, <span class="keywordtype">int</span> largura_tela, <span class="keywordtype">int</span> altura_tela,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                        <span class="keyword">const</span> <a class="code" href="classPonto.html">Ponto</a> &amp;origem=<a class="code" href="classPonto.html">Ponto</a>()):</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                espacamento_x(espacamento_x),</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                espacamento_y(espacamento_y),</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                largura_tela(largura_tela),</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                altura_tela(altura_tela),</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                origem(origem),</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                cor_eixos(cor_eixos),</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                cor_grade(cor_grade){</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">void</span> desenharEixo(<a class="code" href="classRenderizador.html">Renderizador</a> &amp;render){</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            render.desenhar_linha(cor_eixos,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                  -origem.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                  0,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                                  largura_tela-origem.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                  0);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            render.desenhar_linha(cor_eixos,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                  0,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                                  -origem.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                  0,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                  altura_tela-origem.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">void</span> desenharGradeY(<a class="code" href="classRenderizador.html">Renderizador</a> &amp;render){</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=-origem.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>; i&lt;=altura_tela-origem.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>; i+=espacamento_x){</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                render.desenhar_linha(cor_grade,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                                      -origem.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                      i,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                      largura_tela-origem.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                      i);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">void</span> desenharGradeX(<a class="code" href="classRenderizador.html">Renderizador</a> &amp;render){</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=-origem.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>; i&lt;=largura_tela-origem.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>; i+=espacamento_y){</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                render.desenhar_linha(cor_grade,</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                      i,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                      -origem.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                      i,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                      altura_tela-origem.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPlanoCartesiano.html">PlanoCartesiano</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#accf7c773f0a269c9e24639f66e0d282d">   18</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classPlanoCartesiano.html#accf7c773f0a269c9e24639f66e0d282d">espacamento_x</a>;          </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#a418be3861b8809eadbd43324062b6c61">   19</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classPlanoCartesiano.html#a418be3861b8809eadbd43324062b6c61">espacamento_y</a>;          </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">   20</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">largura_tela</a>;           </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">   21</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">altura_tela</a>;            </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">   22</a></span>&#160;        <a class="code" href="classPonto.html">Ponto</a> <a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>;               </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#a7fc902565765790474c4955618bf48e0">   23</a></span>&#160;        <a class="code" href="classCorRGBA.html">CorRGBA</a> <a class="code" href="classPlanoCartesiano.html#a7fc902565765790474c4955618bf48e0">cor_eixos</a>;          </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">   24</a></span>&#160;        <a class="code" href="classCorRGBA.html">CorRGBA</a> <a class="code" href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">cor_grade</a>;          </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#a7672bdb864baaa73d69624b5b59628aa">   43</a></span>&#160;        <a class="code" href="classPlanoCartesiano.html#a7672bdb864baaa73d69624b5b59628aa">PlanoCartesiano</a>(<span class="keywordtype">int</span> <a class="code" href="classPlanoCartesiano.html#accf7c773f0a269c9e24639f66e0d282d">espacamento_x</a>, <span class="keywordtype">int</span> <a class="code" href="classPlanoCartesiano.html#a418be3861b8809eadbd43324062b6c61">espacamento_y</a>, <span class="keyword">const</span> <a class="code" href="classCorRGBA.html">CorRGBA</a> &amp;<a class="code" href="classPlanoCartesiano.html#a7fc902565765790474c4955618bf48e0">cor_eixos</a>, </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                        <span class="keyword">const</span> <a class="code" href="classCorRGBA.html">CorRGBA</a> &amp;<a class="code" href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">cor_grade</a>, <span class="keywordtype">int</span> <a class="code" href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">largura_tela</a>, <span class="keywordtype">int</span> <a class="code" href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">altura_tela</a>,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                        <span class="keyword">const</span> <a class="code" href="classPonto.html">Ponto</a> &amp;<a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>=<a class="code" href="classPonto.html">Ponto</a>()):</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <a class="code" href="classPlanoCartesiano.html#accf7c773f0a269c9e24639f66e0d282d">espacamento_x</a>(<a class="code" href="classPlanoCartesiano.html#accf7c773f0a269c9e24639f66e0d282d">espacamento_x</a>),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <a class="code" href="classPlanoCartesiano.html#a418be3861b8809eadbd43324062b6c61">espacamento_y</a>(<a class="code" href="classPlanoCartesiano.html#a418be3861b8809eadbd43324062b6c61">espacamento_y</a>),</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <a class="code" href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">largura_tela</a>(<a class="code" href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">largura_tela</a>),</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <a class="code" href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">altura_tela</a>(<a class="code" href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">altura_tela</a>),</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>(<a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>),</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <a class="code" href="classPlanoCartesiano.html#a7fc902565765790474c4955618bf48e0">cor_eixos</a>(<a class="code" href="classPlanoCartesiano.html#a7fc902565765790474c4955618bf48e0">cor_eixos</a>),</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <a class="code" href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">cor_grade</a>(<a class="code" href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">cor_grade</a>){</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#a5cb5929d65537324a8c5b9269f3f6b33">   63</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPlanoCartesiano.html#a5cb5929d65537324a8c5b9269f3f6b33">desenharEixo</a>(<a class="code" href="classRenderizador.html">Renderizador</a> &amp;render){</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            render.<a class="code" href="classRenderizador.html#a6120c744af4f4546790c249dfd918688">desenhar_linha</a>(<a class="code" href="classPlanoCartesiano.html#a7fc902565765790474c4955618bf48e0">cor_eixos</a>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                                    <a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                                    0,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                    <a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                    <a class="code" href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">altura_tela</a>);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> desenharGrade(<a class="code" href="classRenderizador.html">Renderizador</a> &amp;render){</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            desenharGradeX(render);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            desenharGradeY(render);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            desenharEixo(render);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            render.<a class="code" href="classRenderizador.html#a6120c744af4f4546790c249dfd918688">desenhar_linha</a>(<a class="code" href="classPlanoCartesiano.html#a7fc902565765790474c4955618bf48e0">cor_eixos</a>,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                                    0,</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                    <a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                    <a class="code" href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">largura_tela</a>,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                    <a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#a7be671bde040eb9cf4db81b61b89a811">   84</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPlanoCartesiano.html#a7be671bde040eb9cf4db81b61b89a811">desenharGradeY</a>(<a class="code" href="classRenderizador.html">Renderizador</a> &amp;render){</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>; i&gt;=0; i-=<a class="code" href="classPlanoCartesiano.html#a418be3861b8809eadbd43324062b6c61">espacamento_y</a>){</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                render.<a class="code" href="classRenderizador.html#a6120c744af4f4546790c249dfd918688">desenhar_linha</a>(<a class="code" href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">cor_grade</a>,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                        0,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                        i,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                        <a class="code" href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">largura_tela</a>,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                        i);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>; i&lt;=<a class="code" href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">altura_tela</a>; i+=<a class="code" href="classPlanoCartesiano.html#a418be3861b8809eadbd43324062b6c61">espacamento_y</a>){</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                render.<a class="code" href="classRenderizador.html#a6120c744af4f4546790c249dfd918688">desenhar_linha</a>(<a class="code" href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">cor_grade</a>,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                        0,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                        i,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                        <a class="code" href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">largura_tela</a>,</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                        i);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#a007131ea69729d7100958c2324757040">  109</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPlanoCartesiano.html#a007131ea69729d7100958c2324757040">desenharGradeX</a>(<a class="code" href="classRenderizador.html">Renderizador</a> &amp;render){</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>; i&gt;=0; i-=<a class="code" href="classPlanoCartesiano.html#accf7c773f0a269c9e24639f66e0d282d">espacamento_x</a>){</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                render.<a class="code" href="classRenderizador.html#a6120c744af4f4546790c249dfd918688">desenhar_linha</a>(<a class="code" href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">cor_grade</a>,</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                                        i,</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                                        0,</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                                        i,</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                                        <a class="code" href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">altura_tela</a>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<a class="code" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>; i&lt;=<a class="code" href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">largura_tela</a>; i+=<a class="code" href="classPlanoCartesiano.html#accf7c773f0a269c9e24639f66e0d282d">espacamento_x</a>){</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                render.<a class="code" href="classRenderizador.html#a6120c744af4f4546790c249dfd918688">desenhar_linha</a>(<a class="code" href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">cor_grade</a>,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                                        i,</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                                        0,</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                                        i,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                                        <a class="code" href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">altura_tela</a>);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classPlanoCartesiano.html#a786778a2224ded284223c27ed44cf298">  137</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPlanoCartesiano.html#a786778a2224ded284223c27ed44cf298">desenharGrade</a>(<a class="code" href="classRenderizador.html">Renderizador</a> &amp;render){</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="comment">/*</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="comment">                Criação de uma Matriz de Transformação temporária para armazenar</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">                a Matriz atual de Transformação usada pelo Renderizador, visto que</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="comment">                para o plano cartesiano deve-se consdiderar coordenadas padrão da</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;<span class="comment">                janela gráfica, algo que pode ter sido alterado para o processo</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">                de renderização gráfica do Sistema</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">            */</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <a class="code" href="classMatriz.html">Matriz</a> tmp = render.Transformacao;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="comment">// Uso do recurso de Atribuição por Movimentação implementado na classe Matriz</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            render.Transformacao = std::move(<a class="code" href="classMatriz.html">Matriz</a>(3,3));</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="comment">// Definição de uma Matriz Identidade 3x3</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            render.Transformacao[0][0] = 1;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            render.Transformacao[1][1] = 1;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            render.Transformacao[2][2] = 1;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <a class="code" href="classPlanoCartesiano.html#a007131ea69729d7100958c2324757040">desenharGradeX</a>(render);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <a class="code" href="classPlanoCartesiano.html#a7be671bde040eb9cf4db81b61b89a811">desenharGradeY</a>(render);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <a class="code" href="classPlanoCartesiano.html#a5cb5929d65537324a8c5b9269f3f6b33">desenharEixo</a>(render);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="comment">// Uso do recurso de Atribuição por Movimentação implementado na classe Matriz</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="comment">// Faz com que a Matriz de Transformação volte ao seu valor anterior a renderiazção do Plano</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            render.Transformacao = std::move(tmp);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;};</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassPonto_html_ac72a5274f1b887279fe959d0eca1eaa8"><div class="ttname"><a href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">Ponto::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Coordenada no eixo X.</div><div class="ttdef"><b>Definition:</b> ponto.h:15</div></div>
-<div class="ttc" id="aclassPonto_html"><div class="ttname"><a href="classPonto.html">Ponto</a></div><div class="ttdef"><b>Definition:</b> ponto.h:13</div></div>
-<div class="ttc" id="aclassPonto_html_aa3d21f6f0e8a9fb0591c982f03cbb26a"><div class="ttname"><a href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">Ponto::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Coordenada no eixo X.</div><div class="ttdef"><b>Definition:</b> ponto.h:16</div></div>
-<div class="ttc" id="aclassPlanoCartesiano_html"><div class="ttname"><a href="classPlanoCartesiano.html">PlanoCartesiano</a></div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:8</div></div>
-<div class="ttc" id="aclassCorRGBA_html"><div class="ttname"><a href="classCorRGBA.html">CorRGBA</a></div><div class="ttdef"><b>Definition:</b> cor_rgba.h:15</div></div>
-<div class="ttc" id="aclassRenderizador_html"><div class="ttname"><a href="classRenderizador.html">Renderizador</a></div><div class="ttdef"><b>Definition:</b> renderizador.h:15</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_a410a6cf620f5b1faf0b40da7a2212eb9"><div class="ttname"><a href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">PlanoCartesiano::largura_tela</a></div><div class="ttdeci">int largura_tela</div><div class="ttdoc">Largura da tela para desenhar o plano dentro dos limites da aplicação.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:20</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_a5e2b8c90296d125d63e395bc95dac704"><div class="ttname"><a href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">PlanoCartesiano::altura_tela</a></div><div class="ttdeci">int altura_tela</div><div class="ttdoc">Altura da tela para desenhar o plano dentro dos limites da aplicação.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:21</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_a786778a2224ded284223c27ed44cf298"><div class="ttname"><a href="classPlanoCartesiano.html#a786778a2224ded284223c27ed44cf298">PlanoCartesiano::desenharGrade</a></div><div class="ttdeci">void desenharGrade(Renderizador &amp;render)</div><div class="ttdoc">Desenha as retas paralelas aos Eixos x e y do Plano, bem como os Próprios Eixos.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:137</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_a418be3861b8809eadbd43324062b6c61"><div class="ttname"><a href="classPlanoCartesiano.html#a418be3861b8809eadbd43324062b6c61">PlanoCartesiano::espacamento_y</a></div><div class="ttdeci">int espacamento_y</div><div class="ttdoc">Distância entre as retas paralelas ao eixo y.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:19</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_a34580f009e588fac72e12503027d630d"><div class="ttname"><a href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">PlanoCartesiano::origem</a></div><div class="ttdeci">Ponto origem</div><div class="ttdoc">Ponto de Origem do Plano Cartesiano na Tela.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:22</div></div>
+<div class="ttc" id="aclassMatriz_html"><div class="ttname"><a href="classMatriz.html">Matriz</a></div><div class="ttdoc">Classe para Representação de Matrizes.</div><div class="ttdef"><b>Definition:</b> matriz.h:16</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_a007131ea69729d7100958c2324757040"><div class="ttname"><a href="classPlanoCartesiano.html#a007131ea69729d7100958c2324757040">PlanoCartesiano::desenharGradeX</a></div><div class="ttdeci">void desenharGradeX(Renderizador &amp;render)</div><div class="ttdoc">Desenha as retas paralelas ao Eixo x.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:109</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_a5cb5929d65537324a8c5b9269f3f6b33"><div class="ttname"><a href="classPlanoCartesiano.html#a5cb5929d65537324a8c5b9269f3f6b33">PlanoCartesiano::desenharEixo</a></div><div class="ttdeci">void desenharEixo(Renderizador &amp;render)</div><div class="ttdoc">Desenha os Eixos do Plano Cartesiano.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:63</div></div>
+<div class="ttc" id="aclassPonto_html_ac72a5274f1b887279fe959d0eca1eaa8"><div class="ttname"><a href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">Ponto::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Coordenada no eixo das abscissas.</div><div class="ttdef"><b>Definition:</b> ponto.h:18</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_a7be671bde040eb9cf4db81b61b89a811"><div class="ttname"><a href="classPlanoCartesiano.html#a7be671bde040eb9cf4db81b61b89a811">PlanoCartesiano::desenharGradeY</a></div><div class="ttdeci">void desenharGradeY(Renderizador &amp;render)</div><div class="ttdoc">Desenha as retas paralelas ao Eixo y.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:84</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_ab2307ed6ad9d0dbe84a7dd055d6f9e80"><div class="ttname"><a href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">PlanoCartesiano::cor_grade</a></div><div class="ttdeci">CorRGBA cor_grade</div><div class="ttdoc">Cor das retas paralelas aos eixos das abscissas e das ordenadas.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:24</div></div>
+<div class="ttc" id="aclassPonto_html"><div class="ttname"><a href="classPonto.html">Ponto</a></div><div class="ttdoc">Classe para Representação de um Ponto no Plano Cartesiano.</div><div class="ttdef"><b>Definition:</b> ponto.h:16</div></div>
+<div class="ttc" id="arenderizador_8h_html"><div class="ttname"><a href="renderizador_8h.html">renderizador.h</a></div></div>
+<div class="ttc" id="aclassPonto_html_aa3d21f6f0e8a9fb0591c982f03cbb26a"><div class="ttname"><a href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">Ponto::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Coordenada no eixo das ordenadas.</div><div class="ttdef"><b>Definition:</b> ponto.h:19</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_a7672bdb864baaa73d69624b5b59628aa"><div class="ttname"><a href="classPlanoCartesiano.html#a7672bdb864baaa73d69624b5b59628aa">PlanoCartesiano::PlanoCartesiano</a></div><div class="ttdeci">PlanoCartesiano(int espacamento_x, int espacamento_y, const CorRGBA &amp;cor_eixos, const CorRGBA &amp;cor_grade, int largura_tela, int altura_tela, const Ponto &amp;origem=Ponto())</div><div class="ttdoc">Construtor Default.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:43</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_a7fc902565765790474c4955618bf48e0"><div class="ttname"><a href="classPlanoCartesiano.html#a7fc902565765790474c4955618bf48e0">PlanoCartesiano::cor_eixos</a></div><div class="ttdeci">CorRGBA cor_eixos</div><div class="ttdoc">Cor dos eixos das abscissas e das ordenadas.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:23</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html"><div class="ttname"><a href="classPlanoCartesiano.html">PlanoCartesiano</a></div><div class="ttdoc">Classe responsável pela representação gráfica do Plano Cartesiano.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:15</div></div>
+<div class="ttc" id="aclassCorRGBA_html"><div class="ttname"><a href="classCorRGBA.html">CorRGBA</a></div><div class="ttdoc">Classe responsável por representar cores RGBA para uso em conjunto aos elementos gráficos da interfac...</div><div class="ttdef"><b>Definition:</b> cor_rgba.h:16</div></div>
+<div class="ttc" id="aclassRenderizador_html_a6120c744af4f4546790c249dfd918688"><div class="ttname"><a href="classRenderizador.html#a6120c744af4f4546790c249dfd918688">Renderizador::desenhar_linha</a></div><div class="ttdeci">void desenhar_linha(const CorRGBA &amp;cor, int xi, int yi, int xf, int yf)</div><div class="ttdoc">Solicita ao Renderizador que uma linha seja desenhada.</div><div class="ttdef"><b>Definition:</b> renderizador.h:145</div></div>
+<div class="ttc" id="aclassRenderizador_html"><div class="ttname"><a href="classRenderizador.html">Renderizador</a></div><div class="ttdoc">Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...</div><div class="ttdef"><b>Definition:</b> renderizador.h:24</div></div>
+<div class="ttc" id="aclassPlanoCartesiano_html_accf7c773f0a269c9e24639f66e0d282d"><div class="ttname"><a href="classPlanoCartesiano.html#accf7c773f0a269c9e24639f66e0d282d">PlanoCartesiano::espacamento_x</a></div><div class="ttdeci">int espacamento_x</div><div class="ttdoc">Distância entre as retas paralelas ao eixo x.</div><div class="ttdef"><b>Definition:</b> plano_cartesiano.h:18</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado por &#160;<a href="http://www.doxygen.org/index.html">

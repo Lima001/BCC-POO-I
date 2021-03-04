@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -71,28 +78,130 @@ $(function() {
 <div class="title">Referência da Classe Evento</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe Responsável pela representação de um evento único capaz de ser processado por um objeto do tipo <a class="el" href="classGerenciadorEvento.html">GerenciadorEvento</a>.  
+ <a href="classEvento.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="evento_8h_source.html">evento.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a784ca75439e527cbd03b84e50e54e017"><td class="memItemLeft" align="right" valign="top"><a id="a784ca75439e527cbd03b84e50e54e017"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Evento</b> (TipoEvento te, Trigger tr)</td></tr>
+<tr class="memitem:a784ca75439e527cbd03b84e50e54e017"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEvento.html#a784ca75439e527cbd03b84e50e54e017">Evento</a> (TipoEvento te, Trigger tr)</td></tr>
+<tr class="memdesc:a784ca75439e527cbd03b84e50e54e017"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default.  <a href="classEvento.html#a784ca75439e527cbd03b84e50e54e017">Mais...</a><br /></td></tr>
 <tr class="separator:a784ca75439e527cbd03b84e50e54e017"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fe5f7549736a17562670d0ac3941bec"><td class="memItemLeft" align="right" valign="top"><a id="a1fe5f7549736a17562670d0ac3941bec"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEvento.html#a1fe5f7549736a17562670d0ac3941bec">~Evento</a> ()</td></tr>
+<tr class="memdesc:a1fe5f7549736a17562670d0ac3941bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da Classe. <br /></td></tr>
+<tr class="separator:a1fe5f7549736a17562670d0ac3941bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atributos Públicos</h2></td></tr>
 <tr class="memitem:a048ab9016192065b90e7ece0f398038e"><td class="memItemLeft" align="right" valign="top"><a id="a048ab9016192065b90e7ece0f398038e"></a>
-TipoEvento&#160;</td><td class="memItemRight" valign="bottom"><b>tipo_evento</b></td></tr>
+TipoEvento&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEvento.html#a048ab9016192065b90e7ece0f398038e">tipo_evento</a></td></tr>
+<tr class="memdesc:a048ab9016192065b90e7ece0f398038e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define o tipo do evento gerado. Para ver os tipos permitidos olhe o arquivo da Classe. <br /></td></tr>
 <tr class="separator:a048ab9016192065b90e7ece0f398038e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3eb67534a6a105f1e76fdebd5ffb4fb"><td class="memItemLeft" align="right" valign="top"><a id="ae3eb67534a6a105f1e76fdebd5ffb4fb"></a>
-Trigger&#160;</td><td class="memItemRight" valign="bottom"><b>trigger</b></td></tr>
+Trigger&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEvento.html#ae3eb67534a6a105f1e76fdebd5ffb4fb">trigger</a></td></tr>
+<tr class="memdesc:ae3eb67534a6a105f1e76fdebd5ffb4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define quem gerou o evento. Para ver os ativadores permitidos olhe o arquivo da Classe. <br /></td></tr>
 <tr class="separator:ae3eb67534a6a105f1e76fdebd5ffb4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
-<tr class="memitem:a9548eaaa114d1d6c3cbee159831cc064"><td class="memItemLeft" align="right" valign="top"><a id="a9548eaaa114d1d6c3cbee159831cc064"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="classEvento.html">Evento</a> &amp;evento)</td></tr>
+<tr class="memitem:a9548eaaa114d1d6c3cbee159831cc064"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEvento.html#a9548eaaa114d1d6c3cbee159831cc064">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classEvento.html">Evento</a> &amp;evento)</td></tr>
+<tr class="memdesc:a9548eaaa114d1d6c3cbee159831cc064"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do Insertion Operator para Saída de Dados.  <a href="classEvento.html#a9548eaaa114d1d6c3cbee159831cc064">Mais...</a><br /></td></tr>
 <tr class="separator:a9548eaaa114d1d6c3cbee159831cc064"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe Responsável pela representação de um evento único capaz de ser processado por um objeto do tipo <a class="el" href="classGerenciadorEvento.html">GerenciadorEvento</a>. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última alteração: 28/02/2021 </dd></dl>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a784ca75439e527cbd03b84e50e54e017"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a784ca75439e527cbd03b84e50e54e017">&#9670;&nbsp;</a></span>Evento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Evento::Evento </td>
+          <td>(</td>
+          <td class="paramtype">TipoEvento&#160;</td>
+          <td class="paramname"><em>te</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Trigger&#160;</td>
+          <td class="paramname"><em>tr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Default. </p>
+<p>Cria um objeto do tipo evento conforme descrito pelos parâmetros informados.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">te</td><td>inicializa o atributo <a class="el" href="classEvento.html#a048ab9016192065b90e7ece0f398038e">tipo_evento</a> </td></tr>
+    <tr><td class="paramname">tr</td><td>inicializa o atributo <a class="el" href="classEvento.html#ae3eb67534a6a105f1e76fdebd5ffb4fb">trigger</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Amigas e Funções Relacionadas</h2>
+<a id="a9548eaaa114d1d6c3cbee159831cc064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9548eaaa114d1d6c3cbee159831cc064">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classEvento.html">Evento</a> &amp;&#160;</td>
+          <td class="paramname"><em>evento</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sobrecarga do Insertion Operator para Saída de Dados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>string no formato: "(a,b)" onde têm-se: a: valor do tipo de evento; b: valor do ativador do evento </dd></dl>
+
+</div>
+</div>
 <hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
 <li>Interface/<a class="el" href="evento_8h_source.html">evento.h</a></li>
 </ul>

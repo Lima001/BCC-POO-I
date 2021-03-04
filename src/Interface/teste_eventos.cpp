@@ -5,6 +5,7 @@
 using namespace std;
 
 int main(){
+    // Criação de objetos para teste de captura e interpretação de eventos
 
     Controlador_SDL control;
     CorRGBA branco, azul, verde;
@@ -23,8 +24,10 @@ int main(){
 
     bool executar = true;
     while (executar){
+        // Captura e interpretação de Eventos
         gerenciador.registrarEvento();
 
+        // Em caso de um evento específico, realizar uma determinada ação
         if (gerenciador.evento.tipo_evento == QUIT){
             executar = false;
             break;

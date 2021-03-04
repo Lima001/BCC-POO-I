@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -70,37 +77,229 @@ $(function() {
 <div class="title">Referência da Classe Janela</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe responsável pela criação e controle da <a class="el" href="classJanela.html" title="Classe responsável pela criação e controle da Janela gráfica e seus elementos associados.">Janela</a> gráfica e seus elementos associados.  
+ <a href="classJanela.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="janela_8h_source.html">janela.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a0808bfc9f11824820da4f7d246eb0e68"><td class="memItemLeft" align="right" valign="top"><a id="a0808bfc9f11824820da4f7d246eb0e68"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Janela</b> (const char titulo[], int largura, int altura)</td></tr>
+<tr class="memitem:a0808bfc9f11824820da4f7d246eb0e68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJanela.html#a0808bfc9f11824820da4f7d246eb0e68">Janela</a> (const char titulo[], int <a class="el" href="classJanela.html#a573f824f777ea90de7af09fa7ee8919a">largura</a>, int <a class="el" href="classJanela.html#ac4535f602aeb08e63e72c44e4a1e947b">altura</a>)</td></tr>
+<tr class="memdesc:a0808bfc9f11824820da4f7d246eb0e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default.  <a href="classJanela.html#a0808bfc9f11824820da4f7d246eb0e68">Mais...</a><br /></td></tr>
 <tr class="separator:a0808bfc9f11824820da4f7d246eb0e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afecf007f98faaa349664e6e2c13463c9"><td class="memItemLeft" align="right" valign="top"><a id="afecf007f98faaa349664e6e2c13463c9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>iniciarSurface</b> ()</td></tr>
+<tr class="memitem:a60212eb57108f5fc838bb1ba2eb04f40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJanela.html#a60212eb57108f5fc838bb1ba2eb04f40">~Janela</a> ()</td></tr>
+<tr class="memdesc:a60212eb57108f5fc838bb1ba2eb04f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da Classe.  <a href="classJanela.html#a60212eb57108f5fc838bb1ba2eb04f40">Mais...</a><br /></td></tr>
+<tr class="separator:a60212eb57108f5fc838bb1ba2eb04f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afecf007f98faaa349664e6e2c13463c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJanela.html#afecf007f98faaa349664e6e2c13463c9">iniciarSurface</a> ()</td></tr>
+<tr class="memdesc:afecf007f98faaa349664e6e2c13463c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa a área de renderização gráfica da janela.  <a href="classJanela.html#afecf007f98faaa349664e6e2c13463c9">Mais...</a><br /></td></tr>
 <tr class="separator:afecf007f98faaa349664e6e2c13463c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca4f782386c2f80a6b726c849c488b78"><td class="memItemLeft" align="right" valign="top"><a id="aca4f782386c2f80a6b726c849c488b78"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>preencherFundo</b> (<a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor)</td></tr>
-<tr class="separator:aca4f782386c2f80a6b726c849c488b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1743ea3afd721298e031480d9dec95c"><td class="memItemLeft" align="right" valign="top"><a id="ae1743ea3afd721298e031480d9dec95c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>atualizar</b> ()</td></tr>
+<tr class="memitem:af0ac21701758313e61f3ae6d196c30db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJanela.html#af0ac21701758313e61f3ae6d196c30db">preencherFundo</a> (const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor)</td></tr>
+<tr class="memdesc:af0ac21701758313e61f3ae6d196c30db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define uma cor de fundo para a Área de renderização gráfica da janela.  <a href="classJanela.html#af0ac21701758313e61f3ae6d196c30db">Mais...</a><br /></td></tr>
+<tr class="separator:af0ac21701758313e61f3ae6d196c30db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1743ea3afd721298e031480d9dec95c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJanela.html#ae1743ea3afd721298e031480d9dec95c">atualizar</a> ()</td></tr>
+<tr class="memdesc:ae1743ea3afd721298e031480d9dec95c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza a Área de Renderização.  <a href="classJanela.html#ae1743ea3afd721298e031480d9dec95c">Mais...</a><br /></td></tr>
 <tr class="separator:ae1743ea3afd721298e031480d9dec95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atributos Públicos</h2></td></tr>
 <tr class="memitem:a573f824f777ea90de7af09fa7ee8919a"><td class="memItemLeft" align="right" valign="top"><a id="a573f824f777ea90de7af09fa7ee8919a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>largura</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJanela.html#a573f824f777ea90de7af09fa7ee8919a">largura</a></td></tr>
+<tr class="memdesc:a573f824f777ea90de7af09fa7ee8919a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largura da janela a ser criada. Não deve ser alterado durante a aplicação. <br /></td></tr>
 <tr class="separator:a573f824f777ea90de7af09fa7ee8919a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4535f602aeb08e63e72c44e4a1e947b"><td class="memItemLeft" align="right" valign="top"><a id="ac4535f602aeb08e63e72c44e4a1e947b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>altura</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJanela.html#ac4535f602aeb08e63e72c44e4a1e947b">altura</a></td></tr>
+<tr class="memdesc:ac4535f602aeb08e63e72c44e4a1e947b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altura da janela a ser criada. Não deve ser alterado durante a aplicação. <br /></td></tr>
 <tr class="separator:ac4535f602aeb08e63e72c44e4a1e947b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7db027b0d0917be8a5c0ad368fdfbd33"><td class="memItemLeft" align="right" valign="top"><a id="a7db027b0d0917be8a5c0ad368fdfbd33"></a>
-SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><b>ptr_janela</b> = NULL</td></tr>
+SDL_Window *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJanela.html#a7db027b0d0917be8a5c0ad368fdfbd33">ptr_janela</a> = nullptr</td></tr>
+<tr class="memdesc:a7db027b0d0917be8a5c0ad368fdfbd33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ponteiro para o objeto SDL_Window. Permite acesso a janela gráfica gerada por essa biblioteca. <br /></td></tr>
 <tr class="separator:a7db027b0d0917be8a5c0ad368fdfbd33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a463ac510287b1da2be6afce7ae8a492d"><td class="memItemLeft" align="right" valign="top"><a id="a463ac510287b1da2be6afce7ae8a492d"></a>
-SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><b>ptr_surface</b> = NULL</td></tr>
+SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classJanela.html#a463ac510287b1da2be6afce7ae8a492d">ptr_surface</a> = nullptr</td></tr>
+<tr class="memdesc:a463ac510287b1da2be6afce7ae8a492d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ponteiro para o objeto SDL_Surface. Permite acesso a área de renderização gerada por essa biblioteca. <br /></td></tr>
 <tr class="separator:a463ac510287b1da2be6afce7ae8a492d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe responsável pela criação e controle da <a class="el" href="classJanela.html" title="Classe responsável pela criação e controle da Janela gráfica e seus elementos associados.">Janela</a> gráfica e seus elementos associados. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última alteração: 28/02/2021 </dd></dl>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a0808bfc9f11824820da4f7d246eb0e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0808bfc9f11824820da4f7d246eb0e68">&#9670;&nbsp;</a></span>Janela()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Janela::Janela </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>titulo</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>largura</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>altura</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Default. </p>
+<p>Usado para criar um objeto janela conforme parâmetros informados. Não incializa o ponteiro para SDL_Surface do objeto, sendo que esse deve ser inicializados somente através de seu métodos membros implementados, nas situações julgadas necessárias.</p>
+<p>Em caso de erros durante o processo de criação da janela gráfica pelo SDL, o erro será exibido conforme retorno da função SDL_GetError().</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">titulo</td><td>Uma string estilo C. É usado para criar a janela atavés da função SDL_CreateWindow() que solicita um título </td></tr>
+    <tr><td class="paramname">largura</td><td>Inicializa atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">altura</td><td>Inicializa atributo de mesma nomenclatura </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a60212eb57108f5fc838bb1ba2eb04f40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60212eb57108f5fc838bb1ba2eb04f40">&#9670;&nbsp;</a></span>~Janela()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Janela::~Janela </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destrutor da Classe. </p>
+<p>Verifica se alguma janela gráfica foi construída a partir do SDL. Em caso de existência de algo do tipo, a janela é destruída por esse método. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="ae1743ea3afd721298e031480d9dec95c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1743ea3afd721298e031480d9dec95c">&#9670;&nbsp;</a></span>atualizar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Janela::atualizar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atualiza a Área de Renderização. </p>
+<p>Esse método deve ser usado logo após todas as definições de renderização tiverem sido concluidas. Caso o método não seja chamado, não será possível observar os efeitos gráficos produzidos. </p>
+
+</div>
+</div>
+<a id="afecf007f98faaa349664e6e2c13463c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afecf007f98faaa349664e6e2c13463c9">&#9670;&nbsp;</a></span>iniciarSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Janela::iniciarSurface </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inicializa a área de renderização gráfica da janela. </p>
+<p>Esse método é usado para inicializar o ponteiro <a class="el" href="classJanela.html#a463ac510287b1da2be6afce7ae8a492d">ptr_surface</a> que permite acesso a área de renderização gráfica da janela criada.</p>
+<p>Observação: Deve-se somente chamar esse método se a janela gráfica SDL já tiver sido criada, podendo resultar erro em caso contrário. </p>
+
+</div>
+</div>
+<a id="af0ac21701758313e61f3ae6d196c30db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0ac21701758313e61f3ae6d196c30db">&#9670;&nbsp;</a></span>preencherFundo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Janela::preencherFundo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;&#160;</td>
+          <td class="paramname"><em>cor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define uma cor de fundo para a Área de renderização gráfica da janela. </p>
+<p>Método usado quando deseja-se resetar o gráfico da área de renderização usando-se da definição de uma cor de fundo padrão.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cor</td><td>Referência constante para um objeto <a class="el" href="classCorRGBA.html">CorRGBA</a> que será usado para gerar a cor compreendida pelas funções SDL e que representa a cor de fundo desejada pelo desenvolvedor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
 <li>Interface/<a class="el" href="janela_8h_source.html">janela.h</a></li>
 </ul>

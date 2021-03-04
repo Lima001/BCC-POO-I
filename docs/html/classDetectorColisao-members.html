@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -69,15 +76,18 @@ $(function() {
 
 <p>Esta é a lista de todos os membros de <a class="el" href="classDetectorColisao.html">DetectorColisao</a>, incluindo os membros herdados.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>aplicar_colisao_simples</b>() (definido(a) em <a class="el" href="classDetectorColisao.html">DetectorColisao</a>)</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>detectar</b>() (definido(a) em <a class="el" href="classDetectorColisao.html">DetectorColisao</a>)</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>DetectorColisao</b>(int qtd_objetos, Objeto *lista_objetos) (definido(a) em <a class="el" href="classDetectorColisao.html">DetectorColisao</a>)</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>escala</b> (definido(a) em <a class="el" href="classDetectorColisao.html">DetectorColisao</a>)</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>exibirObjetos</b>() (definido(a) em <a class="el" href="classDetectorColisao.html">DetectorColisao</a>)</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>ptr_lista_objetos</b> (definido(a) em <a class="el" href="classDetectorColisao.html">DetectorColisao</a>)</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>qtd_objetos</b> (definido(a) em <a class="el" href="classDetectorColisao.html">DetectorColisao</a>)</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>verificar_colisao_borda</b>(Renderizador &amp;render, int largura, int altura) (definido(a) em <a class="el" href="classDetectorColisao.html">DetectorColisao</a>)</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~DetectorColisao</b>() (definido(a) em <a class="el" href="classDetectorColisao.html">DetectorColisao</a>)</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classDetectorColisao.html#a53cfb2a01f410da48e43b1dd47a933a2">aplicar_colisao_borda</a>()</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classDetectorColisao.html#a26a18c8f076b90fd81e9d0ed52175b1c">aplicar_colisao_cm</a>()</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classDetectorColisao.html#a949191c2e8b5da6da8e1f8d9f94dcd09">aplicar_colisao_simples</a>()</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classDetectorColisao.html#af481fb29fdcb71ba912fad097dd35f2a">detectar</a>()</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classDetectorColisao.html#a962d89d6a13fcfc01e41cd65b56d657d">DetectorColisao</a>(int qtd_objetos, Objeto *lista_objetos)</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classDetectorColisao.html#aab2f496a09ee3ede00105853141e635b">exibirObjetos</a>()</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classDetectorColisao.html#a44149d2414afd34851e873b5b93b93a1">ptr_lista_linhas</a></td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classDetectorColisao.html#a6ba6fee2ba97948912d8bbcc52374fb5">ptr_lista_objetos</a></td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classDetectorColisao.html#ac592605fa8776ad1e91e2cf7b0cff90f">qtd_linhas</a></td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classDetectorColisao.html#a28c67b8f21da38597a36f9775e14fa71">qtd_objetos</a></td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classDetectorColisao.html#ab2bc447b74a4be053c2a655f2bcac927">setInfoLinhas</a>(int qtd, Linha *lista_linhas)</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classDetectorColisao.html#aa190671298c489ce9853c803c2465c57">~DetectorColisao</a>()</td><td class="entry"><a class="el" href="classDetectorColisao.html">DetectorColisao</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

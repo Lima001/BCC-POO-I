@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -71,49 +78,333 @@ $(function() {
 <div class="title">Referência da Classe Retangulo</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe para Representação de um Retângulo.  
+ <a href="classRetangulo.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="retangulo_8h_source.html">retangulo.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de colaboração para Retangulo:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRetangulo__coll__graph.png" border="0" usemap="#Retangulo_coll__map" alt="Collaboration graph"/></div>
-<!-- MAP 0 -->
+<map name="Retangulo_coll__map" id="Retangulo_coll__map">
+<area shape="rect" title="Classe para Representação de um Retângulo." alt="" coords="5,95,93,121"/>
+<area shape="rect" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano." alt="" coords="20,5,79,32"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a2a6b2863847d97303b8e5e3992a69b82"><td class="memItemLeft" align="right" valign="top"><a id="a2a6b2863847d97303b8e5e3992a69b82"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Retangulo</b> (const <a class="el" href="classPonto.html">Ponto</a> &amp;inicio, float largura, float altura)</td></tr>
+<tr class="memitem:ac21a81cae046920c8bee401bcb879562"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRetangulo.html#ac21a81cae046920c8bee401bcb879562">Retangulo</a> ()</td></tr>
+<tr class="memdesc:ac21a81cae046920c8bee401bcb879562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default.  <a href="classRetangulo.html#ac21a81cae046920c8bee401bcb879562">Mais...</a><br /></td></tr>
+<tr class="separator:ac21a81cae046920c8bee401bcb879562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a6b2863847d97303b8e5e3992a69b82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRetangulo.html#a2a6b2863847d97303b8e5e3992a69b82">Retangulo</a> (const <a class="el" href="classPonto.html">Ponto</a> &amp;<a class="el" href="classRetangulo.html#a23839310726426373d115180884c03e5">inicio</a>, float <a class="el" href="classRetangulo.html#a7dc902283835c9a9e4302a628f43d382">largura</a>, float <a class="el" href="classRetangulo.html#a80a55ad677f16d52118d16127e5b9207">altura</a>)</td></tr>
+<tr class="memdesc:a2a6b2863847d97303b8e5e3992a69b82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor base.  <a href="classRetangulo.html#a2a6b2863847d97303b8e5e3992a69b82">Mais...</a><br /></td></tr>
 <tr class="separator:a2a6b2863847d97303b8e5e3992a69b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00dd3d5f324f753448e7ef8fb70e1c8b"><td class="memItemLeft" align="right" valign="top"><a id="a00dd3d5f324f753448e7ef8fb70e1c8b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Retangulo</b> (const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;rect)</td></tr>
+<tr class="memitem:a00dd3d5f324f753448e7ef8fb70e1c8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRetangulo.html#a00dd3d5f324f753448e7ef8fb70e1c8b">Retangulo</a> (const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;rect)</td></tr>
+<tr class="memdesc:a00dd3d5f324f753448e7ef8fb70e1c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de Cópia.  <a href="classRetangulo.html#a00dd3d5f324f753448e7ef8fb70e1c8b">Mais...</a><br /></td></tr>
 <tr class="separator:a00dd3d5f324f753448e7ef8fb70e1c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab29cdc63380ed0cc1f4568e91a8fcb30"><td class="memItemLeft" align="right" valign="top"><a id="ab29cdc63380ed0cc1f4568e91a8fcb30"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Retangulo</b> (<a class="el" href="classRetangulo.html">Retangulo</a> &amp;&amp;rect) noexcept</td></tr>
+<tr class="memitem:ab29cdc63380ed0cc1f4568e91a8fcb30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRetangulo.html#ab29cdc63380ed0cc1f4568e91a8fcb30">Retangulo</a> (<a class="el" href="classRetangulo.html">Retangulo</a> &amp;&amp;rect) noexcept</td></tr>
+<tr class="memdesc:ab29cdc63380ed0cc1f4568e91a8fcb30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Move.  <a href="classRetangulo.html#ab29cdc63380ed0cc1f4568e91a8fcb30">Mais...</a><br /></td></tr>
 <tr class="separator:ab29cdc63380ed0cc1f4568e91a8fcb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e52f891a519cdd0e480ed70be0a36d7"><td class="memItemLeft" align="right" valign="top"><a id="a7e52f891a519cdd0e480ed70be0a36d7"></a>
-<a class="el" href="classRetangulo.html">Retangulo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;rect)</td></tr>
+<tr class="memitem:a7e52f891a519cdd0e480ed70be0a36d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRetangulo.html">Retangulo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRetangulo.html#a7e52f891a519cdd0e480ed70be0a36d7">operator=</a> (const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;rect)</td></tr>
+<tr class="memdesc:a7e52f891a519cdd0e480ed70be0a36d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribuição por Cópia.  <a href="classRetangulo.html#a7e52f891a519cdd0e480ed70be0a36d7">Mais...</a><br /></td></tr>
 <tr class="separator:a7e52f891a519cdd0e480ed70be0a36d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d470ef6fc2c5c57e07eb747dce64f78"><td class="memItemLeft" align="right" valign="top"><a id="a8d470ef6fc2c5c57e07eb747dce64f78"></a>
-<a class="el" href="classRetangulo.html">Retangulo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classRetangulo.html">Retangulo</a> &amp;&amp;rect) noexcept</td></tr>
+<tr class="memitem:a8d470ef6fc2c5c57e07eb747dce64f78"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classRetangulo.html">Retangulo</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRetangulo.html#a8d470ef6fc2c5c57e07eb747dce64f78">operator=</a> (<a class="el" href="classRetangulo.html">Retangulo</a> &amp;&amp;rect) noexcept</td></tr>
+<tr class="memdesc:a8d470ef6fc2c5c57e07eb747dce64f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribuição Move.  <a href="classRetangulo.html#a8d470ef6fc2c5c57e07eb747dce64f78">Mais...</a><br /></td></tr>
 <tr class="separator:a8d470ef6fc2c5c57e07eb747dce64f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atributos Públicos</h2></td></tr>
 <tr class="memitem:a23839310726426373d115180884c03e5"><td class="memItemLeft" align="right" valign="top"><a id="a23839310726426373d115180884c03e5"></a>
-<a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><b>inicio</b></td></tr>
+<a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRetangulo.html#a23839310726426373d115180884c03e5">inicio</a></td></tr>
+<tr class="memdesc:a23839310726426373d115180884c03e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano.">Ponto</a> de início do retângulo - Considerar ponto Superior Esquerdo da Figura. <br /></td></tr>
 <tr class="separator:a23839310726426373d115180884c03e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dc902283835c9a9e4302a628f43d382"><td class="memItemLeft" align="right" valign="top"><a id="a7dc902283835c9a9e4302a628f43d382"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>largura</b></td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRetangulo.html#a7dc902283835c9a9e4302a628f43d382">largura</a></td></tr>
+<tr class="memdesc:a7dc902283835c9a9e4302a628f43d382"><td class="mdescLeft">&#160;</td><td class="mdescRight">Medida da Largura do retângulo. <br /></td></tr>
 <tr class="separator:a7dc902283835c9a9e4302a628f43d382"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80a55ad677f16d52118d16127e5b9207"><td class="memItemLeft" align="right" valign="top"><a id="a80a55ad677f16d52118d16127e5b9207"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>altura</b></td></tr>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRetangulo.html#a80a55ad677f16d52118d16127e5b9207">altura</a></td></tr>
+<tr class="memdesc:a80a55ad677f16d52118d16127e5b9207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Medida da Altura do retangulo. <br /></td></tr>
 <tr class="separator:a80a55ad677f16d52118d16127e5b9207"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
-<tr class="memitem:a585a1a12eee2b5c94e6bf56b1e25369e"><td class="memItemLeft" align="right" valign="top"><a id="a585a1a12eee2b5c94e6bf56b1e25369e"></a>
-std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator&lt;&lt;</b> (std::ostream &amp;out, const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;rect)</td></tr>
+<tr class="memitem:a585a1a12eee2b5c94e6bf56b1e25369e"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRetangulo.html#a585a1a12eee2b5c94e6bf56b1e25369e">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;rect)</td></tr>
+<tr class="memdesc:a585a1a12eee2b5c94e6bf56b1e25369e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do Insertion Operator para Saída de Dados.  <a href="classRetangulo.html#a585a1a12eee2b5c94e6bf56b1e25369e">Mais...</a><br /></td></tr>
 <tr class="separator:a585a1a12eee2b5c94e6bf56b1e25369e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe para Representação de um Retângulo. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última Modificação: 27/02/2001 </dd></dl>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="ac21a81cae046920c8bee401bcb879562"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac21a81cae046920c8bee401bcb879562">&#9670;&nbsp;</a></span>Retangulo() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Retangulo::Retangulo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Default. </p>
+<p>Chamado quando nenhum parâmetro de ininicialização for informado.</p>
+<p>Cria um objeto do tipo <a class="el" href="classRetangulo.html">Retangulo</a> com perímetro nulo. Usar somente para declaração de variaveis. Não esquecer de modificar os atributos para fazer o correto uso do objeto. </p>
+
+</div>
+</div>
+<a id="a2a6b2863847d97303b8e5e3992a69b82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a6b2863847d97303b8e5e3992a69b82">&#9670;&nbsp;</a></span>Retangulo() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Retangulo::Retangulo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classPonto.html">Ponto</a> &amp;&#160;</td>
+          <td class="paramname"><em>inicio</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>largura</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>altura</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor base. </p>
+<p>Cria um objeto a partir dos parâmetros informados.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inicio</td><td>Referência constante a um <a class="el" href="classPonto.html">Ponto</a> usado para inicializar o atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">largura</td><td>usado para inicializar o atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">float</td><td>usado para inicializar o atributo de mesma nomenclatura </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a00dd3d5f324f753448e7ef8fb70e1c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00dd3d5f324f753448e7ef8fb70e1c8b">&#9670;&nbsp;</a></span>Retangulo() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Retangulo::Retangulo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor de Cópia. </p>
+<p>Cria um novo objeto copiando os atributos de um <a class="el" href="classRetangulo.html">Retangulo</a> informado.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Referência constante para o <a class="el" href="classRetangulo.html">Retangulo</a> que deseja-se copiar </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab29cdc63380ed0cc1f4568e91a8fcb30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab29cdc63380ed0cc1f4568e91a8fcb30">&#9670;&nbsp;</a></span>Retangulo() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Retangulo::Retangulo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRetangulo.html">Retangulo</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Move. </p>
+<p>Cria um novo objeto fazendo uso do recurso de movimentação Transfere de maneira eficiente os dados de um <a class="el" href="classRetangulo.html">Retangulo</a> para o novo objeto criado</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Referência rvalue de um <a class="el" href="classRetangulo.html">Retangulo</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Para mais detalhe sobre o recurso, consultar documentação da linguagem </p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a7e52f891a519cdd0e480ed70be0a36d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e52f891a519cdd0e480ed70be0a36d7">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRetangulo.html">Retangulo</a>&amp; Retangulo::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atribuição por Cópia. </p>
+<p>Copia o valor dos atributos do <a class="el" href="classRetangulo.html">Retangulo</a> passado por parâmetro para o <a class="el" href="classRetangulo.html">Retangulo</a> que invocou o operador.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>Referência constante do <a class="el" href="classRetangulo.html">Retangulo</a> que deseja-se copiar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classRetangulo.html">Retangulo</a> que invocou o operador </dd></dl>
+
+</div>
+</div>
+<a id="a8d470ef6fc2c5c57e07eb747dce64f78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d470ef6fc2c5c57e07eb747dce64f78">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classRetangulo.html">Retangulo</a>&amp; Retangulo::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRetangulo.html">Retangulo</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rect</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atribuição Move. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rect</td><td>Referência rvalue de um <a class="el" href="classRetangulo.html">Retangulo</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classRetangulo.html">Retangulo</a> que Invocou o operador </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Amigas e Funções Relacionadas</h2>
+<a id="a585a1a12eee2b5c94e6bf56b1e25369e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a585a1a12eee2b5c94e6bf56b1e25369e">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classRetangulo.html">Retangulo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rect</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sobrecarga do Insertion Operator para Saída de Dados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>string no formato: "Retangulo(Ponto(x,y),largura,altura)" onde cada elemento refere-se aos valores dos atributos. </dd></dl>
+
+</div>
+</div>
 <hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
 <li>Base/<a class="el" href="retangulo_8h_source.html">retangulo.h</a></li>
 </ul>

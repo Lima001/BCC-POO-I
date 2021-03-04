@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -70,55 +77,299 @@ $(function() {
 <div class="title">Referência da Classe PlanoCartesiano</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe responsável pela representação gráfica do Plano Cartesiano.  
+ <a href="classPlanoCartesiano.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="plano__cartesiano_8h_source.html">plano_cartesiano.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de colaboração para PlanoCartesiano:</div>
 <div class="dyncontent">
 <div class="center"><img src="classPlanoCartesiano__coll__graph.png" border="0" usemap="#PlanoCartesiano_coll__map" alt="Collaboration graph"/></div>
-<!-- MAP 0 -->
+<map name="PlanoCartesiano_coll__map" id="PlanoCartesiano_coll__map">
+<area shape="rect" title="Classe responsável pela representação gráfica do Plano Cartesiano." alt="" coords="17,109,145,136"/>
+<area shape="rect" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano." alt="" coords="5,5,64,32"/>
+<area shape="rect" href="classCorRGBA.html" title="Classe responsável por representar cores RGBA para uso em conjunto aos elementos gráficos da interfac..." alt="" coords="89,5,170,32"/>
+</map>
 <center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a7672bdb864baaa73d69624b5b59628aa"><td class="memItemLeft" align="right" valign="top"><a id="a7672bdb864baaa73d69624b5b59628aa"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PlanoCartesiano</b> (int espacamento_x, int espacamento_y, const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor_eixos, const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor_grade, int largura_tela, int altura_tela, const <a class="el" href="classPonto.html">Ponto</a> &amp;origem=<a class="el" href="classPonto.html">Ponto</a>())</td></tr>
+<tr class="memitem:a7672bdb864baaa73d69624b5b59628aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#a7672bdb864baaa73d69624b5b59628aa">PlanoCartesiano</a> (int <a class="el" href="classPlanoCartesiano.html#accf7c773f0a269c9e24639f66e0d282d">espacamento_x</a>, int <a class="el" href="classPlanoCartesiano.html#a418be3861b8809eadbd43324062b6c61">espacamento_y</a>, const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;<a class="el" href="classPlanoCartesiano.html#a7fc902565765790474c4955618bf48e0">cor_eixos</a>, const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;<a class="el" href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">cor_grade</a>, int <a class="el" href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">largura_tela</a>, int <a class="el" href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">altura_tela</a>, const <a class="el" href="classPonto.html">Ponto</a> &amp;<a class="el" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a>=<a class="el" href="classPonto.html">Ponto</a>())</td></tr>
+<tr class="memdesc:a7672bdb864baaa73d69624b5b59628aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default.  <a href="classPlanoCartesiano.html#a7672bdb864baaa73d69624b5b59628aa">Mais...</a><br /></td></tr>
 <tr class="separator:a7672bdb864baaa73d69624b5b59628aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cb5929d65537324a8c5b9269f3f6b33"><td class="memItemLeft" align="right" valign="top"><a id="a5cb5929d65537324a8c5b9269f3f6b33"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desenharEixo</b> (<a class="el" href="classRenderizador.html">Renderizador</a> &amp;render)</td></tr>
+<tr class="memitem:a5cb5929d65537324a8c5b9269f3f6b33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#a5cb5929d65537324a8c5b9269f3f6b33">desenharEixo</a> (<a class="el" href="classRenderizador.html">Renderizador</a> &amp;render)</td></tr>
+<tr class="memdesc:a5cb5929d65537324a8c5b9269f3f6b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha os Eixos do Plano Cartesiano.  <a href="classPlanoCartesiano.html#a5cb5929d65537324a8c5b9269f3f6b33">Mais...</a><br /></td></tr>
 <tr class="separator:a5cb5929d65537324a8c5b9269f3f6b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7be671bde040eb9cf4db81b61b89a811"><td class="memItemLeft" align="right" valign="top"><a id="a7be671bde040eb9cf4db81b61b89a811"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desenharGradeY</b> (<a class="el" href="classRenderizador.html">Renderizador</a> &amp;render)</td></tr>
+<tr class="memitem:a7be671bde040eb9cf4db81b61b89a811"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#a7be671bde040eb9cf4db81b61b89a811">desenharGradeY</a> (<a class="el" href="classRenderizador.html">Renderizador</a> &amp;render)</td></tr>
+<tr class="memdesc:a7be671bde040eb9cf4db81b61b89a811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha as retas paralelas ao Eixo y.  <a href="classPlanoCartesiano.html#a7be671bde040eb9cf4db81b61b89a811">Mais...</a><br /></td></tr>
 <tr class="separator:a7be671bde040eb9cf4db81b61b89a811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a007131ea69729d7100958c2324757040"><td class="memItemLeft" align="right" valign="top"><a id="a007131ea69729d7100958c2324757040"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desenharGradeX</b> (<a class="el" href="classRenderizador.html">Renderizador</a> &amp;render)</td></tr>
+<tr class="memitem:a007131ea69729d7100958c2324757040"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#a007131ea69729d7100958c2324757040">desenharGradeX</a> (<a class="el" href="classRenderizador.html">Renderizador</a> &amp;render)</td></tr>
+<tr class="memdesc:a007131ea69729d7100958c2324757040"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha as retas paralelas ao Eixo x.  <a href="classPlanoCartesiano.html#a007131ea69729d7100958c2324757040">Mais...</a><br /></td></tr>
 <tr class="separator:a007131ea69729d7100958c2324757040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a786778a2224ded284223c27ed44cf298"><td class="memItemLeft" align="right" valign="top"><a id="a786778a2224ded284223c27ed44cf298"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>desenharGrade</b> (<a class="el" href="classRenderizador.html">Renderizador</a> &amp;render)</td></tr>
+<tr class="memitem:a786778a2224ded284223c27ed44cf298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#a786778a2224ded284223c27ed44cf298">desenharGrade</a> (<a class="el" href="classRenderizador.html">Renderizador</a> &amp;render)</td></tr>
+<tr class="memdesc:a786778a2224ded284223c27ed44cf298"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desenha as retas paralelas aos Eixos x e y do Plano, bem como os Próprios Eixos.  <a href="classPlanoCartesiano.html#a786778a2224ded284223c27ed44cf298">Mais...</a><br /></td></tr>
 <tr class="separator:a786778a2224ded284223c27ed44cf298"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Atributos Protegidos</h2></td></tr>
 <tr class="memitem:accf7c773f0a269c9e24639f66e0d282d"><td class="memItemLeft" align="right" valign="top"><a id="accf7c773f0a269c9e24639f66e0d282d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>espacamento_x</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#accf7c773f0a269c9e24639f66e0d282d">espacamento_x</a></td></tr>
+<tr class="memdesc:accf7c773f0a269c9e24639f66e0d282d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distância entre as retas paralelas ao eixo x. <br /></td></tr>
 <tr class="separator:accf7c773f0a269c9e24639f66e0d282d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a418be3861b8809eadbd43324062b6c61"><td class="memItemLeft" align="right" valign="top"><a id="a418be3861b8809eadbd43324062b6c61"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>espacamento_y</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#a418be3861b8809eadbd43324062b6c61">espacamento_y</a></td></tr>
+<tr class="memdesc:a418be3861b8809eadbd43324062b6c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distância entre as retas paralelas ao eixo y. <br /></td></tr>
 <tr class="separator:a418be3861b8809eadbd43324062b6c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a410a6cf620f5b1faf0b40da7a2212eb9"><td class="memItemLeft" align="right" valign="top"><a id="a410a6cf620f5b1faf0b40da7a2212eb9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>largura_tela</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#a410a6cf620f5b1faf0b40da7a2212eb9">largura_tela</a></td></tr>
+<tr class="memdesc:a410a6cf620f5b1faf0b40da7a2212eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largura da tela para desenhar o plano dentro dos limites da aplicação. <br /></td></tr>
 <tr class="separator:a410a6cf620f5b1faf0b40da7a2212eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e2b8c90296d125d63e395bc95dac704"><td class="memItemLeft" align="right" valign="top"><a id="a5e2b8c90296d125d63e395bc95dac704"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>altura_tela</b></td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#a5e2b8c90296d125d63e395bc95dac704">altura_tela</a></td></tr>
+<tr class="memdesc:a5e2b8c90296d125d63e395bc95dac704"><td class="mdescLeft">&#160;</td><td class="mdescRight">Altura da tela para desenhar o plano dentro dos limites da aplicação. <br /></td></tr>
 <tr class="separator:a5e2b8c90296d125d63e395bc95dac704"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34580f009e588fac72e12503027d630d"><td class="memItemLeft" align="right" valign="top"><a id="a34580f009e588fac72e12503027d630d"></a>
-<a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><b>origem</b></td></tr>
+<a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#a34580f009e588fac72e12503027d630d">origem</a></td></tr>
+<tr class="memdesc:a34580f009e588fac72e12503027d630d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano.">Ponto</a> de Origem do Plano Cartesiano na Tela. <br /></td></tr>
 <tr class="separator:a34580f009e588fac72e12503027d630d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fc902565765790474c4955618bf48e0"><td class="memItemLeft" align="right" valign="top"><a id="a7fc902565765790474c4955618bf48e0"></a>
-<a class="el" href="classCorRGBA.html">CorRGBA</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cor_eixos</b></td></tr>
+<a class="el" href="classCorRGBA.html">CorRGBA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#a7fc902565765790474c4955618bf48e0">cor_eixos</a></td></tr>
+<tr class="memdesc:a7fc902565765790474c4955618bf48e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cor dos eixos das abscissas e das ordenadas. <br /></td></tr>
 <tr class="separator:a7fc902565765790474c4955618bf48e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2307ed6ad9d0dbe84a7dd055d6f9e80"><td class="memItemLeft" align="right" valign="top"><a id="ab2307ed6ad9d0dbe84a7dd055d6f9e80"></a>
-<a class="el" href="classCorRGBA.html">CorRGBA</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cor_grade</b></td></tr>
+<a class="el" href="classCorRGBA.html">CorRGBA</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPlanoCartesiano.html#ab2307ed6ad9d0dbe84a7dd055d6f9e80">cor_grade</a></td></tr>
+<tr class="memdesc:ab2307ed6ad9d0dbe84a7dd055d6f9e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cor das retas paralelas aos eixos das abscissas e das ordenadas. <br /></td></tr>
 <tr class="separator:ab2307ed6ad9d0dbe84a7dd055d6f9e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe responsável pela representação gráfica do Plano Cartesiano. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última alteração: 28/02/2021 </dd></dl>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a7672bdb864baaa73d69624b5b59628aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7672bdb864baaa73d69624b5b59628aa">&#9670;&nbsp;</a></span>PlanoCartesiano()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PlanoCartesiano::PlanoCartesiano </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>espacamento_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>espacamento_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;&#160;</td>
+          <td class="paramname"><em>cor_eixos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;&#160;</td>
+          <td class="paramname"><em>cor_grade</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>largura_tela</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>altura_tela</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classPonto.html">Ponto</a> &amp;&#160;</td>
+          <td class="paramname"><em>origem</em> = <code><a class="el" href="classPonto.html">Ponto</a>()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Default. </p>
+<p>Cria um objeto com os atributos conforme valores especificados via parâmetro.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">espacamento_x</td><td>inicializa o atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">espacamento_y</td><td>inicializa o atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">cor_eixos</td><td>inicializa o atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">cor_grade</td><td>inicializa o atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">largura_tela</td><td>inicializa o atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">altura_tela</td><td>inicializa o atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">origem</td><td>inicializa o atributo de mesma nomenclatura. Caso seja omitido, será considerado como origem o <a class="el" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano.">Ponto(0,0)</a> da Tela </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a5cb5929d65537324a8c5b9269f3f6b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb5929d65537324a8c5b9269f3f6b33">&#9670;&nbsp;</a></span>desenharEixo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlanoCartesiano::desenharEixo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRenderizador.html">Renderizador</a> &amp;&#160;</td>
+          <td class="paramname"><em>render</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Desenha os Eixos do Plano Cartesiano. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">render</td><td>Referência constante para objeto do tipo <a class="el" href="classRenderizador.html">Renderizador</a> que será usado para o processo de renderização.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> </dd></dl>
+
+</div>
+</div>
+<a id="a786778a2224ded284223c27ed44cf298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a786778a2224ded284223c27ed44cf298">&#9670;&nbsp;</a></span>desenharGrade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlanoCartesiano::desenharGrade </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRenderizador.html">Renderizador</a> &amp;&#160;</td>
+          <td class="paramname"><em>render</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Desenha as retas paralelas aos Eixos x e y do Plano, bem como os Próprios Eixos. </p>
+<p>Faz uso dos métodos membros responsáveis pela renderização de cada elemento específico do Plano Cartesiano.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">render</td><td>Referência constante para objeto do tipo <a class="el" href="classRenderizador.html">Renderizador</a> que será usado para o processo de renderização</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> </dd></dl>
+
+</div>
+</div>
+<a id="a007131ea69729d7100958c2324757040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a007131ea69729d7100958c2324757040">&#9670;&nbsp;</a></span>desenharGradeX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlanoCartesiano::desenharGradeX </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRenderizador.html">Renderizador</a> &amp;&#160;</td>
+          <td class="paramname"><em>render</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Desenha as retas paralelas ao Eixo x. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">render</td><td>Referência constante para objeto do tipo <a class="el" href="classRenderizador.html">Renderizador</a> que será usado para o processo de renderização.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> </dd></dl>
+
+</div>
+</div>
+<a id="a7be671bde040eb9cf4db81b61b89a811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be671bde040eb9cf4db81b61b89a811">&#9670;&nbsp;</a></span>desenharGradeY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PlanoCartesiano::desenharGradeY </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classRenderizador.html">Renderizador</a> &amp;&#160;</td>
+          <td class="paramname"><em>render</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Desenha as retas paralelas ao Eixo y. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">render</td><td>Referência constante para objeto do tipo <a class="el" href="classRenderizador.html">Renderizador</a> que será usado para o processo de renderização.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a> </dd></dl>
+
+</div>
+</div>
 <hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
 <li>Interface/<a class="el" href="plano__cartesiano_8h_source.html">plano_cartesiano.h</a></li>
 </ul>

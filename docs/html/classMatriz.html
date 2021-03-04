@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -66,88 +73,834 @@ $(function() {
 <a href="#pub-methods">Membros Públicos</a> &#124;
 <a href="#pub-attribs">Atributos Públicos</a> &#124;
 <a href="#pro-methods">Membros Protegidos</a> &#124;
+<a href="#pro-attribs">Atributos Protegidos</a> &#124;
 <a href="#friends">Amigas</a> &#124;
 <a href="classMatriz-members.html">Lista de todos os Membros</a>  </div>
   <div class="headertitle">
 <div class="title">Referência da Classe Matriz</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe para Representação de Matrizes.  
+ <a href="classMatriz.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="matriz_8h_source.html">matriz.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:adfe53538a1e8865ca934020f4cb7a87b"><td class="memItemLeft" align="right" valign="top"><a id="adfe53538a1e8865ca934020f4cb7a87b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Matriz</b> (unsigned int n_linha, unsigned int n_coluna)</td></tr>
+<tr class="memitem:a7de756301bddbc4b0b5d2a0f2b1fc695"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a7de756301bddbc4b0b5d2a0f2b1fc695">Matriz</a> ()</td></tr>
+<tr class="memdesc:a7de756301bddbc4b0b5d2a0f2b1fc695"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default.  <a href="classMatriz.html#a7de756301bddbc4b0b5d2a0f2b1fc695">Mais...</a><br /></td></tr>
+<tr class="separator:a7de756301bddbc4b0b5d2a0f2b1fc695"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfe53538a1e8865ca934020f4cb7a87b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#adfe53538a1e8865ca934020f4cb7a87b">Matriz</a> (unsigned int <a class="el" href="classMatriz.html#a7a47f20a2888676639b85a103f1f0acc">n_linha</a>, unsigned int <a class="el" href="classMatriz.html#a75de113513435223ef020229d301660a">n_coluna</a>)</td></tr>
+<tr class="memdesc:adfe53538a1e8865ca934020f4cb7a87b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default.  <a href="classMatriz.html#adfe53538a1e8865ca934020f4cb7a87b">Mais...</a><br /></td></tr>
 <tr class="separator:adfe53538a1e8865ca934020f4cb7a87b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ce231d36fa5a85304933484e14a4426"><td class="memItemLeft" align="right" valign="top"><a id="a6ce231d36fa5a85304933484e14a4426"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Matriz</b> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memitem:a6ce231d36fa5a85304933484e14a4426"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a6ce231d36fa5a85304933484e14a4426">Matriz</a> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memdesc:a6ce231d36fa5a85304933484e14a4426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de Cópia.  <a href="classMatriz.html#a6ce231d36fa5a85304933484e14a4426">Mais...</a><br /></td></tr>
 <tr class="separator:a6ce231d36fa5a85304933484e14a4426"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8987741da4cabe0aa054f2e8b077a97"><td class="memItemLeft" align="right" valign="top"><a id="af8987741da4cabe0aa054f2e8b077a97"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print</b> ()</td></tr>
+<tr class="memitem:a2092b7a289ecec369e1da407d5839f5a"><td class="memItemLeft" align="right" valign="top"><a id="a2092b7a289ecec369e1da407d5839f5a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a2092b7a289ecec369e1da407d5839f5a">~Matriz</a> ()</td></tr>
+<tr class="memdesc:a2092b7a289ecec369e1da407d5839f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da Classe. <br /></td></tr>
+<tr class="separator:a2092b7a289ecec369e1da407d5839f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8987741da4cabe0aa054f2e8b077a97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#af8987741da4cabe0aa054f2e8b077a97">print</a> ()</td></tr>
+<tr class="memdesc:af8987741da4cabe0aa054f2e8b077a97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método usado para exibir a <a class="el" href="classMatriz.html">Matriz</a>.  <a href="classMatriz.html#af8987741da4cabe0aa054f2e8b077a97">Mais...</a><br /></td></tr>
 <tr class="separator:af8987741da4cabe0aa054f2e8b077a97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e7f83c428a54594555dfe7933706645"><td class="memItemLeft" align="right" valign="top"><a id="a9e7f83c428a54594555dfe7933706645"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>definir_linha</b> (unsigned int index, const std::vector&lt; double &gt; &amp;linha)</td></tr>
+<tr class="memitem:a9e7f83c428a54594555dfe7933706645"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a9e7f83c428a54594555dfe7933706645">definir_linha</a> (unsigned int index, const std::vector&lt; double &gt; &amp;linha)</td></tr>
+<tr class="memdesc:a9e7f83c428a54594555dfe7933706645"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método utilizado para preencher uma linha inteira da <a class="el" href="classMatriz.html">Matriz</a> com valores.  <a href="classMatriz.html#a9e7f83c428a54594555dfe7933706645">Mais...</a><br /></td></tr>
 <tr class="separator:a9e7f83c428a54594555dfe7933706645"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6ad696598fc80ff8eb1e59dc433c45b"><td class="memItemLeft" align="right" valign="top"><a id="ac6ad696598fc80ff8eb1e59dc433c45b"></a>
-<a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator+=</b> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memitem:ac6ad696598fc80ff8eb1e59dc433c45b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#ac6ad696598fc80ff8eb1e59dc433c45b">operator+=</a> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memdesc:ac6ad696598fc80ff8eb1e59dc433c45b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de Atibuição de Adição.  <a href="classMatriz.html#ac6ad696598fc80ff8eb1e59dc433c45b">Mais...</a><br /></td></tr>
 <tr class="separator:ac6ad696598fc80ff8eb1e59dc433c45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b453c6c27e6189ef8661ab3d242b16"><td class="memItemLeft" align="right" valign="top"><a id="a64b453c6c27e6189ef8661ab3d242b16"></a>
-<a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator+</b> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memitem:a64b453c6c27e6189ef8661ab3d242b16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a64b453c6c27e6189ef8661ab3d242b16">operator+</a> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memdesc:a64b453c6c27e6189ef8661ab3d242b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de Adição.  <a href="classMatriz.html#a64b453c6c27e6189ef8661ab3d242b16">Mais...</a><br /></td></tr>
 <tr class="separator:a64b453c6c27e6189ef8661ab3d242b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ab483e63659844df170d87fc1b07faf"><td class="memItemLeft" align="right" valign="top"><a id="a5ab483e63659844df170d87fc1b07faf"></a>
-<a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator-=</b> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memitem:a5ab483e63659844df170d87fc1b07faf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a5ab483e63659844df170d87fc1b07faf">operator-=</a> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memdesc:a5ab483e63659844df170d87fc1b07faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de Atibuição de Subtração.  <a href="classMatriz.html#a5ab483e63659844df170d87fc1b07faf">Mais...</a><br /></td></tr>
 <tr class="separator:a5ab483e63659844df170d87fc1b07faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60851cf31b1b25d3ce0d3ce4cf65d3fe"><td class="memItemLeft" align="right" valign="top"><a id="a60851cf31b1b25d3ce0d3ce4cf65d3fe"></a>
-<a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator-</b> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memitem:a60851cf31b1b25d3ce0d3ce4cf65d3fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a60851cf31b1b25d3ce0d3ce4cf65d3fe">operator-</a> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memdesc:a60851cf31b1b25d3ce0d3ce4cf65d3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de Subtração.  <a href="classMatriz.html#a60851cf31b1b25d3ce0d3ce4cf65d3fe">Mais...</a><br /></td></tr>
 <tr class="separator:a60851cf31b1b25d3ce0d3ce4cf65d3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6bca6741b27663fe3b348f3f30ebdbf9"><td class="memItemLeft" align="right" valign="top"><a id="a6bca6741b27663fe3b348f3f30ebdbf9"></a>
-<a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator*=</b> (float escalar)</td></tr>
+<tr class="memitem:a6bca6741b27663fe3b348f3f30ebdbf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a6bca6741b27663fe3b348f3f30ebdbf9">operator*=</a> (float escalar)</td></tr>
+<tr class="memdesc:a6bca6741b27663fe3b348f3f30ebdbf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de atibuição de multiplicação por escalar.  <a href="classMatriz.html#a6bca6741b27663fe3b348f3f30ebdbf9">Mais...</a><br /></td></tr>
 <tr class="separator:a6bca6741b27663fe3b348f3f30ebdbf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c31d0a74ecad92fbfa5577d960674bf"><td class="memItemLeft" align="right" valign="top"><a id="a8c31d0a74ecad92fbfa5577d960674bf"></a>
-<a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memitem:a8c31d0a74ecad92fbfa5577d960674bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a8c31d0a74ecad92fbfa5577d960674bf">operator*</a> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memdesc:a8c31d0a74ecad92fbfa5577d960674bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Múltiplicação entre Matrizes.  <a href="classMatriz.html#a8c31d0a74ecad92fbfa5577d960674bf">Mais...</a><br /></td></tr>
 <tr class="separator:a8c31d0a74ecad92fbfa5577d960674bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48aaebca919d8d50bacf7e9a184c0021"><td class="memItemLeft" align="right" valign="top"><a id="a48aaebca919d8d50bacf7e9a184c0021"></a>
-<a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memitem:a48aaebca919d8d50bacf7e9a184c0021"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a48aaebca919d8d50bacf7e9a184c0021">operator=</a> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memdesc:a48aaebca919d8d50bacf7e9a184c0021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribuição por Cópia.  <a href="classMatriz.html#a48aaebca919d8d50bacf7e9a184c0021">Mais...</a><br /></td></tr>
 <tr class="separator:a48aaebca919d8d50bacf7e9a184c0021"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9566df815b81e112f6785f748866ae5f"><td class="memItemLeft" align="right" valign="top"><a id="a9566df815b81e112f6785f748866ae5f"></a>
-<a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;&amp;m)</td></tr>
+<tr class="memitem:a9566df815b81e112f6785f748866ae5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a9566df815b81e112f6785f748866ae5f">operator=</a> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;&amp;m)</td></tr>
+<tr class="memdesc:a9566df815b81e112f6785f748866ae5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribuição Move.  <a href="classMatriz.html#a9566df815b81e112f6785f748866ae5f">Mais...</a><br /></td></tr>
 <tr class="separator:a9566df815b81e112f6785f748866ae5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a337f1572a6fb5bdd65d7e97b7dfd4bf3"><td class="memItemLeft" align="right" valign="top"><a id="a337f1572a6fb5bdd65d7e97b7dfd4bf3"></a>
-double *&amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator[]</b> (int index)</td></tr>
+<tr class="memitem:a337f1572a6fb5bdd65d7e97b7dfd4bf3"><td class="memItemLeft" align="right" valign="top">double *&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a337f1572a6fb5bdd65d7e97b7dfd4bf3">operator[]</a> (int index)</td></tr>
+<tr class="memdesc:a337f1572a6fb5bdd65d7e97b7dfd4bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de Acesso.  <a href="classMatriz.html#a337f1572a6fb5bdd65d7e97b7dfd4bf3">Mais...</a><br /></td></tr>
 <tr class="separator:a337f1572a6fb5bdd65d7e97b7dfd4bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atributos Públicos</h2></td></tr>
-<tr class="memitem:a7a47f20a2888676639b85a103f1f0acc"><td class="memItemLeft" align="right" valign="top"><a id="a7a47f20a2888676639b85a103f1f0acc"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>n_linha</b></td></tr>
-<tr class="separator:a7a47f20a2888676639b85a103f1f0acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75de113513435223ef020229d301660a"><td class="memItemLeft" align="right" valign="top"><a id="a75de113513435223ef020229d301660a"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>n_coluna</b></td></tr>
-<tr class="separator:a75de113513435223ef020229d301660a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23291aa666ef3b2213ed8358a5a640eb"><td class="memItemLeft" align="right" valign="top"><a id="a23291aa666ef3b2213ed8358a5a640eb"></a>
-double **&#160;</td><td class="memItemRight" valign="bottom"><b>ptr</b> = nullptr</td></tr>
+double **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a23291aa666ef3b2213ed8358a5a640eb">ptr</a> = nullptr</td></tr>
+<tr class="memdesc:a23291aa666ef3b2213ed8358a5a640eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ponteiro para Ponteiros usado para representar uma estrutura de Linhas e Colunas ou Array de Arrays. <br /></td></tr>
 <tr class="separator:a23291aa666ef3b2213ed8358a5a640eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Membros Protegidos</h2></td></tr>
-<tr class="memitem:a45b783c49e5a4175487b121f5615790c"><td class="memItemLeft" align="right" valign="top"><a id="a45b783c49e5a4175487b121f5615790c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>limpar</b> ()</td></tr>
+<tr class="memitem:a45b783c49e5a4175487b121f5615790c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a45b783c49e5a4175487b121f5615790c">limpar</a> ()</td></tr>
+<tr class="memdesc:a45b783c49e5a4175487b121f5615790c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método usado para resetar a <a class="el" href="classMatriz.html">Matriz</a> a um estado básico sem linhas nem colunas.  <a href="classMatriz.html#a45b783c49e5a4175487b121f5615790c">Mais...</a><br /></td></tr>
 <tr class="separator:a45b783c49e5a4175487b121f5615790c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70efb1a82f5eec412a19f9c4694793a3"><td class="memItemLeft" align="right" valign="top"><a id="a70efb1a82f5eec412a19f9c4694793a3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>alocar</b> (unsigned int n_linha_, unsigned n_coluna_)</td></tr>
+<tr class="memitem:a70efb1a82f5eec412a19f9c4694793a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a70efb1a82f5eec412a19f9c4694793a3">alocar</a> (unsigned int n_linha_, unsigned n_coluna_)</td></tr>
+<tr class="memdesc:a70efb1a82f5eec412a19f9c4694793a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método usado para alocar memória dinâmica da <a class="el" href="classMatriz.html">Matriz</a> que o Invocar.  <a href="classMatriz.html#a70efb1a82f5eec412a19f9c4694793a3">Mais...</a><br /></td></tr>
 <tr class="separator:a70efb1a82f5eec412a19f9c4694793a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0c567703acae0b472073502b938c42b"><td class="memItemLeft" align="right" valign="top"><a id="af0c567703acae0b472073502b938c42b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>copiar</b> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memitem:af0c567703acae0b472073502b938c42b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#af0c567703acae0b472073502b938c42b">copiar</a> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memdesc:af0c567703acae0b472073502b938c42b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método usado para copiar os elementos de uma <a class="el" href="classMatriz.html">Matriz</a>.  <a href="classMatriz.html#af0c567703acae0b472073502b938c42b">Mais...</a><br /></td></tr>
 <tr class="separator:af0c567703acae0b472073502b938c42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Atributos Protegidos</h2></td></tr>
+<tr class="memitem:a7a47f20a2888676639b85a103f1f0acc"><td class="memItemLeft" align="right" valign="top"><a id="a7a47f20a2888676639b85a103f1f0acc"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a7a47f20a2888676639b85a103f1f0acc">n_linha</a></td></tr>
+<tr class="memdesc:a7a47f20a2888676639b85a103f1f0acc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quantidade de linhas da <a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a>. <br /></td></tr>
+<tr class="separator:a7a47f20a2888676639b85a103f1f0acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75de113513435223ef020229d301660a"><td class="memItemLeft" align="right" valign="top"><a id="a75de113513435223ef020229d301660a"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a75de113513435223ef020229d301660a">n_coluna</a></td></tr>
+<tr class="memdesc:a75de113513435223ef020229d301660a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quantidade de colunas da <a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a>. <br /></td></tr>
+<tr class="separator:a75de113513435223ef020229d301660a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
-<tr class="memitem:a871b8637c7b093fd539bca2978ed0fcb"><td class="memItemLeft" align="right" valign="top"><a id="a871b8637c7b093fd539bca2978ed0fcb"></a>
-<a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const float escalar, const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memitem:a871b8637c7b093fd539bca2978ed0fcb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#a871b8637c7b093fd539bca2978ed0fcb">operator*</a> (const float escalar, const <a class="el" href="classMatriz.html">Matriz</a> &amp;m)</td></tr>
+<tr class="memdesc:a871b8637c7b093fd539bca2978ed0fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de atibuição de multiplicação por escalar a esquerda.  <a href="classMatriz.html#a871b8637c7b093fd539bca2978ed0fcb">Mais...</a><br /></td></tr>
 <tr class="separator:a871b8637c7b093fd539bca2978ed0fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2e14cafdab952648bae7f283287e482"><td class="memItemLeft" align="right" valign="top"><a id="aa2e14cafdab952648bae7f283287e482"></a>
-<a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><b>operator*</b> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m, const float escalar)</td></tr>
+<tr class="memitem:aa2e14cafdab952648bae7f283287e482"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMatriz.html#aa2e14cafdab952648bae7f283287e482">operator*</a> (const <a class="el" href="classMatriz.html">Matriz</a> &amp;m, const float escalar)</td></tr>
+<tr class="memdesc:aa2e14cafdab952648bae7f283287e482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operador de atibuição de multiplicação por escalar a direita.  <a href="classMatriz.html#aa2e14cafdab952648bae7f283287e482">Mais...</a><br /></td></tr>
 <tr class="separator:aa2e14cafdab952648bae7f283287e482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe para Representação de Matrizes. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última Modificação: 27/02/2001 </dd></dl>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a7de756301bddbc4b0b5d2a0f2b1fc695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7de756301bddbc4b0b5d2a0f2b1fc695">&#9670;&nbsp;</a></span>Matriz() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matriz::Matriz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Default. </p>
+<p>Chamado quando nenhum parâmetro de ininicialização for informado.</p>
+<p>Cria um objeto <a class="el" href="classMatriz.html">Matriz</a> sem linhas e nem colunas. Deve ser usado apenas para declaração de variáveis que futuramente terão a quantidade de linhas e colunas configuradas e memória alocada.</p>
+<p>Observação: Esse caso de objeto não deve ser usado em métodos de outras classes que exigem uma <a class="el" href="classMatriz.html">Matriz</a> como parâmetro. A título de exemplo, </p><dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classRenderizador.html" title="Classe responsável pela abstração do processo de renderização de figuras na Área de renderização da j...">Renderizador</a>. </dd></dl>
+
+</div>
+</div>
+<a id="adfe53538a1e8865ca934020f4cb7a87b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfe53538a1e8865ca934020f4cb7a87b">&#9670;&nbsp;</a></span>Matriz() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matriz::Matriz </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>n_linha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>n_coluna</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Default. </p>
+<p>Cria um objeto com a quantidade de linhas e colunas conforme dados passados como parâmetro. Nesse caso a memória será automáticamente alocada para atender a estrutura informada e valores default serão posicionados nas linhas e colunas.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n_linha</td><td>usado para inicializar atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">n_coluna</td><td>usado para inicializar atributo de mesma nomenclatura </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6ce231d36fa5a85304933484e14a4426"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ce231d36fa5a85304933484e14a4426">&#9670;&nbsp;</a></span>Matriz() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Matriz::Matriz </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor de Cópia. </p>
+<p>Cria um novo objeto copiando a estrutura e os valores de uma determinada <a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a> informada.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>Referência constante para a <a class="el" href="classMatriz.html">Matriz</a> que será copiada </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a70efb1a82f5eec412a19f9c4694793a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70efb1a82f5eec412a19f9c4694793a3">&#9670;&nbsp;</a></span>alocar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matriz::alocar </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>n_linha_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>n_coluna_</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método usado para alocar memória dinâmica da <a class="el" href="classMatriz.html">Matriz</a> que o Invocar. </p>
+<p>Caso seja necessário alterar a estrutura da <a class="el" href="classMatriz.html">Matriz</a>, será necessário realocar a quantidade de memória disponível para ela.</p>
+<p>Uma vez alocados os espaços na memória para a <a class="el" href="classMatriz.html">Matriz</a>, os valores que podem ser interpretados como linhas e colunas serão todos preenchidos por 0.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n_linha_</td><td>usado para definir a nova quantidade de linhas da <a class="el" href="classMatriz.html">Matriz</a> e permir a alocação de Memória </td></tr>
+    <tr><td class="paramname">n_coluna_</td><td>usado para definir a nova quantidade de colunas da <a class="el" href="classMatriz.html">Matriz</a> e permir a alocação de Memória </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af0c567703acae0b472073502b938c42b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0c567703acae0b472073502b938c42b">&#9670;&nbsp;</a></span>copiar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matriz::copiar </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método usado para copiar os elementos de uma <a class="el" href="classMatriz.html">Matriz</a>. </p>
+<p>Esse método é usado para copiar apenas os elementos de uma <a class="el" href="classMatriz.html">Matriz</a>, isso é os valores de presentes em suas linhas e colunas. Para isso observe que a <a class="el" href="classMatriz.html">Matriz</a> que terá a sua estrutura copiada deve obrigatoriamente conter a mesma quantidade de linha e coluna da <a class="el" href="classMatriz.html">Matriz</a> de destino.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td><a class="el" href="classMatriz.html">Matriz</a> que terá seus elementos copiados </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9e7f83c428a54594555dfe7933706645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e7f83c428a54594555dfe7933706645">&#9670;&nbsp;</a></span>definir_linha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matriz::definir_linha </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; double &gt; &amp;&#160;</td>
+          <td class="paramname"><em>linha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método utilizado para preencher uma linha inteira da <a class="el" href="classMatriz.html">Matriz</a> com valores. </p>
+<p>Esse método é usado para tornar a atribuição de valores a <a class="el" href="classMatriz.html">Matriz</a> mais cômoda ao desenvolvedor. Através desse método é possível definir os valores de uma linha inteira através de um vetor C++ (vector). Os valores serão copiados conforme sua posição no vetor, "da esquerda para a direita".</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>índice da linha que será alterada - Deve ser um valor &gt;= 0 e dentro dos limites da estrutura da <a class="el" href="classMatriz.html">Matriz</a> </td></tr>
+    <tr><td class="paramname">linha</td><td><code>vector</code> contendo os elementos das colunas daquela linha</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Aviso</dt><dd>Caso o índice informado não seja válido na <a class="el" href="classMatriz.html">Matriz</a>, bem como caso a quantidade de elementos do vetor seja superior a suportada pelo objeto, a operação não será efetuada e o método será finalizado </dd></dl>
+
+</div>
+</div>
+<a id="a45b783c49e5a4175487b121f5615790c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45b783c49e5a4175487b121f5615790c">&#9670;&nbsp;</a></span>limpar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matriz::limpar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método usado para resetar a <a class="el" href="classMatriz.html">Matriz</a> a um estado básico sem linhas nem colunas. </p>
+<p>Esse método é usado principalmente na necessidade de realocar a quantidade de memória dinâmica disponível para a <a class="el" href="classMatriz.html">Matriz</a>. Para isso é necessário antes deletar toda a memória anteriormente alocada para a <a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a> para possível configuração conforme contexto. </p>
+
+</div>
+</div>
+<a id="a8c31d0a74ecad92fbfa5577d960674bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c31d0a74ecad92fbfa5577d960674bf">&#9670;&nbsp;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a> Matriz::operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Múltiplicação entre Matrizes. </p>
+<p>Realiza a múltiplicação entre duas matrizes gerando ao final um novo objeto do tipo <a class="el" href="classMatriz.html">Matriz</a> como resultado da operação.</p>
+<p>Observação: Deve-se observar a condição matemática necessária para que a multiplicação entre as matrzies ocorra com sucesso. Considere uma matriz \( A (linha X coluna) \) e a matriz \( B (linha X coluna) \). Para que a multiplicação ocorra deve-se observar a seguinte verdade \( A coluna = B linha \)</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Referência a <a class="el" href="classMatriz.html">Matriz</a> usada na operação de múltiplicação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classMatriz.html">Matriz</a> resultante da múltplicação de matrizes </dd></dl>
+
+</div>
+</div>
+<a id="a6bca6741b27663fe3b348f3f30ebdbf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bca6741b27663fe3b348f3f30ebdbf9">&#9670;&nbsp;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a>&amp; Matriz::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>escalar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de atibuição de multiplicação por escalar. </p>
+<p>Múltiplica as respectivas linhas e colunas de uma <a class="el" href="classMatriz.html">Matriz</a> por um número escalar. Gera alteração da própria <a class="el" href="classMatriz.html">Matriz</a>, não criando um novo objeto.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">escalar</td><td><code>float</code> usado para múltiplicar os valores da <a class="el" href="classMatriz.html">Matriz</a> que Invocou o operador </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para a própria <a class="el" href="classMatriz.html">Matriz</a> que invocou o operador </dd></dl>
+
+</div>
+</div>
+<a id="a64b453c6c27e6189ef8661ab3d242b16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b453c6c27e6189ef8661ab3d242b16">&#9670;&nbsp;</a></span>operator+()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a> Matriz::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de Adição. </p>
+<p>Soma as respectivas linhas e colunas de uma <a class="el" href="classMatriz.html">Matriz</a> a <a class="el" href="classMatriz.html">Matriz</a> atual gerando ao fim um novo objeto.</p>
+<p>Observação: Para a soma ser bem sucedida, as matrizes devem possuir o exato número de linhas e colunas. Caso contrário a operação não é realizada.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Referência constante a <a class="el" href="classMatriz.html">Matriz</a> referente a parcela direita da Operação de Soma </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classMatriz.html">Matriz</a> resultante da Operação de Soma </dd></dl>
+
+</div>
+</div>
+<a id="ac6ad696598fc80ff8eb1e59dc433c45b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6ad696598fc80ff8eb1e59dc433c45b">&#9670;&nbsp;</a></span>operator+=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a>&amp; Matriz::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de Atibuição de Adição. </p>
+<p>Soma as respectivas linhas e colunas de uma <a class="el" href="classMatriz.html">Matriz</a> a <a class="el" href="classMatriz.html">Matriz</a> atual. Gera alteração da própria <a class="el" href="classMatriz.html">Matriz</a>, não criando um novo objeto.</p>
+<p>Observação: Para a soma ser bem sucedida, as matrizes devem possuir o exato número de linhas e colunas. Caso contrário a operação não é realizada.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Referência constante a <a class="el" href="classMatriz.html">Matriz</a> referente a parcela direita da Operação de Atrbuição de Adição </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para a própria <a class="el" href="classMatriz.html">Matriz</a> que invocou o método </dd></dl>
+
+</div>
+</div>
+<a id="a60851cf31b1b25d3ce0d3ce4cf65d3fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60851cf31b1b25d3ce0d3ce4cf65d3fe">&#9670;&nbsp;</a></span>operator-()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a> Matriz::operator- </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de Subtração. </p>
+<p>Suntrai as respectivas linhas e colunas de uma <a class="el" href="classMatriz.html">Matriz</a> a <a class="el" href="classMatriz.html">Matriz</a> atual gerando ao fim um novo objeto.</p>
+<p>Observação: Para a operação ser bem sucedida, as matrizes devem possuir o exato número de linhas e colunas. Caso contrário a operação não é realizada.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Referência constante a <a class="el" href="classMatriz.html">Matriz</a> referente a parcela direita da Operação de Subtração </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classMatriz.html">Matriz</a> resultante da Operação </dd></dl>
+
+</div>
+</div>
+<a id="a5ab483e63659844df170d87fc1b07faf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab483e63659844df170d87fc1b07faf">&#9670;&nbsp;</a></span>operator-=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a>&amp; Matriz::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de Atibuição de Subtração. </p>
+<p>Subtrai as respectivas linhas e colunas de uma <a class="el" href="classMatriz.html">Matriz</a> a <a class="el" href="classMatriz.html" title="Classe para Representação de Matrizes.">Matriz</a> atual. Gera alteração da própria <a class="el" href="classMatriz.html">Matriz</a>, não criando um novo objeto.</p>
+<p>Observação: Para a operação ser bem sucedida, as matrizes devem possuir o exato número de linhas e colunas. Caso contrário a operação não érRealizada.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Referência constante a <a class="el" href="classMatriz.html">Matriz</a> referente a parcela direita da Operação de Atrbuição de Subtração </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para a própria <a class="el" href="classMatriz.html">Matriz</a> que invocou o operador </dd></dl>
+
+</div>
+</div>
+<a id="a9566df815b81e112f6785f748866ae5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9566df815b81e112f6785f748866ae5f">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a>&amp; Matriz::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMatriz.html">Matriz</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atribuição Move. </p>
+<p>Movimenta a estrutura completa de uma <a class="el" href="classMatriz.html">Matriz</a>. Dessa forma pode-se usar como parâmetro qualquer <a class="el" href="classMatriz.html">Matriz</a>, independente de sua quantidade de linhas e colunas divergirem da quantidade atual da <a class="el" href="classMatriz.html">Matriz</a> que invocou o método. Isso deve-se ao fato da alocação dinâmica de memória realizada na chamada desse método.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vetor</td><td>Referência rvalue da <a class="el" href="classMatriz.html">Matriz</a> Base para a operação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classMatriz.html">Matriz</a> que Invocou o Método </dd></dl>
+
+</div>
+</div>
+<a id="a48aaebca919d8d50bacf7e9a184c0021"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48aaebca919d8d50bacf7e9a184c0021">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a>&amp; Matriz::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atribuição por Cópia. </p>
+<p>Copia a estrutura completa de uma <a class="el" href="classMatriz.html">Matriz</a>. Dessa forma pode-se copiar qualquer <a class="el" href="classMatriz.html">Matriz</a>, independente de sua quantidade de linhas e colunas divergirem da quantidade atual da <a class="el" href="classMatriz.html">Matriz</a> que invocou o operador. Isso deve-se ao fato da alocação dinâmica de memória realizada na chamada desse método.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Referência constante da <a class="el" href="classMatriz.html">Matriz</a> que será Copiado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para a <a class="el" href="classMatriz.html">Matriz</a> que invocou o operador </dd></dl>
+
+</div>
+</div>
+<a id="a337f1572a6fb5bdd65d7e97b7dfd4bf3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a337f1572a6fb5bdd65d7e97b7dfd4bf3">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double*&amp; Matriz::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de Acesso. </p>
+<p>Usado quando é necessário acessar um elemento em um índice específico da <a class="el" href="classMatriz.html">Matriz</a>. Permite tanto a leitura quanto a escrita da posição da <a class="el" href="classMatriz.html">Matriz</a> .</p>
+<p>Observação: O índice informado deve ser compatível com a estrutura da <a class="el" href="classMatriz.html">Matriz</a>, caso contrário a operação não é realizada a fim de evitar acesso a espaços de memórias não pertencetes a <a class="el" href="classMatriz.html">Matriz</a> .</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>índice que deseja-se acessar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para o endereço de memória do elemento no índice informado </dd></dl>
+
+</div>
+</div>
+<a id="af8987741da4cabe0aa054f2e8b077a97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8987741da4cabe0aa054f2e8b077a97">&#9670;&nbsp;</a></span>print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Matriz::print </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método usado para exibir a <a class="el" href="classMatriz.html">Matriz</a>. </p>
+<p>Exibe as informações de linhas e colunas da <a class="el" href="classMatriz.html">Matriz</a> atual, bem como cada linha e coluna no formato usual de representação de matrizes. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Amigas e Funções Relacionadas</h2>
+<a id="a871b8637c7b093fd539bca2978ed0fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a871b8637c7b093fd539bca2978ed0fcb">&#9670;&nbsp;</a></span>operator* <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>escalar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de atibuição de multiplicação por escalar a esquerda. </p>
+<p>Múltiplica as respectivas linhas e colunas de uma <a class="el" href="classMatriz.html">Matriz</a> por um número escalar informado a esquerda de <b>*</b>. Nesse caso gera uma nova <a class="el" href="classMatriz.html">Matriz</a> resultante da operação</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">escalar</td><td><code>float</code> usado para múltiplicar os valores de uma <a class="el" href="classMatriz.html">Matriz</a> </td></tr>
+    <tr><td class="paramname">m</td><td>Referência constante a uma <a class="el" href="classMatriz.html">Matriz</a> usada na Operação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classMatriz.html">Matriz</a> resultante do produto entre a <a class="el" href="classMatriz.html">Matriz</a> de parâmetro e o escalar </dd></dl>
+
+</div>
+</div>
+<a id="aa2e14cafdab952648bae7f283287e482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e14cafdab952648bae7f283287e482">&#9670;&nbsp;</a></span>operator* <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a> operator* </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMatriz.html">Matriz</a> &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>escalar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Operador de atibuição de multiplicação por escalar a direita. </p>
+<p>Múltiplica as respectivas linhas e colunas de uma <a class="el" href="classMatriz.html">Matriz</a> por um número escalar informado a direita de <b>*</b>. Nesse caso gera uma nova <a class="el" href="classMatriz.html">Matriz</a> resultante da operação</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">escalar</td><td><code>float</code> usado para múltiplicar os valores de uma <a class="el" href="classMatriz.html">Matriz</a> </td></tr>
+    <tr><td class="paramname">m</td><td>Referência constante a uma <a class="el" href="classMatriz.html">Matriz</a> usada na Operação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classMatriz.html">Matriz</a> resultante do produto entre a <a class="el" href="classMatriz.html">Matriz</a> de parâmetro e o escalar </dd></dl>
+
+</div>
+</div>
 <hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
 <li>Base/<a class="el" href="matriz_8h_source.html">matriz.h</a></li>
 </ul>

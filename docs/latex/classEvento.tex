@@ -1,28 +1,87 @@
 \hypertarget{classEvento}{}\doxysection{Referência da Classe Evento}
 \label{classEvento}\index{Evento@{Evento}}
+
+
+Classe Responsável pela representação de um evento único capaz de ser processado por um objeto do tipo \mbox{\hyperlink{classGerenciadorEvento}{Gerenciador\+Evento}}.  
+
+
+
+
+{\ttfamily \#include $<$evento.\+h$>$}
+
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classEvento_a784ca75439e527cbd03b84e50e54e017}\label{classEvento_a784ca75439e527cbd03b84e50e54e017}} 
-{\bfseries Evento} (Tipo\+Evento te, Trigger tr)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classEvento_a784ca75439e527cbd03b84e50e54e017}{Evento}} (Tipo\+Evento te, Trigger tr)
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEvento_a1fe5f7549736a17562670d0ac3941bec}\label{classEvento_a1fe5f7549736a17562670d0ac3941bec}} 
+\mbox{\hyperlink{classEvento_a1fe5f7549736a17562670d0ac3941bec}{$\sim$\+Evento}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classEvento_a048ab9016192065b90e7ece0f398038e}\label{classEvento_a048ab9016192065b90e7ece0f398038e}} 
-Tipo\+Evento {\bfseries tipo\+\_\+evento}
-\item 
+Tipo\+Evento \mbox{\hyperlink{classEvento_a048ab9016192065b90e7ece0f398038e}{tipo\+\_\+evento}}
+\begin{DoxyCompactList}\small\item\em Define o tipo do evento gerado. Para ver os tipos permitidos olhe o arquivo da Classe. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classEvento_ae3eb67534a6a105f1e76fdebd5ffb4fb}\label{classEvento_ae3eb67534a6a105f1e76fdebd5ffb4fb}} 
-Trigger {\bfseries trigger}
-\end{DoxyCompactItemize}
+Trigger \mbox{\hyperlink{classEvento_ae3eb67534a6a105f1e76fdebd5ffb4fb}{trigger}}
+\begin{DoxyCompactList}\small\item\em Define quem gerou o evento. Para ver os ativadores permitidos olhe o arquivo da Classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
+std\+::ostream \& \mbox{\hyperlink{classEvento_a9548eaaa114d1d6c3cbee159831cc064}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classEvento}{Evento}} \&evento)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do Insertion Operator para Saída de Dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe Responsável pela representação de um evento único capaz de ser processado por um objeto do tipo \mbox{\hyperlink{classGerenciadorEvento}{Gerenciador\+Evento}}. 
+
+\begin{DoxyAuthor}{Autor}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Última alteração\+: 28/02/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classEvento_a784ca75439e527cbd03b84e50e54e017}\label{classEvento_a784ca75439e527cbd03b84e50e54e017}} 
+\index{Evento@{Evento}!Evento@{Evento}}
+\index{Evento@{Evento}!Evento@{Evento}}
+\doxysubsubsection{\texorpdfstring{Evento()}{Evento()}}
+{\footnotesize\ttfamily Evento\+::\+Evento (\begin{DoxyParamCaption}\item[{Tipo\+Evento}]{te,  }\item[{Trigger}]{tr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Cria um objeto do tipo evento conforme descrito pelos parâmetros informados.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em te} & inicializa o atributo \mbox{\hyperlink{classEvento_a048ab9016192065b90e7ece0f398038e}{tipo\+\_\+evento}} \\
+\hline
+{\em tr} & inicializa o atributo \mbox{\hyperlink{classEvento_ae3eb67534a6a105f1e76fdebd5ffb4fb}{trigger}} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
 \mbox{\Hypertarget{classEvento_a9548eaaa114d1d6c3cbee159831cc064}\label{classEvento_a9548eaaa114d1d6c3cbee159831cc064}} 
-std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, const \mbox{\hyperlink{classEvento}{Evento}} \&evento)
-\end{DoxyCompactItemize}
+\index{Evento@{Evento}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Evento@{Evento}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classEvento}{Evento}} \&}]{evento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do Insertion Operator para Saída de Dados. 
+
+\begin{DoxyReturn}{Retorna}
+string no formato\+: \char`\"{}(a,b)\char`\"{} onde têm-\/se\+: a\+: valor do tipo de evento; b\+: valor do ativador do evento 
+\end{DoxyReturn}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Interface/evento.\+h\end{DoxyCompactItemize}
+Interface/\mbox{\hyperlink{evento_8h}{evento.\+h}}\end{DoxyCompactItemize}

@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -72,6 +79,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Classe para Representação de um <a class="el" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano.">Vetor</a> no Plano Cartesiano.  
+ <a href="classVetor.html#details">Mais...</a></p>
+
 <p><code>#include &lt;<a class="el" href="vetor_8h_source.html">vetor.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -83,7 +93,7 @@ Membros Públicos</h2></td></tr>
 <tr class="memdesc:a6e2acbd08b7677a3b2b2cbc2fab520ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Base a partir de Coordenadas.  <a href="classVetor.html#a6e2acbd08b7677a3b2b2cbc2fab520ff">Mais...</a><br /></td></tr>
 <tr class="separator:a6e2acbd08b7677a3b2b2cbc2fab520ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab37163f68f7f265eedfcf5adba635a68"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#ab37163f68f7f265eedfcf5adba635a68">Vetor</a> (const <a class="el" href="classPonto.html">Ponto</a> &amp;inicio, const <a class="el" href="classPonto.html">Ponto</a> &amp;fim)</td></tr>
-<tr class="memdesc:ab37163f68f7f265eedfcf5adba635a68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor a partir de Pontos.  <a href="classVetor.html#ab37163f68f7f265eedfcf5adba635a68">Mais...</a><br /></td></tr>
+<tr class="memdesc:ab37163f68f7f265eedfcf5adba635a68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor a partir de pontos.  <a href="classVetor.html#ab37163f68f7f265eedfcf5adba635a68">Mais...</a><br /></td></tr>
 <tr class="separator:ab37163f68f7f265eedfcf5adba635a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2bcdf7f558b9c6768697a50ba1f8e260"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#a2bcdf7f558b9c6768697a50ba1f8e260">Vetor</a> (const <a class="el" href="classVetor.html">Vetor</a> &amp;vetor)</td></tr>
 <tr class="memdesc:a2bcdf7f558b9c6768697a50ba1f8e260"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de Cópia.  <a href="classVetor.html#a2bcdf7f558b9c6768697a50ba1f8e260">Mais...</a><br /></td></tr>
@@ -92,16 +102,25 @@ Membros Públicos</h2></td></tr>
 <tr class="memdesc:a0f841dc7b4c753e545f966ff44f86435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Move.  <a href="classVetor.html#a0f841dc7b4c753e545f966ff44f86435">Mais...</a><br /></td></tr>
 <tr class="separator:a0f841dc7b4c753e545f966ff44f86435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2279b65fbde9427cb721ba3ff748adb6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#a2279b65fbde9427cb721ba3ff748adb6">getModulo</a> () const</td></tr>
+<tr class="memdesc:a2279b65fbde9427cb721ba3ff748adb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para cálcular o módulo do objeto <a class="el" href="classVetor.html">Vetor</a>.  <a href="classVetor.html#a2279b65fbde9427cb721ba3ff748adb6">Mais...</a><br /></td></tr>
 <tr class="separator:a2279b65fbde9427cb721ba3ff748adb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7291e5e93996a98b74e79781198b25c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#ab7291e5e93996a98b74e79781198b25c">getAngulo</a> () const</td></tr>
+<tr class="memdesc:ab7291e5e93996a98b74e79781198b25c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método para cálcular o ângulo formado pelo vetor em relação ao eixo x.  <a href="classVetor.html#ab7291e5e93996a98b74e79781198b25c">Mais...</a><br /></td></tr>
 <tr class="separator:ab7291e5e93996a98b74e79781198b25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9ec833987134211b666458ac33811fe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#af9ec833987134211b666458ac33811fe">vetorToPonto</a> ()</td></tr>
+<tr class="memdesc:af9ec833987134211b666458ac33811fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforma um <a class="el" href="classVetor.html">Vetor</a> para sua representação em <a class="el" href="classPonto.html">Ponto</a>.  <a href="classVetor.html#af9ec833987134211b666458ac33811fe">Mais...</a><br /></td></tr>
 <tr class="separator:af9ec833987134211b666458ac33811fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb04f83b5a33990856ad6809772943ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatriz.html">Matriz</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#afb04f83b5a33990856ad6809772943ca">vetorToMatriz</a> ()</td></tr>
+<tr class="memdesc:afb04f83b5a33990856ad6809772943ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforma um <a class="el" href="classVetor.html">Vetor</a> para sua representação em <a class="el" href="classMatriz.html">Matriz</a>.  <a href="classVetor.html#afb04f83b5a33990856ad6809772943ca">Mais...</a><br /></td></tr>
+<tr class="separator:afb04f83b5a33990856ad6809772943ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae59666bd20761415172191c2afa4decf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVetor.html">Vetor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#ae59666bd20761415172191c2afa4decf">operator+</a> (const <a class="el" href="classVetor.html">Vetor</a> &amp;vetor)</td></tr>
+<tr class="memdesc:ae59666bd20761415172191c2afa4decf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Soma de vetores.  <a href="classVetor.html#ae59666bd20761415172191c2afa4decf">Mais...</a><br /></td></tr>
 <tr class="separator:ae59666bd20761415172191c2afa4decf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a530724daa99751287335033b9ccb6b15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVetor.html">Vetor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#a530724daa99751287335033b9ccb6b15">operator-</a> (const <a class="el" href="classVetor.html">Vetor</a> &amp;vetor)</td></tr>
+<tr class="memdesc:a530724daa99751287335033b9ccb6b15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Subtração de Vetores.  <a href="classVetor.html#a530724daa99751287335033b9ccb6b15">Mais...</a><br /></td></tr>
 <tr class="separator:a530724daa99751287335033b9ccb6b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7da569260dc42ea384335cce2c11fafb"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#a7da569260dc42ea384335cce2c11fafb">operator*</a> (const <a class="el" href="classVetor.html">Vetor</a> &amp;vetor)</td></tr>
+<tr class="memdesc:a7da569260dc42ea384335cce2c11fafb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Produto escalar de vetores.  <a href="classVetor.html#a7da569260dc42ea384335cce2c11fafb">Mais...</a><br /></td></tr>
 <tr class="separator:a7da569260dc42ea384335cce2c11fafb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37935eaf0267708f702daccc9f39e953"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVetor.html">Vetor</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#a37935eaf0267708f702daccc9f39e953">operator=</a> (const <a class="el" href="classVetor.html">Vetor</a> &amp;vetor)</td></tr>
 <tr class="memdesc:a37935eaf0267708f702daccc9f39e953"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribuição por Cópia.  <a href="classVetor.html#a37935eaf0267708f702daccc9f39e953">Mais...</a><br /></td></tr>
@@ -114,25 +133,29 @@ Membros Públicos</h2></td></tr>
 Atributos Públicos</h2></td></tr>
 <tr class="memitem:af652db948695d6bbd7bc81307020f13b"><td class="memItemLeft" align="right" valign="top"><a id="af652db948695d6bbd7bc81307020f13b"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a></td></tr>
-<tr class="memdesc:af652db948695d6bbd7bc81307020f13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente no eixo X - Constante Real que Múltiplica o vetor i. <br /></td></tr>
+<tr class="memdesc:af652db948695d6bbd7bc81307020f13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente no eixo das Abscissas. <br /></td></tr>
 <tr class="separator:af652db948695d6bbd7bc81307020f13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab430657c16d9b5c321a4b5428a5181ae"><td class="memItemLeft" align="right" valign="top"><a id="ab430657c16d9b5c321a4b5428a5181ae"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a></td></tr>
-<tr class="memdesc:ab430657c16d9b5c321a4b5428a5181ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente no eixo Y - Constante Real que Múltiplica o vetor j. <br /></td></tr>
+<tr class="memdesc:ab430657c16d9b5c321a4b5428a5181ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente no eixo das Ordendas. <br /></td></tr>
 <tr class="separator:ab430657c16d9b5c321a4b5428a5181ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
 <tr class="memitem:a915c25c15881d882e5891765f574ff72"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#a915c25c15881d882e5891765f574ff72">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classVetor.html">Vetor</a> &amp;vetor)</td></tr>
+<tr class="memdesc:a915c25c15881d882e5891765f574ff72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do Insertion Operator para Saída de Dados.  <a href="classVetor.html#a915c25c15881d882e5891765f574ff72">Mais...</a><br /></td></tr>
 <tr class="separator:a915c25c15881d882e5891765f574ff72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa83625b0e4fc53fc3fe9cc2a6d98d9b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVetor.html">Vetor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#aa83625b0e4fc53fc3fe9cc2a6d98d9b7">operator*</a> (const float escalar, const <a class="el" href="classVetor.html">Vetor</a> &amp;vetor)</td></tr>
+<tr class="memdesc:aa83625b0e4fc53fc3fe9cc2a6d98d9b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplicação de um <a class="el" href="classVetor.html">Vetor</a> por um escalar.  <a href="classVetor.html#aa83625b0e4fc53fc3fe9cc2a6d98d9b7">Mais...</a><br /></td></tr>
 <tr class="separator:aa83625b0e4fc53fc3fe9cc2a6d98d9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb08d22ebcaaa62ae2d4fcbbc5ebf6ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVetor.html">Vetor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classVetor.html#aeb08d22ebcaaa62ae2d4fcbbc5ebf6ee">operator*</a> (const <a class="el" href="classVetor.html">Vetor</a> &amp;vetor, const float escalar)</td></tr>
+<tr class="memdesc:aeb08d22ebcaaa62ae2d4fcbbc5ebf6ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplicação de um <a class="el" href="classVetor.html">Vetor</a> por um escalar.  <a href="classVetor.html#aeb08d22ebcaaa62ae2d4fcbbc5ebf6ee">Mais...</a><br /></td></tr>
 <tr class="separator:aeb08d22ebcaaa62ae2d4fcbbc5ebf6ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
-<dl class="section date"><dt>Data</dt><dd>11/11/2020 Classe para Representação de um <a class="el" href="classVetor.html">Vetor</a> no Plano Cartesiano </dd></dl>
+<div class="textblock"><p>Classe para Representação de um <a class="el" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano.">Vetor</a> no Plano Cartesiano. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última Modificação: 27/02/2002 </dd></dl>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
 <a id="ab9c22eb83d7874825f4124eac52b3c58"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9c22eb83d7874825f4124eac52b3c58">&#9670;&nbsp;</a></span>Vetor() <span class="overload">[1/5]</span></h2>
@@ -159,7 +182,7 @@ Amigas</h2></td></tr>
 
 <p>Construtor Default. </p>
 <p>Chamado quando nenhum parâmetro de ininicialização for informado.</p>
-<p>Cria um objeto com ambas as componentes configuradas para 0, resultando em um vetor nulo.</p>
+<p>Cria um objeto com ambas as componentes configuradas para 0, resultando em um vetor nulo. </p>
 
 </div>
 </div>
@@ -198,11 +221,11 @@ Amigas</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor Base a partir de Coordenadas. </p>
-<p>Cria um objeto com as componentes conforme valores passados por parâmetro</p>
+<p>Cria um objeto com as componentes conforme valores passados por parâmetro.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">x</td><td>um float representando a Componente X </td></tr>
-    <tr><td class="paramname">y</td><td>um float representando a Componente Y</td></tr>
+    <tr><td class="paramname">x</td><td>usado para inicializar atributo de mesmo nomenclatura </td></tr>
+    <tr><td class="paramname">y</td><td>usado para inicializar atributo de mesmo nomenclatura </td></tr>
   </table>
   </dd>
 </dl>
@@ -243,12 +266,13 @@ Amigas</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Construtor a partir de Pontos. </p>
-<p>Cria um objeto onde componentes calculadas a partir de dois pontos, sendo eles o ponto de Início e de Fim do vetor, inforamados por parâmetro.</p>
+<p>Construtor a partir de pontos. </p>
+<p>Cria um objeto onde as componentes são calculadas a partir de dois pontos, sendo eles o ponto de Início e de Fim do vetor, inforamados por parâmetro.</p>
+<p>O cálculo do vetor dá-se da seguinte forma: Considere os Pontos \( I(xi,yi) \) e \( F(xf,yf) \) representando respectivamente os parâmetros inicio e fim. As componentes do vetor dá-se da forma: \( \vec{v} = (xf-xi, yf-yi) \).</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">inicio</td><td>uma referência constante a um objeto do tipo <a class="el" href="classPonto.html">Ponto</a> </td></tr>
-    <tr><td class="paramname">fim</td><td>uma referência constante a um objeto do tipo <a class="el" href="classPonto.html">Ponto</a></td></tr>
+    <tr><td class="paramname">inicio</td><td>Referência constante a um <a class="el" href="classPonto.html">Ponto</a> </td></tr>
+    <tr><td class="paramname">fim</td><td>Referência constante a um <a class="el" href="classPonto.html">Ponto</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -283,7 +307,7 @@ Amigas</h2></td></tr>
 <p>Cria um novo objeto copiando as componentes de um vetor informado.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vetor</td><td>uma referência constante para um <a class="el" href="classVetor.html">Vetor</a></td></tr>
+    <tr><td class="paramname">vetor</td><td>Referência constante para o <a class="el" href="classVetor.html">Vetor</a> que será copiado </td></tr>
   </table>
   </dd>
 </dl>
@@ -318,11 +342,11 @@ Amigas</h2></td></tr>
 <p>Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os dados das componentes de um vetor para o novo objeto criado.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vetor</td><td>uma referência rvalue de um <a class="el" href="classVetor.html">Vetor</a></td></tr>
+    <tr><td class="paramname">vetor</td><td>Referência rvalue de um <a class="el" href="classVetor.html">Vetor</a></td></tr>
   </table>
   </dd>
 </dl>
-<p>Para mais detalhe sobre o recurso, consultar documentação da linguagem.</p>
+<p>Para mais detalhe sobre o recurso, consultar documentação da linguagem </p>
 
 </div>
 </div>
@@ -349,8 +373,10 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Método para cálcular o angulo formado pelo <a class="el" href="classVetor.html">Vetor</a> em relação ao eixo x.</p>
-<dl class="section return"><dt>Retorna</dt><dd>um número float</dd></dl>
+
+<p>Método para cálcular o ângulo formado pelo vetor em relação ao eixo x. </p>
+<p>Cálculo efetuado através de \(\alpha = \arctan{(y/x)}\).</p>
+<dl class="section return"><dt>Retorna</dt><dd>O ângulo \(\alpha\) em Radianos </dd></dl>
 
 </div>
 </div>
@@ -376,8 +402,10 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Método para cálcular o módulo do objeto vetor.</p>
-<dl class="section return"><dt>Retorna</dt><dd>um número float</dd></dl>
+
+<p>Método para cálcular o módulo do objeto <a class="el" href="classVetor.html">Vetor</a>. </p>
+<p>Cálculo efetuado através de: \( |v| = \sqrt{x^2 + y^2}\).</p>
+<dl class="section return"><dt>Retorna</dt><dd>O valor do módulo \(|v|\) </dd></dl>
 
 </div>
 </div>
@@ -404,15 +432,16 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Produto Escalar de Vetores.</p>
-<p>Multiplica as componentes respesctivas dos Vetores, onde os valores do produto são somados e retornados.</p>
+
+<p>Produto escalar de vetores. </p>
+<p>Multiplica as respesctivas componentes dos vetores, sendo que os valores resultantes desses produtos são somados e retornados.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vetor</td><td>uma referência constante a um <a class="el" href="classVetor.html">Vetor</a></td></tr>
+    <tr><td class="paramname">vetor</td><td>Referência constante a um <a class="el" href="classVetor.html">Vetor</a> </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>um número int</dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>O resutlado <code>float</code> da Operação </dd></dl>
 
 </div>
 </div>
@@ -439,14 +468,16 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Soma de Vetores. Soma as componentes dos Vetores criando assim um novo objeto.</p>
+
+<p>Soma de vetores. </p>
+<p>Soma as respectivas componentes dos vetores criando assim um novo objeto <a class="el" href="classVetor.html">Vetor</a>.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vetor</td><td>uma referência constante a um <a class="el" href="classVetor.html">Vetor</a> </td></tr>
+    <tr><td class="paramname">vetor</td><td>Referência constante ao <a class="el" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano.">Vetor</a> referente a parcela direita da Operação </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>um objeto do tipo <a class="el" href="classVetor.html">Vetor</a></dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano.">Vetor</a> resultante da Operação </dd></dl>
 
 </div>
 </div>
@@ -473,14 +504,16 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Subtração de Vetores. Subtrai as componentes dos Vetores criando assim um novo objeto.</p>
+
+<p>Subtração de Vetores. </p>
+<p>Subtrai as respectivas componentes dos vetores criando assim um novo objeto <a class="el" href="classVetor.html">Vetor</a>.</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vetor</td><td>uma referência constante a um <a class="el" href="classVetor.html">Vetor</a></td></tr>
+    <tr><td class="paramname">vetor</td><td>Referência constante a um <a class="el" href="classVetor.html">Vetor</a> referente a parcela direita da Operação </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>um objeto do tipo <a class="el" href="classVetor.html">Vetor</a></dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classVetor.html">Vetor</a> resultante da Operação </dd></dl>
 
 </div>
 </div>
@@ -511,11 +544,11 @@ Amigas</h2></td></tr>
 <p>Atribuição por Cópia. </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vetor</td><td>uma referência constante de um <a class="el" href="classVetor.html">Vetor</a> </td></tr>
+    <tr><td class="paramname">vetor</td><td>Referência constante do <a class="el" href="classVetor.html">Vetor</a> que será Copiado </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classVetor.html">Vetor</a> que Invocou o Método</dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classVetor.html">Vetor</a> que Invocou o operador </dd></dl>
 
 </div>
 </div>
@@ -546,11 +579,43 @@ Amigas</h2></td></tr>
 <p>Atribuição Move. </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vetor</td><td>uma referência rvalue de um <a class="el" href="classVetor.html">Vetor</a> </td></tr>
+    <tr><td class="paramname">vetor</td><td>Referência rvalue do <a class="el" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano.">Vetor</a> Base para a operação </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classVetor.html">Vetor</a> que Invocou o Método</dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para o <a class="el" href="classVetor.html">Vetor</a> que Invocou o operador </dd></dl>
+
+</div>
+</div>
+<a id="afb04f83b5a33990856ad6809772943ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb04f83b5a33990856ad6809772943ca">&#9670;&nbsp;</a></span>vetorToMatriz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatriz.html">Matriz</a> Vetor::vetorToMatriz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transforma um <a class="el" href="classVetor.html">Vetor</a> para sua representação em <a class="el" href="classMatriz.html">Matriz</a>. </p>
+<p>Considere o vetor \( \vec{v} = (x,y) \). A representação em forma de matriz de \( v \) é dada como:</p>
+<p class="formulaDsp">
+\[ M = \begin{bmatrix} x \\ y \\ 1 \end{bmatrix} \]
+</p>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classMatriz.html">Matriz</a> 3x1 M </dd></dl>
 
 </div>
 </div>
@@ -576,8 +641,10 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Método para obter uma formatação do <a class="el" href="classVetor.html">Vetor</a> para um <a class="el" href="classPonto.html">Ponto</a> com coordenadas x e y respectivamente iguais ás componentes x e y</p>
-<dl class="section return"><dt>Retorna</dt><dd>um <a class="el" href="classPonto.html">Ponto</a></dd></dl>
+
+<p>Transforma um <a class="el" href="classVetor.html">Vetor</a> para sua representação em <a class="el" href="classPonto.html">Ponto</a>. </p>
+<p>Considere o vetor \( \vec{v} = (x,y) \). Diz-se que sua representação em como um ponto pode ser dada por \( P(x,y) \).</p>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classPonto.html">Ponto</a> conforme P </dd></dl>
 
 </div>
 </div>
@@ -615,15 +682,17 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Multiplicação de um <a class="el" href="classVetor.html">Vetor</a> por um escalar. Multiplica as componentes do <a class="el" href="classVetor.html">Vetor</a> por um escalar a esquerda da operação <b>*</b> criando assim um novo objeto.</p>
+
+<p>Multiplicação de um <a class="el" href="classVetor.html">Vetor</a> por um escalar. </p>
+<p>Cria um novo objeto do tipo <a class="el" href="classVetor.html">Vetor</a> através da multiplicação entre as componentes de um <a class="el" href="classVetor.html">Vetor</a> por um escalar a esquerda da operação <b>*</b> .</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">escalar</td><td>um valor float constante </td></tr>
-    <tr><td class="paramname">vetor</td><td>uma referência constante a um <a class="el" href="classVetor.html">Vetor</a></td></tr>
+    <tr><td class="paramname">escalar</td><td>valor <code>float</code> constante </td></tr>
+    <tr><td class="paramname">vetor</td><td>Referência constante ao <a class="el" href="classVetor.html">Vetor</a> base para a Multplicação </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>um objeto do tipo <a class="el" href="classVetor.html">Vetor</a></dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classVetor.html">Vetor</a> resultante da Operação </dd></dl>
 
 </div>
 </div>
@@ -660,15 +729,17 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Multiplicação de um <a class="el" href="classVetor.html">Vetor</a> por um escalar. Multiplica as componentes do <a class="el" href="classVetor.html">Vetor</a> por um escalar a direita da operação <b>*</b> criando assim um novo objeto.</p>
+
+<p>Multiplicação de um <a class="el" href="classVetor.html">Vetor</a> por um escalar. </p>
+<p>Cria um novo objeto do tipo <a class="el" href="classVetor.html">Vetor</a> através da multiplicação entre as componentes de um <a class="el" href="classVetor.html">Vetor</a> por um escalar a direita da operação <b>*</b> .</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">escalar</td><td>um valor float constante </td></tr>
-    <tr><td class="paramname">vetor</td><td>uma referência constante a um <a class="el" href="classVetor.html">Vetor</a></td></tr>
+    <tr><td class="paramname">escalar</td><td>valor <code>float</code> constante </td></tr>
+    <tr><td class="paramname">vetor</td><td>Referência constante ao <a class="el" href="classVetor.html">Vetor</a> base para a Multplicação </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>um objeto do tipo <a class="el" href="classVetor.html">Vetor</a></dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classVetor.html">Vetor</a> resultante da Operação </dd></dl>
 
 </div>
 </div>
@@ -705,8 +776,9 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Função amiga para ter acesso ao atributos protegidos da classe, visando sobscrita do operador &lt;&lt; para apresentação de saída ao usuário.</p>
-<dl class="section return"><dt>Retorna</dt><dd>uma string no formato: xi + yj</dd></dl>
+
+<p>Sobrecarga do Insertion Operator para Saída de Dados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>uma string no formato: "Vetor(x,y)" onde x e y são respectivamentes os valores dos atributos de mesmo nome do objeto </dd></dl>
 
 </div>
 </div>

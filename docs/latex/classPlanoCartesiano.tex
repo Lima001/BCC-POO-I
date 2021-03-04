@@ -2,52 +2,182 @@
 \label{classPlanoCartesiano}\index{PlanoCartesiano@{PlanoCartesiano}}
 
 
+Classe responsável pela representação gráfica do Plano Cartesiano.  
+
+
+
+
+{\ttfamily \#include $<$plano\+\_\+cartesiano.\+h$>$}
+
+
+
 Diagrama de colaboração para Plano\+Cartesiano\+:
-% FIG 0
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classPlanoCartesiano__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classPlanoCartesiano_a7672bdb864baaa73d69624b5b59628aa}\label{classPlanoCartesiano_a7672bdb864baaa73d69624b5b59628aa}} 
-{\bfseries Plano\+Cartesiano} (int espacamento\+\_\+x, int espacamento\+\_\+y, const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor\+\_\+eixos, const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor\+\_\+grade, int largura\+\_\+tela, int altura\+\_\+tela, const \mbox{\hyperlink{classPonto}{Ponto}} \&origem=\mbox{\hyperlink{classPonto}{Ponto}}())
-\item 
-\mbox{\Hypertarget{classPlanoCartesiano_a5cb5929d65537324a8c5b9269f3f6b33}\label{classPlanoCartesiano_a5cb5929d65537324a8c5b9269f3f6b33}} 
-void {\bfseries desenhar\+Eixo} (\mbox{\hyperlink{classRenderizador}{Renderizador}} \&render)
-\item 
-\mbox{\Hypertarget{classPlanoCartesiano_a7be671bde040eb9cf4db81b61b89a811}\label{classPlanoCartesiano_a7be671bde040eb9cf4db81b61b89a811}} 
-void {\bfseries desenhar\+GradeY} (\mbox{\hyperlink{classRenderizador}{Renderizador}} \&render)
-\item 
-\mbox{\Hypertarget{classPlanoCartesiano_a007131ea69729d7100958c2324757040}\label{classPlanoCartesiano_a007131ea69729d7100958c2324757040}} 
-void {\bfseries desenhar\+GradeX} (\mbox{\hyperlink{classRenderizador}{Renderizador}} \&render)
-\item 
-\mbox{\Hypertarget{classPlanoCartesiano_a786778a2224ded284223c27ed44cf298}\label{classPlanoCartesiano_a786778a2224ded284223c27ed44cf298}} 
-void {\bfseries desenhar\+Grade} (\mbox{\hyperlink{classRenderizador}{Renderizador}} \&render)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classPlanoCartesiano_a7672bdb864baaa73d69624b5b59628aa}{Plano\+Cartesiano}} (int \mbox{\hyperlink{classPlanoCartesiano_accf7c773f0a269c9e24639f66e0d282d}{espacamento\+\_\+x}}, int \mbox{\hyperlink{classPlanoCartesiano_a418be3861b8809eadbd43324062b6c61}{espacamento\+\_\+y}}, const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&\mbox{\hyperlink{classPlanoCartesiano_a7fc902565765790474c4955618bf48e0}{cor\+\_\+eixos}}, const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&\mbox{\hyperlink{classPlanoCartesiano_ab2307ed6ad9d0dbe84a7dd055d6f9e80}{cor\+\_\+grade}}, int \mbox{\hyperlink{classPlanoCartesiano_a410a6cf620f5b1faf0b40da7a2212eb9}{largura\+\_\+tela}}, int \mbox{\hyperlink{classPlanoCartesiano_a5e2b8c90296d125d63e395bc95dac704}{altura\+\_\+tela}}, const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classPlanoCartesiano_a34580f009e588fac72e12503027d630d}{origem}}=\mbox{\hyperlink{classPonto}{Ponto}}())
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlanoCartesiano_a5cb5929d65537324a8c5b9269f3f6b33}{desenhar\+Eixo}} (\mbox{\hyperlink{classRenderizador}{Renderizador}} \&render)
+\begin{DoxyCompactList}\small\item\em Desenha os Eixos do Plano Cartesiano. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlanoCartesiano_a7be671bde040eb9cf4db81b61b89a811}{desenhar\+GradeY}} (\mbox{\hyperlink{classRenderizador}{Renderizador}} \&render)
+\begin{DoxyCompactList}\small\item\em Desenha as retas paralelas ao Eixo y. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlanoCartesiano_a007131ea69729d7100958c2324757040}{desenhar\+GradeX}} (\mbox{\hyperlink{classRenderizador}{Renderizador}} \&render)
+\begin{DoxyCompactList}\small\item\em Desenha as retas paralelas ao Eixo x. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlanoCartesiano_a786778a2224ded284223c27ed44cf298}{desenhar\+Grade}} (\mbox{\hyperlink{classRenderizador}{Renderizador}} \&render)
+\begin{DoxyCompactList}\small\item\em Desenha as retas paralelas aos Eixos x e y do Plano, bem como os Próprios Eixos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classPlanoCartesiano_accf7c773f0a269c9e24639f66e0d282d}\label{classPlanoCartesiano_accf7c773f0a269c9e24639f66e0d282d}} 
-int {\bfseries espacamento\+\_\+x}
-\item 
+int \mbox{\hyperlink{classPlanoCartesiano_accf7c773f0a269c9e24639f66e0d282d}{espacamento\+\_\+x}}
+\begin{DoxyCompactList}\small\item\em Distância entre as retas paralelas ao eixo x. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPlanoCartesiano_a418be3861b8809eadbd43324062b6c61}\label{classPlanoCartesiano_a418be3861b8809eadbd43324062b6c61}} 
-int {\bfseries espacamento\+\_\+y}
-\item 
+int \mbox{\hyperlink{classPlanoCartesiano_a418be3861b8809eadbd43324062b6c61}{espacamento\+\_\+y}}
+\begin{DoxyCompactList}\small\item\em Distância entre as retas paralelas ao eixo y. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPlanoCartesiano_a410a6cf620f5b1faf0b40da7a2212eb9}\label{classPlanoCartesiano_a410a6cf620f5b1faf0b40da7a2212eb9}} 
-int {\bfseries largura\+\_\+tela}
-\item 
+int \mbox{\hyperlink{classPlanoCartesiano_a410a6cf620f5b1faf0b40da7a2212eb9}{largura\+\_\+tela}}
+\begin{DoxyCompactList}\small\item\em Largura da tela para desenhar o plano dentro dos limites da aplicação. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPlanoCartesiano_a5e2b8c90296d125d63e395bc95dac704}\label{classPlanoCartesiano_a5e2b8c90296d125d63e395bc95dac704}} 
-int {\bfseries altura\+\_\+tela}
-\item 
+int \mbox{\hyperlink{classPlanoCartesiano_a5e2b8c90296d125d63e395bc95dac704}{altura\+\_\+tela}}
+\begin{DoxyCompactList}\small\item\em Altura da tela para desenhar o plano dentro dos limites da aplicação. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPlanoCartesiano_a34580f009e588fac72e12503027d630d}\label{classPlanoCartesiano_a34580f009e588fac72e12503027d630d}} 
-\mbox{\hyperlink{classPonto}{Ponto}} {\bfseries origem}
-\item 
+\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classPlanoCartesiano_a34580f009e588fac72e12503027d630d}{origem}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPonto}{Ponto}} de Origem do Plano Cartesiano na Tela. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPlanoCartesiano_a7fc902565765790474c4955618bf48e0}\label{classPlanoCartesiano_a7fc902565765790474c4955618bf48e0}} 
-\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} {\bfseries cor\+\_\+eixos}
-\item 
+\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \mbox{\hyperlink{classPlanoCartesiano_a7fc902565765790474c4955618bf48e0}{cor\+\_\+eixos}}
+\begin{DoxyCompactList}\small\item\em Cor dos eixos das abscissas e das ordenadas. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPlanoCartesiano_ab2307ed6ad9d0dbe84a7dd055d6f9e80}\label{classPlanoCartesiano_ab2307ed6ad9d0dbe84a7dd055d6f9e80}} 
-\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} {\bfseries cor\+\_\+grade}
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \mbox{\hyperlink{classPlanoCartesiano_ab2307ed6ad9d0dbe84a7dd055d6f9e80}{cor\+\_\+grade}}
+\begin{DoxyCompactList}\small\item\em Cor das retas paralelas aos eixos das abscissas e das ordenadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe responsável pela representação gráfica do Plano Cartesiano. 
+
+\begin{DoxyAuthor}{Autor}
+Gabriel Eduardo Lima 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+Última alteração\+: 28/02/2021 
+\end{DoxyDate}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classPlanoCartesiano_a7672bdb864baaa73d69624b5b59628aa}\label{classPlanoCartesiano_a7672bdb864baaa73d69624b5b59628aa}} 
+\index{PlanoCartesiano@{PlanoCartesiano}!PlanoCartesiano@{PlanoCartesiano}}
+\index{PlanoCartesiano@{PlanoCartesiano}!PlanoCartesiano@{PlanoCartesiano}}
+\doxysubsubsection{\texorpdfstring{PlanoCartesiano()}{PlanoCartesiano()}}
+{\footnotesize\ttfamily Plano\+Cartesiano\+::\+Plano\+Cartesiano (\begin{DoxyParamCaption}\item[{int}]{espacamento\+\_\+x,  }\item[{int}]{espacamento\+\_\+y,  }\item[{const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&}]{cor\+\_\+eixos,  }\item[{const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&}]{cor\+\_\+grade,  }\item[{int}]{largura\+\_\+tela,  }\item[{int}]{altura\+\_\+tela,  }\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{origem = {\ttfamily \mbox{\hyperlink{classPonto}{Ponto}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Default. 
+
+Cria um objeto com os atributos conforme valores especificados via parâmetro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em espacamento\+\_\+x} & inicializa o atributo de mesma nomenclatura \\
+\hline
+{\em espacamento\+\_\+y} & inicializa o atributo de mesma nomenclatura \\
+\hline
+{\em cor\+\_\+eixos} & inicializa o atributo de mesma nomenclatura \\
+\hline
+{\em cor\+\_\+grade} & inicializa o atributo de mesma nomenclatura \\
+\hline
+{\em largura\+\_\+tela} & inicializa o atributo de mesma nomenclatura \\
+\hline
+{\em altura\+\_\+tela} & inicializa o atributo de mesma nomenclatura \\
+\hline
+{\em origem} & inicializa o atributo de mesma nomenclatura. Caso seja omitido, será considerado como origem o \mbox{\hyperlink{classPonto}{Ponto(0,0)}} da Tela \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classPlanoCartesiano_a5cb5929d65537324a8c5b9269f3f6b33}\label{classPlanoCartesiano_a5cb5929d65537324a8c5b9269f3f6b33}} 
+\index{PlanoCartesiano@{PlanoCartesiano}!desenharEixo@{desenharEixo}}
+\index{desenharEixo@{desenharEixo}!PlanoCartesiano@{PlanoCartesiano}}
+\doxysubsubsection{\texorpdfstring{desenharEixo()}{desenharEixo()}}
+{\footnotesize\ttfamily void Plano\+Cartesiano\+::desenhar\+Eixo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRenderizador}{Renderizador}} \&}]{render }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Desenha os Eixos do Plano Cartesiano. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em render} & Referência constante para objeto do tipo \mbox{\hyperlink{classRenderizador}{Renderizador}} que será usado para o processo de renderização.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classRenderizador}{Renderizador}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classPlanoCartesiano_a786778a2224ded284223c27ed44cf298}\label{classPlanoCartesiano_a786778a2224ded284223c27ed44cf298}} 
+\index{PlanoCartesiano@{PlanoCartesiano}!desenharGrade@{desenharGrade}}
+\index{desenharGrade@{desenharGrade}!PlanoCartesiano@{PlanoCartesiano}}
+\doxysubsubsection{\texorpdfstring{desenharGrade()}{desenharGrade()}}
+{\footnotesize\ttfamily void Plano\+Cartesiano\+::desenhar\+Grade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRenderizador}{Renderizador}} \&}]{render }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Desenha as retas paralelas aos Eixos x e y do Plano, bem como os Próprios Eixos. 
+
+Faz uso dos métodos membros responsáveis pela renderização de cada elemento específico do Plano Cartesiano.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em render} & Referência constante para objeto do tipo \mbox{\hyperlink{classRenderizador}{Renderizador}} que será usado para o processo de renderização\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classRenderizador}{Renderizador}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classPlanoCartesiano_a007131ea69729d7100958c2324757040}\label{classPlanoCartesiano_a007131ea69729d7100958c2324757040}} 
+\index{PlanoCartesiano@{PlanoCartesiano}!desenharGradeX@{desenharGradeX}}
+\index{desenharGradeX@{desenharGradeX}!PlanoCartesiano@{PlanoCartesiano}}
+\doxysubsubsection{\texorpdfstring{desenharGradeX()}{desenharGradeX()}}
+{\footnotesize\ttfamily void Plano\+Cartesiano\+::desenhar\+GradeX (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRenderizador}{Renderizador}} \&}]{render }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Desenha as retas paralelas ao Eixo x. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em render} & Referência constante para objeto do tipo \mbox{\hyperlink{classRenderizador}{Renderizador}} que será usado para o processo de renderização.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classRenderizador}{Renderizador}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classPlanoCartesiano_a7be671bde040eb9cf4db81b61b89a811}\label{classPlanoCartesiano_a7be671bde040eb9cf4db81b61b89a811}} 
+\index{PlanoCartesiano@{PlanoCartesiano}!desenharGradeY@{desenharGradeY}}
+\index{desenharGradeY@{desenharGradeY}!PlanoCartesiano@{PlanoCartesiano}}
+\doxysubsubsection{\texorpdfstring{desenharGradeY()}{desenharGradeY()}}
+{\footnotesize\ttfamily void Plano\+Cartesiano\+::desenhar\+GradeY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRenderizador}{Renderizador}} \&}]{render }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Desenha as retas paralelas ao Eixo y. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em render} & Referência constante para objeto do tipo \mbox{\hyperlink{classRenderizador}{Renderizador}} que será usado para o processo de renderização.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classRenderizador}{Renderizador}} 
+\end{DoxySeeAlso}
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Interface/plano\+\_\+cartesiano.\+h\end{DoxyCompactItemize}
+Interface/\mbox{\hyperlink{plano__cartesiano_8h}{plano\+\_\+cartesiano.\+h}}\end{DoxyCompactItemize}

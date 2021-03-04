@@ -4,8 +4,10 @@ using namespace std;
 
 int main(){
 
+    // Criação de uma Matriz 3x3
     Matriz m1 = Matriz(3,3);
 
+    // Definição de linhas para a matriz
     vector<double> l1 = {1,1,1};
     vector<double> l2 = {2,2,2};
     vector<double> l3 = {3,3,3};
@@ -14,10 +16,14 @@ int main(){
     m1.definir_linha(1,l2);
     m1.definir_linha(2,l3);
 
+    // Criação de uma nova Matriz por cópia
     Matriz m2 = m1;
 
+    // Exibição da Matriz
     m1.print();
     cout << endl;
+    
+    // Testes com as operações de Matrizes com escalar
     (m1 *= 2).print();
     cout << endl;
     (m1 += m2).print();
@@ -32,6 +38,7 @@ int main(){
 
     cout << endl;
 
+    // Acesso, Recuperação e Alteração de elementos usando []
     cout << m1[0][0] << endl;
     m1[0][0] = 57;
     cout << m1[0][0] << endl;
@@ -39,6 +46,7 @@ int main(){
 
     cout << endl;
 
+    // Criação de Matrizes para testes
     Matriz A = Matriz(3,2);
     Matriz B = Matriz(2,3);
 
@@ -49,6 +57,7 @@ int main(){
     B.definir_linha(0, vector<double>{1,2,3});
     B.definir_linha(1, vector<double>{-2,0,4});
 
+    // Testes com as operações de Matrizes com escalar
     (A*B).print();
     cout << endl;
     (B*A).print();

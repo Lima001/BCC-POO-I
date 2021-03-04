@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -72,6 +79,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Classe responsável por representar cores RGBA para uso em conjunto aos elementos gráficos da interface SDL.  
+ <a href="classCorRGBA.html#details">Mais...</a></p>
+
 <p><code>#include &lt;<a class="el" href="cor__rgba_8h_source.html">cor_rgba.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -82,8 +92,9 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:aa3d9084d0dd2a5764b0a1de212ba8815"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorRGBA.html#aa3d9084d0dd2a5764b0a1de212ba8815">CorRGBA</a> (int <a class="el" href="classCorRGBA.html#afa21e7ce0c1e53644f50c6280167a53e">r</a>, int <a class="el" href="classCorRGBA.html#a62bc218e68ab6782f1b4167488642391">g</a>, int <a class="el" href="classCorRGBA.html#a90c5cb9376fdba3a7e0bf68ff64944ff">b</a>, int <a class="el" href="classCorRGBA.html#a2b44e4f88c51e58f504a77b068a6622c">a</a>=255)</td></tr>
 <tr class="memdesc:aa3d9084d0dd2a5764b0a1de212ba8815"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Base.  <a href="classCorRGBA.html#aa3d9084d0dd2a5764b0a1de212ba8815">Mais...</a><br /></td></tr>
 <tr class="separator:aa3d9084d0dd2a5764b0a1de212ba8815"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afab420128af1f66f7fa96cc142d496f5"><td class="memItemLeft" align="right" valign="top">Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorRGBA.html#afab420128af1f66f7fa96cc142d496f5">getCor</a> (SDL_Surface *surface)</td></tr>
-<tr class="separator:afab420128af1f66f7fa96cc142d496f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc388d91caab51128a0ad2694e9ee81"><td class="memItemLeft" align="right" valign="top">Uint32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorRGBA.html#a4cc388d91caab51128a0ad2694e9ee81">getCor</a> (SDL_Surface *surface) const</td></tr>
+<tr class="memdesc:a4cc388d91caab51128a0ad2694e9ee81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a cor RGBA.  <a href="classCorRGBA.html#a4cc388d91caab51128a0ad2694e9ee81">Mais...</a><br /></td></tr>
+<tr class="separator:a4cc388d91caab51128a0ad2694e9ee81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atributos Públicos</h2></td></tr>
@@ -107,11 +118,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
 <tr class="memitem:a50724d32585456bbc13d33b82bd6229f"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCorRGBA.html#a50724d32585456bbc13d33b82bd6229f">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classCorRGBA.html">CorRGBA</a> &amp;cor)</td></tr>
+<tr class="memdesc:a50724d32585456bbc13d33b82bd6229f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do Insertion Operator para Saída de Dados.  <a href="classCorRGBA.html#a50724d32585456bbc13d33b82bd6229f">Mais...</a><br /></td></tr>
 <tr class="separator:a50724d32585456bbc13d33b82bd6229f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
-<dl class="section date"><dt>Data</dt><dd>1/1/1 Classe Responsável por representar cores RGBA para uso em conjunto aos elementos gráficos da interface SDL. </dd></dl>
+<div class="textblock"><p>Classe responsável por representar cores RGBA para uso em conjunto aos elementos gráficos da interface SDL. </p>
+<dl class="section author"><dt>Autor</dt><dd>Gabriel Eduardo Lima </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>Última modificação: 28/02/2021 </dd></dl>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
 <a id="a2293683479050e33da43f3c3bc7fb4f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2293683479050e33da43f3c3bc7fb4f5">&#9670;&nbsp;</a></span>CorRGBA() <span class="overload">[1/2]</span></h2>
@@ -189,22 +202,23 @@ Amigas</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor Base. </p>
-<p>Cria um objeto com os valores passados por parâmetro </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Cria um objeto com os valores passados por parâmetro.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td>um inteiro para configurar o atributo <a class="el" href="classCorRGBA.html#afa21e7ce0c1e53644f50c6280167a53e">r</a> </td></tr>
-    <tr><td class="paramname">g</td><td>um inteiro para configurar o atributo <a class="el" href="classCorRGBA.html#a62bc218e68ab6782f1b4167488642391">g</a> </td></tr>
-    <tr><td class="paramname">b</td><td>um inteiro para configurar o atributo <a class="el" href="classCorRGBA.html#a90c5cb9376fdba3a7e0bf68ff64944ff">b</a> </td></tr>
-    <tr><td class="paramname">a</td><td>um inteiro para configurar o atributo <a class="el" href="classCorRGBA.html#a2b44e4f88c51e58f504a77b068a6622c">a</a></td></tr>
+    <tr><td class="paramname">r</td><td>um inteiro para configurar o atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">g</td><td>um inteiro para configurar o atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">b</td><td>um inteiro para configurar o atributo de mesma nomenclatura </td></tr>
+    <tr><td class="paramname">a</td><td>um inteiro para configurar o atributo de mesma nomenclatura</td></tr>
   </table>
   </dd>
 </dl>
-<p>O parâmetro <b>a</b> pode ser omitido no processo de invocação do método. Nesse caso, o valor será configurado automáticamente para o seu máximo. </p>
+<p>O parâmetro <b>a</b> pode ser omitido no processo de invocação do método. Nesse caso, o valor será configurado automáticamente para o seu máximo (255). </p>
 
 </div>
 </div>
 <h2 class="groupheader">Funções membros</h2>
-<a id="afab420128af1f66f7fa96cc142d496f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afab420128af1f66f7fa96cc142d496f5">&#9670;&nbsp;</a></span>getCor()</h2>
+<a id="a4cc388d91caab51128a0ad2694e9ee81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc388d91caab51128a0ad2694e9ee81">&#9670;&nbsp;</a></span>getCor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,7 +231,7 @@ Amigas</h2></td></tr>
           <td>(</td>
           <td class="paramtype">SDL_Surface *&#160;</td>
           <td class="paramname"><em>surface</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -226,15 +240,17 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Função para receber a cor em um formato útil e compatível ao usado por funções da bliblioteca SDL.</p>
-<p>Faz uso da função SDL_MapRGB()</p>
+
+<p>Retorna a cor RGBA. </p>
+<p>Método para receber a cor em um formato útil e compatível ao usado por funções da bliblioteca SDL.</p>
+<p>Faz uso da função SDL_MapRGB().</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">surface</td><td>um ponteiro para um objeto SDL_Surface </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>a cor no formato Uint32</dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>cor no formato <code>Uint32</code> </dd></dl>
 
 </div>
 </div>
@@ -272,7 +288,9 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Função amiga para ter acesso ao atributos protegidos da classe, visando sobscrita do operador &lt;&lt; para apresentação de saída ao usuário. </p><dl class="section return"><dt>Retorna</dt><dd>uma string no formato: (r,g,b,a)</dd></dl>
+
+<p>Sobrecarga do Insertion Operator para Saída de Dados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>string no formato: "Cor(r,g,b,a)" onde cada elemento refere-se aos valores dos respectivos atributos do objeto </dd></dl>
 
 </div>
 </div>

@@ -6,16 +6,17 @@
 #define VETOR_H
 
 /*!
+    \file vetor.h
     \class Vetor
     \author Gabriel Eduardo Lima
-    \date 11/11/2020
-    Classe para Representação de um Vetor no Plano Cartesiano
+    \date Última Modificação: 27/02/2002
+    \brief Classe para Representação de um Vetor no Plano Cartesiano
 */
 
 class Vetor {
     public:
-        float x;        //!< Componente no eixo X - Constante Real que Múltiplica o vetor i
-        float y;        //!< Componente no eixo Y - Constante Real que Múltiplica o vetor j
+        float x;        //!< Componente no eixo das Abscissas
+        float y;        //!< Componente no eixo das Ordendas
 
         //! Construtor Default
         /*!
@@ -30,23 +31,28 @@ class Vetor {
 
         //! Construtor Base a partir de Coordenadas
         /*!
-            Cria um objeto com as componentes conforme valores passados por parâmetro
+            Cria um objeto com as componentes conforme valores passados por parâmetro.
             
-            \param x um float representando a Componente X
-            \param y um float representando a Componente Y
+            \param x usado para inicializar atributo de mesmo nomenclatura
+            \param y usado para inicializar atributo de mesmo nomenclatura
         */
         Vetor(float x, float y):
             x(x), y(y){
         }
 
-        //! Construtor a partir de Pontos
+        //! Construtor a partir de pontos
         /*!
-            Cria um objeto onde componentes calculadas a partir de
+            Cria um objeto onde as componentes são calculadas a partir de
             dois pontos, sendo eles o ponto de Início e de Fim do vetor,
             inforamados por parâmetro.
+
+            O cálculo do vetor dá-se da seguinte forma: Considere os Pontos 
+            \f$ I(xi,yi) \f$ e \f$ F(xf,yf) \f$ representando respectivamente
+            os parâmetros inicio e fim. As componentes do vetor dá-se da forma:
+            \f$ \vec{v} = (xf-xi, yf-yi) \f$.
         
-            \param inicio uma referência constante a um objeto do tipo \ref Ponto
-            \param fim uma referência constante a um objeto do tipo \ref Ponto
+            \param inicio Referência constante a um \ref Ponto
+            \param fim Referência constante a um \ref Ponto
         */
         Vetor(const Ponto &inicio, const Ponto &fim): 
             x(fim.x - inicio.x), y(fim.y - inicio.y){
@@ -56,59 +62,81 @@ class Vetor {
         /*!
             Cria um novo objeto copiando as componentes de um vetor informado.
 
-            \param vetor uma referência constante para um Vetor
+            \param vetor Referência constante para o \ref Vetor que será copiado
         */
         Vetor(const Vetor &vetor):
             x(vetor.x), y(vetor.y){
         }
 
         //! Construtor Move
+        /*!
+            Cria um novo objeto fazendo uso do recurso de movimentação. 
+            Transfere de maneira eficiente os dados das componentes de um vetor 
+            para o novo objeto criado.
+
+            \param vetor Referência rvalue de um \ref Vetor
+
+            Para mais detalhe sobre o recurso, consultar documentação da linguagem
+        */
         Vetor (Vetor &&vetor) noexcept{
-            /*!
-                Cria um novo objeto fazendo uso do recurso de movimentação. 
-                Transfere de maneira eficiente os dados das componentes de um vetor 
-                para o novo objeto criado. 
-
-                \param vetor uma referência rvalue de um Vetor
-
-                Para mais detalhe sobre o recurso, consultar documentação da linguagem. 
-            */
             x = vetor.x;
             y = vetor.y;
         }
-        
-        float getModulo() const{
-             /*!
-                Método para cálcular o módulo do objeto vetor.
 
-                \return um número float 
-            */
+        // Destrutor da Classe
+        ~Vetor(){}
+        
+        //! Método para cálcular o módulo do objeto \ref Vetor
+        /*!
+            Cálculo efetuado através de: \f$ |v| = \sqrt{x^2 + y^2}\f$.
+
+            \return O valor do módulo \f$|v|\f$
+        */
+        float getModulo() const{
             return pow((x*x + y*y),(1.0/2));
         }
 
+        //! Método para cálcular o ângulo formado pelo vetor em relação ao eixo x.
+        /*!
+            Cálculo efetuado através de \f$\alpha = \arctan{(y/x)}\f$. 
+            
+            \return O ângulo \f$\alpha\f$ em Radianos
+        */
         float getAngulo() const{
-            /*!
-                Método para cálcular o angulo formado pelo Vetor
-                em relação ao eixo x.
-                
-                \return um número float
-            */
             return atan2(y,x);
         }
 
+        //! Transforma um \ref Vetor para sua representação em \ref Ponto
+        /*!
+            Considere o vetor \f$ \vec{v} = (x,y) \f$. Diz-se que
+            sua representação em como um ponto pode ser dada por 
+            \f$ P(x,y) \f$.
+            
+            \return \ref Ponto conforme P
+        */
         const Ponto vetorToPonto(){
-            /*!
-                Método para obter uma formatação do Vetor
-                para um \ref Ponto com coordenadas x e y
-                respectivamente iguais ás componentes x e y
-                
-                \return um \ref Ponto 
-            */
             return Ponto(x,y);
         }
 
+        //! Transforma um \ref Vetor para sua representação em \ref Matriz
+        /*!
+            Considere o vetor \f$ \vec{v} = (x,y) \f$. A representação em forma
+            de matriz de \f$ v \f$ é dada como:
+
+            \f[
+                M = 
+                \begin{bmatrix}
+                        x \\
+                        y \\
+                        1
+                \end{bmatrix}
+            \f]	
+            
+            \return \ref Matriz 3x1 M
+        */
         Matriz vetorToMatriz(){
             Matriz tmp = Matriz(3,1);
+            
             tmp[0][0] = x;
             tmp[1][0] = y;
             tmp[2][0] = 1;
@@ -116,90 +144,88 @@ class Vetor {
             return tmp;
         }
         
-        // Métodos de sobrecarga de operadores!
+        //! Sobrecarga do Insertion Operator para Saída de Dados
+        /*!
+            \return uma string no formato: "Vetor(x,y)"
+                    onde x e y são respectivamentes os valores
+                    dos atributos de mesmo nome do objeto
+        */
         friend std::ostream& operator<< (std::ostream &out, const Vetor &vetor){
-            /*!
-                Função amiga para ter acesso ao atributos protegidos da classe,
-                visando sobscrita do operador << para apresentação de saída ao
-                usuário.
-                
-                \return uma string no formato: xi + yj
-            */
-            out << vetor.x << "i +" << vetor.y << "j";
+            out << "Vetor(" << vetor.x << "," << vetor.y << ")";
             return out;
         };
 
-        Vetor operator+(const Vetor &vetor){
-            /*!
-                Soma de Vetores. Soma as componentes dos
-                Vetores criando assim um novo objeto.
+        //! Soma de vetores
+        /*!
+            Soma as respectivas componentes dos vetores criando assim um 
+            novo objeto \ref Vetor.
 
-                \param vetor uma referência constante a um Vetor
-                \return um objeto do tipo Vetor
-            */
+            \param vetor Referência constante ao Vetor referente a parcela direita da Operação
+            \return Vetor resultante da Operação
+        */
+        Vetor operator+(const Vetor &vetor){
 		    return Vetor(x + vetor.x, y + vetor.y);
 	    }
 
-        Vetor operator-(const Vetor &vetor){
-            /*!
-                Subtração de Vetores. Subtrai as componentes dos
-                Vetores criando assim um novo objeto.
+        //! Subtração de Vetores
+        /*!
+            Subtrai as respectivas componentes dos vetores criando assim um novo objeto
+            \ref Vetor.
 
-                \param vetor uma referência constante a um Vetor
-                
-                \return um objeto do tipo Vetor
-            */
+            \param vetor Referência constante a um \ref Vetor referente a parcela direita da Operação
+            \return \ref Vetor resultante da Operação
+        */
+        Vetor operator-(const Vetor &vetor){
 		    return Vetor(x - vetor.x, y - vetor.y);
 	    }
 
+        //! Multiplicação de um \ref Vetor por um escalar.
+        /*!
+            Cria um novo objeto do tipo \ref Vetor através da
+            multiplicação entre as componentes de um \ref Vetor
+            por um escalar a esquerda da operação \b * .
+
+            \param escalar valor \c float constante
+            \param vetor Referência constante ao \ref Vetor base para a Multplicação
+            \return \ref Vetor resultante da Operação
+        */
         friend Vetor operator*(const float escalar, const Vetor &vetor){
-            /*!
-                Multiplicação de um Vetor por um escalar.
-                Multiplica as componentes do Vetor por um escalar
-                a esquerda da operação <b>*</b> criando assim um novo objeto.
-
-                \param escalar um valor float constante
-                \param vetor uma referência constante a um Vetor
-               
-                \return um objeto do tipo Vetor
-            */
 		    return Vetor(vetor.x * escalar, vetor.y * escalar);
 	    }
 
+        //! Multiplicação de um \ref Vetor por um escalar.
+        /*!
+            Cria um novo objeto do tipo \ref Vetor através da
+            multiplicação entre as componentes de um \ref Vetor
+            por um escalar a direita da operação \b * .
+
+            \param escalar valor \c float constante
+            \param vetor Referência constante ao \ref Vetor base para a Multplicação
+            \return \ref Vetor resultante da Operação
+        */
         friend Vetor operator*(const Vetor &vetor, const float escalar){
-            /*!
-                Multiplicação de um Vetor por um escalar.
-                Multiplica as componentes do Vetor por um escalar
-                a direita da operação <b>*</b> criando assim um novo objeto.
-
-                \param escalar um valor float constante
-                \param vetor uma referência constante a um Vetor
-               
-                \return um objeto do tipo Vetor
-            */
 		    return Vetor(vetor.x * escalar, vetor.y * escalar);
 	    }
 
-        float operator*(const Vetor &vetor){
-            /*!
-                Produto Escalar de Vetores.
-                
-                Multiplica as componentes respesctivas dos Vetores, onde os
-                valores do produto são somados e retornados.
+        //! Produto escalar de vetores.
+        /*! 
+            Multiplica as respesctivas componentes dos vetores,
+            sendo que os valores resultantes desses produtos 
+            são somados e retornados.
 
-                \param vetor uma referência constante a um Vetor
-               
-                \return um número int
-            */
+            \param vetor Referência constante a um \ref Vetor
+            \return O resutlado \c float da Operação
+        */
+        float operator*(const Vetor &vetor){
 		    return ((x * vetor.x) + (y * vetor.y));
         }
 
         //! Atribuição por Cópia
+        /*!
+            \param vetor Referência constante do \ref Vetor que será Copiado
+            \return Referência para o \ref Vetor que Invocou o operador
+        */
         Vetor& operator=(const Vetor &vetor){
-            /*!
-                \param vetor uma referência constante de um Vetor
-                \return Referência para o Vetor que Invocou o Método
-            */
             x = vetor.x;
             y = vetor.y;
 
@@ -207,12 +233,11 @@ class Vetor {
         }
 
         //! Atribuição Move
+        /*!
+            \param vetor Referência rvalue do Vetor Base para a operação
+            \return Referência para o \ref Vetor que Invocou o operador
+        */
         Vetor& operator=(Vetor &&vetor) noexcept {
-            /*!
-                \param vetor uma referência rvalue de um Vetor
-                \return Referência para o Vetor que Invocou o Método
-            */
-
             /*
                 Verifica se o parâmetro referencia o próprio objeto.
                 Em caso de verdade, retorno a referência para o objeto

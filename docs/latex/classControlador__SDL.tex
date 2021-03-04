@@ -2,38 +2,45 @@
 \label{classControlador__SDL}\index{Controlador\_SDL@{Controlador\_SDL}}
 
 
+Classe responsável pela inicialização e possibilitar a operação da biblioteca S\+DL.  
+
+
+
+
 {\ttfamily \#include $<$controlador\+\_\+\+S\+D\+L.\+h$>$}
 
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classControlador__SDL_ab9eb55d41466f50793e26fa80d44eba0}{Controlador\+\_\+\+S\+DL}} ()
-\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor Default e Base. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classControlador__SDL_afe1314444a7db563c5bdbe222142c6ec}\label{classControlador__SDL_afe1314444a7db563c5bdbe222142c6ec}} 
 \mbox{\hyperlink{classControlador__SDL_afe1314444a7db563c5bdbe222142c6ec}{$\sim$\+Controlador\+\_\+\+S\+DL}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classControlador__SDL_a58e158a1ee9311bbd63c336f9b8cc4c1}{inicializar}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Inicializa a biblioteca S\+DL. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classControlador__SDL_a4d1faad690db1e539853605119eada3b}{pausar}} (int milissegundos)
-\item 
+\begin{DoxyCompactList}\small\item\em Pausa a aplicação S\+DL. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classControlador__SDL_acae9b200430be5abc032da8041115092}{finalizar}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Finaliza a biblioteca S\+DL. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classControlador__SDL_ae190d2109862257555103015095c43ba}{get\+Inicializado}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Retorna se a biblioteca foi ou não inicializada. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classControlador__SDL_aadf0682a32bea80257020017a68dac41}\label{classControlador__SDL_aadf0682a32bea80257020017a68dac41}} 
 bool \mbox{\hyperlink{classControlador__SDL_aadf0682a32bea80257020017a68dac41}{inicializado}}
-\begin{DoxyCompactList}\small\item\em Indicador de inicialização. Um valor True -\/$>$ S\+DL Inicializado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Indicador de inicialização. Um valor True implica em S\+DL Inicializado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
+Classe responsável pela inicialização e possibilitar a operação da biblioteca S\+DL. 
+
 \begin{DoxyAuthor}{Autor}
 Gabriel Eduardo Lima 
 \end{DoxyAuthor}
 \begin{DoxyDate}{Data}
-1/1/1 Classe Responsável pela Inicialização e Possibilitar a Operação da biblioteca S\+DL 
+Última alteração\+: 28/02/2021 
 \end{DoxyDate}
 
 
@@ -46,9 +53,13 @@ Gabriel Eduardo Lima
 
 
 
-Construtor Default. 
+Construtor Default e Base. 
 
-Não é necessário a passagem de parâmetros! 
+Não é necessário a passagem de parâmetros!
+
+Cria um objeto do tipo \mbox{\hyperlink{classControlador__SDL}{Controlador\+\_\+\+S\+DL}} permitindo ao desenvolvedor a inicialização da biblioteca e por consequência o uso de todas as outras funcionalidades gráficas desenvolvidas usando os recursos dessa biblioteca.
+
+Observação\+: Recomenda-\/se que esse seja a primeira classe com um objeto para o uso dos recursos gráficos. Recomenda-\/se também que seja criado apenas um objeto desse tipo para a aplicação para evitar uso desnecessário de memória. 
 
 \doxysubsection{Funções membros}
 \mbox{\Hypertarget{classControlador__SDL_acae9b200430be5abc032da8041115092}\label{classControlador__SDL_acae9b200430be5abc032da8041115092}} 
@@ -56,6 +67,10 @@ Não é necessário a passagem de parâmetros!
 \index{finalizar@{finalizar}!Controlador\_SDL@{Controlador\_SDL}}
 \doxysubsubsection{\texorpdfstring{finalizar()}{finalizar()}}
 {\footnotesize\ttfamily void Controlador\+\_\+\+S\+D\+L\+::finalizar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finaliza a biblioteca S\+DL. 
 
 Método utilizado para finalizar a biblioteca S\+DL. Deve ser usado ao final do programa para garantir que todos os elementos sejam finalizados sem problemas.
 
@@ -65,10 +80,14 @@ Ao ser invocado, o método chama a função de saída da bilbioteca S\+DL -\/ S\
 \doxysubsubsection{\texorpdfstring{getInicializado()}{getInicializado()}}
 {\footnotesize\ttfamily bool Controlador\+\_\+\+S\+D\+L\+::get\+Inicializado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Retorna se a biblioteca foi ou não inicializada. 
+
 Método utilizado para saber o status do controlador S\+DL.
 
 \begin{DoxyReturn}{Retorna}
-um boolenano referente ao atributo \mbox{\hyperlink{classControlador__SDL_aadf0682a32bea80257020017a68dac41}{inicializado}} 
+Boolenano referente ao atributo \mbox{\hyperlink{classControlador__SDL_aadf0682a32bea80257020017a68dac41}{inicializado}} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classControlador__SDL_a58e158a1ee9311bbd63c336f9b8cc4c1}\label{classControlador__SDL_a58e158a1ee9311bbd63c336f9b8cc4c1}} 
 \index{Controlador\_SDL@{Controlador\_SDL}!inicializar@{inicializar}}
@@ -76,17 +95,27 @@ um boolenano referente ao atributo \mbox{\hyperlink{classControlador__SDL_aadf06
 \doxysubsubsection{\texorpdfstring{inicializar()}{inicializar()}}
 {\footnotesize\ttfamily void Controlador\+\_\+\+S\+D\+L\+::inicializar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
+
+
+Inicializa a biblioteca S\+DL. 
+
 Método utilizado para inicializar a biblioteca S\+DL e permitir o uso de suas funcionalidades.
 
 Faz uso da Função S\+D\+L\+\_\+\+Init() com a flag S\+D\+L\+\_\+\+I\+N\+I\+T\+\_\+\+E\+V\+E\+R\+Y\+T\+H\+I\+NG para iniciar todos os modulos S\+DL. Os erros são capturados a partir do uso da função S\+D\+L\+\_\+\+Get\+Error().
 
 Caso ocorra algum erro durante o processo de inicialização, uma mensagem é exibida no console informando o acontecido, bem como o erro retornado pelo S\+DL. Nesse caso, o atributo \mbox{\hyperlink{classControlador__SDL_aadf0682a32bea80257020017a68dac41}{inicializado}} receberá o valor booleano false.
 
-Caso o processo de inicialização seja bem sucedido, uma mensagem é exibida no console informando o usuário. Nesse caso, o atributo \mbox{\hyperlink{classControlador__SDL_aadf0682a32bea80257020017a68dac41}{inicializado}} receberá o valor booleano true. \mbox{\Hypertarget{classControlador__SDL_a4d1faad690db1e539853605119eada3b}\label{classControlador__SDL_a4d1faad690db1e539853605119eada3b}} 
+Caso o processo de inicialização seja bem sucedido, uma mensagem é exibida no console informando o usuário. Nesse caso, o atributo \mbox{\hyperlink{classControlador__SDL_aadf0682a32bea80257020017a68dac41}{inicializado}} receberá o valor booleano true.
+
+Esse método deve ser obrigatoriamente chamado antes da execução dos recursos implementados por outras classes gráficas, causando em caso contrário erro na execução do programa. \mbox{\Hypertarget{classControlador__SDL_a4d1faad690db1e539853605119eada3b}\label{classControlador__SDL_a4d1faad690db1e539853605119eada3b}} 
 \index{Controlador\_SDL@{Controlador\_SDL}!pausar@{pausar}}
 \index{pausar@{pausar}!Controlador\_SDL@{Controlador\_SDL}}
 \doxysubsubsection{\texorpdfstring{pausar()}{pausar()}}
 {\footnotesize\ttfamily void Controlador\+\_\+\+S\+D\+L\+::pausar (\begin{DoxyParamCaption}\item[{int}]{milissegundos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pausa a aplicação S\+DL. 
 
 Método utilizado para pausar a execução do programa em uma determinada quantidade de tempo.
 
@@ -101,4 +130,4 @@ Ao ser invocado, o método pausa a execução fazendo o uso da função S\+D\+L\
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 
-Interface/controlador\+\_\+\+S\+D\+L.\+h\end{DoxyCompactItemize}
+Interface/\mbox{\hyperlink{controlador__SDL_8h}{controlador\+\_\+\+S\+D\+L.\+h}}\end{DoxyCompactItemize}

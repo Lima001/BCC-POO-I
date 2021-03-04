@@ -12,6 +12,13 @@
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -69,16 +76,17 @@ $(function() {
 
 <p>Esta é a lista de todos os membros de <a class="el" href="classRetangulo.html">Retangulo</a>, incluindo os membros herdados.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>altura</b> (definido(a) em <a class="el" href="classRetangulo.html">Retangulo</a>)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>inicio</b> (definido(a) em <a class="el" href="classRetangulo.html">Retangulo</a>)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>largura</b> (definido(a) em <a class="el" href="classRetangulo.html">Retangulo</a>)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>operator&lt;&lt;</b> (definido(a) em <a class="el" href="classRetangulo.html">Retangulo</a>)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator=</b>(const Retangulo &amp;rect) (definido(a) em <a class="el" href="classRetangulo.html">Retangulo</a>)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>operator=</b>(Retangulo &amp;&amp;rect) noexcept (definido(a) em <a class="el" href="classRetangulo.html">Retangulo</a>)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Retangulo</b>() (definido(a) em <a class="el" href="classRetangulo.html">Retangulo</a>)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Retangulo</b>(const Ponto &amp;inicio, float largura, float altura) (definido(a) em <a class="el" href="classRetangulo.html">Retangulo</a>)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Retangulo</b>(const Retangulo &amp;rect) (definido(a) em <a class="el" href="classRetangulo.html">Retangulo</a>)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Retangulo</b>(Retangulo &amp;&amp;rect) noexcept (definido(a) em <a class="el" href="classRetangulo.html">Retangulo</a>)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRetangulo.html#a80a55ad677f16d52118d16127e5b9207">altura</a></td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRetangulo.html#a23839310726426373d115180884c03e5">inicio</a></td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRetangulo.html#a7dc902283835c9a9e4302a628f43d382">largura</a></td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classRetangulo.html#a585a1a12eee2b5c94e6bf56b1e25369e">operator&lt;&lt;</a>(std::ostream &amp;out, const Retangulo &amp;rect)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">friend</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRetangulo.html#a7e52f891a519cdd0e480ed70be0a36d7">operator=</a>(const Retangulo &amp;rect)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRetangulo.html#a8d470ef6fc2c5c57e07eb747dce64f78">operator=</a>(Retangulo &amp;&amp;rect) noexcept</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRetangulo.html#ac21a81cae046920c8bee401bcb879562">Retangulo</a>()</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRetangulo.html#a2a6b2863847d97303b8e5e3992a69b82">Retangulo</a>(const Ponto &amp;inicio, float largura, float altura)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classRetangulo.html#a00dd3d5f324f753448e7ef8fb70e1c8b">Retangulo</a>(const Retangulo &amp;rect)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classRetangulo.html#ab29cdc63380ed0cc1f4568e91a8fcb30">Retangulo</a>(Retangulo &amp;&amp;rect) noexcept</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~Retangulo</b>() (definido(a) em <a class="el" href="classRetangulo.html">Retangulo</a>)</td><td class="entry"><a class="el" href="classRetangulo.html">Retangulo</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

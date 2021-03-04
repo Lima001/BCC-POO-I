@@ -7,6 +7,7 @@ double f(double t){
 }
 
 int main(){
+    // Criação de objetos do tipo Objeto e de DetectorColisao
     int qtd_objetos = 60;
 
     Objeto lista_objetos[qtd_objetos];
@@ -19,9 +20,6 @@ int main(){
 
     DetectorColisao detector = DetectorColisao(qtd_objetos, lista_objetos);
     
-    for (int i=0; i<qtd_objetos; i++){
-        cout << lista_objetos[i] << endl;
-    }
 
     cout << endl;
     
@@ -35,8 +33,10 @@ int main(){
 
     cout << endl;
 
+    // Detectar as colisões entre os objetos
     vector<pair<Objeto*,Objeto*>> colisoes = detector.detectar();
 
+    // Exibir os pares de Colisão
     for(int i=0; i<colisoes.size(); i++){
         cout << *(colisoes[i].first) << ", " << *(colisoes[i].second) << endl;
     }

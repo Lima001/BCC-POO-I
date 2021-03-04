@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['gerenciadorevento_45',['GerenciadorEvento',['../classGerenciadorEvento.html',1,'']]]
+  ['gerenciadorarquivo_159',['GerenciadorArquivo',['../classGerenciadorArquivo.html',1,'']]],
+  ['gerenciadorevento_160',['GerenciadorEvento',['../classGerenciadorEvento.html',1,'']]]
 ];
