@@ -46,22 +46,22 @@ int main(){
 
     Relogio relogio = Relogio(control);
     
-    Janela janela = Janela("Movimento CMUX", 800, 600);
+    Janela janela = Janela("Movimento e Borda", 800, 600);
     janela.iniciarSurface();
     
     Renderizador render = Renderizador(janela.ptr_janela);
 
     // Definição da Matriz de Transformação para processo de Renderização
-    render.Transformacao = Matriz(3,3);
-    render.Transformacao[0][0] = 1;
-    render.Transformacao[0][1] = 0;
-    render.Transformacao[0][2] = 400;
-    render.Transformacao[1][0] = 0;
-    render.Transformacao[1][1] = -1;
-    render.Transformacao[1][2] = 300;
-    render.Transformacao[2][0] = 0;
-    render.Transformacao[2][1] = 0;
-    render.Transformacao[2][2] = 1;
+    render.transformacao = Matriz(3,3);
+    render.transformacao[0][0] = 1;
+    render.transformacao[0][1] = 0;
+    render.transformacao[0][2] = 400;
+    render.transformacao[1][0] = 0;
+    render.transformacao[1][1] = -1;
+    render.transformacao[1][2] = 300;
+    render.transformacao[2][0] = 0;
+    render.transformacao[2][1] = 0;
+    render.transformacao[2][2] = 1;
 
     GerenciadorEvento gerenciador = GerenciadorEvento();
 
@@ -79,7 +79,7 @@ int main(){
     lista_linhas[1] = Linha(Ponto(-400,-300), Ponto(400,-300)); // Linha horizontal inferior
     lista_linhas[2] = Linha(Ponto(-400,300), Ponto(-400,-300)); // Linha vertical esquerda
     lista_linhas[3] = Linha(Ponto(400,300), Ponto(400,-300));   // Linha vertical direita
-    detector.setInfoLinhas(4,lista_linhas);
+    detector.setInfoLinhas(lista_linhas);
 
     // Laço principal da Simulação
     bool executar = true;

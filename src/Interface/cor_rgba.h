@@ -52,9 +52,11 @@ class CorRGBA {
             r(r),
             g(g),
             b(b),
-            a(a)
-        {
+            a(a){
         }
+
+        //! Destrutor da Classe
+        ~CorRGBA(){}
 
         //! Retorna a cor RGBA
         /*!

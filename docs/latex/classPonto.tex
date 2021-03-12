@@ -20,7 +20,6 @@ Classe para Representação de um \mbox{\hyperlink{classPonto}{Ponto}} no Plano 
 \begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPonto_aef5d85e0bdd420a08024bff4e9ceaf69}{Ponto}} (\mbox{\hyperlink{classPonto}{Ponto}} \&\&p) noexcept
 \begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPonto_a3b0e3df470cda29d6bf52e6c11a1e8a6}\label{classPonto_a3b0e3df470cda29d6bf52e6c11a1e8a6}} 
 \mbox{\hyperlink{classPonto_a3b0e3df470cda29d6bf52e6c11a1e8a6}{$\sim$\+Ponto}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{classPonto_ad95aef665ea1fb3e9b82b8508ab05cf1}{ponto\+To\+Matriz}} () const
@@ -32,10 +31,8 @@ Classe para Representação de um \mbox{\hyperlink{classPonto}{Ponto}} no Plano 
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}\label{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}} 
 float \mbox{\hyperlink{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}{x}}
 \begin{DoxyCompactList}\small\item\em Coordenada no eixo das abscissas. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}\label{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}} 
 float \mbox{\hyperlink{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}{y}}
 \begin{DoxyCompactList}\small\item\em Coordenada no eixo das ordenadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
@@ -122,7 +119,17 @@ Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de manei
 {\em p} & Referência rvalue para um \mbox{\hyperlink{classPonto}{Ponto}}\\
 \hline
 \end{DoxyParams}
-Para mais detalhe sobre o recurso, consultar documentação da linguagem 
+Para mais detalhe sobre o recurso, consultar documentação da linguagem \mbox{\Hypertarget{classPonto_a3b0e3df470cda29d6bf52e6c11a1e8a6}\label{classPonto_a3b0e3df470cda29d6bf52e6c11a1e8a6}} 
+\index{Ponto@{Ponto}!````~Ponto@{$\sim$Ponto}}
+\index{````~Ponto@{$\sim$Ponto}!Ponto@{Ponto}}
+\doxysubsubsection{\texorpdfstring{$\sim$Ponto()}{~Ponto()}}
+{\footnotesize\ttfamily Ponto\+::$\sim$\+Ponto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da Classe. 
+
+
 
 \doxysubsection{Funções membros}
 \mbox{\Hypertarget{classPonto_a1f1cd02177d47eef370db80b9527ef97}\label{classPonto_a1f1cd02177d47eef370db80b9527ef97}} 
@@ -199,6 +206,29 @@ Sobrecarga do Insertion Operator para Saída de Dados.
 \begin{DoxyReturn}{Retorna}
 string no formato\+: \char`\"{}\+Ponto(x,y)\char`\"{} onde x e y são respectivamente os valores dos atributos de mesmo nome do objeto 
 \end{DoxyReturn}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}\label{classPonto_ac72a5274f1b887279fe959d0eca1eaa8}} 
+\index{Ponto@{Ponto}!x@{x}}
+\index{x@{x}!Ponto@{Ponto}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float Ponto\+::x}
+
+
+
+Coordenada no eixo das abscissas. 
+
+\mbox{\Hypertarget{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}\label{classPonto_aa3d21f6f0e8a9fb0591c982f03cbb26a}} 
+\index{Ponto@{Ponto}!y@{y}}
+\index{y@{y}!Ponto@{Ponto}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float Ponto\+::y}
+
+
+
+Coordenada no eixo das ordenadas. 
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}

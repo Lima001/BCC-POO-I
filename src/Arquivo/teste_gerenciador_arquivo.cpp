@@ -9,7 +9,7 @@ double f_const(double t){
 int main(){
     // Criação de um objeto do tipo GerenciadorArquivo para manipular o arquivo teste.txt
     string nome_arquivo = "teste.txt";
-    GerenciadorArquivo g = GerenciadorArquivo(nome_arquivo);
+    GerenciadorArquivo g(nome_arquivo);
 
     // Criação do Arquivo
     g.criarArquivo();

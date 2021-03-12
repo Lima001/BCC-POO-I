@@ -11,8 +11,7 @@ Classe para Representação de um \mbox{\hyperlink{classTriangulo}{Triangulo}}.
 
 
 
-Diagrama de colaboração para Triangulo\+:
-\nopagebreak
+Diagrama de colaboração para Triangulo\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,6 +29,8 @@ Diagrama de colaboração para Triangulo\+:
 \begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTriangulo_ae74b966b436967f9536ed21353f10f14}{Triangulo}} (\mbox{\hyperlink{classTriangulo}{Triangulo}} \&\&t) noexcept
 \begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTriangulo_aca2be15b19831e8d7a5331808f5c1958}{$\sim$\+Triangulo}} ()
+\item 
 \mbox{\hyperlink{classTriangulo}{Triangulo}} \& \mbox{\hyperlink{classTriangulo_a2388dd3d42a7519142a7ef69a66a2ab2}{operator=}} (\mbox{\hyperlink{classTriangulo}{Triangulo}} \&t)
 \begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classTriangulo}{Triangulo}} \& \mbox{\hyperlink{classTriangulo_a233a10e4b54c54100d87da85cb1ada37}{operator=}} (\mbox{\hyperlink{classTriangulo}{Triangulo}} \&\&t) noexcept
@@ -37,13 +38,10 @@ Diagrama de colaboração para Triangulo\+:
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTriangulo_ae3185b6adf615dd4b3739d2f36494fa7}\label{classTriangulo_ae3185b6adf615dd4b3739d2f36494fa7}} 
 \mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classTriangulo_ae3185b6adf615dd4b3739d2f36494fa7}{p1}}
 \begin{DoxyCompactList}\small\item\em Vértice 01 do triângulo;. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTriangulo_abfcdc9f759904824721a74a338eb3540}\label{classTriangulo_abfcdc9f759904824721a74a338eb3540}} 
 \mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classTriangulo_abfcdc9f759904824721a74a338eb3540}{p2}}
 \begin{DoxyCompactList}\small\item\em Vértice 02 do triângulo;. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTriangulo_ae1cb043f7e5d23030f265e7ce398088b}\label{classTriangulo_ae1cb043f7e5d23030f265e7ce398088b}} 
 \mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classTriangulo_ae1cb043f7e5d23030f265e7ce398088b}{p3}}
 \begin{DoxyCompactList}\small\item\em Vértice 03 do triângulo;. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
@@ -132,7 +130,13 @@ Cria um novo objeto fazendo uso do recurso de movimentação Transfere de maneir
 {\em t} & Referência rvalue de um \mbox{\hyperlink{classTriangulo}{Triangulo}}\\
 \hline
 \end{DoxyParams}
-Para mais detalhe sobre o recurso, consultar documentação da linguagem 
+Para mais detalhe sobre o recurso, consultar documentação da linguagem \mbox{\Hypertarget{classTriangulo_aca2be15b19831e8d7a5331808f5c1958}\label{classTriangulo_aca2be15b19831e8d7a5331808f5c1958}} 
+\index{Triangulo@{Triangulo}!````~Triangulo@{$\sim$Triangulo}}
+\index{````~Triangulo@{$\sim$Triangulo}!Triangulo@{Triangulo}}
+\doxysubsubsection{\texorpdfstring{$\sim$Triangulo()}{~Triangulo()}}
+{\footnotesize\ttfamily Triangulo\+::$\sim$\+Triangulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
 
 \doxysubsection{Funções membros}
 \mbox{\Hypertarget{classTriangulo_a233a10e4b54c54100d87da85cb1ada37}\label{classTriangulo_a233a10e4b54c54100d87da85cb1ada37}} 
@@ -189,6 +193,39 @@ Sobrecarga do Insertion Operator para Saída de Dados.
 \begin{DoxyReturn}{Retorna}
 string no formato\+: \char`\"{}\+Triangulo(\+Ponto(x1,y1),\+Ponto(x2,y2),\+Ponto(x3,y3))\char`\"{} onde cada \mbox{\hyperlink{classPonto}{Ponto}} representa os atributos do objeto que invocou o operador 
 \end{DoxyReturn}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classTriangulo_ae3185b6adf615dd4b3739d2f36494fa7}\label{classTriangulo_ae3185b6adf615dd4b3739d2f36494fa7}} 
+\index{Triangulo@{Triangulo}!p1@{p1}}
+\index{p1@{p1}!Triangulo@{Triangulo}}
+\doxysubsubsection{\texorpdfstring{p1}{p1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPonto}{Ponto}} Triangulo\+::p1}
+
+
+
+Vértice 01 do triângulo;. 
+
+\mbox{\Hypertarget{classTriangulo_abfcdc9f759904824721a74a338eb3540}\label{classTriangulo_abfcdc9f759904824721a74a338eb3540}} 
+\index{Triangulo@{Triangulo}!p2@{p2}}
+\index{p2@{p2}!Triangulo@{Triangulo}}
+\doxysubsubsection{\texorpdfstring{p2}{p2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPonto}{Ponto}} Triangulo\+::p2}
+
+
+
+Vértice 02 do triângulo;. 
+
+\mbox{\Hypertarget{classTriangulo_ae1cb043f7e5d23030f265e7ce398088b}\label{classTriangulo_ae1cb043f7e5d23030f265e7ce398088b}} 
+\index{Triangulo@{Triangulo}!p3@{p3}}
+\index{p3@{p3}!Triangulo@{Triangulo}}
+\doxysubsubsection{\texorpdfstring{p3}{p3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPonto}{Ponto}} Triangulo\+::p3}
+
+
+
+Vértice 03 do triângulo;. 
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}

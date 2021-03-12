@@ -12,23 +12,36 @@ Classe para manipulação de arquivos visando a persitência de dados relacionad
 \doxysubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classGerenciadorArquivo_aa3fa8801d2ccbf1739267f49e6727f0f}{Gerenciador\+Arquivo}} (string endereco\+\_\+arquivo)
-\begin{DoxyCompactList}\small\item\em Construtor default. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classGerenciadorArquivo_a657f00fee4b2db7b9ce2224a7f161f2f}\label{classGerenciadorArquivo_a657f00fee4b2db7b9ce2224a7f161f2f}} 
+\mbox{\hyperlink{classGerenciadorArquivo_a81043bcea9420b232bf26be7091b0ce4}{Gerenciador\+Arquivo}} ()
+\begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGerenciadorArquivo_a2b815d03c65fa3afb5bedf2735fcad60}{Gerenciador\+Arquivo}} (const string \&\mbox{\hyperlink{classGerenciadorArquivo_ae51d5f8eaac311485385b6bef0608e25}{endereco\+\_\+arquivo}})
+\begin{DoxyCompactList}\small\item\em Construtor Base. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGerenciadorArquivo_ac03fa3222405107c275eccf6b9b56dd9}{$\sim$\+Gerenciador\+Arquivo}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGerenciadorArquivo_a657f00fee4b2db7b9ce2224a7f161f2f}{criar\+Arquivo}} ()
 \begin{DoxyCompactList}\small\item\em Cria o arquivo informado ao gerenciador. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classGerenciadorArquivo_a8a0aca8a1630472d00b1c4fb0f2a0838}\label{classGerenciadorArquivo_a8a0aca8a1630472d00b1c4fb0f2a0838}} 
 void \mbox{\hyperlink{classGerenciadorArquivo_a8a0aca8a1630472d00b1c4fb0f2a0838}{limpar\+Arquivo}} ()
 \begin{DoxyCompactList}\small\item\em Apaga todo o conteúdo informado ao gerenciador. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{classGerenciadorArquivo_aa78c70153d8b0b91b4de291babd15409}{get\+LinhaN}} (int n\+\_\+linha)
 \begin{DoxyCompactList}\small\item\em Retorna uma linha específica conforme informado. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classGerenciadorArquivo_a10b2231507873c84cbe2bf09313144bc}\label{classGerenciadorArquivo_a10b2231507873c84cbe2bf09313144bc}} 
 void \mbox{\hyperlink{classGerenciadorArquivo_a10b2231507873c84cbe2bf09313144bc}{ler\+Arquivo}} ()
 \begin{DoxyCompactList}\small\item\em Exibe todas as linhas do arquivo do gerenciador na ordem em que estiverem armazenadas. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGerenciadorArquivo_ad89595c0984b660119789b5961c99ebc}{salvar\+Objetos}} (int qtd\+\_\+objetos, \mbox{\hyperlink{classObjeto}{Objeto}} $\ast$lista\+\_\+objetos)
 \begin{DoxyCompactList}\small\item\em Escreve os \mbox{\hyperlink{classObjeto}{Objeto}} no arquivo. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGerenciadorArquivo_aee7333bb6180e378965c3bfa345822e0}{recuperar\+Objetos}} (\mbox{\hyperlink{classObjeto}{Objeto}} $\ast$lista\+\_\+objetos)
 \begin{DoxyCompactList}\small\item\em Recupera todos \mbox{\hyperlink{classObjeto}{Objeto}} do arquivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGerenciadorArquivo_a7703996b33191400724b429e0886707a}{split}} (const string \&str, vector$<$ string $>$ \&v, char delim)
+\begin{DoxyCompactList}\small\item\em Particiona uma string a partir de um delimitador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+fstream \mbox{\hyperlink{classGerenciadorArquivo_a0285aef1905fb641be930c5161661d3d}{target}}
+\begin{DoxyCompactList}\small\item\em Camada de manipulação de arquivo C++. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classGerenciadorArquivo_ae51d5f8eaac311485385b6bef0608e25}{endereco\+\_\+arquivo}}
+\begin{DoxyCompactList}\small\item\em Endereço do arquivo a ser manipulado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
@@ -46,15 +59,27 @@ Gabriel Eduardo Lima
 
 
 \doxysubsection{Construtores e Destrutores}
-\mbox{\Hypertarget{classGerenciadorArquivo_aa3fa8801d2ccbf1739267f49e6727f0f}\label{classGerenciadorArquivo_aa3fa8801d2ccbf1739267f49e6727f0f}} 
+\mbox{\Hypertarget{classGerenciadorArquivo_a81043bcea9420b232bf26be7091b0ce4}\label{classGerenciadorArquivo_a81043bcea9420b232bf26be7091b0ce4}} 
 \index{GerenciadorArquivo@{GerenciadorArquivo}!GerenciadorArquivo@{GerenciadorArquivo}}
 \index{GerenciadorArquivo@{GerenciadorArquivo}!GerenciadorArquivo@{GerenciadorArquivo}}
-\doxysubsubsection{\texorpdfstring{GerenciadorArquivo()}{GerenciadorArquivo()}}
-{\footnotesize\ttfamily Gerenciador\+Arquivo\+::\+Gerenciador\+Arquivo (\begin{DoxyParamCaption}\item[{string}]{endereco\+\_\+arquivo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxysubsubsection{\texorpdfstring{GerenciadorArquivo()}{GerenciadorArquivo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Gerenciador\+Arquivo\+::\+Gerenciador\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Construtor default. 
+Construtor Default. 
+
+Chamado quando nenhum parâmetro de ininicialização for informado.
+
+Cria um objeto com o endereço do arquivo definido para \char`\"{}default.\+txt\char`\"{} \mbox{\Hypertarget{classGerenciadorArquivo_a2b815d03c65fa3afb5bedf2735fcad60}\label{classGerenciadorArquivo_a2b815d03c65fa3afb5bedf2735fcad60}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!GerenciadorArquivo@{GerenciadorArquivo}}
+\index{GerenciadorArquivo@{GerenciadorArquivo}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{GerenciadorArquivo()}{GerenciadorArquivo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Gerenciador\+Arquivo\+::\+Gerenciador\+Arquivo (\begin{DoxyParamCaption}\item[{const string \&}]{endereco\+\_\+arquivo }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor Base. 
 
 Cria um objeto preparado para realizar manipulações sobre o arquivo no endereço informado por parâmetro.
 
@@ -62,12 +87,32 @@ Observação\+: Não inicia nenhum processo de manipulação no arquivo!
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em endereco\+\_\+arquivo} & usado para inicializar atributo de mesma nomenclatura \\
+{\em endereco\+\_\+arquivo} & Referência de string constante usada para inicializar atributo de mesma nomenclatura \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classGerenciadorArquivo_ac03fa3222405107c275eccf6b9b56dd9}\label{classGerenciadorArquivo_ac03fa3222405107c275eccf6b9b56dd9}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!````~GerenciadorArquivo@{$\sim$GerenciadorArquivo}}
+\index{````~GerenciadorArquivo@{$\sim$GerenciadorArquivo}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{$\sim$GerenciadorArquivo()}{~GerenciadorArquivo()}}
+{\footnotesize\ttfamily Gerenciador\+Arquivo\+::$\sim$\+Gerenciador\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da Classe. 
+
 
 
 \doxysubsection{Funções membros}
+\mbox{\Hypertarget{classGerenciadorArquivo_a657f00fee4b2db7b9ce2224a7f161f2f}\label{classGerenciadorArquivo_a657f00fee4b2db7b9ce2224a7f161f2f}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!criarArquivo@{criarArquivo}}
+\index{criarArquivo@{criarArquivo}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{criarArquivo()}{criarArquivo()}}
+{\footnotesize\ttfamily void Gerenciador\+Arquivo\+::criar\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cria o arquivo informado ao gerenciador. 
+
 \mbox{\Hypertarget{classGerenciadorArquivo_aa78c70153d8b0b91b4de291babd15409}\label{classGerenciadorArquivo_aa78c70153d8b0b91b4de291babd15409}} 
 \index{GerenciadorArquivo@{GerenciadorArquivo}!getLinhaN@{getLinhaN}}
 \index{getLinhaN@{getLinhaN}!GerenciadorArquivo@{GerenciadorArquivo}}
@@ -85,6 +130,26 @@ Retorna uma linha {\bfseries{n}} do arquivo do gerenciador. Em caso do número d
 {\em n\+\_\+linha} & número da linha que será retornada \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classGerenciadorArquivo_a10b2231507873c84cbe2bf09313144bc}\label{classGerenciadorArquivo_a10b2231507873c84cbe2bf09313144bc}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!lerArquivo@{lerArquivo}}
+\index{lerArquivo@{lerArquivo}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{lerArquivo()}{lerArquivo()}}
+{\footnotesize\ttfamily void Gerenciador\+Arquivo\+::ler\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Exibe todas as linhas do arquivo do gerenciador na ordem em que estiverem armazenadas. 
+
+\mbox{\Hypertarget{classGerenciadorArquivo_a8a0aca8a1630472d00b1c4fb0f2a0838}\label{classGerenciadorArquivo_a8a0aca8a1630472d00b1c4fb0f2a0838}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!limparArquivo@{limparArquivo}}
+\index{limparArquivo@{limparArquivo}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{limparArquivo()}{limparArquivo()}}
+{\footnotesize\ttfamily void Gerenciador\+Arquivo\+::limpar\+Arquivo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Apaga todo o conteúdo informado ao gerenciador. 
+
 \mbox{\Hypertarget{classGerenciadorArquivo_aee7333bb6180e378965c3bfa345822e0}\label{classGerenciadorArquivo_aee7333bb6180e378965c3bfa345822e0}} 
 \index{GerenciadorArquivo@{GerenciadorArquivo}!recuperarObjetos@{recuperarObjetos}}
 \index{recuperarObjetos@{recuperarObjetos}!GerenciadorArquivo@{GerenciadorArquivo}}
@@ -126,6 +191,53 @@ Dada uma quantidade de objetos e um array de \mbox{\hyperlink{classObjeto}{Objet
 \begin{DoxySeeAlso}{Veja também}
 \mbox{\hyperlink{classObjeto}{Objeto}} 
 \end{DoxySeeAlso}
+\mbox{\Hypertarget{classGerenciadorArquivo_a7703996b33191400724b429e0886707a}\label{classGerenciadorArquivo_a7703996b33191400724b429e0886707a}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!split@{split}}
+\index{split@{split}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{split()}{split()}}
+{\footnotesize\ttfamily void Gerenciador\+Arquivo\+::split (\begin{DoxyParamCaption}\item[{const string \&}]{str,  }\item[{vector$<$ string $>$ \&}]{v,  }\item[{char}]{delim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Particiona uma string a partir de um delimitador. 
+
+Dada uma {\ttfamily string} {\itshape str}, o particionamento de {\itshape str} resultará um vetor onde cada elementos desse vetor será um elemento particionado da string a partir da divisão usando-\/se um caractere delimitador.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em str} & Referência constante para a {\ttfamily string} a ser particionada \\
+\hline
+{\em v} & Referência para o vector que armazenrá os pedaços da {\ttfamily string} particionada \\
+\hline
+{\em delim} & caractere usado como delimitador que separa as diferentes particões de uma {\ttfamily string} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+vetor onde os itens são os elementos particionados da {\ttfamily string} 
+\end{DoxyReturn}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classGerenciadorArquivo_ae51d5f8eaac311485385b6bef0608e25}\label{classGerenciadorArquivo_ae51d5f8eaac311485385b6bef0608e25}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!endereco\_arquivo@{endereco\_arquivo}}
+\index{endereco\_arquivo@{endereco\_arquivo}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{endereco\_arquivo}{endereco\_arquivo}}
+{\footnotesize\ttfamily string Gerenciador\+Arquivo\+::endereco\+\_\+arquivo\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Endereço do arquivo a ser manipulado. 
+
+\mbox{\Hypertarget{classGerenciadorArquivo_a0285aef1905fb641be930c5161661d3d}\label{classGerenciadorArquivo_a0285aef1905fb641be930c5161661d3d}} 
+\index{GerenciadorArquivo@{GerenciadorArquivo}!target@{target}}
+\index{target@{target}!GerenciadorArquivo@{GerenciadorArquivo}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily fstream Gerenciador\+Arquivo\+::target\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Camada de manipulação de arquivo C++. 
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}

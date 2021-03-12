@@ -18,9 +18,9 @@
 class Linha {
     public:
         
-        Ponto p1;               //!< ponto de Início do segmento de Reta
-        Ponto p2;               //!< ponto de Fim do segmento de Reta
-        Vetor normal;           //!< vetor normal a Linha direcionado ao Centro da Tela
+        Ponto inicio;            //!< ponto de Início do segmento de Reta
+        Ponto fim;               //!< ponto de Fim do segmento de Reta
+        Vetor normal;            //!< vetor normal a Linha direcionado ao Centro da Tela
 
         //! Construtor Default
         /*!
@@ -30,7 +30,7 @@ class Linha {
             construtor Default. @see Vetor @see Ponto
         */
         Linha():
-            p1(Ponto()), p2(Ponto()), normal(Vetor()){
+            inicio(Ponto()), fim(Ponto()), normal(Vetor()){
         }
 
 
@@ -46,19 +46,101 @@ class Linha {
             pelo vetor diretor \f$ \vec{d} = (x,y) \f$. Pode-se definir
             um vetor normal a essa reta como \f$ \vec{n} = (-y,x) \f$
             
-            \param p1 usado para inicializar atributo de mesmo nomenclatura
-            \param p2 usado para inicializar atributo de mesmo nomenclatura
+            \param inicio usado para inicializar atributo de mesmo nomenclatura
+            \param fim usado para inicializar atributo de mesmo nomenclatura
         */
-        Linha(const Ponto &p1, const Ponto &p2):
-            p1(p1), p2(p2){
+        Linha(const Ponto &inicio, const Ponto &fim):
+            inicio(inicio), fim(fim){
             
-            Vetor d = Vetor(p1,p2);                     // Vetor diretor da Reta/Segmento de Reta criado
+            Vetor d = Vetor(inicio,fim);                     // Vetor diretor da Reta/Segmento de Reta criado
             normal = Vetor(-d.y,d.x);                   // Cálculo do Vetor Normal
             normal = normal * (1.f/normal.getModulo()); // Tranformação do Vetor Normal em Unitário a fins de simplificação
         }
 
         //! Destrutor da Classe
         ~Linha(){}
+
+        //! Construtor de Cópia
+        /*!
+            Cria um novo objeto copiando os pontos e vetor de uma Linha informado.
+
+            \param l Referência constante para o \ref Linha que será copiado
+        */
+        Linha(const Linha &l):
+            inicio(l.inicio), fim(l.fim), normal(l.normal){    
+        }
+
+        //! Construtor Move
+        /*!
+            Cria um novo objeto fazendo uso do recurso de movimentação. 
+            Transfere de maneira eficiente os atributos de uma \ref Linha 
+            para o novo objeto criado.
+            
+            \param l Referência rvalue para uma \ref Linha
+
+            Para mais detalhe sobre o recurso, consultar documentação da linguagem
+        */
+        Linha(Linha &&l) noexcept{
+            // Uso do recurso de movimentatção implementado em outras classes
+            inicio = std::move(l.inicio);
+            fim = std::move(l.fim);
+            normal = std::move(l.normal);
+        };
+
+        // Sobrecarga de operadores
+
+
+        //! Sobrecarga do Insertion Operator para Saída de Dados
+        /*!
+            \return string no formato: "Linha(Ponto(x1,y1),Ponto(x2,y2),Vetor(x,y))"
+                    onde os Pontos e o Vetor são respectivamente os valores
+                    dos atributos de mesmo nome do objeto e são exibidos
+                    conforme sua implementação. @see Ponto @see Vetor
+        */
+        friend std::ostream& operator<<(std::ostream &out, const Linha &linha){
+            out << "Linha(" << linha.inicio << "," << linha.fim << "," << linha.normal << ")";
+            return out;
+        }
+
+        //! Atribuição por Cópia
+        /*!
+            Copia o valor dos atributos da \ref Linha passado por parâmetro
+            para a \ref Linha que invocou o operador.
+
+            \param l Referência constante da \ref Linha que deseja-se copiar
+            \return Referência para a \ref Linha que invocou o operador
+        */
+        Linha& operator=(const Linha &l){
+            inicio = l.inicio;
+            fim = l.fim;
+            normal = l.normal;
+
+            return *this;
+        }
+
+        //! Atribuição por Movimentação
+        /*!
+            \param l Referência rvalue de uma \ref Linha
+            \return Referência para a \ref Linha que Invocou o operador
+        */
+        Linha& operator=(Linha &&l) noexcept {
+            /*
+                Verifica se o parâmetro referencia o próprio objeto.
+                Em caso de verdade, retorno a referência para o objeto
+                atual. Em caso de falsidade, significa que a referência
+                é para outro objeto e a movimentação dos atributos ocorre.
+            */
+            if (&l == this){
+			    return *this;
+            }
+
+            // Uso do recurso de movimentatção implementado em outras classes
+            inicio = std::move(l.inicio);
+            fim = std::move(l.fim);
+            normal = std::move(l.normal);
+
+            return *this;
+        }
 };
 
 #endif

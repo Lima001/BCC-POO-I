@@ -11,12 +11,11 @@ Classe responsável pela abstração do processo de renderização de figuras na
 
 
 
-Diagrama de colaboração para Renderizador\+:
-\nopagebreak
+Diagrama de colaboração para Renderizador\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=197pt]{classRenderizador__coll__graph}
+\includegraphics[width=196pt]{classRenderizador__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Membros Públicos}
@@ -39,21 +38,19 @@ void \mbox{\hyperlink{classRenderizador_a6120c744af4f4546790c249dfd918688}{desen
 void \mbox{\hyperlink{classRenderizador_a97cd301ef2e638a6806b954cb2fb3085}{desenhar\+\_\+circunferencia}} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, const \mbox{\hyperlink{classCircunferencia}{Circunferencia}} \&circ)
 \begin{DoxyCompactList}\small\item\em Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que uma \mbox{\hyperlink{classCircunferencia}{Circunferencia}} seja desenhada. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRenderizador_ad4de411cc9db706fd49d2dec5dc7334a}{desenhar\+\_\+triangulo}} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, const \mbox{\hyperlink{classTriangulo}{Triangulo}} \&triangulo)
-\begin{DoxyCompactList}\small\item\em Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classTriangulo}{Triangulo}} seja desenhada. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classTriangulo}{Triangulo}} seja desenhado. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRenderizador_ae8edd632b63923d0b2397df4d2940669}{desenhar\+\_\+retangulo}} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&rect)
-\begin{DoxyCompactList}\small\item\em Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classRetangulo}{Retangulo}} seja desenhada. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classRetangulo}{Retangulo}} seja desenhado. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRenderizador_a70ca92e1cae39b02e5d329a0852fda69}{desenhar\+\_\+vetor}} (const \mbox{\hyperlink{classCorRGBA}{Cor\+R\+G\+BA}} \&cor, const \mbox{\hyperlink{classVetor}{Vetor}} \&vetor, const \mbox{\hyperlink{classPonto}{Ponto}} \&inicio)
-\begin{DoxyCompactList}\small\item\em Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classVetor}{Vetor}} seja desenhada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classVetor}{Vetor}} seja desenhado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRenderizador_ab2403609733952d8ce2524491292db85}\label{classRenderizador_ab2403609733952d8ce2524491292db85}} 
-\mbox{\hyperlink{classMatriz}{Matriz}} {\bfseries Transformacao}
+\mbox{\hyperlink{classMatriz}{Matriz}} \mbox{\hyperlink{classRenderizador_a840a983dfcd112ca9c7ac9ab158778d2}{transformacao}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRenderizador_a975351e3ea6895bd3ff29b22699d0d81}\label{classRenderizador_a975351e3ea6895bd3ff29b22699d0d81}} 
 S\+D\+L\+\_\+\+Renderer $\ast$ \mbox{\hyperlink{classRenderizador_a975351e3ea6895bd3ff29b22699d0d81}{ptr\+\_\+renderizador}} = nullptr
 \begin{DoxyCompactList}\small\item\em Ponteiro para o elemento \mbox{\hyperlink{classRenderizador}{Renderizador}} S\+DL que permite a chamada de funções de renderização. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -130,7 +127,7 @@ Observação\+: Recomenda-\/se a sua invocação ao final da definição de todo
 
 Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que uma \mbox{\hyperlink{classCircunferencia}{Circunferencia}} seja desenhada. 
 
-Dada uma cor e uma circunferência, essa será desenhado conforme especificado por suas coordenadas de centro e demarcacao transformadas pela \mbox{\hyperlink{classMatriz}{Matriz}} de Transformação .
+Dada uma cor e uma circunferência, essa será desenhado conforme especificado por suas coordenadas de centro e demarcacao transformadas pela \mbox{\hyperlink{classMatriz}{Matriz}} de \mbox{\hyperlink{classRenderizador_a840a983dfcd112ca9c7ac9ab158778d2}{transformacao}} .
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -152,7 +149,7 @@ Dada uma cor e uma circunferência, essa será desenhado conforme especificado p
 
 Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que uma linha seja desenhada. 
 
-Dada uma cor e um as posições de inicio e fim de uma linha, essa será desenhada conforme os parâmetros transformados pela \mbox{\hyperlink{classMatriz}{Matriz}} de Transformação .
+Dada uma cor e um as posições de inicio e fim de uma linha, essa será desenhada conforme os parâmetros transformados pela \mbox{\hyperlink{classMatriz}{Matriz}} de \mbox{\hyperlink{classRenderizador_a840a983dfcd112ca9c7ac9ab158778d2}{transformacao}} .
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -177,7 +174,7 @@ Dada uma cor e um as posições de inicio e fim de uma linha, essa será desenha
 
 Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classPonto}{Ponto}} seja desenhado. 
 
-Dada uma cor e um ponto, esse será desenhado conforme especificado por suas coordenadas transformadas pela \mbox{\hyperlink{classMatriz}{Matriz}} de Transformação .
+Dada uma cor e um ponto, esse será desenhado conforme especificado por suas coordenadas transformadas pela \mbox{\hyperlink{classMatriz}{Matriz}} de \mbox{\hyperlink{classRenderizador_a840a983dfcd112ca9c7ac9ab158778d2}{transformacao}} .
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -197,9 +194,9 @@ Dada uma cor e um ponto, esse será desenhado conforme especificado por suas coo
 
 
 
-Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classRetangulo}{Retangulo}} seja desenhada. 
+Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classRetangulo}{Retangulo}} seja desenhado. 
 
-Dada uma cor e um retângulo, essa será desenhado conforme especificado por seus vértices calculados a partir do \mbox{\hyperlink{classPonto}{Ponto}} inicial e das medidas de altura e largura transformados pela \mbox{\hyperlink{classMatriz}{Matriz}} de Transformação .
+Dada uma cor e um retângulo, essa será desenhado conforme especificado por seus vértices calculados a partir do \mbox{\hyperlink{classPonto}{Ponto}} inicial e das medidas de altura e largura transformados pela \mbox{\hyperlink{classMatriz}{Matriz}} de \mbox{\hyperlink{classRenderizador_a840a983dfcd112ca9c7ac9ab158778d2}{transformacao}} .
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -219,9 +216,9 @@ Dada uma cor e um retângulo, essa será desenhado conforme especificado por seu
 
 
 
-Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classTriangulo}{Triangulo}} seja desenhada. 
+Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classTriangulo}{Triangulo}} seja desenhado. 
 
-Dada uma cor e um triângulo, essa será desenhado conforme especificado por seus vértices transformados pela \mbox{\hyperlink{classMatriz}{Matriz}} de Transformação
+Dada uma cor e um triângulo, essa será desenhado conforme especificado por seus vértices transformados pela \mbox{\hyperlink{classMatriz}{Matriz}} de \mbox{\hyperlink{classRenderizador_a840a983dfcd112ca9c7ac9ab158778d2}{transformacao}}
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -241,9 +238,9 @@ Dada uma cor e um triângulo, essa será desenhado conforme especificado por seu
 
 
 
-Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classVetor}{Vetor}} seja desenhada. 
+Solicita ao \mbox{\hyperlink{classRenderizador}{Renderizador}} que um \mbox{\hyperlink{classVetor}{Vetor}} seja desenhado. 
 
-Dada uma cor e um vetor, esse será desenhado conforme especificado por suas coordenadas a partir de um ponto de início informado e será transformado pela \mbox{\hyperlink{classMatriz}{Matriz}} de Transformação .
+Dada uma cor e um vetor, esse será desenhado conforme especificado por suas coordenadas a partir de um ponto de início informado e será transformado pela \mbox{\hyperlink{classMatriz}{Matriz}} de \mbox{\hyperlink{classRenderizador_a840a983dfcd112ca9c7ac9ab158778d2}{transformacao}} .
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -290,6 +287,25 @@ Define a cor que deve ser usada para o processo de renderização. Uma vez confi
  que especifica a cor de renderização \\
 \hline
 \end{DoxyParams}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classRenderizador_a975351e3ea6895bd3ff29b22699d0d81}\label{classRenderizador_a975351e3ea6895bd3ff29b22699d0d81}} 
+\index{Renderizador@{Renderizador}!ptr\_renderizador@{ptr\_renderizador}}
+\index{ptr\_renderizador@{ptr\_renderizador}!Renderizador@{Renderizador}}
+\doxysubsubsection{\texorpdfstring{ptr\_renderizador}{ptr\_renderizador}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Renderer$\ast$ Renderizador\+::ptr\+\_\+renderizador = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Ponteiro para o elemento \mbox{\hyperlink{classRenderizador}{Renderizador}} S\+DL que permite a chamada de funções de renderização. 
+
+\mbox{\Hypertarget{classRenderizador_a840a983dfcd112ca9c7ac9ab158778d2}\label{classRenderizador_a840a983dfcd112ca9c7ac9ab158778d2}} 
+\index{Renderizador@{Renderizador}!transformacao@{transformacao}}
+\index{transformacao@{transformacao}!Renderizador@{Renderizador}}
+\doxysubsubsection{\texorpdfstring{transformacao}{transformacao}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatriz}{Matriz}} Renderizador\+::transformacao}
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}

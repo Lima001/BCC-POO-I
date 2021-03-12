@@ -22,6 +22,8 @@ Classe para Representação de um \mbox{\hyperlink{classVetor}{Vetor}} no Plano 
 \begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classVetor_a0f841dc7b4c753e545f966ff44f86435}{Vetor}} (\mbox{\hyperlink{classVetor}{Vetor}} \&\&vetor) noexcept
 \begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVetor_a7396a0492de44676a977c593d36e061c}{$\sim$\+Vetor}} ()
+\item 
 float \mbox{\hyperlink{classVetor_a2279b65fbde9427cb721ba3ff748adb6}{get\+Modulo}} () const
 \begin{DoxyCompactList}\small\item\em Método para cálcular o módulo do objeto \mbox{\hyperlink{classVetor}{Vetor}}. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classVetor_ab7291e5e93996a98b74e79781198b25c}{get\+Angulo}} () const
@@ -43,12 +45,10 @@ float \mbox{\hyperlink{classVetor_a7da569260dc42ea384335cce2c11fafb}{operator$\a
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classVetor_af652db948695d6bbd7bc81307020f13b}\label{classVetor_af652db948695d6bbd7bc81307020f13b}} 
 float \mbox{\hyperlink{classVetor_af652db948695d6bbd7bc81307020f13b}{x}}
 \begin{DoxyCompactList}\small\item\em Componente no eixo das Abscissas. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classVetor_ab430657c16d9b5c321a4b5428a5181ae}\label{classVetor_ab430657c16d9b5c321a4b5428a5181ae}} 
 float \mbox{\hyperlink{classVetor_ab430657c16d9b5c321a4b5428a5181ae}{y}}
-\begin{DoxyCompactList}\small\item\em Componente no eixo das Ordendas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Componente no eixo das Ordenadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
@@ -158,7 +158,13 @@ Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de manei
 {\em vetor} & Referência rvalue de um \mbox{\hyperlink{classVetor}{Vetor}}\\
 \hline
 \end{DoxyParams}
-Para mais detalhe sobre o recurso, consultar documentação da linguagem 
+Para mais detalhe sobre o recurso, consultar documentação da linguagem \mbox{\Hypertarget{classVetor_a7396a0492de44676a977c593d36e061c}\label{classVetor_a7396a0492de44676a977c593d36e061c}} 
+\index{Vetor@{Vetor}!````~Vetor@{$\sim$Vetor}}
+\index{````~Vetor@{$\sim$Vetor}!Vetor@{Vetor}}
+\doxysubsubsection{\texorpdfstring{$\sim$Vetor()}{~Vetor()}}
+{\footnotesize\ttfamily Vetor\+::$\sim$\+Vetor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
 
 \doxysubsection{Funções membros}
 \mbox{\Hypertarget{classVetor_ab7291e5e93996a98b74e79781198b25c}\label{classVetor_ab7291e5e93996a98b74e79781198b25c}} 
@@ -379,6 +385,29 @@ Sobrecarga do Insertion Operator para Saída de Dados.
 \begin{DoxyReturn}{Retorna}
 uma string no formato\+: \char`\"{}\+Vetor(x,y)\char`\"{} onde x e y são respectivamentes os valores dos atributos de mesmo nome do objeto 
 \end{DoxyReturn}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classVetor_af652db948695d6bbd7bc81307020f13b}\label{classVetor_af652db948695d6bbd7bc81307020f13b}} 
+\index{Vetor@{Vetor}!x@{x}}
+\index{x@{x}!Vetor@{Vetor}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float Vetor\+::x}
+
+
+
+Componente no eixo das Abscissas. 
+
+\mbox{\Hypertarget{classVetor_ab430657c16d9b5c321a4b5428a5181ae}\label{classVetor_ab430657c16d9b5c321a4b5428a5181ae}} 
+\index{Vetor@{Vetor}!y@{y}}
+\index{y@{y}!Vetor@{Vetor}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float Vetor\+::y}
+
+
+
+Componente no eixo das Ordenadas. 
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}

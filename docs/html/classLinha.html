@@ -29,6 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Projeto POO - Simulação Física 2D
+   &#160;<span id="projectnumber">1</span>
    </div>
    <div id="projectbrief">Projeto desenvolvido para apresentação na disciplina de  Programação Orientada a Objetos I - Bacharelado em Ciência da Computação - IFC Blumenau</div>
   </td>
@@ -72,6 +73,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Membros Públicos</a> &#124;
 <a href="#pub-attribs">Atributos Públicos</a> &#124;
+<a href="#friends">Amigas</a> &#124;
 <a href="classLinha-members.html">Lista de todos os Membros</a>  </div>
   <div class="headertitle">
 <div class="title">Referência da Classe Linha</div>  </div>
@@ -98,28 +100,42 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:aace7b025f21c57ac832b0e29dd267e7e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#aace7b025f21c57ac832b0e29dd267e7e">Linha</a> ()</td></tr>
 <tr class="memdesc:aace7b025f21c57ac832b0e29dd267e7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Default.  <a href="classLinha.html#aace7b025f21c57ac832b0e29dd267e7e">Mais...</a><br /></td></tr>
 <tr class="separator:aace7b025f21c57ac832b0e29dd267e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7adb000240f20df22cb72c6e38c1b2ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a7adb000240f20df22cb72c6e38c1b2ba">Linha</a> (const <a class="el" href="classPonto.html">Ponto</a> &amp;<a class="el" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>, const <a class="el" href="classPonto.html">Ponto</a> &amp;<a class="el" href="classLinha.html#a411fb41aa85dbc9a2068e09f308b4c21">p2</a>)</td></tr>
-<tr class="memdesc:a7adb000240f20df22cb72c6e38c1b2ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Base.  <a href="classLinha.html#a7adb000240f20df22cb72c6e38c1b2ba">Mais...</a><br /></td></tr>
-<tr class="separator:a7adb000240f20df22cb72c6e38c1b2ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a7774ff6d4bd717c457cdb3d182464b"><td class="memItemLeft" align="right" valign="top"><a id="a8a7774ff6d4bd717c457cdb3d182464b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a8a7774ff6d4bd717c457cdb3d182464b">~Linha</a> ()</td></tr>
-<tr class="memdesc:a8a7774ff6d4bd717c457cdb3d182464b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da Classe. <br /></td></tr>
+<tr class="memitem:a4d365f1f9b924b80f027d1e6e1e77b9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a4d365f1f9b924b80f027d1e6e1e77b9d">Linha</a> (const <a class="el" href="classPonto.html">Ponto</a> &amp;<a class="el" href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">inicio</a>, const <a class="el" href="classPonto.html">Ponto</a> &amp;<a class="el" href="classLinha.html#a9b92752fd7bd4bd70f12fc60cc807a99">fim</a>)</td></tr>
+<tr class="memdesc:a4d365f1f9b924b80f027d1e6e1e77b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Base.  <a href="classLinha.html#a4d365f1f9b924b80f027d1e6e1e77b9d">Mais...</a><br /></td></tr>
+<tr class="separator:a4d365f1f9b924b80f027d1e6e1e77b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a7774ff6d4bd717c457cdb3d182464b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a8a7774ff6d4bd717c457cdb3d182464b">~Linha</a> ()</td></tr>
+<tr class="memdesc:a8a7774ff6d4bd717c457cdb3d182464b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da Classe.  <a href="classLinha.html#a8a7774ff6d4bd717c457cdb3d182464b">Mais...</a><br /></td></tr>
 <tr class="separator:a8a7774ff6d4bd717c457cdb3d182464b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a449ace2c9577a59aa1e009ac442c19cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a449ace2c9577a59aa1e009ac442c19cb">Linha</a> (const <a class="el" href="classLinha.html">Linha</a> &amp;l)</td></tr>
+<tr class="memdesc:a449ace2c9577a59aa1e009ac442c19cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de Cópia.  <a href="classLinha.html#a449ace2c9577a59aa1e009ac442c19cb">Mais...</a><br /></td></tr>
+<tr class="separator:a449ace2c9577a59aa1e009ac442c19cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3842c3cc2d3066765cc86da34e9f09f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a3842c3cc2d3066765cc86da34e9f09f8">Linha</a> (<a class="el" href="classLinha.html">Linha</a> &amp;&amp;l) noexcept</td></tr>
+<tr class="memdesc:a3842c3cc2d3066765cc86da34e9f09f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor Move.  <a href="classLinha.html#a3842c3cc2d3066765cc86da34e9f09f8">Mais...</a><br /></td></tr>
+<tr class="separator:a3842c3cc2d3066765cc86da34e9f09f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a934e04b137097a18f26850541fd0a65b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinha.html">Linha</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a934e04b137097a18f26850541fd0a65b">operator=</a> (const <a class="el" href="classLinha.html">Linha</a> &amp;l)</td></tr>
+<tr class="memdesc:a934e04b137097a18f26850541fd0a65b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribuição por Cópia.  <a href="classLinha.html#a934e04b137097a18f26850541fd0a65b">Mais...</a><br /></td></tr>
+<tr class="separator:a934e04b137097a18f26850541fd0a65b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4beeae6a51a3340ea8ea2bd33457f5a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLinha.html">Linha</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a4beeae6a51a3340ea8ea2bd33457f5a0">operator=</a> (<a class="el" href="classLinha.html">Linha</a> &amp;&amp;l) noexcept</td></tr>
+<tr class="memdesc:a4beeae6a51a3340ea8ea2bd33457f5a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atribuição por Movimentação.  <a href="classLinha.html#a4beeae6a51a3340ea8ea2bd33457f5a0">Mais...</a><br /></td></tr>
+<tr class="separator:a4beeae6a51a3340ea8ea2bd33457f5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Atributos Públicos</h2></td></tr>
-<tr class="memitem:ade241efb0c59630bbd712ab9f06b9a7e"><td class="memItemLeft" align="right" valign="top"><a id="ade241efb0c59630bbd712ab9f06b9a7e"></a>
-<a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a></td></tr>
-<tr class="memdesc:ade241efb0c59630bbd712ab9f06b9a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ponto de Início do segmento de Reta <br /></td></tr>
-<tr class="separator:ade241efb0c59630bbd712ab9f06b9a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a411fb41aa85dbc9a2068e09f308b4c21"><td class="memItemLeft" align="right" valign="top"><a id="a411fb41aa85dbc9a2068e09f308b4c21"></a>
-<a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a411fb41aa85dbc9a2068e09f308b4c21">p2</a></td></tr>
-<tr class="memdesc:a411fb41aa85dbc9a2068e09f308b4c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">ponto de Fim do segmento de Reta <br /></td></tr>
-<tr class="separator:a411fb41aa85dbc9a2068e09f308b4c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed4bdaaa18ebf2aa4dfc44855dca1303"><td class="memItemLeft" align="right" valign="top"><a id="aed4bdaaa18ebf2aa4dfc44855dca1303"></a>
-<a class="el" href="classVetor.html">Vetor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a></td></tr>
-<tr class="memdesc:aed4bdaaa18ebf2aa4dfc44855dca1303"><td class="mdescLeft">&#160;</td><td class="mdescRight">vetor normal a <a class="el" href="classLinha.html" title="Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ...">Linha</a> direcionado ao Centro da Tela <br /></td></tr>
+<tr class="memitem:a1d75d40c94cc9e41941ff45a1b7a73fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">inicio</a></td></tr>
+<tr class="memdesc:a1d75d40c94cc9e41941ff45a1b7a73fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">ponto de Início do segmento de Reta  <a href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">Mais...</a><br /></td></tr>
+<tr class="separator:a1d75d40c94cc9e41941ff45a1b7a73fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b92752fd7bd4bd70f12fc60cc807a99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPonto.html">Ponto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a9b92752fd7bd4bd70f12fc60cc807a99">fim</a></td></tr>
+<tr class="memdesc:a9b92752fd7bd4bd70f12fc60cc807a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">ponto de Fim do segmento de Reta  <a href="classLinha.html#a9b92752fd7bd4bd70f12fc60cc807a99">Mais...</a><br /></td></tr>
+<tr class="separator:a9b92752fd7bd4bd70f12fc60cc807a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed4bdaaa18ebf2aa4dfc44855dca1303"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classVetor.html">Vetor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a></td></tr>
+<tr class="memdesc:aed4bdaaa18ebf2aa4dfc44855dca1303"><td class="mdescLeft">&#160;</td><td class="mdescRight">vetor normal a <a class="el" href="classLinha.html" title="Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ...">Linha</a> direcionado ao Centro da Tela  <a href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">Mais...</a><br /></td></tr>
 <tr class="separator:aed4bdaaa18ebf2aa4dfc44855dca1303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Amigas</h2></td></tr>
+<tr class="memitem:a0477cc29f2ab1596a5b751eac0f0e5fa"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLinha.html#a0477cc29f2ab1596a5b751eac0f0e5fa">operator&lt;&lt;</a> (std::ostream &amp;out, const <a class="el" href="classLinha.html">Linha</a> &amp;linha)</td></tr>
+<tr class="memdesc:a0477cc29f2ab1596a5b751eac0f0e5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do Insertion Operator para Saída de Dados.  <a href="classLinha.html#a0477cc29f2ab1596a5b751eac0f0e5fa">Mais...</a><br /></td></tr>
+<tr class="separator:a0477cc29f2ab1596a5b751eac0f0e5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
 <div class="textblock"><p>Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites nos quais os objetos da simulação colidem, e principalmente para o cálculo da reflexão especular. </p>
@@ -130,7 +146,7 @@ Atributos Públicos</h2></td></tr>
 <a href="https://en.wikipedia.org/wiki/Specular_reflection">https://en.wikipedia.org/wiki/Specular_reflection</a> </dd></dl>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
 <a id="aace7b025f21c57ac832b0e29dd267e7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aace7b025f21c57ac832b0e29dd267e7e">&#9670;&nbsp;</a></span>Linha() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aace7b025f21c57ac832b0e29dd267e7e">&#9670;&nbsp;</a></span>Linha() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,8 +176,8 @@ Atributos Públicos</h2></td></tr>
 
 </div>
 </div>
-<a id="a7adb000240f20df22cb72c6e38c1b2ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7adb000240f20df22cb72c6e38c1b2ba">&#9670;&nbsp;</a></span>Linha() <span class="overload">[2/2]</span></h2>
+<a id="a4d365f1f9b924b80f027d1e6e1e77b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d365f1f9b924b80f027d1e6e1e77b9d">&#9670;&nbsp;</a></span>Linha() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -173,13 +189,13 @@ Atributos Públicos</h2></td></tr>
           <td class="memname">Linha::Linha </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="classPonto.html">Ponto</a> &amp;&#160;</td>
-          <td class="paramname"><em>p1</em>, </td>
+          <td class="paramname"><em>inicio</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="classPonto.html">Ponto</a> &amp;&#160;</td>
-          <td class="paramname"><em>p2</em>&#160;</td>
+          <td class="paramname"><em>fim</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -199,11 +215,273 @@ Atributos Públicos</h2></td></tr>
 <p>A título de especificação, o cálculo de um vetor normal pode ser dado da seguinte forma: Considere a reta <em>r</em> definida pelo vetor diretor \( \vec{d} = (x,y) \). Pode-se definir um vetor normal a essa reta como \( \vec{n} = (-y,x) \)</p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p1</td><td>usado para inicializar atributo de mesmo nomenclatura </td></tr>
-    <tr><td class="paramname">p2</td><td>usado para inicializar atributo de mesmo nomenclatura </td></tr>
+    <tr><td class="paramname">inicio</td><td>usado para inicializar atributo de mesmo nomenclatura </td></tr>
+    <tr><td class="paramname">fim</td><td>usado para inicializar atributo de mesmo nomenclatura </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a8a7774ff6d4bd717c457cdb3d182464b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a7774ff6d4bd717c457cdb3d182464b">&#9670;&nbsp;</a></span>~Linha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Linha::~Linha </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destrutor da Classe. </p>
+
+</div>
+</div>
+<a id="a449ace2c9577a59aa1e009ac442c19cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a449ace2c9577a59aa1e009ac442c19cb">&#9670;&nbsp;</a></span>Linha() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Linha::Linha </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLinha.html">Linha</a> &amp;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor de Cópia. </p>
+<p>Cria um novo objeto copiando os pontos e vetor de uma <a class="el" href="classLinha.html" title="Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ...">Linha</a> informado.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>Referência constante para o <a class="el" href="classLinha.html">Linha</a> que será copiado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3842c3cc2d3066765cc86da34e9f09f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3842c3cc2d3066765cc86da34e9f09f8">&#9670;&nbsp;</a></span>Linha() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Linha::Linha </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLinha.html">Linha</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor Move. </p>
+<p>Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os atributos de uma <a class="el" href="classLinha.html">Linha</a> para o novo objeto criado.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>Referência rvalue para uma <a class="el" href="classLinha.html">Linha</a></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Para mais detalhe sobre o recurso, consultar documentação da linguagem </p>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a934e04b137097a18f26850541fd0a65b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a934e04b137097a18f26850541fd0a65b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLinha.html">Linha</a>&amp; Linha::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classLinha.html">Linha</a> &amp;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atribuição por Cópia. </p>
+<p>Copia o valor dos atributos da <a class="el" href="classLinha.html">Linha</a> passado por parâmetro para a <a class="el" href="classLinha.html">Linha</a> que invocou o operador.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>Referência constante da <a class="el" href="classLinha.html">Linha</a> que deseja-se copiar </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para a <a class="el" href="classLinha.html">Linha</a> que invocou o operador </dd></dl>
+
+</div>
+</div>
+<a id="a4beeae6a51a3340ea8ea2bd33457f5a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4beeae6a51a3340ea8ea2bd33457f5a0">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLinha.html">Linha</a>&amp; Linha::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLinha.html">Linha</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Atribuição por Movimentação. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>Referência rvalue de uma <a class="el" href="classLinha.html">Linha</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Referência para a <a class="el" href="classLinha.html">Linha</a> que Invocou o operador </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Amigas e Funções Relacionadas</h2>
+<a id="a0477cc29f2ab1596a5b751eac0f0e5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0477cc29f2ab1596a5b751eac0f0e5fa">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classLinha.html">Linha</a> &amp;&#160;</td>
+          <td class="paramname"><em>linha</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sobrecarga do Insertion Operator para Saída de Dados. </p>
+<dl class="section return"><dt>Retorna</dt><dd>string no formato: "Linha(Ponto(x1,y1),Ponto(x2,y2),Vetor(x,y))" onde os Pontos e o <a class="el" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano.">Vetor</a> são respectivamente os valores dos atributos de mesmo nome do objeto e são exibidos conforme sua implementação. </dd></dl>
+<dl class="section see"><dt>Veja também</dt><dd><a class="el" href="classPonto.html" title="Classe para Representação de um Ponto no Plano Cartesiano.">Ponto</a> </dd>
+<dd>
+<a class="el" href="classVetor.html" title="Classe para Representação de um Vetor no Plano Cartesiano.">Vetor</a> </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="a9b92752fd7bd4bd70f12fc60cc807a99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b92752fd7bd4bd70f12fc60cc807a99">&#9670;&nbsp;</a></span>fim</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPonto.html">Ponto</a> Linha::fim</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ponto de Fim do segmento de Reta </p>
+
+</div>
+</div>
+<a id="a1d75d40c94cc9e41941ff45a1b7a73fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d75d40c94cc9e41941ff45a1b7a73fa">&#9670;&nbsp;</a></span>inicio</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPonto.html">Ponto</a> Linha::inicio</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ponto de Início do segmento de Reta </p>
+
+</div>
+</div>
+<a id="aed4bdaaa18ebf2aa4dfc44855dca1303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed4bdaaa18ebf2aa4dfc44855dca1303">&#9670;&nbsp;</a></span>normal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classVetor.html">Vetor</a> Linha::normal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>vetor normal a <a class="el" href="classLinha.html" title="Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ...">Linha</a> direcionado ao Centro da Tela </p>
 
 </div>
 </div>

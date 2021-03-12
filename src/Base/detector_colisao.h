@@ -22,9 +22,9 @@ using namespace std;
 class DetectorColisao {
     protected:
         int qtd_objetos;                        //!< Atributo de controle da quantidade de Objetos considerados no cálculo de colisão
-        Objeto* ptr_lista_objetos = nullptr;    //!< Ponteiro para um Array de Objetos que sofreram a Colisão
-        int qtd_linhas;                         //!< Atributo de controle da quantidade de linhas considerados no cálculo de colisão
-        Linha* ptr_lista_linhas = nullptr;      //!< Ponteiro para um Array de Linhas que aplicam a Colisão aos Objetos
+        Objeto* ptr_lista_objetos = nullptr;    //!< Ponteiro para um Array de Objetos que podem sofrer a Colisão
+        int qtd_linhas = 4;                     //!< Atributo de controle da quantidade de linhas considerados no cálculo de colisão
+        Linha* ptr_lista_linhas = nullptr;      //!< Ponteiro para um Array de Linhas que aplicam a Colisão aos Objetos. A quantidade de objetos deve seguir o atributo qtd_linhas
 
     public:
 
@@ -66,7 +66,7 @@ class DetectorColisao {
             desse valor com o raio dos \ref Objeto. 
             
             Essa abordagem pode ser escrita da seguinte forma: Considera os pontos
-            \f$ P1(x1,y1) \f$ e \f$ P2(x2,y2) \f$ como sendo o centro
+            \f$ inicio(x1,y1) \f$ e \f$ P2(x2,y2) \f$ como sendo o centro
             dos respectivos Objeto Ob1 e Objeto Ob2, e considere \f$ r1 \f$
             e \f$ r2 \f$ sendo seus respectivos raios. A distãncia entre os
             centros \f$ d\f$ é dada por: 
@@ -74,9 +74,9 @@ class DetectorColisao {
             \f$ d = sqrt{(x2-x1)^2 + (y2-y1)^2} \f$, onde através da analise abaixo
             é possível concluir se houve ou não colisão.
 
-            \f$ d > r1 +r2 \implication Não houve colisão\f$
-            \f$ d = r1 +r2 \implication Houve colisão em um Ponto\f$
-            \f$ d < r1 +r2 \implication Houve Colisão em mais de um Ponto\f$
+            \li \f$ d > r1 +r2 \Rightarrow\f$ Não houve colisão
+            \li \f$ d = r1 +r2 \Rightarrow\f$ Houve colisão em um Ponto
+            \li \f$ d < r1 +r2 \Rightarrow\f$ Houve Colisão em mais de um Ponto
 
             \return A partir desse método é possível obter um vetor contendo um dupla de
                     Referências para Objeto que representam objetos que colidiram um com o outro. 
@@ -88,7 +88,8 @@ class DetectorColisao {
             //Variáveis auxiliares
             Objeto ob1, ob2;
 
-            // Percorrer o array de Objeto pegando um a um para analisar com os demais Objeto a fim de verificar colisão
+            // Percorrer o array de Objeto pegando um a um para analisar com os demais Objeto
+            // a fim de verificar colisão
             for (int i=0; i<(qtd_objetos-1); i++){
                 for (int j=i+1; j<qtd_objetos; j++){
                     ob1 = *(ptr_lista_objetos+i);
@@ -157,7 +158,8 @@ class DetectorColisao {
                 r2 = move(colisoes[i].second->r);
                 m2 = colisoes[i].second->m;
 
-                // Cálculo do novo vetor Velocidade através do cálculo vetorial de colisão bidimensional entre dois Objetos
+                // Cálculo do novo vetor Velocidade através do cálculo vetorial de colisão bidimensional 
+                // entre dois Objetos
                 Vetor v1_ = v1 - ((2*m2)/(m1+m2)) * (((v1-v2)*(r1-r2)) * (1/pow((r1-r2).getModulo(),2))) * (r1-r2);
                 Vetor v2_ = v2 - ((2*m1)/(m1+m2)) * (((v2-v1)*(r2-r1)) * (1/pow((r2-r1).getModulo(),2))) * (r2-r1);
 
@@ -181,13 +183,13 @@ class DetectorColisao {
             A título de especificação, o cálculo de reposicionamento pode ser analisado da
             seguinte forma, considerando os seguintes elementos:
 
-            \li \f$ \vec{r}: vetor posição do Objeto \f$
-            \li \f$ \vec{v}: vetor velocidade do Objeto \f$
-            \li \f$ \vec{n}: vetor normal a linha com a qual o Objeto colidiu e transpassou\f$
-            \li \f$ \alpha: ângulo entre \vec{v} e \vec{n} \f$
-            \li \f$ d: Distância entre o ponto mais externo da Circunferencia em relação a linha que colidiu \f$
-            \li \f$ t: \tan{\alpha} \f$
-            \li \f$ \vec{c}: Vetor para Reposicionamento \f$
+            \li \f$ \vec{r}\f$: vetor posição do Objeto
+            \li \f$ \vec{v}\f$: vetor velocidade do Objeto
+            \li \f$ \vec{n}\f$: vetor normal a linha com a qual o Objeto colidiu e transpassou
+            \li \f$ \alpha\f$: ângulo entre \f$\vec{v}\f$ e \f$\vec{n}\f$
+            \li \f$ d\f$: Distância entre o ponto mais externo da Circunferencia em relação a linha que colidiu
+            \li \f$ t: \tan{\alpha}\f$
+            \li \f$ \vec{c}\f$: Vetor para Reposicionamento
 
             Para saber quem é a Vetor para Reposicionamento deve-se seguir:
 
@@ -234,27 +236,27 @@ class DetectorColisao {
                         e aplicação futura do efeito de reflexão especular
                     */    
                     if (j==0){
-                        if (r.y + ob.raio_circunferencia >= l.p1.y){
+                        if (r.y + ob.raio_circunferencia >= l.inicio.y){
                             colidiu = true;
-                            d = r.y + raio - l.p1.y;
+                            d = r.y + raio - l.inicio.y;
                         }
                     }
                     else if (j==1){
-                        if (r.y - ob.raio_circunferencia <= l.p1.y){
+                        if (r.y - ob.raio_circunferencia <= l.inicio.y){
                             colidiu = true;
-                            d = abs(r.y - raio - l.p1.y);
+                            d = abs(r.y - raio - l.inicio.y);
                         }
                     }
                     else if(j==2){
-                        if (r.x - ob.raio_circunferencia <= l.p1.x){
+                        if (r.x - ob.raio_circunferencia <= l.inicio.x){
                             colidiu = true;
-                            d = abs(r.x - raio - l.p1.x);
+                            d = abs(r.x - raio - l.inicio.x);
                         }
                     }
                     else{
-                        if (r.x + ob.raio_circunferencia >= l.p1.x){
+                        if (r.x + ob.raio_circunferencia >= l.inicio.x){
                             colidiu = true;
-                            d = r.x + raio - l.p1.x;
+                            d = r.x + raio - l.inicio.x;
                         }
                     }
 
@@ -292,8 +294,7 @@ class DetectorColisao {
             \param qtd utilziado para configurar o atributo \ref qtd_linhas
             \param lista_linhas utilziado para configurar o atributo \ref ptr_lista_linhas
         */
-        void setInfoLinhas(int qtd, Linha* lista_linhas){
-            qtd_linhas = qtd;
+        void setInfoLinhas(Linha* lista_linhas){
             ptr_lista_linhas = lista_linhas;
         }
 };

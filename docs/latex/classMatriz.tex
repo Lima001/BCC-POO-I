@@ -18,7 +18,6 @@ Classe para Representação de Matrizes.
 \begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classMatriz_a6ce231d36fa5a85304933484e14a4426}{Matriz}} (const \mbox{\hyperlink{classMatriz}{Matriz}} \&m)
 \begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classMatriz_a2092b7a289ecec369e1da407d5839f5a}\label{classMatriz_a2092b7a289ecec369e1da407d5839f5a}} 
 \mbox{\hyperlink{classMatriz_a2092b7a289ecec369e1da407d5839f5a}{$\sim$\+Matriz}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classMatriz_af8987741da4cabe0aa054f2e8b077a97}{print}} ()
@@ -46,7 +45,6 @@ double $\ast$\& \mbox{\hyperlink{classMatriz_a337f1572a6fb5bdd65d7e97b7dfd4bf3}{
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMatriz_a23291aa666ef3b2213ed8358a5a640eb}\label{classMatriz_a23291aa666ef3b2213ed8358a5a640eb}} 
 double $\ast$$\ast$ \mbox{\hyperlink{classMatriz_a23291aa666ef3b2213ed8358a5a640eb}{ptr}} = nullptr
 \begin{DoxyCompactList}\small\item\em Ponteiro para Ponteiros usado para representar uma estrutura de Linhas e Colunas ou Array de Arrays. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Protegidos}
@@ -61,10 +59,8 @@ void \mbox{\hyperlink{classMatriz_af0c567703acae0b472073502b938c42b}{copiar}} (c
 \doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMatriz_a7a47f20a2888676639b85a103f1f0acc}\label{classMatriz_a7a47f20a2888676639b85a103f1f0acc}} 
 unsigned int \mbox{\hyperlink{classMatriz_a7a47f20a2888676639b85a103f1f0acc}{n\+\_\+linha}}
 \begin{DoxyCompactList}\small\item\em Quantidade de linhas da \mbox{\hyperlink{classMatriz}{Matriz}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classMatriz_a75de113513435223ef020229d301660a}\label{classMatriz_a75de113513435223ef020229d301660a}} 
 unsigned int \mbox{\hyperlink{classMatriz_a75de113513435223ef020229d301660a}{n\+\_\+coluna}}
 \begin{DoxyCompactList}\small\item\em Quantidade de colunas da \mbox{\hyperlink{classMatriz}{Matriz}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
@@ -141,6 +137,16 @@ Cria um novo objeto copiando a estrutura e os valores de uma determinada \mbox{\
 {\em p} & Referência constante para a \mbox{\hyperlink{classMatriz}{Matriz}} que será copiada \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classMatriz_a2092b7a289ecec369e1da407d5839f5a}\label{classMatriz_a2092b7a289ecec369e1da407d5839f5a}} 
+\index{Matriz@{Matriz}!````~Matriz@{$\sim$Matriz}}
+\index{````~Matriz@{$\sim$Matriz}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{$\sim$Matriz()}{~Matriz()}}
+{\footnotesize\ttfamily Matriz\+::$\sim$\+Matriz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da Classe. 
+
 
 
 \doxysubsection{Funções membros}
@@ -463,6 +469,39 @@ Múltiplica as respectivas linhas e colunas de uma \mbox{\hyperlink{classMatriz}
 \begin{DoxyReturn}{Retorna}
 \mbox{\hyperlink{classMatriz}{Matriz}} resultante do produto entre a \mbox{\hyperlink{classMatriz}{Matriz}} de parâmetro e o escalar 
 \end{DoxyReturn}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classMatriz_a75de113513435223ef020229d301660a}\label{classMatriz_a75de113513435223ef020229d301660a}} 
+\index{Matriz@{Matriz}!n\_coluna@{n\_coluna}}
+\index{n\_coluna@{n\_coluna}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{n\_coluna}{n\_coluna}}
+{\footnotesize\ttfamily unsigned int Matriz\+::n\+\_\+coluna\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Quantidade de colunas da \mbox{\hyperlink{classMatriz}{Matriz}}. 
+
+\mbox{\Hypertarget{classMatriz_a7a47f20a2888676639b85a103f1f0acc}\label{classMatriz_a7a47f20a2888676639b85a103f1f0acc}} 
+\index{Matriz@{Matriz}!n\_linha@{n\_linha}}
+\index{n\_linha@{n\_linha}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{n\_linha}{n\_linha}}
+{\footnotesize\ttfamily unsigned int Matriz\+::n\+\_\+linha\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Quantidade de linhas da \mbox{\hyperlink{classMatriz}{Matriz}}. 
+
+\mbox{\Hypertarget{classMatriz_a23291aa666ef3b2213ed8358a5a640eb}\label{classMatriz_a23291aa666ef3b2213ed8358a5a640eb}} 
+\index{Matriz@{Matriz}!ptr@{ptr}}
+\index{ptr@{ptr}!Matriz@{Matriz}}
+\doxysubsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily double$\ast$$\ast$ Matriz\+::ptr = nullptr}
+
+
+
+Ponteiro para Ponteiros usado para representar uma estrutura de Linhas e Colunas ou Array de Arrays. 
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}

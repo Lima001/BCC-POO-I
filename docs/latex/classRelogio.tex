@@ -11,8 +11,7 @@ Classe responsável pelo controle dos F\+PS da aplicação gráfica.
 
 
 
-Diagrama de colaboração para Relogio\+:
-\nopagebreak
+Diagrama de colaboração para Relogio\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,18 +23,17 @@ Diagrama de colaboração para Relogio\+:
 \item 
 \mbox{\hyperlink{classRelogio_a1b4efe11d6fc799430afb24d74df5e0c}{Relogio}} (\mbox{\hyperlink{classControlador__SDL}{Controlador\+\_\+\+S\+DL}} \&\mbox{\hyperlink{classRelogio_a8ea7c825347570bba41216df650a0497}{control}}, int \mbox{\hyperlink{classRelogio_a97662caa3d7a78d5411a8c879db75661}{fps}}=60)
 \begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRelogio_ae5e31a7baf3879d93549b9ff77bead97}{$\sim$\+Relogio}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classRelogio_a1afc03bc99b11898839f21ec9829bf8e}{tick}} ()
 \begin{DoxyCompactList}\small\item\em Método usado para ajustar o fps da aplicação. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRelogio_a8ea7c825347570bba41216df650a0497}\label{classRelogio_a8ea7c825347570bba41216df650a0497}} 
 \mbox{\hyperlink{classControlador__SDL}{Controlador\+\_\+\+S\+DL}} \mbox{\hyperlink{classRelogio_a8ea7c825347570bba41216df650a0497}{control}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classObjeto}{Objeto}} controlador -\/ Permite o uso das funções S\+DL. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classRelogio_a97662caa3d7a78d5411a8c879db75661}\label{classRelogio_a97662caa3d7a78d5411a8c879db75661}} 
 int \mbox{\hyperlink{classRelogio_a97662caa3d7a78d5411a8c879db75661}{fps}}
 \begin{DoxyCompactList}\small\item\em Indica a quantidade de fps desejada pelo desenvolvedor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classRelogio_ac2f3681adc7d2b6783eae175c9198dd2}\label{classRelogio_ac2f3681adc7d2b6783eae175c9198dd2}} 
 Uint32 \mbox{\hyperlink{classRelogio_ac2f3681adc7d2b6783eae175c9198dd2}{clock\+\_\+inicio}}
 \begin{DoxyCompactList}\small\item\em Usado para controle de clock. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -73,6 +71,16 @@ Observação\+: Recomenda-\/se que seja criado apenas um objeto desse tipo para 
 {\em fps} & Usado para inicializar parâmetro de mesma nomenclatura. Em caso de omissão desse parâmetro, seu valor será configurado para o mínimo de 60fps esperado para uma boa aplicação gráfica \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classRelogio_ae5e31a7baf3879d93549b9ff77bead97}\label{classRelogio_ae5e31a7baf3879d93549b9ff77bead97}} 
+\index{Relogio@{Relogio}!````~Relogio@{$\sim$Relogio}}
+\index{````~Relogio@{$\sim$Relogio}!Relogio@{Relogio}}
+\doxysubsubsection{\texorpdfstring{$\sim$Relogio()}{~Relogio()}}
+{\footnotesize\ttfamily Relogio\+::$\sim$\+Relogio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da Classe. 
+
 
 
 \doxysubsection{Funções membros}
@@ -89,6 +97,39 @@ Método usado para ajustar o fps da aplicação.
 Esse método cálcula a quantidade de fps atuais da aplicação e verifica se este é menor do que a quantidade prevista pela aplicação. Caso seje, fica responsável por acrescentar um delay condizente com a quantidade faltante de quadros por segundo.
 
 Observação\+: a cada execução do método, o valor de \mbox{\hyperlink{classRelogio_ac2f3681adc7d2b6783eae175c9198dd2}{clock\+\_\+inicio}} é atualizado, uma vez que esse refere-\/se ao valor da execução no momento, e deve ser usado para comparação com o clock da aplicação em sua próxima iteração de loop principal. 
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classRelogio_ac2f3681adc7d2b6783eae175c9198dd2}\label{classRelogio_ac2f3681adc7d2b6783eae175c9198dd2}} 
+\index{Relogio@{Relogio}!clock\_inicio@{clock\_inicio}}
+\index{clock\_inicio@{clock\_inicio}!Relogio@{Relogio}}
+\doxysubsubsection{\texorpdfstring{clock\_inicio}{clock\_inicio}}
+{\footnotesize\ttfamily Uint32 Relogio\+::clock\+\_\+inicio\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Usado para controle de clock. 
+
+\mbox{\Hypertarget{classRelogio_a8ea7c825347570bba41216df650a0497}\label{classRelogio_a8ea7c825347570bba41216df650a0497}} 
+\index{Relogio@{Relogio}!control@{control}}
+\index{control@{control}!Relogio@{Relogio}}
+\doxysubsubsection{\texorpdfstring{control}{control}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classControlador__SDL}{Controlador\+\_\+\+S\+DL}} Relogio\+::control\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{classObjeto}{Objeto}} controlador -\/ Permite o uso das funções S\+DL. 
+
+\mbox{\Hypertarget{classRelogio_a97662caa3d7a78d5411a8c879db75661}\label{classRelogio_a97662caa3d7a78d5411a8c879db75661}} 
+\index{Relogio@{Relogio}!fps@{fps}}
+\index{fps@{fps}!Relogio@{Relogio}}
+\doxysubsubsection{\texorpdfstring{fps}{fps}}
+{\footnotesize\ttfamily int Relogio\+::fps\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Indica a quantidade de fps desejada pelo desenvolvedor. 
+
+
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 

@@ -29,6 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Projeto POO - Simulação Física 2D
+   &#160;<span id="projectnumber">1</span>
    </div>
    <div id="projectbrief">Projeto desenvolvido para apresentação na disciplina de  Programação Orientada a Objetos I - Bacharelado em Ciência da Computação - IFC Blumenau</div>
   </td>
@@ -97,26 +98,29 @@ $(function() {
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="classRelogio.html#a97662caa3d7a78d5411a8c879db75661">fps</a>(<a class="code" href="classRelogio.html#a97662caa3d7a78d5411a8c879db75661">fps</a>){</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="classRelogio.html#ac2f3681adc7d2b6783eae175c9198dd2">clock_inicio</a> = 0;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        };</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classRelogio.html#a1afc03bc99b11898839f21ec9829bf8e">   62</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classRelogio.html#a1afc03bc99b11898839f21ec9829bf8e">tick</a>(){</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">if</span> ((1000 / <a class="code" href="classRelogio.html#a97662caa3d7a78d5411a8c879db75661">fps</a>) &gt; SDL_GetTicks() - <a class="code" href="classRelogio.html#ac2f3681adc7d2b6783eae175c9198dd2">clock_inicio</a>){</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                SDL_Delay(1000 / <a class="code" href="classRelogio.html#a97662caa3d7a78d5411a8c879db75661">fps</a> - (SDL_GetTicks() - <a class="code" href="classRelogio.html#ac2f3681adc7d2b6783eae175c9198dd2">clock_inicio</a>));</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="classRelogio.html#ac2f3681adc7d2b6783eae175c9198dd2">clock_inicio</a> = SDL_GetTicks();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classRelogio.html#ae5e31a7baf3879d93549b9ff77bead97">   48</a></span>&#160;        <a class="code" href="classRelogio.html#ae5e31a7baf3879d93549b9ff77bead97">~Relogio</a>(){}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classRelogio.html#a1afc03bc99b11898839f21ec9829bf8e">   65</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classRelogio.html#a1afc03bc99b11898839f21ec9829bf8e">tick</a>(){</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> ((1000 / <a class="code" href="classRelogio.html#a97662caa3d7a78d5411a8c879db75661">fps</a>) &gt; SDL_GetTicks() - <a class="code" href="classRelogio.html#ac2f3681adc7d2b6783eae175c9198dd2">clock_inicio</a>){</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                SDL_Delay(1000 / <a class="code" href="classRelogio.html#a97662caa3d7a78d5411a8c879db75661">fps</a> - (SDL_GetTicks() - <a class="code" href="classRelogio.html#ac2f3681adc7d2b6783eae175c9198dd2">clock_inicio</a>));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="classRelogio.html#ac2f3681adc7d2b6783eae175c9198dd2">clock_inicio</a> = SDL_GetTicks();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassRelogio_html_ae5e31a7baf3879d93549b9ff77bead97"><div class="ttname"><a href="classRelogio.html#ae5e31a7baf3879d93549b9ff77bead97">Relogio::~Relogio</a></div><div class="ttdeci">~Relogio()</div><div class="ttdoc">Destrutor da Classe.</div><div class="ttdef"><b>Definition:</b> relogio.h:48</div></div>
 <div class="ttc" id="aclassRelogio_html"><div class="ttname"><a href="classRelogio.html">Relogio</a></div><div class="ttdoc">Classe responsável pelo controle dos FPS da aplicação gráfica.</div><div class="ttdef"><b>Definition:</b> relogio.h:14</div></div>
 <div class="ttc" id="aclassRelogio_html_a8ea7c825347570bba41216df650a0497"><div class="ttname"><a href="classRelogio.html#a8ea7c825347570bba41216df650a0497">Relogio::control</a></div><div class="ttdeci">Controlador_SDL control</div><div class="ttdoc">Objeto controlador - Permite o uso das funções SDL.</div><div class="ttdef"><b>Definition:</b> relogio.h:17</div></div>
 <div class="ttc" id="aclassRelogio_html_ac2f3681adc7d2b6783eae175c9198dd2"><div class="ttname"><a href="classRelogio.html#ac2f3681adc7d2b6783eae175c9198dd2">Relogio::clock_inicio</a></div><div class="ttdeci">Uint32 clock_inicio</div><div class="ttdoc">Usado para controle de clock.</div><div class="ttdef"><b>Definition:</b> relogio.h:19</div></div>
 <div class="ttc" id="acontrolador__SDL_8h_html"><div class="ttname"><a href="controlador__SDL_8h.html">controlador_SDL.h</a></div></div>
 <div class="ttc" id="aclassRelogio_html_a97662caa3d7a78d5411a8c879db75661"><div class="ttname"><a href="classRelogio.html#a97662caa3d7a78d5411a8c879db75661">Relogio::fps</a></div><div class="ttdeci">int fps</div><div class="ttdoc">Indica a quantidade de fps desejada pelo desenvolvedor.</div><div class="ttdef"><b>Definition:</b> relogio.h:18</div></div>
-<div class="ttc" id="aclassRelogio_html_a1afc03bc99b11898839f21ec9829bf8e"><div class="ttname"><a href="classRelogio.html#a1afc03bc99b11898839f21ec9829bf8e">Relogio::tick</a></div><div class="ttdeci">void tick()</div><div class="ttdoc">Método usado para ajustar o fps da aplicação.</div><div class="ttdef"><b>Definition:</b> relogio.h:62</div></div>
+<div class="ttc" id="aclassRelogio_html_a1afc03bc99b11898839f21ec9829bf8e"><div class="ttname"><a href="classRelogio.html#a1afc03bc99b11898839f21ec9829bf8e">Relogio::tick</a></div><div class="ttdeci">void tick()</div><div class="ttdoc">Método usado para ajustar o fps da aplicação.</div><div class="ttdef"><b>Definition:</b> relogio.h:65</div></div>
 <div class="ttc" id="aclassRelogio_html_a1b4efe11d6fc799430afb24d74df5e0c"><div class="ttname"><a href="classRelogio.html#a1b4efe11d6fc799430afb24d74df5e0c">Relogio::Relogio</a></div><div class="ttdeci">Relogio(Controlador_SDL &amp;control, int fps=60)</div><div class="ttdoc">Construtor Default.</div><div class="ttdef"><b>Definition:</b> relogio.h:40</div></div>
 <div class="ttc" id="aclassControlador__SDL_html"><div class="ttname"><a href="classControlador__SDL.html">Controlador_SDL</a></div><div class="ttdoc">Classe responsável pela inicialização e possibilitar a operação da biblioteca SDL.</div><div class="ttdef"><b>Definition:</b> controlador_SDL.h:15</div></div>
 <!-- start footer part -->

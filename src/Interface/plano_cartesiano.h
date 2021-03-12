@@ -53,6 +53,9 @@ class PlanoCartesiano {
                 cor_grade(cor_grade){
             }
 
+        //! Destrutor da Classe
+        ~PlanoCartesiano(){}
+
         //! Desenha os Eixos do Plano Cartesiano
         /*!
             \param render Referência constante para objeto do tipo \ref Renderizador
@@ -142,15 +145,15 @@ class PlanoCartesiano {
                 janela gráfica, algo que pode ter sido alterado para o processo
                 de renderização gráfica do Sistema
             */
-            Matriz tmp = render.Transformacao;
+            Matriz tmp = render.transformacao;
             
             // Uso do recurso de Atribuição por Movimentação implementado na classe Matriz
-            render.Transformacao = std::move(Matriz(3,3));
+            render.transformacao = std::move(Matriz(3,3));
             
             // Definição de uma Matriz Identidade 3x3
-            render.Transformacao[0][0] = 1;
-            render.Transformacao[1][1] = 1;
-            render.Transformacao[2][2] = 1;
+            render.transformacao[0][0] = 1;
+            render.transformacao[1][1] = 1;
+            render.transformacao[2][2] = 1;
 
             desenharGradeX(render);
             desenharGradeY(render);
@@ -158,7 +161,7 @@ class PlanoCartesiano {
 
             // Uso do recurso de Atribuição por Movimentação implementado na classe Matriz
             // Faz com que a Matriz de Transformação volte ao seu valor anterior a renderiazção do Plano
-            render.Transformacao = std::move(tmp);
+            render.transformacao = std::move(tmp);
         }
 };
 

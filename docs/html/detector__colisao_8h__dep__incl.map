@@ -1,0 +1,8 @@
+<map id="Base/detector_colisao.h" name="Base/detector_colisao.h">
+<area shape="rect" id="node1" title=" " alt="" coords="399,5,577,32"/>
+<area shape="rect" id="node2" href="$teste__detector_8cpp.html" title=" " alt="" coords="5,87,184,114"/>
+<area shape="rect" id="node3" href="$movimento__colisao__borda_8cpp.html" title=" " alt="" coords="208,80,379,121"/>
+<area shape="rect" id="node4" href="$movimento__colisao__cmb_8cpp.html" title=" " alt="" coords="403,80,573,121"/>
+<area shape="rect" id="node5" href="$movimento__colisao__cmux_8cpp.html" title=" " alt="" coords="597,80,768,121"/>
+<area shape="rect" id="node6" href="$movimento__colisao__simples_8cpp.html" title=" " alt="" coords="792,80,963,121"/>
+</map>

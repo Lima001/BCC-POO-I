@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projeto POO - Simulação Física 2D: Implementação das Componentes do Sistema</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projeto POO - Simulação Física 2D
+   &#160;<span id="projectnumber">1</span>
+   </div>
+   <div id="projectbrief">Projeto desenvolvido para apresentação na disciplina de  Programação Orientada a Objetos I - Bacharelado em Ciência da Computação - IFC Blumenau</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Implementação das Componentes do Sistema </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Nesse local é possível encontrar todo o código desenvolvido para a simulação física dividido em pacotes. Nos pacotes é possível encontrar a implementação das classes do sistema, bem como alguns testes realizados sobre esses elementos.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Ferramentas Utilizadas no Desenvolvimento</h1>
+<p>&ndash; Linguagem C++: Linguagem adotada pelo docente responsável pela disciplina para o desenvolvimento das atividades e do projeto. C++ É uma linguagem muito interessante de trabalhar uma vez que pode ser compreendida como um superconjunto da linguagem C onde têm-se recursos como alocação de memória dinâmica herdada do C junto de recursos da Orientação a Objetos adicionados pelas implementações C++;</p>
+<p>&ndash; Compilador g++: Compilador padrão da distribuição Linux Ubuntu 20.04 utilizado ao longo do desenvolvimento do trabalho. A título de especificação, o projeto foi compilado usando-se da versão C++14;</p>
+<p>&ndash; Biblioteca SDL: É uma biblioteca escrita em C que funciona nativamente em C++ e foi usada para proporcionar acesso de baixo nível a hardware de vídeo, som, teclado, mouse etc. A título de especificação, o projeto faz uso da versão 2.0.10;</p>
+<p>&ndash; Doxygen: É uma ferramenta que permite a escrita de comentários no código C++ que futuramente podem ser compilados e gerar uma documentação para o projeto. A título de especificação, o projeto faz uso da versão 1.8.17;</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Divisão dos Pacotes</h1>
+<ul>
+<li>Arquivo: Implementação da componente responsável pela Persistência de Dados simplificada do sistema.</li>
+<li>Base: Implementação das componentes responsáve por representar e permitir a manipulação dos elementos matemáticos e físicos do sistema.</li>
+<li>Interface: Implementação das componentes responsável por abstrair a biblbioteca SDL e permitir a criação de uma Interface Gráfica simples.</li>
+<li>Integração: Implementação de testes que integram maior parte das funcionalidades implementadas pelos outros pacotes. </li>
+</ul>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

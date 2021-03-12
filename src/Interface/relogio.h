@@ -42,7 +42,10 @@ class Relogio{
             fps(fps){
 
             clock_inicio = 0;
-        };
+        }
+
+        //! Destrutor da Classe
+        ~Relogio(){}
 
         //! Método usado para ajustar o fps da aplicação
         /*!

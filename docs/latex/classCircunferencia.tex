@@ -11,8 +11,7 @@ Classe para Representação de uma Circunferência. É a forma considerada como 
 
 
 
-Diagrama de colaboração para Circunferencia\+:
-\nopagebreak
+Diagrama de colaboração para Circunferencia\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -41,16 +40,12 @@ void \mbox{\hyperlink{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}{ger
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}\label{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}} 
 int \mbox{\hyperlink{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}{precisao}}
 \begin{DoxyCompactList}\small\item\em Definição da quantidade de pontos usados para gerar a demarcação da circunferência. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCircunferencia_a8bc69243976463322985c38e366d2b9d}\label{classCircunferencia_a8bc69243976463322985c38e366d2b9d}} 
 float \mbox{\hyperlink{classCircunferencia_a8bc69243976463322985c38e366d2b9d}{raio}}
 \begin{DoxyCompactList}\small\item\em Raio da Circunferência. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}\label{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}} 
 \mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}{centro}}
 \begin{DoxyCompactList}\small\item\em Centro da Circunferência. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}\label{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}} 
 \mbox{\hyperlink{classPonto}{Ponto}} $\ast$ \mbox{\hyperlink{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}{demarcacao}} = nullptr
 \begin{DoxyCompactList}\small\item\em Ponteiro que guarda as demarcações da circunferência -\/ Usado para representação Gráfica. Por padrão é configurado para nullptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
@@ -101,7 +96,7 @@ Construtor Base.
 
 Cria um objeto \mbox{\hyperlink{classCircunferencia}{Circunferencia}} com os atributos configurados conforme informado por parâmetro.
 
-Observação\+: A demarcação não é gerada ao chamar esse método para evitar alocação de memória desnecessária. Caso seja necessário pode-\/se chamar o método membro \mbox{\hyperlink{classCircunferencia_addc5b507440da86173d4799b4d2a96d1}{gerar\+Demarcacao()}} para configurar o atributo membro demarcacao adequadamente.
+Observação\+: A demarcação é gerada automáticamente ao chamar esse método. Tenha cuidado para a alocação de memória dinâmica automática.
 
 
 \begin{DoxyParams}{Parâmetros}
@@ -233,6 +228,49 @@ Sobrecarga do Insertion Operator para Saída de Dados.
 \begin{DoxyReturn}{Retorna}
 uma string no formato\+: \char`\"{}\+Circunferencia(precisao,raio,\+Ponto(x,y))\char`\"{} onde \mbox{\hyperlink{classPonto}{Ponto}} refere-\/se ao \mbox{\hyperlink{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}{centro}} da \mbox{\hyperlink{classCircunferencia}{Circunferencia}} 
 \end{DoxyReturn}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}\label{classCircunferencia_a7bc8965dd1d3d94ae3cb3208d3d333b2}} 
+\index{Circunferencia@{Circunferencia}!centro@{centro}}
+\index{centro@{centro}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{centro}{centro}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPonto}{Ponto}} Circunferencia\+::centro}
+
+
+
+Centro da Circunferência. 
+
+\mbox{\Hypertarget{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}\label{classCircunferencia_aa67c54667dd962a750a3c326bb373c82}} 
+\index{Circunferencia@{Circunferencia}!demarcacao@{demarcacao}}
+\index{demarcacao@{demarcacao}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{demarcacao}{demarcacao}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPonto}{Ponto}}$\ast$ Circunferencia\+::demarcacao = nullptr}
+
+
+
+Ponteiro que guarda as demarcações da circunferência -\/ Usado para representação Gráfica. Por padrão é configurado para nullptr. 
+
+\mbox{\Hypertarget{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}\label{classCircunferencia_a9abde79c099f2b4ce6833787b09b38db}} 
+\index{Circunferencia@{Circunferencia}!precisao@{precisao}}
+\index{precisao@{precisao}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{precisao}{precisao}}
+{\footnotesize\ttfamily int Circunferencia\+::precisao}
+
+
+
+Definição da quantidade de pontos usados para gerar a demarcação da circunferência. 
+
+\mbox{\Hypertarget{classCircunferencia_a8bc69243976463322985c38e366d2b9d}\label{classCircunferencia_a8bc69243976463322985c38e366d2b9d}} 
+\index{Circunferencia@{Circunferencia}!raio@{raio}}
+\index{raio@{raio}!Circunferencia@{Circunferencia}}
+\doxysubsubsection{\texorpdfstring{raio}{raio}}
+{\footnotesize\ttfamily float Circunferencia\+::raio}
+
+
+
+Raio da Circunferência. 
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}

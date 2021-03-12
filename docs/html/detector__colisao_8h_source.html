@@ -29,6 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Projeto POO - Simulação Física 2D
+   &#160;<span id="projectnumber">1</span>
    </div>
    <div id="projectbrief">Projeto desenvolvido para apresentação na disciplina de  Programação Orientada a Objetos I - Bacharelado em Ciência da Computação - IFC Blumenau</div>
   </td>
@@ -93,7 +94,7 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#a28c67b8f21da38597a36f9775e14fa71">   24</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classDetectorColisao.html#a28c67b8f21da38597a36f9775e14fa71">qtd_objetos</a>;                        </div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#a6ba6fee2ba97948912d8bbcc52374fb5">   25</a></span>&#160;        <a class="code" href="classObjeto.html">Objeto</a>* ptr_lista_objetos = <span class="keyword">nullptr</span>;    </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#ac592605fa8776ad1e91e2cf7b0cff90f">   26</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classDetectorColisao.html#ac592605fa8776ad1e91e2cf7b0cff90f">qtd_linhas</a>;                         </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#ac592605fa8776ad1e91e2cf7b0cff90f">   26</a></span>&#160;        <span class="keywordtype">int</span> qtd_linhas = 4;                     </div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#a44149d2414afd34851e873b5b93b93a1">   27</a></span>&#160;        <a class="code" href="classLinha.html">Linha</a>* ptr_lista_linhas = <span class="keyword">nullptr</span>;      </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
@@ -119,201 +120,184 @@ $(function() {
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="comment">//Variáveis auxiliares</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            <a class="code" href="classObjeto.html">Objeto</a> ob1, ob2;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="comment">// Percorrer o array de Objeto pegando um a um para analisar com os demais Objeto a fim de verificar colisão</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;(qtd_objetos-1); i++){</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=i+1; j&lt;qtd_objetos; j++){</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    ob1 = *(ptr_lista_objetos+i);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    ob2 = *(ptr_lista_objetos+j);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    <span class="comment">// Cálculo da distância</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    <span class="keywordtype">float</span> distancia = pow((pow((ob1.<a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> - ob2.<a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a>), 2) + pow((ob1.<a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> - ob2.<a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a>), 2)),(1/2.f));</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    <span class="comment">// Caso houve colisão, adicionar referências para os Objeto no vetor de retorno</span></div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="keywordflow">if</span> (distancia &lt;= (ob1.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> + ob2.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a>)){</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        v.push_back(pair&lt;Objeto*,Objeto*&gt;(ptr_lista_objetos+i, ptr_lista_objetos+j));</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">return</span> v;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#a949191c2e8b5da6da8e1f8d9f94dcd09">  120</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDetectorColisao.html#a949191c2e8b5da6da8e1f8d9f94dcd09">aplicar_colisao_simples</a>(){</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            vector&lt;pair&lt;Objeto*,Objeto*&gt;&gt; colisoes = detectar();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;colisoes.size(); i++){</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                colisoes[i].first-&gt;v = colisoes[i].first-&gt;v *-1; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                colisoes[i].second-&gt;v = colisoes[i].second-&gt;v *-1;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#a26a18c8f076b90fd81e9d0ed52175b1c">  140</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDetectorColisao.html#a26a18c8f076b90fd81e9d0ed52175b1c">aplicar_colisao_cm</a>(){</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="comment">// Detecção das Colisões</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            vector&lt;pair&lt;Objeto*,Objeto*&gt;&gt; colisoes = detectar();</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <span class="comment">// Declaração de Variáveis Auxiliares</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <a class="code" href="classVetor.html">Vetor</a> v1, v2, r1, r2;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordtype">float</span> m1, m2;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="comment">// Iteração sobre o vetor para acessar as duplas de Objetos que colidiram entre si</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;colisoes.size(); i++){</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="comment">// Dados do primeiro Objeto da dupla de Colisão</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                v1 = move(colisoes[i].first-&gt;v);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                r1 = move(colisoes[i].first-&gt;r);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                m1 = colisoes[i].first-&gt;m;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <span class="comment">// Dados do segundo Objeto da dupla de Colisão</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                v2 = move(colisoes[i].second-&gt;v);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                r2 = move(colisoes[i].second-&gt;r);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                m2 = colisoes[i].second-&gt;m;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                <span class="comment">// Cálculo do novo vetor Velocidade através do cálculo vetorial de colisão bidimensional entre dois Objetos</span></div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <a class="code" href="classVetor.html">Vetor</a> v1_ = v1 - ((2*m2)/(m1+m2)) * (((v1-v2)*(r1-r2)) * (1/pow((r1-r2).getModulo(),2))) * (r1-r2);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <a class="code" href="classVetor.html">Vetor</a> v2_ = v2 - ((2*m1)/(m1+m2)) * (((v2-v1)*(r2-r1)) * (1/pow((r2-r1).getModulo(),2))) * (r2-r1);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="comment">// Alteração das velocidades dos Objeto pelo novo valor calculador</span></div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                colisoes[i].first-&gt;v = move(v1_);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                colisoes[i].second-&gt;v = move(v2_);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            }</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        }</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="comment">// Percorrer o array de Objeto pegando um a um para analisar com os demais Objeto</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="comment">// a fim de verificar colisão</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;(qtd_objetos-1); i++){</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=i+1; j&lt;qtd_objetos; j++){</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    ob1 = *(ptr_lista_objetos+i);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                    ob2 = *(ptr_lista_objetos+j);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    <span class="comment">// Cálculo da distância</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    <span class="keywordtype">float</span> distancia = pow((pow((ob1.<a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> - ob2.<a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a>), 2) + pow((ob1.<a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> - ob2.<a class="code" href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">r</a>.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a>), 2)),(1/2.f));</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="comment">// Caso houve colisão, adicionar referências para os Objeto no vetor de retorno</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    <span class="keywordflow">if</span> (distancia &lt;= (ob1.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> + ob2.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a>)){</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        v.push_back(pair&lt;Objeto*,Objeto*&gt;(ptr_lista_objetos+i, ptr_lista_objetos+j));</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">return</span> v;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#a949191c2e8b5da6da8e1f8d9f94dcd09">  121</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDetectorColisao.html#a949191c2e8b5da6da8e1f8d9f94dcd09">aplicar_colisao_simples</a>(){</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            vector&lt;pair&lt;Objeto*,Objeto*&gt;&gt; colisoes = detectar();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;colisoes.size(); i++){</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                colisoes[i].first-&gt;v = colisoes[i].first-&gt;v *-1; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                colisoes[i].second-&gt;v = colisoes[i].second-&gt;v *-1;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#a26a18c8f076b90fd81e9d0ed52175b1c">  141</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDetectorColisao.html#a26a18c8f076b90fd81e9d0ed52175b1c">aplicar_colisao_cm</a>(){</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <span class="comment">// Detecção das Colisões</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            vector&lt;pair&lt;Objeto*,Objeto*&gt;&gt; colisoes = detectar();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="comment">// Declaração de Variáveis Auxiliares</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <a class="code" href="classVetor.html">Vetor</a> v1, v2, r1, r2;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordtype">float</span> m1, m2;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="comment">// Iteração sobre o vetor para acessar as duplas de Objetos que colidiram entre si</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;colisoes.size(); i++){</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="comment">// Dados do primeiro Objeto da dupla de Colisão</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                v1 = move(colisoes[i].first-&gt;v);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                r1 = move(colisoes[i].first-&gt;r);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                m1 = colisoes[i].first-&gt;m;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <span class="comment">// Dados do segundo Objeto da dupla de Colisão</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                v2 = move(colisoes[i].second-&gt;v);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                r2 = move(colisoes[i].second-&gt;r);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                m2 = colisoes[i].second-&gt;m;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <span class="comment">// Cálculo do novo vetor Velocidade através do cálculo vetorial de colisão bidimensional </span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <span class="comment">// entre dois Objetos</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <a class="code" href="classVetor.html">Vetor</a> v1_ = v1 - ((2*m2)/(m1+m2)) * (((v1-v2)*(r1-r2)) * (1/pow((r1-r2).getModulo(),2))) * (r1-r2);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <a class="code" href="classVetor.html">Vetor</a> v2_ = v2 - ((2*m1)/(m1+m2)) * (((v2-v1)*(r2-r1)) * (1/pow((r2-r1).getModulo(),2))) * (r2-r1);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <span class="comment">// Alteração das velocidades dos Objeto pelo novo valor calculador</span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                colisoes[i].first-&gt;v = move(v1_);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                colisoes[i].second-&gt;v = move(v2_);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#a53cfb2a01f410da48e43b1dd47a933a2">  204</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDetectorColisao.html#a53cfb2a01f410da48e43b1dd47a933a2">aplicar_colisao_borda</a>(){</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="comment">// Declaração de Variáveis Auxiliares</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <a class="code" href="classLinha.html">Linha</a> l;</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <a class="code" href="classObjeto.html">Objeto</a> ob;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <a class="code" href="classVetor.html">Vetor</a> v;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <a class="code" href="classVetor.html">Vetor</a> r;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <span class="keywordtype">float</span> raio;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="comment">// Iteração sobre os Objeto</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;qtd_objetos; i++){</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="comment">// Dados do Objeto sendo considerado atualmente. Uso da atribuição por movimentação implementada na classe Ponto</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                ob = move(*(ptr_lista_objetos+i));</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                v = move((ptr_lista_objetos+i)-&gt;v);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                r = move((ptr_lista_objetos+i)-&gt;r);</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                raio = (ptr_lista_objetos+i)-&gt;raio_circunferencia;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#a53cfb2a01f410da48e43b1dd47a933a2">  207</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDetectorColisao.html#a53cfb2a01f410da48e43b1dd47a933a2">aplicar_colisao_borda</a>(){</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="comment">// Declaração de Variáveis Auxiliares</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <a class="code" href="classLinha.html">Linha</a> l;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            <a class="code" href="classObjeto.html">Objeto</a> ob;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <a class="code" href="classVetor.html">Vetor</a> v, r, normal;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordtype">float</span> raio;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="comment">// Iteração sobre os Objeto</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;qtd_objetos; i++){</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                <span class="comment">// Dados do Objeto sendo considerado atualmente. Uso da atribuição por movimentação implementada na classe Ponto</span></div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                ob = move(*(ptr_lista_objetos+i));</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                v = move((ptr_lista_objetos+i)-&gt;v);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                r = move((ptr_lista_objetos+i)-&gt;r);</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                <span class="comment">// Iteração sobre as Linhas que representam as Bordas da Janela</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;qtd_linhas; j++){</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    <span class="comment">// Variáveis Auxiliares</span></div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    l = move(*(ptr_lista_linhas+j));    <span class="comment">// objeto Linha considerado para o Cálculo</span></div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    <span class="keywordtype">bool</span> colidiu = <span class="keyword">false</span>;               <span class="comment">// Flag de colisão</span></div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                    </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    <span class="comment">// Distância entre o Ponto mais Externo da Circunferencia em relação a Linha</span></div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    <span class="keywordtype">float</span> d;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                    <span class="comment">/* </span></div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="comment">                        Verificação se o Objeto colidiu com a Linha para cálculo da distância d,</span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment">                        e aplicação futura do efeito de reflexão especular</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="comment">                    */</span>    </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    <span class="keywordflow">if</span> (j==0){</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                        <span class="keywordflow">if</span> (r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> + ob.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> &gt;= l.<a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>){</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                            colidiu = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                            d = r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> + raio - l.<a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                        }</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                    }</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (j==1){</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                        <span class="keywordflow">if</span> (r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> - ob.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> &lt;= l.<a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>){</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                            colidiu = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                            d = abs(r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> - raio - l.<a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                        }</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                    }</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(j==2){</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                        <span class="keywordflow">if</span> (r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> - ob.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> &lt;= l.<a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>){</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                            colidiu = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                            d = abs(r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> - raio - l.<a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                        }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                    }</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    <span class="keywordflow">else</span>{</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                        <span class="keywordflow">if</span> (r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> + ob.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> &gt;= l.<a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>){</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                            colidiu = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                            d = r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> + raio - l.<a class="code" href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">p1</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                        }</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                    <span class="comment">// Verificação de existência colisão</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    <span class="keywordflow">if</span> (colidiu){</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                        <span class="keywordtype">float</span> angulo = v.<a class="code" href="classVetor.html#ab7291e5e93996a98b74e79781198b25c">getAngulo</a>();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                raio = (ptr_lista_objetos+i)-&gt;raio_circunferencia;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                <span class="comment">// Iteração sobre as Linhas que representam as Bordas da Janela</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;qtd_linhas; j++){</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    <span class="comment">// Variáveis Auxiliares</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                    l = move(*(ptr_lista_linhas+j));                <span class="comment">// objeto Linha considerado para o Cálculo</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                    normal = move((ptr_lista_linhas+j)-&gt;normal);    <span class="comment">// Vetor normal a Linha</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                    <span class="keywordtype">bool</span> colidiu = <span class="keyword">false</span>;               <span class="comment">// Flag de colisão</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                    </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                    <span class="comment">// Distância entre o Ponto mais Externo da Circunferencia em relação a Linha</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    <span class="keywordtype">float</span> d;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    <span class="comment">/* </span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="comment">                        Verificação se o Objeto colidiu com a Linha para cálculo da distância d,</span></div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;<span class="comment">                        e aplicação futura do efeito de reflexão especular</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment">                    */</span>    </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                    <span class="keywordflow">if</span> (j==0){</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                        <span class="keywordflow">if</span> (r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> + ob.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> &gt;= l.<a class="code" href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">inicio</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>){</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                            colidiu = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                            d = r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> + raio - l.<a class="code" href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">inicio</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                        }</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                    }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (j==1){</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                        <span class="keywordflow">if</span> (r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> - ob.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> &lt;= l.<a class="code" href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">inicio</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>){</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                            colidiu = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                            d = abs(r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> - raio - l.<a class="code" href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">inicio</a>.<a class="code" href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">y</a>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                        }</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                    }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(j==2){</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                        <span class="keywordflow">if</span> (r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> - ob.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> &lt;= l.<a class="code" href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">inicio</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>){</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                            colidiu = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                            d = abs(r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> - raio - l.<a class="code" href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">inicio</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                        }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                    <span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                        <span class="keywordflow">if</span> (r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> + ob.<a class="code" href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">raio_circunferencia</a> &gt;= l.<a class="code" href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">inicio</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>){</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                            colidiu = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                            d = r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> + raio - l.<a class="code" href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">inicio</a>.<a class="code" href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">x</a>;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                        }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                    }</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                        </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                        <span class="comment">// Cálculo do menor angulo formado entre o Vetor velocidade e o eixo das ordendas</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                        <span class="keywordflow">if</span> (angulo &lt;= M_PI)</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                            angulo = M_PI/2.f - angulo;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                            angulo = 3*M_PI/2.f - angulo;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                        <span class="comment">// Verificar se ângulo equivale a 90° ou -90°</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                        <span class="keywordflow">if</span> (sin(angulo) == sin(M_PI/2.f) || sin(angulo) == sin(-M_PI/2.f))</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                            <span class="comment">/*</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="comment">                                Caso ocorra a igualdade anterior, deve-se considerar</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="comment">                                o ângulo como 0 para fins de cálculos usando a tangente</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="comment">                                desse ângulo, uma vez que tg(90°) e tg(-90°) são indefinidas</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="comment">                                e impendem o reposicionamento do Objeto</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="comment">                            */</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                            angulo = 0; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                        <span class="comment">// Verificar com qual linha o Objeto colidiu para efeturar o seu reposicionamento</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                        <span class="keywordflow">if</span> (j == 0){</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                            (ptr_lista_objetos+i)-&gt;r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> -= d*tan(angulo); </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                            (ptr_lista_objetos+i)-&gt;r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> -= d;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                        }</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (j==1){</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                            (ptr_lista_objetos+i)-&gt;r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> += d*tan(angulo); </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                            (ptr_lista_objetos+i)-&gt;r.<a class="code" href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">y</a> += d;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                        }</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (j==2){</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                            (ptr_lista_objetos+i)-&gt;r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> += d; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                            (ptr_lista_objetos+i)-&gt;r.y += d*tan(angulo);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                        }</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                            (ptr_lista_objetos+i)-&gt;r.<a class="code" href="classVetor.html#af652db948695d6bbd7bc81307020f13b">x</a> -= d; </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                            (ptr_lista_objetos+i)-&gt;r.y -= d*tan(angulo);</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                        }</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                        <span class="comment">// Aplicação da reflexão especular através de cálculo vetorial</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                        (ptr_lista_objetos+i)-&gt;v = v - 2*(v*l.<a class="code" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a>)*l.<a class="code" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                    }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                }</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        }</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
-<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#ab2bc447b74a4be053c2a655f2bcac927">  313</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDetectorColisao.html#ab2bc447b74a4be053c2a655f2bcac927">setInfoLinhas</a>(<span class="keywordtype">int</span> qtd, <a class="code" href="classLinha.html">Linha</a>* lista_linhas){</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            qtd_linhas = qtd;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            ptr_lista_linhas = lista_linhas;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        }</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;};</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                    <span class="comment">// Verificação de existência colisão</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    <span class="keywordflow">if</span> (colidiu){</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                        </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                        <span class="comment">// Cálculo do ângulo formado entre o Vetor normal da Linha e o Vetor Velocidade do Objeto</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        <span class="keywordtype">float</span> angulo = acos(1.<a class="code" href="teste__detector_8cpp.html#a5766ce3a19153daa7270bde04b438fd8">f</a> * (v * normal) / (v.<a class="code" href="classVetor.html#a2279b65fbde9427cb721ba3ff748adb6">getModulo</a>() * normal.getModulo()));</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                        <span class="comment">// Cálculo do Vetor Reposicionamento, conforme descrito anteriormente</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                        <a class="code" href="classVetor.html">Vetor</a> reposicionamento;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                        <span class="keywordflow">if</span> (j == 0 || j == 1)</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                            reposicionamento = <a class="code" href="teste_8txt.html#abd46b518e34cd4b89d95057306e31f4b">Vetor</a>(d*tan(angulo), d);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                            reposicionamento = <a class="code" href="teste_8txt.html#abd46b518e34cd4b89d95057306e31f4b">Vetor</a>(d, d*tan(angulo));</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                        <span class="comment">// Soma/Subtração do Vetor reposicionamento ao Vetor posição do Objeto</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                        <span class="keywordflow">if</span> (j == 0 || j == 3)</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                            (ptr_lista_objetos+i)-&gt;r = (ptr_lista_objetos+i)-&gt;r - reposicionamento;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                            (ptr_lista_objetos+i)-&gt;r = (ptr_lista_objetos+i)-&gt;r + reposicionamento;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                        <span class="comment">// Aplicação da reflexão especular através de cálculo vetorial</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                        (ptr_lista_objetos+i)-&gt;v = v - 2*(v*l.<a class="code" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a>)*l.<a class="code" href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">normal</a>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                    }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        }</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="classDetectorColisao.html#a6eb93cce1de2be21d8ae9e74001574e5">  297</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDetectorColisao.html#a6eb93cce1de2be21d8ae9e74001574e5">setInfoLinhas</a>(<a class="code" href="classLinha.html">Linha</a>* lista_linhas){</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            ptr_lista_linhas = lista_linhas;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        }</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;};</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassLinha_html_ade241efb0c59630bbd712ab9f06b9a7e"><div class="ttname"><a href="classLinha.html#ade241efb0c59630bbd712ab9f06b9a7e">Linha::p1</a></div><div class="ttdeci">Ponto p1</div><div class="ttdoc">ponto de Início do segmento de Reta</div><div class="ttdef"><b>Definition:</b> linha.h:21</div></div>
+<div class="ttc" id="ateste__detector_8cpp_html_a5766ce3a19153daa7270bde04b438fd8"><div class="ttname"><a href="teste__detector_8cpp.html#a5766ce3a19153daa7270bde04b438fd8">f</a></div><div class="ttdeci">double f(double t)</div><div class="ttdef"><b>Definition:</b> teste_detector.cpp:5</div></div>
 <div class="ttc" id="aclassObjeto_html"><div class="ttname"><a href="classObjeto.html">Objeto</a></div><div class="ttdoc">Classe para Representação de um Obejto com forma de Circunferência capaz de movimentar-se.</div><div class="ttdef"><b>Definition:</b> objeto.h:17</div></div>
 <div class="ttc" id="aclassDetectorColisao_html"><div class="ttname"><a href="classDetectorColisao.html">DetectorColisao</a></div><div class="ttdoc">Classe para Cálculo e Aplicação de Colisão entre objetos do tipo Objeto e entre um Objeto e uma Linha...</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:22</div></div>
 <div class="ttc" id="aclassDetectorColisao_html_a28c67b8f21da38597a36f9775e14fa71"><div class="ttname"><a href="classDetectorColisao.html#a28c67b8f21da38597a36f9775e14fa71">DetectorColisao::qtd_objetos</a></div><div class="ttdeci">int qtd_objetos</div><div class="ttdoc">Atributo de controle da quantidade de Objetos considerados no cálculo de colisão.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:24</div></div>
 <div class="ttc" id="aclassDetectorColisao_html_aab2f496a09ee3ede00105853141e635b"><div class="ttname"><a href="classDetectorColisao.html#aab2f496a09ee3ede00105853141e635b">DetectorColisao::exibirObjetos</a></div><div class="ttdeci">void exibirObjetos()</div><div class="ttdoc">Exibe todos os objetos do tipo Objeto considerados no DetectorColisao.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:56</div></div>
-<div class="ttc" id="aclassDetectorColisao_html_a26a18c8f076b90fd81e9d0ed52175b1c"><div class="ttname"><a href="classDetectorColisao.html#a26a18c8f076b90fd81e9d0ed52175b1c">DetectorColisao::aplicar_colisao_cm</a></div><div class="ttdeci">void aplicar_colisao_cm()</div><div class="ttdoc">Aplicar Colisão com Conservação do Momento Bidimensional.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:140</div></div>
-<div class="ttc" id="aclassVetor_html_ab7291e5e93996a98b74e79781198b25c"><div class="ttname"><a href="classVetor.html#ab7291e5e93996a98b74e79781198b25c">Vetor::getAngulo</a></div><div class="ttdeci">float getAngulo() const</div><div class="ttdoc">Método para cálcular o ângulo formado pelo vetor em relação ao eixo x.</div><div class="ttdef"><b>Definition:</b> vetor.h:105</div></div>
+<div class="ttc" id="aclassDetectorColisao_html_a26a18c8f076b90fd81e9d0ed52175b1c"><div class="ttname"><a href="classDetectorColisao.html#a26a18c8f076b90fd81e9d0ed52175b1c">DetectorColisao::aplicar_colisao_cm</a></div><div class="ttdeci">void aplicar_colisao_cm()</div><div class="ttdoc">Aplicar Colisão com Conservação do Momento Bidimensional.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:141</div></div>
 <div class="ttc" id="aclassDetectorColisao_html_af481fb29fdcb71ba912fad097dd35f2a"><div class="ttname"><a href="classDetectorColisao.html#af481fb29fdcb71ba912fad097dd35f2a">DetectorColisao::detectar</a></div><div class="ttdeci">vector&lt; pair&lt; Objeto *, Objeto * &gt; &gt; detectar()</div><div class="ttdoc">Detecta a colisão entre objetos do tipo Objeto.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:85</div></div>
-<div class="ttc" id="aclassDetectorColisao_html_a949191c2e8b5da6da8e1f8d9f94dcd09"><div class="ttname"><a href="classDetectorColisao.html#a949191c2e8b5da6da8e1f8d9f94dcd09">DetectorColisao::aplicar_colisao_simples</a></div><div class="ttdeci">void aplicar_colisao_simples()</div><div class="ttdoc">Aplicar Regra de Colisão Simples.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:120</div></div>
+<div class="ttc" id="aclassDetectorColisao_html_a949191c2e8b5da6da8e1f8d9f94dcd09"><div class="ttname"><a href="classDetectorColisao.html#a949191c2e8b5da6da8e1f8d9f94dcd09">DetectorColisao::aplicar_colisao_simples</a></div><div class="ttdeci">void aplicar_colisao_simples()</div><div class="ttdoc">Aplicar Regra de Colisão Simples.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:121</div></div>
 <div class="ttc" id="aclassObjeto_html_ace60283c1fb4b980ea25ca0e93e0aaac"><div class="ttname"><a href="classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac">Objeto::raio_circunferencia</a></div><div class="ttdeci">float raio_circunferencia</div><div class="ttdoc">Raio da circunferencia do Objeto.</div><div class="ttdef"><b>Definition:</b> objeto.h:23</div></div>
 <div class="ttc" id="alinha_8h_html"><div class="ttname"><a href="linha_8h.html">linha.h</a></div></div>
 <div class="ttc" id="aclassLinha_html_aed4bdaaa18ebf2aa4dfc44855dca1303"><div class="ttname"><a href="classLinha.html#aed4bdaaa18ebf2aa4dfc44855dca1303">Linha::normal</a></div><div class="ttdeci">Vetor normal</div><div class="ttdoc">vetor normal a Linha direcionado ao Centro da Tela</div><div class="ttdef"><b>Definition:</b> linha.h:23</div></div>
 <div class="ttc" id="aclassDetectorColisao_html_a962d89d6a13fcfc01e41cd65b56d657d"><div class="ttname"><a href="classDetectorColisao.html#a962d89d6a13fcfc01e41cd65b56d657d">DetectorColisao::DetectorColisao</a></div><div class="ttdeci">DetectorColisao(int qtd_objetos, Objeto *lista_objetos)</div><div class="ttdoc">Construtor Default.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:42</div></div>
-<div class="ttc" id="aclassDetectorColisao_html_a53cfb2a01f410da48e43b1dd47a933a2"><div class="ttname"><a href="classDetectorColisao.html#a53cfb2a01f410da48e43b1dd47a933a2">DetectorColisao::aplicar_colisao_borda</a></div><div class="ttdeci">void aplicar_colisao_borda()</div><div class="ttdoc">Detectar e Aplicar Colisão com as Bordas da Janela.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:204</div></div>
+<div class="ttc" id="aclassDetectorColisao_html_a53cfb2a01f410da48e43b1dd47a933a2"><div class="ttname"><a href="classDetectorColisao.html#a53cfb2a01f410da48e43b1dd47a933a2">DetectorColisao::aplicar_colisao_borda</a></div><div class="ttdeci">void aplicar_colisao_borda()</div><div class="ttdoc">Detectar e Aplicar Colisão com as Bordas da Janela.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:207</div></div>
 <div class="ttc" id="aclassPonto_html_ac72a5274f1b887279fe959d0eca1eaa8"><div class="ttname"><a href="classPonto.html#ac72a5274f1b887279fe959d0eca1eaa8">Ponto::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Coordenada no eixo das abscissas.</div><div class="ttdef"><b>Definition:</b> ponto.h:18</div></div>
+<div class="ttc" id="ateste_8txt_html_abd46b518e34cd4b89d95057306e31f4b"><div class="ttname"><a href="teste_8txt.html#abd46b518e34cd4b89d95057306e31f4b">Vetor</a></div><div class="ttdeci">Vetor(0, 0)</div></div>
+<div class="ttc" id="aclassDetectorColisao_html_a6eb93cce1de2be21d8ae9e74001574e5"><div class="ttname"><a href="classDetectorColisao.html#a6eb93cce1de2be21d8ae9e74001574e5">DetectorColisao::setInfoLinhas</a></div><div class="ttdeci">void setInfoLinhas(Linha *lista_linhas)</div><div class="ttdoc">Configura os atributos relacionados aos objetos do tipo Linha.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:297</div></div>
 <div class="ttc" id="aclassVetor_html"><div class="ttname"><a href="classVetor.html">Vetor</a></div><div class="ttdoc">Classe para Representação de um Vetor no Plano Cartesiano.</div><div class="ttdef"><b>Definition:</b> vetor.h:16</div></div>
 <div class="ttc" id="aclassPonto_html_aa3d21f6f0e8a9fb0591c982f03cbb26a"><div class="ttname"><a href="classPonto.html#aa3d21f6f0e8a9fb0591c982f03cbb26a">Ponto::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Coordenada no eixo das ordenadas.</div><div class="ttdef"><b>Definition:</b> ponto.h:19</div></div>
 <div class="ttc" id="aclassDetectorColisao_html_aa190671298c489ce9853c803c2465c57"><div class="ttname"><a href="classDetectorColisao.html#aa190671298c489ce9853c803c2465c57">DetectorColisao::~DetectorColisao</a></div><div class="ttdeci">~DetectorColisao()</div><div class="ttdoc">Destrutor da Classe.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:47</div></div>
 <div class="ttc" id="aclassLinha_html"><div class="ttname"><a href="classLinha.html">Linha</a></div><div class="ttdoc">Classe para Representação de um Segmento de reta no Plano Cartesiano Usada para definição de limites ...</div><div class="ttdef"><b>Definition:</b> linha.h:18</div></div>
+<div class="ttc" id="aclassVetor_html_a2279b65fbde9427cb721ba3ff748adb6"><div class="ttname"><a href="classVetor.html#a2279b65fbde9427cb721ba3ff748adb6">Vetor::getModulo</a></div><div class="ttdeci">float getModulo() const</div><div class="ttdoc">Método para cálcular o módulo do objeto Vetor.</div><div class="ttdef"><b>Definition:</b> vetor.h:95</div></div>
 <div class="ttc" id="aobjeto_8h_html"><div class="ttname"><a href="objeto_8h.html">objeto.h</a></div></div>
 <div class="ttc" id="aclassObjeto_html_ac46abc31b29690263c366ed34ed8b5c6"><div class="ttname"><a href="classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6">Objeto::r</a></div><div class="ttdeci">Vetor r</div><div class="ttdoc">Vetor posição do Objeto.</div><div class="ttdef"><b>Definition:</b> objeto.h:25</div></div>
 <div class="ttc" id="aclassVetor_html_af652db948695d6bbd7bc81307020f13b"><div class="ttname"><a href="classVetor.html#af652db948695d6bbd7bc81307020f13b">Vetor::x</a></div><div class="ttdeci">float x</div><div class="ttdoc">Componente no eixo das Abscissas.</div><div class="ttdef"><b>Definition:</b> vetor.h:18</div></div>
-<div class="ttc" id="aclassVetor_html_ab430657c16d9b5c321a4b5428a5181ae"><div class="ttname"><a href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">Vetor::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Componente no eixo das Ordendas.</div><div class="ttdef"><b>Definition:</b> vetor.h:19</div></div>
-<div class="ttc" id="aclassDetectorColisao_html_ac592605fa8776ad1e91e2cf7b0cff90f"><div class="ttname"><a href="classDetectorColisao.html#ac592605fa8776ad1e91e2cf7b0cff90f">DetectorColisao::qtd_linhas</a></div><div class="ttdeci">int qtd_linhas</div><div class="ttdoc">Atributo de controle da quantidade de linhas considerados no cálculo de colisão.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:26</div></div>
-<div class="ttc" id="aclassDetectorColisao_html_ab2bc447b74a4be053c2a655f2bcac927"><div class="ttname"><a href="classDetectorColisao.html#ab2bc447b74a4be053c2a655f2bcac927">DetectorColisao::setInfoLinhas</a></div><div class="ttdeci">void setInfoLinhas(int qtd, Linha *lista_linhas)</div><div class="ttdoc">Configura os atributos relacionados aos objetos do tipo Linha.</div><div class="ttdef"><b>Definition:</b> detector_colisao.h:313</div></div>
+<div class="ttc" id="aclassVetor_html_ab430657c16d9b5c321a4b5428a5181ae"><div class="ttname"><a href="classVetor.html#ab430657c16d9b5c321a4b5428a5181ae">Vetor::y</a></div><div class="ttdeci">float y</div><div class="ttdoc">Componente no eixo das Ordenadas.</div><div class="ttdef"><b>Definition:</b> vetor.h:19</div></div>
+<div class="ttc" id="aclassLinha_html_a1d75d40c94cc9e41941ff45a1b7a73fa"><div class="ttname"><a href="classLinha.html#a1d75d40c94cc9e41941ff45a1b7a73fa">Linha::inicio</a></div><div class="ttdeci">Ponto inicio</div><div class="ttdoc">ponto de Início do segmento de Reta</div><div class="ttdef"><b>Definition:</b> linha.h:21</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Gerado por &#160;<a href="http://www.doxygen.org/index.html">

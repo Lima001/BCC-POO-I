@@ -22,16 +22,16 @@ int main(){
     Renderizador render = Renderizador(janela.ptr_janela);
 
     // Definição de uma Matriz de Transformação para o processo de Renderização
-    render.Transformacao = Matriz(3,3);
-    render.Transformacao[0][0] = 1;
-    render.Transformacao[0][1] = 0;
-    render.Transformacao[0][2] = 400;
-    render.Transformacao[1][0] = 0;
-    render.Transformacao[1][1] = -1;
-    render.Transformacao[1][2] = 300;
-    render.Transformacao[2][0] = 0;
-    render.Transformacao[2][1] = 0;
-    render.Transformacao[2][2] = 1;
+    render.transformacao = Matriz(3,3);
+    render.transformacao[0][0] = 1;
+    render.transformacao[0][1] = 0;
+    render.transformacao[0][2] = 400;
+    render.transformacao[1][0] = 0;
+    render.transformacao[1][1] = -1;
+    render.transformacao[1][2] = 300;
+    render.transformacao[2][0] = 0;
+    render.transformacao[2][1] = 0;
+    render.transformacao[2][2] = 1;
 
     janela.preencherFundo(CorRGBA(25,25,25));
 
@@ -49,14 +49,14 @@ int main(){
     render.desenhar_retangulo(branco, Retangulo(Ponto(0,150),25,25));
     
     // Alteração da Matriz de Transformação para mudança no processo de renderização
-    render.Transformacao[0][0] = 2/10.f;
-    render.Transformacao[1][1] = -2/10.f;
+    render.transformacao[0][0] = 2/10.f;
+    render.transformacao[1][1] = -2/10.f;
     render.desenhar_vetor(branco, Vetor(60,80), Ponto(0,0));
     
     render.atualizar();
     janela.atualizar();
 
-    control.pausar(6000);
+    control.pausar(20000);
     control.finalizar();
 
     return 0;

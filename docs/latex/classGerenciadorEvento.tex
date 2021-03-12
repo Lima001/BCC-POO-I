@@ -11,8 +11,7 @@ Classe Responsável pelo processamento dos objetos do tipo \mbox{\hyperlink{clas
 
 
 
-Diagrama de colaboração para Gerenciador\+Evento\+:
-\nopagebreak
+Diagrama de colaboração para Gerenciador\+Evento\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,13 +23,14 @@ Diagrama de colaboração para Gerenciador\+Evento\+:
 \item 
 \mbox{\hyperlink{classGerenciadorEvento_a86d2a4d9ab0c857405bad096eeb9ef79}{Gerenciador\+Evento}} ()
 \begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGerenciadorEvento_a0870972e028ff4cf38f89a2372a51715}{$\sim$\+Gerenciador\+Evento}} ()
+\item 
 void \mbox{\hyperlink{classGerenciadorEvento_aa8a6581cc3638c04f6de4f388a2617c8}{registrar\+Evento}} ()
 \begin{DoxyCompactList}\small\item\em Registra e Interpreta os eventos captados. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classGerenciadorEvento_a93123d4d0f6595cecbd6bb832782b14d}\label{classGerenciadorEvento_a93123d4d0f6595cecbd6bb832782b14d}} 
-\mbox{\hyperlink{classEvento}{Evento}} \mbox{\hyperlink{classGerenciadorEvento_a93123d4d0f6595cecbd6bb832782b14d}{evento}} = \mbox{\hyperlink{classEvento}{Evento}}(N\+O\+NE,T\+\_\+\+N\+O\+NE)
+\mbox{\hyperlink{classEvento}{Evento}} \mbox{\hyperlink{classGerenciadorEvento_a93123d4d0f6595cecbd6bb832782b14d}{evento}} = \mbox{\hyperlink{classEvento}{Evento}}(\mbox{\hyperlink{evento_8h_af07debe1798ea9888e13f66b93c6ab05ac157bdf0b85a40d2619cbc8bc1ae5fe2}{N\+O\+NE}},\mbox{\hyperlink{evento_8h_a68dc8420d4850fe68378bc682c360e30a0068efa79fe6ee9e0f9060a1758739ea}{T\+\_\+\+N\+O\+NE}})
 \begin{DoxyCompactList}\small\item\em Usado para armazenar o objeto \mbox{\hyperlink{classEvento}{Evento}} que está sendo processado no momento. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Protegidos}
 \begin{DoxyCompactItemize}
@@ -40,7 +40,6 @@ void \mbox{\hyperlink{classGerenciadorEvento_a456fcbd8d4375b5a3948a094ea2854be}{
 \doxysubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classGerenciadorEvento_a4ec60acb9c89e1fab3d2ddd4148547db}\label{classGerenciadorEvento_a4ec60acb9c89e1fab3d2ddd4148547db}} 
 S\+D\+L\+\_\+\+Event \mbox{\hyperlink{classGerenciadorEvento_a4ec60acb9c89e1fab3d2ddd4148547db}{registro}}
 \begin{DoxyCompactList}\small\item\em Usado para registrar os eventos gerados pelo S\+DL para futura intepretação. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -67,7 +66,13 @@ Gabriel Eduardo Lima
 
 Construtor Default. 
 
-Não necessita de passagem de parâmetros. 
+Não necessita de passagem de parâmetros. \mbox{\Hypertarget{classGerenciadorEvento_a0870972e028ff4cf38f89a2372a51715}\label{classGerenciadorEvento_a0870972e028ff4cf38f89a2372a51715}} 
+\index{GerenciadorEvento@{GerenciadorEvento}!````~GerenciadorEvento@{$\sim$GerenciadorEvento}}
+\index{````~GerenciadorEvento@{$\sim$GerenciadorEvento}!GerenciadorEvento@{GerenciadorEvento}}
+\doxysubsubsection{\texorpdfstring{$\sim$GerenciadorEvento()}{~GerenciadorEvento()}}
+{\footnotesize\ttfamily Gerenciador\+Evento\+::$\sim$\+Gerenciador\+Evento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
 
 \doxysubsection{Funções membros}
 \mbox{\Hypertarget{classGerenciadorEvento_a456fcbd8d4375b5a3948a094ea2854be}\label{classGerenciadorEvento_a456fcbd8d4375b5a3948a094ea2854be}} 
@@ -110,6 +115,29 @@ Caso nenhum evento esteja na fila de eventos, o atributo que armazena esses even
 \begin{DoxySeeAlso}{Veja também}
 \mbox{\hyperlink{classEvento}{Evento}} 
 \end{DoxySeeAlso}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classGerenciadorEvento_a93123d4d0f6595cecbd6bb832782b14d}\label{classGerenciadorEvento_a93123d4d0f6595cecbd6bb832782b14d}} 
+\index{GerenciadorEvento@{GerenciadorEvento}!evento@{evento}}
+\index{evento@{evento}!GerenciadorEvento@{GerenciadorEvento}}
+\doxysubsubsection{\texorpdfstring{evento}{evento}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEvento}{Evento}} Gerenciador\+Evento\+::evento = \mbox{\hyperlink{classEvento}{Evento}}(\mbox{\hyperlink{evento_8h_af07debe1798ea9888e13f66b93c6ab05ac157bdf0b85a40d2619cbc8bc1ae5fe2}{N\+O\+NE}},\mbox{\hyperlink{evento_8h_a68dc8420d4850fe68378bc682c360e30a0068efa79fe6ee9e0f9060a1758739ea}{T\+\_\+\+N\+O\+NE}})}
+
+
+
+Usado para armazenar o objeto \mbox{\hyperlink{classEvento}{Evento}} que está sendo processado no momento. 
+
+\mbox{\Hypertarget{classGerenciadorEvento_a4ec60acb9c89e1fab3d2ddd4148547db}\label{classGerenciadorEvento_a4ec60acb9c89e1fab3d2ddd4148547db}} 
+\index{GerenciadorEvento@{GerenciadorEvento}!registro@{registro}}
+\index{registro@{registro}!GerenciadorEvento@{GerenciadorEvento}}
+\doxysubsubsection{\texorpdfstring{registro}{registro}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Event Gerenciador\+Evento\+::registro\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Usado para registrar os eventos gerados pelo S\+DL para futura intepretação. 
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}

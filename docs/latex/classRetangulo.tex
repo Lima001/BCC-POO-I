@@ -11,8 +11,7 @@ Classe para Representação de um Retângulo.
 
 
 
-Diagrama de colaboração para Retangulo\+:
-\nopagebreak
+Diagrama de colaboração para Retangulo\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -30,6 +29,8 @@ Diagrama de colaboração para Retangulo\+:
 \begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classRetangulo_ab29cdc63380ed0cc1f4568e91a8fcb30}{Retangulo}} (\mbox{\hyperlink{classRetangulo}{Retangulo}} \&\&rect) noexcept
 \begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRetangulo_a52b1a7f23e13a531a30526825b164615}{$\sim$\+Retangulo}} ()
+\item 
 \mbox{\hyperlink{classRetangulo}{Retangulo}} \& \mbox{\hyperlink{classRetangulo_a7e52f891a519cdd0e480ed70be0a36d7}{operator=}} (const \mbox{\hyperlink{classRetangulo}{Retangulo}} \&rect)
 \begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classRetangulo}{Retangulo}} \& \mbox{\hyperlink{classRetangulo_a8d470ef6fc2c5c57e07eb747dce64f78}{operator=}} (\mbox{\hyperlink{classRetangulo}{Retangulo}} \&\&rect) noexcept
@@ -37,13 +38,10 @@ Diagrama de colaboração para Retangulo\+:
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classRetangulo_a23839310726426373d115180884c03e5}\label{classRetangulo_a23839310726426373d115180884c03e5}} 
 \mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classRetangulo_a23839310726426373d115180884c03e5}{inicio}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPonto}{Ponto}} de início do retângulo -\/ Considerar ponto Superior Esquerdo da Figura. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classRetangulo_a7dc902283835c9a9e4302a628f43d382}\label{classRetangulo_a7dc902283835c9a9e4302a628f43d382}} 
 float \mbox{\hyperlink{classRetangulo_a7dc902283835c9a9e4302a628f43d382}{largura}}
 \begin{DoxyCompactList}\small\item\em Medida da Largura do retângulo. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classRetangulo_a80a55ad677f16d52118d16127e5b9207}\label{classRetangulo_a80a55ad677f16d52118d16127e5b9207}} 
 float \mbox{\hyperlink{classRetangulo_a80a55ad677f16d52118d16127e5b9207}{altura}}
 \begin{DoxyCompactList}\small\item\em Medida da Altura do retangulo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
@@ -132,7 +130,13 @@ Cria um novo objeto fazendo uso do recurso de movimentação Transfere de maneir
 {\em t} & Referência rvalue de um \mbox{\hyperlink{classRetangulo}{Retangulo}}\\
 \hline
 \end{DoxyParams}
-Para mais detalhe sobre o recurso, consultar documentação da linguagem 
+Para mais detalhe sobre o recurso, consultar documentação da linguagem \mbox{\Hypertarget{classRetangulo_a52b1a7f23e13a531a30526825b164615}\label{classRetangulo_a52b1a7f23e13a531a30526825b164615}} 
+\index{Retangulo@{Retangulo}!````~Retangulo@{$\sim$Retangulo}}
+\index{````~Retangulo@{$\sim$Retangulo}!Retangulo@{Retangulo}}
+\doxysubsubsection{\texorpdfstring{$\sim$Retangulo()}{~Retangulo()}}
+{\footnotesize\ttfamily Retangulo\+::$\sim$\+Retangulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
 
 \doxysubsection{Funções membros}
 \mbox{\Hypertarget{classRetangulo_a7e52f891a519cdd0e480ed70be0a36d7}\label{classRetangulo_a7e52f891a519cdd0e480ed70be0a36d7}} 
@@ -189,6 +193,39 @@ Sobrecarga do Insertion Operator para Saída de Dados.
 \begin{DoxyReturn}{Retorna}
 string no formato\+: \char`\"{}\+Retangulo(\+Ponto(x,y),largura,altura)\char`\"{} onde cada elemento refere-\/se aos valores dos atributos. 
 \end{DoxyReturn}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classRetangulo_a80a55ad677f16d52118d16127e5b9207}\label{classRetangulo_a80a55ad677f16d52118d16127e5b9207}} 
+\index{Retangulo@{Retangulo}!altura@{altura}}
+\index{altura@{altura}!Retangulo@{Retangulo}}
+\doxysubsubsection{\texorpdfstring{altura}{altura}}
+{\footnotesize\ttfamily float Retangulo\+::altura}
+
+
+
+Medida da Altura do retangulo. 
+
+\mbox{\Hypertarget{classRetangulo_a23839310726426373d115180884c03e5}\label{classRetangulo_a23839310726426373d115180884c03e5}} 
+\index{Retangulo@{Retangulo}!inicio@{inicio}}
+\index{inicio@{inicio}!Retangulo@{Retangulo}}
+\doxysubsubsection{\texorpdfstring{inicio}{inicio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPonto}{Ponto}} Retangulo\+::inicio}
+
+
+
+\mbox{\hyperlink{classPonto}{Ponto}} de início do retângulo -\/ Considerar ponto Superior Esquerdo da Figura. 
+
+\mbox{\Hypertarget{classRetangulo_a7dc902283835c9a9e4302a628f43d382}\label{classRetangulo_a7dc902283835c9a9e4302a628f43d382}} 
+\index{Retangulo@{Retangulo}!largura@{largura}}
+\index{largura@{largura}!Retangulo@{Retangulo}}
+\doxysubsubsection{\texorpdfstring{largura}{largura}}
+{\footnotesize\ttfamily float Retangulo\+::largura}
+
+
+
+Medida da Largura do retângulo. 
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}

@@ -1,3 +1,3 @@
-Objeto(10;20;Vetor(0,0);Vetor(0,20);Aceleracao(0x7ffcbd93f170,0x7ffcbd93f178))
-Objeto(10;20;Vetor(0,0);Vetor(-25,-25);Aceleracao(0x7ffcbd93f1a0,0x7ffcbd93f1a8))
-Objeto(10;50;Vetor(-100,100);Vetor(50,50);Aceleracao(0x7ffcbd93f1d0,0x7ffcbd93f1d8))
+Objeto(10;20;Vetor(0,0);Vetor(0,20);Aceleracao(0x7fffd0b964b0,0x7fffd0b964b8))
+Objeto(10;20;Vetor(0,0);Vetor(-25,-25);Aceleracao(0x7fffd0b964e0,0x7fffd0b964e8))
+Objeto(10;50;Vetor(-100,100);Vetor(50,50);Aceleracao(0x7fffd0b96510,0x7fffd0b96518))

@@ -29,6 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Projeto POO - Simulação Física 2D
+   &#160;<span id="projectnumber">1</span>
    </div>
    <div id="projectbrief">Projeto desenvolvido para apresentação na disciplina de  Programação Orientada a Objetos I - Bacharelado em Ciência da Computação - IFC Blumenau</div>
   </td>
@@ -95,8 +96,15 @@ Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com
 <div class="dyncontent">
 <div class="center"><img src="evento_8h__dep__incl.png" border="0" usemap="#Interface_2evento_8hdep" alt=""/></div>
 <map name="Interface_2evento_8hdep" id="Interface_2evento_8hdep">
-<area shape="rect" title=" " alt="" coords="15,5,157,32"/>
-<area shape="rect" href="gerenciador__evento_8h.html" title=" " alt="" coords="5,80,167,121"/>
+<area shape="rect" title=" " alt="" coords="604,5,745,32"/>
+<area shape="rect" href="gerenciador__evento_8h.html" title=" " alt="" coords="594,80,755,121"/>
+<area shape="rect" href="movimento__aleatorio_8cpp.html" title=" " alt="" coords="5,169,176,211"/>
+<area shape="rect" href="movimento__colisao__borda_8cpp.html" title=" " alt="" coords="200,169,371,211"/>
+<area shape="rect" href="movimento__colisao__cmb_8cpp.html" title=" " alt="" coords="395,169,565,211"/>
+<area shape="rect" href="movimento__colisao__cmux_8cpp.html" title=" " alt="" coords="589,169,760,211"/>
+<area shape="rect" href="movimento__colisao__simples_8cpp.html" title=" " alt="" coords="784,169,955,211"/>
+<area shape="rect" href="movimento__simples_8cpp.html" title=" " alt="" coords="979,169,1149,211"/>
+<area shape="rect" href="teste__eventos_8cpp.html" title=" " alt="" coords="1173,177,1376,203"/>
 </map>
 </div>
 </div>
@@ -110,37 +118,88 @@ Componentes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerações</h2></td></tr>
-<tr class="memitem:af07debe1798ea9888e13f66b93c6ab05"><td class="memItemLeft" align="right" valign="top"><a id="af07debe1798ea9888e13f66b93c6ab05"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>TipoEvento</b> { <br />
-&#160;&#160;<b>QUIT</b>, 
-<b>KEYDOWN</b>, 
-<b>KEYUP</b>, 
-<b>UNDEFINED</b>, 
+<tr class="memitem:af07debe1798ea9888e13f66b93c6ab05"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="evento_8h.html#af07debe1798ea9888e13f66b93c6ab05">TipoEvento</a> { <br />
+&#160;&#160;<a class="el" href="evento_8h.html#af07debe1798ea9888e13f66b93c6ab05a76bdc8adfd6c6463ab269ff4c06be9b4">QUIT</a>, 
+<a class="el" href="evento_8h.html#af07debe1798ea9888e13f66b93c6ab05a6225590ae6caaccd86633209772d5b47">KEYDOWN</a>, 
+<a class="el" href="evento_8h.html#af07debe1798ea9888e13f66b93c6ab05a8179d413773e511bbd7d842903345ad4">KEYUP</a>, 
+<a class="el" href="evento_8h.html#af07debe1798ea9888e13f66b93c6ab05a605159e8a4c32319fd69b5d151369d93">UNDEFINED</a>, 
 <br />
-&#160;&#160;<b>NONE</b>
+&#160;&#160;<a class="el" href="evento_8h.html#af07debe1798ea9888e13f66b93c6ab05ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>
 <br />
  }</td></tr>
 <tr class="separator:af07debe1798ea9888e13f66b93c6ab05"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68dc8420d4850fe68378bc682c360e30"><td class="memItemLeft" align="right" valign="top"><a id="a68dc8420d4850fe68378bc682c360e30"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>Trigger</b> { <br />
-&#160;&#160;<b>T_NONE</b>, 
-<b>T_UNDEFINED</b>, 
-<b>T_CLOSE</b>, 
-<b>T_KQ</b>, 
+<tr class="memitem:a68dc8420d4850fe68378bc682c360e30"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30">Trigger</a> { <br />
+&#160;&#160;<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30a0068efa79fe6ee9e0f9060a1758739ea">T_NONE</a>, 
+<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30a70d13b7dc63331cc4562bcf794f21fdf">T_UNDEFINED</a>, 
+<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30a761613d9453f2e5022ef44b91bf6326e">T_CLOSE</a>, 
+<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30a062574a721d2ae9b3748713adc98d13e">T_KQ</a>, 
 <br />
-&#160;&#160;<b>T_KP</b>, 
-<b>T_KW</b>, 
-<b>T_KS</b>, 
-<b>T_KA</b>, 
+&#160;&#160;<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30afb786167df5a9403a7d9f51b08095a46">T_KP</a>, 
+<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30a6ccd632766f591e375ded65a9842e812">T_KW</a>, 
+<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30aa3dbc42a545515048bb53b2b4abecb27">T_KS</a>, 
+<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30a5d13ae33b083980c64d809cc85f15cc1">T_KA</a>, 
 <br />
-&#160;&#160;<b>T_KD</b>, 
-<b>T_KLEFT</b>, 
-<b>T_KDOWN</b>, 
-<b>T_KRIGHT</b>, 
+&#160;&#160;<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30a42025823dd930b919d80068df07e8c32">T_KD</a>, 
+<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30ac0f60daf47bb926565eb2834f490a88c">T_KLEFT</a>, 
+<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30a4a812b7666ac84c2ce480260accb9b51">T_KDOWN</a>, 
+<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30a3dbc58a24313b21574e9af2abae4e772">T_KRIGHT</a>, 
 <br />
-&#160;&#160;<b>T_KUP</b>
+&#160;&#160;<a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30a5676c0cda61feda1fbf37e43f52a1b6e">T_KUP</a>
 <br />
  }</td></tr>
 <tr class="separator:a68dc8420d4850fe68378bc682c360e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumerações</h2>
+<a id="af07debe1798ea9888e13f66b93c6ab05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af07debe1798ea9888e13f66b93c6ab05">&#9670;&nbsp;</a></span>TipoEvento</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="evento_8h.html#af07debe1798ea9888e13f66b93c6ab05">TipoEvento</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumeradores</th></tr><tr><td class="fieldname"><a id="af07debe1798ea9888e13f66b93c6ab05a76bdc8adfd6c6463ab269ff4c06be9b4"></a>QUIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af07debe1798ea9888e13f66b93c6ab05a6225590ae6caaccd86633209772d5b47"></a>KEYDOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af07debe1798ea9888e13f66b93c6ab05a8179d413773e511bbd7d842903345ad4"></a>KEYUP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af07debe1798ea9888e13f66b93c6ab05a605159e8a4c32319fd69b5d151369d93"></a>UNDEFINED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af07debe1798ea9888e13f66b93c6ab05ac157bdf0b85a40d2619cbc8bc1ae5fe2"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a68dc8420d4850fe68378bc682c360e30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68dc8420d4850fe68378bc682c360e30">&#9670;&nbsp;</a></span>Trigger</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="evento_8h.html#a68dc8420d4850fe68378bc682c360e30">Trigger</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumeradores</th></tr><tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30a0068efa79fe6ee9e0f9060a1758739ea"></a>T_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30a70d13b7dc63331cc4562bcf794f21fdf"></a>T_UNDEFINED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30a761613d9453f2e5022ef44b91bf6326e"></a>T_CLOSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30a062574a721d2ae9b3748713adc98d13e"></a>T_KQ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30afb786167df5a9403a7d9f51b08095a46"></a>T_KP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30a6ccd632766f591e375ded65a9842e812"></a>T_KW&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30aa3dbc42a545515048bb53b2b4abecb27"></a>T_KS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30a5d13ae33b083980c64d809cc85f15cc1"></a>T_KA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30a42025823dd930b919d80068df07e8c32"></a>T_KD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30ac0f60daf47bb926565eb2834f490a88c"></a>T_KLEFT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30a4a812b7666ac84c2ce480260accb9b51"></a>T_KDOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30a3dbc58a24313b21574e9af2abae4e772"></a>T_KRIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a68dc8420d4850fe68378bc682c360e30a5676c0cda61feda1fbf37e43f52a1b6e"></a>T_KUP&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

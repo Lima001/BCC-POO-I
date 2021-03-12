@@ -16,21 +16,19 @@ Classe responsável por representar cores R\+G\+BA para uso em conjunto aos elem
 \begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classCorRGBA_aa3d9084d0dd2a5764b0a1de212ba8815}{Cor\+R\+G\+BA}} (int \mbox{\hyperlink{classCorRGBA_afa21e7ce0c1e53644f50c6280167a53e}{r}}, int \mbox{\hyperlink{classCorRGBA_a62bc218e68ab6782f1b4167488642391}{g}}, int \mbox{\hyperlink{classCorRGBA_a90c5cb9376fdba3a7e0bf68ff64944ff}{b}}, int \mbox{\hyperlink{classCorRGBA_a2b44e4f88c51e58f504a77b068a6622c}{a}}=255)
 \begin{DoxyCompactList}\small\item\em Construtor Base. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCorRGBA_a3c0beeb8c6fe5d1fa5ed20eb062defc0}{$\sim$\+Cor\+R\+G\+BA}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
 Uint32 \mbox{\hyperlink{classCorRGBA_a4cc388d91caab51128a0ad2694e9ee81}{get\+Cor}} (S\+D\+L\+\_\+\+Surface $\ast$surface) const
 \begin{DoxyCompactList}\small\item\em Retorna a cor R\+G\+BA. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classCorRGBA_afa21e7ce0c1e53644f50c6280167a53e}\label{classCorRGBA_afa21e7ce0c1e53644f50c6280167a53e}} 
 int \mbox{\hyperlink{classCorRGBA_afa21e7ce0c1e53644f50c6280167a53e}{r}}
 \begin{DoxyCompactList}\small\item\em Intensidade de vermelho -\/ Min\+: 0; Max\+: 255. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCorRGBA_a62bc218e68ab6782f1b4167488642391}\label{classCorRGBA_a62bc218e68ab6782f1b4167488642391}} 
 int \mbox{\hyperlink{classCorRGBA_a62bc218e68ab6782f1b4167488642391}{g}}
 \begin{DoxyCompactList}\small\item\em Intensidade de verde -\/ Min\+: 0; Max\+: 255. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCorRGBA_a90c5cb9376fdba3a7e0bf68ff64944ff}\label{classCorRGBA_a90c5cb9376fdba3a7e0bf68ff64944ff}} 
 int \mbox{\hyperlink{classCorRGBA_a90c5cb9376fdba3a7e0bf68ff64944ff}{b}}
 \begin{DoxyCompactList}\small\item\em Intensidade de azul -\/ Min\+: 0; Max\+: 255. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classCorRGBA_a2b44e4f88c51e58f504a77b068a6622c}\label{classCorRGBA_a2b44e4f88c51e58f504a77b068a6622c}} 
 int \mbox{\hyperlink{classCorRGBA_a2b44e4f88c51e58f504a77b068a6622c}{a}}
 \begin{DoxyCompactList}\small\item\em Canal Alfa -\/ Min\+: 0; Max\+: 255. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
@@ -87,7 +85,17 @@ Cria um objeto com os valores passados por parâmetro.
 {\em a} & um inteiro para configurar o atributo de mesma nomenclatura\\
 \hline
 \end{DoxyParams}
-O parâmetro {\bfseries{a}} pode ser omitido no processo de invocação do método. Nesse caso, o valor será configurado automáticamente para o seu máximo (255). 
+O parâmetro {\bfseries{a}} pode ser omitido no processo de invocação do método. Nesse caso, o valor será configurado automáticamente para o seu máximo (255). \mbox{\Hypertarget{classCorRGBA_a3c0beeb8c6fe5d1fa5ed20eb062defc0}\label{classCorRGBA_a3c0beeb8c6fe5d1fa5ed20eb062defc0}} 
+\index{CorRGBA@{CorRGBA}!````~CorRGBA@{$\sim$CorRGBA}}
+\index{````~CorRGBA@{$\sim$CorRGBA}!CorRGBA@{CorRGBA}}
+\doxysubsubsection{\texorpdfstring{$\sim$CorRGBA()}{~CorRGBA()}}
+{\footnotesize\ttfamily Cor\+R\+G\+B\+A\+::$\sim$\+Cor\+R\+G\+BA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da Classe. 
+
+
 
 \doxysubsection{Funções membros}
 \mbox{\Hypertarget{classCorRGBA_a4cc388d91caab51128a0ad2694e9ee81}\label{classCorRGBA_a4cc388d91caab51128a0ad2694e9ee81}} 
@@ -128,6 +136,49 @@ Sobrecarga do Insertion Operator para Saída de Dados.
 \begin{DoxyReturn}{Retorna}
 string no formato\+: \char`\"{}\+Cor(r,g,b,a)\char`\"{} onde cada elemento refere-\/se aos valores dos respectivos atributos do objeto 
 \end{DoxyReturn}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classCorRGBA_a2b44e4f88c51e58f504a77b068a6622c}\label{classCorRGBA_a2b44e4f88c51e58f504a77b068a6622c}} 
+\index{CorRGBA@{CorRGBA}!a@{a}}
+\index{a@{a}!CorRGBA@{CorRGBA}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily int Cor\+R\+G\+B\+A\+::a}
+
+
+
+Canal Alfa -\/ Min\+: 0; Max\+: 255. 
+
+\mbox{\Hypertarget{classCorRGBA_a90c5cb9376fdba3a7e0bf68ff64944ff}\label{classCorRGBA_a90c5cb9376fdba3a7e0bf68ff64944ff}} 
+\index{CorRGBA@{CorRGBA}!b@{b}}
+\index{b@{b}!CorRGBA@{CorRGBA}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily int Cor\+R\+G\+B\+A\+::b}
+
+
+
+Intensidade de azul -\/ Min\+: 0; Max\+: 255. 
+
+\mbox{\Hypertarget{classCorRGBA_a62bc218e68ab6782f1b4167488642391}\label{classCorRGBA_a62bc218e68ab6782f1b4167488642391}} 
+\index{CorRGBA@{CorRGBA}!g@{g}}
+\index{g@{g}!CorRGBA@{CorRGBA}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily int Cor\+R\+G\+B\+A\+::g}
+
+
+
+Intensidade de verde -\/ Min\+: 0; Max\+: 255. 
+
+\mbox{\Hypertarget{classCorRGBA_afa21e7ce0c1e53644f50c6280167a53e}\label{classCorRGBA_afa21e7ce0c1e53644f50c6280167a53e}} 
+\index{CorRGBA@{CorRGBA}!r@{r}}
+\index{r@{r}!CorRGBA@{CorRGBA}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily int Cor\+R\+G\+B\+A\+::r}
+
+
+
+Intensidade de vermelho -\/ Min\+: 0; Max\+: 255. 
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}

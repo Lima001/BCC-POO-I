@@ -54,19 +54,32 @@ class GerenciadorArquivo {
 
     public:
 
-        //! Construtor default
+        //! Construtor Default 
         /*!
-            Cria um objeto preparado para realizar manipulações
+            Chamado quando nenhum parâmetro de ininicialização for informado.
+            
+            Cria um objeto com o endereço do arquivo definido para "default.txt"
+        */
+        GerenciadorArquivo():
+            endereco_arquivo("default.txt"){
+        }
+
+        //! Construtor Base
+        /*!
+            Cria um objeto preparado para realizar manipulações 
             sobre o arquivo no endereço informado por parâmetro.
 
             Observação: Não inicia nenhum processo de manipulação
             no arquivo!
 
-            \param endereco_arquivo usado para inicializar atributo de mesma nomenclatura
+            \param endereco_arquivo Referência de string constante usada para inicializar atributo de mesma nomenclatura
         */
-        GerenciadorArquivo(string endereco_arquivo):
+        GerenciadorArquivo(const string &endereco_arquivo):
             endereco_arquivo(endereco_arquivo){
         }
+
+        //! Destrutor da Classe
+        ~GerenciadorArquivo(){}
 
         //! Cria o arquivo informado ao gerenciador
         void criarArquivo(){
@@ -203,5 +216,9 @@ class GerenciadorArquivo {
             
             target.close();
         };
+
+        // Sobrecarga de Operadores
+
+        
 };
 #endif

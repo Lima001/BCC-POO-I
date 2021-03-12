@@ -1,7 +1,7 @@
 var searchData=
 [
   ['a_0',['a',['../classObjeto.html#a5475cb519dfa55af127beb2624e74871',1,'Objeto::a()'],['../classCorRGBA.html#a2b44e4f88c51e58f504a77b068a6622c',1,'CorRGBA::a()']]],
-  ['aceleracao_1',['Aceleracao',['../classAceleracao.html',1,'Aceleracao'],['../classAceleracao.html#a447fb00037a6801c4a41b5010a01bb86',1,'Aceleracao::Aceleracao()'],['../classAceleracao.html#a814335e1e30666a8864e14caf96bd086',1,'Aceleracao::Aceleracao(double(*func_x_)(double), double(*func_y_)(double))'],['../classAceleracao.html#a08ad3c93cbf5407314467eb5f6c2842e',1,'Aceleracao::Aceleracao(const Aceleracao &amp;aceleracao)'],['../classAceleracao.html#aafe414f2f33524797faabf063248e585',1,'Aceleracao::Aceleracao(Aceleracao &amp;&amp;aceleracao) noexcept']]],
+  ['aceleracao_1',['Aceleracao',['../classAceleracao.html',1,'Aceleracao'],['../classAceleracao.html#a447fb00037a6801c4a41b5010a01bb86',1,'Aceleracao::Aceleracao()'],['../classAceleracao.html#a814335e1e30666a8864e14caf96bd086',1,'Aceleracao::Aceleracao(double(*func_x_)(double), double(*func_y_)(double))'],['../classAceleracao.html#a08ad3c93cbf5407314467eb5f6c2842e',1,'Aceleracao::Aceleracao(const Aceleracao &amp;aceleracao)'],['../classAceleracao.html#aafe414f2f33524797faabf063248e585',1,'Aceleracao::Aceleracao(Aceleracao &amp;&amp;aceleracao) noexcept'],['../teste_8txt.html#ad490676ff42762ad7d96f4a0f1dc8885',1,'Aceleracao():&#160;teste.txt']]],
   ['aceleracao_2eh_2',['aceleracao.h',['../aceleracao_8h.html',1,'']]],
   ['acelerecao_3',['Acelerecao',['../classAcelerecao.html',1,'']]],
   ['alocar_4',['alocar',['../classMatriz.html#a70efb1a82f5eec412a19f9c4694793a3',1,'Matriz']]],

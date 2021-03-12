@@ -16,7 +16,7 @@
 class Vetor {
     public:
         float x;        //!< Componente no eixo das Abscissas
-        float y;        //!< Componente no eixo das Ordendas
+        float y;        //!< Componente no eixo das Ordenadas
 
         //! Construtor Default
         /*!

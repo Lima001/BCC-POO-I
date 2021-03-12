@@ -39,8 +39,8 @@ class Aceleracao {
             Cria um objeto com os ponteiros configurados para apontar
             para o endereço de funções passados como parâmetro.
             
-            \param double (*func_x_)(double) usado para inicializar double (*func_x)(double)
-            \param double (*func_y_)(double) usado para inicializar double (*func_y)(double)
+            \param \double (*func_x_)(double) usado para inicializar double (*func_x)(double)
+            \param \double (*func_y_)(double) usado para inicializar double (*func_y)(double)
         */
         Aceleracao(double (*func_x_)(double), double (*func_y_)(double)){
             func_x = func_x_;

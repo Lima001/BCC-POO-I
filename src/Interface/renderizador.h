@@ -27,7 +27,7 @@ class Renderizador{
     
     public:
 
-        Matriz Transformacao;                           //! Matriz 3x3 usada para Transformações Geométricas nas Figuras
+        Matriz transformacao;                           //! Matriz 3x3 usada para Transformações Geométricas nas Figuras
         
         //! Construtor Default
         /*!
@@ -114,7 +114,7 @@ class Renderizador{
         /*!
             Dada uma cor e um ponto, esse será desenhado conforme
             especificado por suas coordenadas transformadas pela
-            \ref Matriz de \ref Transformação .
+            \ref Matriz de \ref transformacao .
 
             \param cor Referência constante para objeto do tipo \ref CorRGBA que define a cor da renderização do ponto
             \param ponto Referência constante para objeto do tipo \ref Ponto que será renderizador
@@ -122,7 +122,7 @@ class Renderizador{
             @see Ponto
         */
         void desenhar_ponto(const CorRGBA &cor, const Ponto &ponto){
-            Matriz tmp = Transformacao * ponto.pontoToMatriz();
+            Matriz tmp = transformacao * ponto.pontoToMatriz();
 
             setCorDesenho(cor);
             SDL_RenderDrawPoint(ptr_renderizador,
@@ -134,7 +134,7 @@ class Renderizador{
         /*!
             Dada uma cor e um as posições de inicio e fim de uma linha,
             essa será desenhada conforme os parâmetros transformados pela
-            Matriz de \ref Transformação .
+            Matriz de \ref transformacao .
 
             \param cor Referência constante para objeto do tipo \ref CorRGBA que define a cor da renderização da linha
             \param xi coordenada x do ponto inicial da Linha
@@ -151,7 +151,7 @@ class Renderizador{
             tmp[2][0] = 1;
             tmp[2][1] = 1;
 
-            tmp = Transformacao * tmp;
+            tmp = transformacao * tmp;
 
             setCorDesenho(cor);
             SDL_RenderDrawLine(ptr_renderizador, tmp[0][0], tmp[1][0], tmp[0][1], tmp[1][1]);
@@ -161,7 +161,7 @@ class Renderizador{
         /*!
             Dada uma cor e uma circunferência, essa será desenhado conforme
             especificado por suas coordenadas de centro e demarcacao transformadas pela
-            Matriz de \ref Transformação .
+            Matriz de \ref transformacao .
 
             \param cor Referência constante para objeto do tipo \ref CorRGBA que define a cor da renderização do ponto
             \param circ Referência constante para objeto do tipo \ref Circunferencia que será renderizador
@@ -180,7 +180,7 @@ class Renderizador{
                 tmp[2][i] = 1;
             }
 
-            tmp = Transformacao * tmp;
+            tmp = transformacao * tmp;
 
             for(int i=1; i<circ.precisao; i++){
                 SDL_RenderDrawLine(ptr_renderizador,
@@ -197,11 +197,11 @@ class Renderizador{
                                 tmp[1][0]);
         }
         
-        //! Solicita ao \ref Renderizador que um \ref Triangulo seja desenhada
+        //! Solicita ao \ref Renderizador que um \ref Triangulo seja desenhado
         /*!
             Dada uma cor e um triângulo, essa será desenhado conforme
             especificado por seus vértices transformados pela
-            Matriz de \ref Transformação
+            Matriz de \ref transformacao
 
             \param cor Referência constante para objeto do tipo \ref CorRGBA que define a cor da renderização do ponto
             \param triangulo Referência constante para objeto do tipo \ref Triangulo que será renderizador
@@ -215,12 +215,12 @@ class Renderizador{
         
         }
         
-        //! Solicita ao \ref Renderizador que um \ref Retangulo seja desenhada
+        //! Solicita ao \ref Renderizador que um \ref Retangulo seja desenhado
         /*!
             Dada uma cor e um retângulo, essa será desenhado conforme
             especificado por seus vértices calculados
             a partir do Ponto inicial e das medidas de altura e largura transformados pela
-            Matriz de \ref Transformação .
+            Matriz de \ref transformacao .
 
             \param cor Referência constante para objeto do tipo \ref CorRGBA que define a cor da renderização do ponto
             \param triangulo Referência constante para objeto do tipo \ref Triangulo que será renderizador
@@ -254,12 +254,12 @@ class Renderizador{
 
         }
 
-        //! Solicita ao \ref Renderizador que um \ref Vetor seja desenhada
+        //! Solicita ao \ref Renderizador que um \ref Vetor seja desenhado
         /*!
             Dada uma cor e um vetor, esse será desenhado conforme
             especificado por suas coordenadas a partir de um
             ponto de início informado e será transformado pela
-            Matriz de \ref Transformação .
+            Matriz de \ref transformacao .
 
             \param cor Referência constante para objeto do tipo \ref CorRGBA que define a cor da renderização do ponto
             \param vetor Referência constante para objeto do tipo \ref Vetor que será renderizador

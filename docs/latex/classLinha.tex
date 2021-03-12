@@ -11,8 +11,7 @@ Classe para Representação de um Segmento de reta no Plano Cartesiano Usada par
 
 
 
-Diagrama de colaboração para Linha\+:
-\nopagebreak
+Diagrama de colaboração para Linha\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,23 +23,32 @@ Diagrama de colaboração para Linha\+:
 \item 
 \mbox{\hyperlink{classLinha_aace7b025f21c57ac832b0e29dd267e7e}{Linha}} ()
 \begin{DoxyCompactList}\small\item\em Construtor Default. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classLinha_a7adb000240f20df22cb72c6e38c1b2ba}{Linha}} (const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classLinha_ade241efb0c59630bbd712ab9f06b9a7e}{p1}}, const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classLinha_a411fb41aa85dbc9a2068e09f308b4c21}{p2}})
+\mbox{\hyperlink{classLinha_a4d365f1f9b924b80f027d1e6e1e77b9d}{Linha}} (const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classLinha_a1d75d40c94cc9e41941ff45a1b7a73fa}{inicio}}, const \mbox{\hyperlink{classPonto}{Ponto}} \&\mbox{\hyperlink{classLinha_a9b92752fd7bd4bd70f12fc60cc807a99}{fim}})
 \begin{DoxyCompactList}\small\item\em Construtor Base. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLinha_a8a7774ff6d4bd717c457cdb3d182464b}\label{classLinha_a8a7774ff6d4bd717c457cdb3d182464b}} 
 \mbox{\hyperlink{classLinha_a8a7774ff6d4bd717c457cdb3d182464b}{$\sim$\+Linha}} ()
-\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destrutor da Classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinha_a449ace2c9577a59aa1e009ac442c19cb}{Linha}} (const \mbox{\hyperlink{classLinha}{Linha}} \&l)
+\begin{DoxyCompactList}\small\item\em Construtor de Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinha_a3842c3cc2d3066765cc86da34e9f09f8}{Linha}} (\mbox{\hyperlink{classLinha}{Linha}} \&\&l) noexcept
+\begin{DoxyCompactList}\small\item\em Construtor Move. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinha}{Linha}} \& \mbox{\hyperlink{classLinha_a934e04b137097a18f26850541fd0a65b}{operator=}} (const \mbox{\hyperlink{classLinha}{Linha}} \&l)
+\begin{DoxyCompactList}\small\item\em Atribuição por Cópia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLinha}{Linha}} \& \mbox{\hyperlink{classLinha_a4beeae6a51a3340ea8ea2bd33457f5a0}{operator=}} (\mbox{\hyperlink{classLinha}{Linha}} \&\&l) noexcept
+\begin{DoxyCompactList}\small\item\em Atribuição por Movimentação. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classLinha_ade241efb0c59630bbd712ab9f06b9a7e}\label{classLinha_ade241efb0c59630bbd712ab9f06b9a7e}} 
-\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classLinha_ade241efb0c59630bbd712ab9f06b9a7e}{p1}}
+\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classLinha_a1d75d40c94cc9e41941ff45a1b7a73fa}{inicio}}
 \begin{DoxyCompactList}\small\item\em ponto de Início do segmento de Reta \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLinha_a411fb41aa85dbc9a2068e09f308b4c21}\label{classLinha_a411fb41aa85dbc9a2068e09f308b4c21}} 
-\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classLinha_a411fb41aa85dbc9a2068e09f308b4c21}{p2}}
+\mbox{\hyperlink{classPonto}{Ponto}} \mbox{\hyperlink{classLinha_a9b92752fd7bd4bd70f12fc60cc807a99}{fim}}
 \begin{DoxyCompactList}\small\item\em ponto de Fim do segmento de Reta \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classLinha_aed4bdaaa18ebf2aa4dfc44855dca1303}\label{classLinha_aed4bdaaa18ebf2aa4dfc44855dca1303}} 
 \mbox{\hyperlink{classVetor}{Vetor}} \mbox{\hyperlink{classLinha_aed4bdaaa18ebf2aa4dfc44855dca1303}{normal}}
 \begin{DoxyCompactList}\small\item\em vetor normal a \mbox{\hyperlink{classLinha}{Linha}} direcionado ao Centro da Tela \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classLinha_a0477cc29f2ab1596a5b751eac0f0e5fa}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classLinha}{Linha}} \&linha)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do Insertion Operator para Saída de Dados. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
@@ -63,7 +71,7 @@ Gabriel Eduardo Lima
 \mbox{\Hypertarget{classLinha_aace7b025f21c57ac832b0e29dd267e7e}\label{classLinha_aace7b025f21c57ac832b0e29dd267e7e}} 
 \index{Linha@{Linha}!Linha@{Linha}}
 \index{Linha@{Linha}!Linha@{Linha}}
-\doxysubsubsection{\texorpdfstring{Linha()}{Linha()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{Linha()}{Linha()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
 {\footnotesize\ttfamily Linha\+::\+Linha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
@@ -77,11 +85,11 @@ Cria um objeto com ambas atributos construídos usando o seu respectivo construt
 
 \mbox{\hyperlink{classPonto}{Ponto}} 
 \end{DoxySeeAlso}
-\mbox{\Hypertarget{classLinha_a7adb000240f20df22cb72c6e38c1b2ba}\label{classLinha_a7adb000240f20df22cb72c6e38c1b2ba}} 
+\mbox{\Hypertarget{classLinha_a4d365f1f9b924b80f027d1e6e1e77b9d}\label{classLinha_a4d365f1f9b924b80f027d1e6e1e77b9d}} 
 \index{Linha@{Linha}!Linha@{Linha}}
 \index{Linha@{Linha}!Linha@{Linha}}
-\doxysubsubsection{\texorpdfstring{Linha()}{Linha()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Linha\+::\+Linha (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{p1,  }\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{p2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\doxysubsubsection{\texorpdfstring{Linha()}{Linha()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Linha\+::\+Linha (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{inicio,  }\item[{const \mbox{\hyperlink{classPonto}{Ponto}} \&}]{fim }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -93,11 +101,150 @@ A título de especificação, o cálculo de um vetor normal pode ser dado da seg
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em p1} & usado para inicializar atributo de mesmo nomenclatura \\
+{\em inicio} & usado para inicializar atributo de mesmo nomenclatura \\
 \hline
-{\em p2} & usado para inicializar atributo de mesmo nomenclatura \\
+{\em fim} & usado para inicializar atributo de mesmo nomenclatura \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classLinha_a8a7774ff6d4bd717c457cdb3d182464b}\label{classLinha_a8a7774ff6d4bd717c457cdb3d182464b}} 
+\index{Linha@{Linha}!````~Linha@{$\sim$Linha}}
+\index{````~Linha@{$\sim$Linha}!Linha@{Linha}}
+\doxysubsubsection{\texorpdfstring{$\sim$Linha()}{~Linha()}}
+{\footnotesize\ttfamily Linha\+::$\sim$\+Linha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da Classe. 
+
+\mbox{\Hypertarget{classLinha_a449ace2c9577a59aa1e009ac442c19cb}\label{classLinha_a449ace2c9577a59aa1e009ac442c19cb}} 
+\index{Linha@{Linha}!Linha@{Linha}}
+\index{Linha@{Linha}!Linha@{Linha}}
+\doxysubsubsection{\texorpdfstring{Linha()}{Linha()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Linha\+::\+Linha (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLinha}{Linha}} \&}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor de Cópia. 
+
+Cria um novo objeto copiando os pontos e vetor de uma \mbox{\hyperlink{classLinha}{Linha}} informado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em l} & Referência constante para o \mbox{\hyperlink{classLinha}{Linha}} que será copiado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLinha_a3842c3cc2d3066765cc86da34e9f09f8}\label{classLinha_a3842c3cc2d3066765cc86da34e9f09f8}} 
+\index{Linha@{Linha}!Linha@{Linha}}
+\index{Linha@{Linha}!Linha@{Linha}}
+\doxysubsubsection{\texorpdfstring{Linha()}{Linha()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Linha\+::\+Linha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLinha}{Linha}} \&\&}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Construtor Move. 
+
+Cria um novo objeto fazendo uso do recurso de movimentação. Transfere de maneira eficiente os atributos de uma \mbox{\hyperlink{classLinha}{Linha}} para o novo objeto criado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em l} & Referência rvalue para uma \mbox{\hyperlink{classLinha}{Linha}}\\
+\hline
+\end{DoxyParams}
+Para mais detalhe sobre o recurso, consultar documentação da linguagem 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classLinha_a934e04b137097a18f26850541fd0a65b}\label{classLinha_a934e04b137097a18f26850541fd0a65b}} 
+\index{Linha@{Linha}!operator=@{operator=}}
+\index{operator=@{operator=}!Linha@{Linha}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLinha}{Linha}}\& Linha\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classLinha}{Linha}} \&}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Atribuição por Cópia. 
+
+Copia o valor dos atributos da \mbox{\hyperlink{classLinha}{Linha}} passado por parâmetro para a \mbox{\hyperlink{classLinha}{Linha}} que invocou o operador.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em l} & Referência constante da \mbox{\hyperlink{classLinha}{Linha}} que deseja-\/se copiar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para a \mbox{\hyperlink{classLinha}{Linha}} que invocou o operador 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLinha_a4beeae6a51a3340ea8ea2bd33457f5a0}\label{classLinha_a4beeae6a51a3340ea8ea2bd33457f5a0}} 
+\index{Linha@{Linha}!operator=@{operator=}}
+\index{operator=@{operator=}!Linha@{Linha}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLinha}{Linha}}\& Linha\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classLinha}{Linha}} \&\&}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Atribuição por Movimentação. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em l} & Referência rvalue de uma \mbox{\hyperlink{classLinha}{Linha}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Referência para a \mbox{\hyperlink{classLinha}{Linha}} que Invocou o operador 
+\end{DoxyReturn}
+
+
+\doxysubsection{Amigas e Funções Relacionadas}
+\mbox{\Hypertarget{classLinha_a0477cc29f2ab1596a5b751eac0f0e5fa}\label{classLinha_a0477cc29f2ab1596a5b751eac0f0e5fa}} 
+\index{Linha@{Linha}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Linha@{Linha}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classLinha}{Linha}} \&}]{linha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do Insertion Operator para Saída de Dados. 
+
+\begin{DoxyReturn}{Retorna}
+string no formato\+: \char`\"{}\+Linha(\+Ponto(x1,y1),\+Ponto(x2,y2),\+Vetor(x,y))\char`\"{} onde os Pontos e o \mbox{\hyperlink{classVetor}{Vetor}} são respectivamente os valores dos atributos de mesmo nome do objeto e são exibidos conforme sua implementação. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Veja também}
+\mbox{\hyperlink{classPonto}{Ponto}} 
+
+\mbox{\hyperlink{classVetor}{Vetor}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classLinha_a9b92752fd7bd4bd70f12fc60cc807a99}\label{classLinha_a9b92752fd7bd4bd70f12fc60cc807a99}} 
+\index{Linha@{Linha}!fim@{fim}}
+\index{fim@{fim}!Linha@{Linha}}
+\doxysubsubsection{\texorpdfstring{fim}{fim}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPonto}{Ponto}} Linha\+::fim}
+
+
+
+ponto de Fim do segmento de Reta 
+
+\mbox{\Hypertarget{classLinha_a1d75d40c94cc9e41941ff45a1b7a73fa}\label{classLinha_a1d75d40c94cc9e41941ff45a1b7a73fa}} 
+\index{Linha@{Linha}!inicio@{inicio}}
+\index{inicio@{inicio}!Linha@{Linha}}
+\doxysubsubsection{\texorpdfstring{inicio}{inicio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPonto}{Ponto}} Linha\+::inicio}
+
+
+
+ponto de Início do segmento de Reta 
+
+\mbox{\Hypertarget{classLinha_aed4bdaaa18ebf2aa4dfc44855dca1303}\label{classLinha_aed4bdaaa18ebf2aa4dfc44855dca1303}} 
+\index{Linha@{Linha}!normal@{normal}}
+\index{normal@{normal}!Linha@{Linha}}
+\doxysubsubsection{\texorpdfstring{normal}{normal}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVetor}{Vetor}} Linha\+::normal}
+
+
+
+vetor normal a \mbox{\hyperlink{classLinha}{Linha}} direcionado ao Centro da Tela 
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}

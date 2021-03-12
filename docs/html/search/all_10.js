@@ -1,6 +1,16 @@
 var searchData=
 [
-  ['salvarobjetos_127',['salvarObjetos',['../classGerenciadorArquivo.html#ad89595c0984b660119789b5961c99ebc',1,'GerenciadorArquivo']]],
-  ['setcordesenho_128',['setCorDesenho',['../classRenderizador.html#ab8992f4244c7e55d9693e085bf0c57fb',1,'Renderizador']]],
-  ['setinfolinhas_129',['setInfoLinhas',['../classDetectorColisao.html#ab2bc447b74a4be053c2a655f2bcac927',1,'DetectorColisao']]]
+  ['r_137',['r',['../classObjeto.html#ac46abc31b29690263c366ed34ed8b5c6',1,'Objeto::r()'],['../classCorRGBA.html#afa21e7ce0c1e53644f50c6280167a53e',1,'CorRGBA::r()']]],
+  ['raio_138',['raio',['../classCircunferencia.html#a8bc69243976463322985c38e366d2b9d',1,'Circunferencia']]],
+  ['raio_5fcircunferencia_139',['raio_circunferencia',['../classObjeto.html#ace60283c1fb4b980ea25ca0e93e0aaac',1,'Objeto']]],
+  ['readme_2emd_140',['README.md',['../src_2README_8md.html',1,'(<em>Namespace</em> global)'],['../README_8md.html',1,'(<em>Namespace</em> global)']]],
+  ['recuperarobjetos_141',['recuperarObjetos',['../classGerenciadorArquivo.html#aee7333bb6180e378965c3bfa345822e0',1,'GerenciadorArquivo']]],
+  ['registrarevento_142',['registrarEvento',['../classGerenciadorEvento.html#aa8a6581cc3638c04f6de4f388a2617c8',1,'GerenciadorEvento']]],
+  ['registro_143',['registro',['../classGerenciadorEvento.html#a4ec60acb9c89e1fab3d2ddd4148547db',1,'GerenciadorEvento']]],
+  ['relogio_144',['Relogio',['../classRelogio.html',1,'Relogio'],['../classRelogio.html#a1b4efe11d6fc799430afb24d74df5e0c',1,'Relogio::Relogio()']]],
+  ['relogio_2eh_145',['relogio.h',['../relogio_8h.html',1,'']]],
+  ['renderizador_146',['Renderizador',['../classRenderizador.html',1,'Renderizador'],['../classRenderizador.html#a189c6c7467daf916b03b6cb4aa69891e',1,'Renderizador::Renderizador()']]],
+  ['renderizador_2eh_147',['renderizador.h',['../renderizador_8h.html',1,'']]],
+  ['retangulo_148',['Retangulo',['../classRetangulo.html',1,'Retangulo'],['../classRetangulo.html#ac21a81cae046920c8bee401bcb879562',1,'Retangulo::Retangulo()'],['../classRetangulo.html#a2a6b2863847d97303b8e5e3992a69b82',1,'Retangulo::Retangulo(const Ponto &amp;inicio, float largura, float altura)'],['../classRetangulo.html#a00dd3d5f324f753448e7ef8fb70e1c8b',1,'Retangulo::Retangulo(const Retangulo &amp;rect)'],['../classRetangulo.html#ab29cdc63380ed0cc1f4568e91a8fcb30',1,'Retangulo::Retangulo(Retangulo &amp;&amp;rect) noexcept']]],
+  ['retangulo_2eh_149',['retangulo.h',['../retangulo_8h.html',1,'']]]
 ];

@@ -1,4 +1,10 @@
 <map id="Base/linha.h" name="Base/linha.h">
-<area shape="rect" id="node1" title=" " alt="" coords="43,5,145,32"/>
-<area shape="rect" id="node2" href="$detector__colisao_8h.html" title=" " alt="" coords="5,80,183,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="533,5,635,32"/>
+<area shape="rect" id="node2" href="$detector__colisao_8h.html" title=" " alt="" coords="399,80,577,107"/>
+<area shape="rect" id="node8" href="$teste__linha_8cpp.html" title=" " alt="" coords="601,80,759,107"/>
+<area shape="rect" id="node3" href="$teste__detector_8cpp.html" title=" " alt="" coords="5,162,184,189"/>
+<area shape="rect" id="node4" href="$movimento__colisao__borda_8cpp.html" title=" " alt="" coords="208,155,379,196"/>
+<area shape="rect" id="node5" href="$movimento__colisao__cmb_8cpp.html" title=" " alt="" coords="403,155,573,196"/>
+<area shape="rect" id="node6" href="$movimento__colisao__cmux_8cpp.html" title=" " alt="" coords="597,155,768,196"/>
+<area shape="rect" id="node7" href="$movimento__colisao__simples_8cpp.html" title=" " alt="" coords="792,155,963,196"/>
 </map>

@@ -11,8 +11,7 @@ Classe para Representação de um Obejto com forma de Circunferência capaz de m
 
 
 
-Diagrama de colaboração para Objeto\+:
-\nopagebreak
+Diagrama de colaboração para Objeto\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -41,24 +40,23 @@ void \mbox{\hyperlink{classObjeto_abc74b2353fce9ed0385a99dca5345800}{movimentar}
 \doxysubsection*{Atributos Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classObjeto_aa722a7b9c4a9d19d7a1d9be413be06fc}\label{classObjeto_aa722a7b9c4a9d19d7a1d9be413be06fc}} 
 int \mbox{\hyperlink{classObjeto_aa722a7b9c4a9d19d7a1d9be413be06fc}{id}}
 \begin{DoxyCompactList}\small\item\em Atributo de identificação única de cada \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObjeto_ace60283c1fb4b980ea25ca0e93e0aaac}\label{classObjeto_ace60283c1fb4b980ea25ca0e93e0aaac}} 
 float \mbox{\hyperlink{classObjeto_ace60283c1fb4b980ea25ca0e93e0aaac}{raio\+\_\+circunferencia}}
 \begin{DoxyCompactList}\small\item\em Raio da circunferencia do \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObjeto_a911f3eedef2be0b7c5b9969e046e8cbd}\label{classObjeto_a911f3eedef2be0b7c5b9969e046e8cbd}} 
 float \mbox{\hyperlink{classObjeto_a911f3eedef2be0b7c5b9969e046e8cbd}{m}}
 \begin{DoxyCompactList}\small\item\em Massa do \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObjeto_ac46abc31b29690263c366ed34ed8b5c6}\label{classObjeto_ac46abc31b29690263c366ed34ed8b5c6}} 
 \mbox{\hyperlink{classVetor}{Vetor}} \mbox{\hyperlink{classObjeto_ac46abc31b29690263c366ed34ed8b5c6}{r}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVetor}{Vetor}} posição do \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObjeto_aa91369eaf35a47d09053b10b8d33bf6d}\label{classObjeto_aa91369eaf35a47d09053b10b8d33bf6d}} 
 \mbox{\hyperlink{classVetor}{Vetor}} \mbox{\hyperlink{classObjeto_aa91369eaf35a47d09053b10b8d33bf6d}{v}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVetor}{Vetor}} velocidade do \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classObjeto_a5475cb519dfa55af127beb2624e74871}\label{classObjeto_a5475cb519dfa55af127beb2624e74871}} 
 \mbox{\hyperlink{classAceleracao}{Aceleracao}} \mbox{\hyperlink{classObjeto_a5475cb519dfa55af127beb2624e74871}{a}}
 \begin{DoxyCompactList}\small\item\em Aceleração do \mbox{\hyperlink{classObjeto}{Objeto}} -\/ Conjunto de Funções que definem aceleração nos eixos x e y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classObjeto_aae34b123e1d4b0268e10bdcf44c95962}{contagem\+\_\+id}} = 0
+\begin{DoxyCompactList}\small\item\em Contador de id -\/ Atributo da Classe para gerar automáticamente o id de cada \mbox{\hyperlink{classObjeto}{Objeto}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Amigas}
 \begin{DoxyCompactItemize}
 \item 
@@ -263,6 +261,79 @@ Sobrecarga do Insertion Operator para Saída de Dados.
 \begin{DoxyReturn}{Retorna}
 uma string no formato\+: \char`\"{}\+Objeto(raio\+\_\+circunferencia,massa,r,v,a)\char`\"{} onde cada elemento refere-\/se ao valor dos respectivos atributos do objeto 
 \end{DoxyReturn}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classObjeto_a5475cb519dfa55af127beb2624e74871}\label{classObjeto_a5475cb519dfa55af127beb2624e74871}} 
+\index{Objeto@{Objeto}!a@{a}}
+\index{a@{a}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAceleracao}{Aceleracao}} Objeto\+::a}
+
+
+
+Aceleração do \mbox{\hyperlink{classObjeto}{Objeto}} -\/ Conjunto de Funções que definem aceleração nos eixos x e y. 
+
+\mbox{\Hypertarget{classObjeto_aae34b123e1d4b0268e10bdcf44c95962}\label{classObjeto_aae34b123e1d4b0268e10bdcf44c95962}} 
+\index{Objeto@{Objeto}!contagem\_id@{contagem\_id}}
+\index{contagem\_id@{contagem\_id}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{contagem\_id}{contagem\_id}}
+{\footnotesize\ttfamily int Objeto\+::contagem\+\_\+id = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Contador de id -\/ Atributo da Classe para gerar automáticamente o id de cada \mbox{\hyperlink{classObjeto}{Objeto}}. 
+
+\mbox{\Hypertarget{classObjeto_aa722a7b9c4a9d19d7a1d9be413be06fc}\label{classObjeto_aa722a7b9c4a9d19d7a1d9be413be06fc}} 
+\index{Objeto@{Objeto}!id@{id}}
+\index{id@{id}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Objeto\+::id}
+
+
+
+Atributo de identificação única de cada \mbox{\hyperlink{classObjeto}{Objeto}}. 
+
+\mbox{\Hypertarget{classObjeto_a911f3eedef2be0b7c5b9969e046e8cbd}\label{classObjeto_a911f3eedef2be0b7c5b9969e046e8cbd}} 
+\index{Objeto@{Objeto}!m@{m}}
+\index{m@{m}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{m}{m}}
+{\footnotesize\ttfamily float Objeto\+::m}
+
+
+
+Massa do \mbox{\hyperlink{classObjeto}{Objeto}}. 
+
+\mbox{\Hypertarget{classObjeto_ac46abc31b29690263c366ed34ed8b5c6}\label{classObjeto_ac46abc31b29690263c366ed34ed8b5c6}} 
+\index{Objeto@{Objeto}!r@{r}}
+\index{r@{r}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVetor}{Vetor}} Objeto\+::r}
+
+
+
+\mbox{\hyperlink{classVetor}{Vetor}} posição do \mbox{\hyperlink{classObjeto}{Objeto}}. 
+
+\mbox{\Hypertarget{classObjeto_ace60283c1fb4b980ea25ca0e93e0aaac}\label{classObjeto_ace60283c1fb4b980ea25ca0e93e0aaac}} 
+\index{Objeto@{Objeto}!raio\_circunferencia@{raio\_circunferencia}}
+\index{raio\_circunferencia@{raio\_circunferencia}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{raio\_circunferencia}{raio\_circunferencia}}
+{\footnotesize\ttfamily float Objeto\+::raio\+\_\+circunferencia}
+
+
+
+Raio da circunferencia do \mbox{\hyperlink{classObjeto}{Objeto}}. 
+
+\mbox{\Hypertarget{classObjeto_aa91369eaf35a47d09053b10b8d33bf6d}\label{classObjeto_aa91369eaf35a47d09053b10b8d33bf6d}} 
+\index{Objeto@{Objeto}!v@{v}}
+\index{v@{v}!Objeto@{Objeto}}
+\doxysubsubsection{\texorpdfstring{v}{v}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classVetor}{Vetor}} Objeto\+::v}
+
+
+
+\mbox{\hyperlink{classVetor}{Vetor}} velocidade do \mbox{\hyperlink{classObjeto}{Objeto}}. 
+
 
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
