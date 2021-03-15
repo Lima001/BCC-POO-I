@@ -1,12 +1,13 @@
 # BCC-Projeto-POO
 
-O presente relatório tem como motivo de sua produção a apresentação do processo
-de desenvolvimento de um projeto prático para a disciplina de Programação Orientada a
-Objetos I do curso de Bacharelado em Ciências da Computação da turma de ingresso em
-\2020. Esse projeto executado ao longo do decorrer da disciplina citada tem como tema o
-desenvolvimento de um simulador físico simples.
+Este repositório conta com o projeto desenvolvido para a disciplina de Programação Orientada a Objetos I do curso de Bacharelado em Ciências da Computação oferecido pelo [IFC Blumenau](http://blumenau.ifc.edu.br/).
 
-- Docente Responsável: Eder Augusto Penharbel 
+## Sobre a Disciplina
+
+- __Período:__ 2º Semestre
+- __Docente Responsável:__ [Eder Augusto Penharbel](https://gitlab.com/oederaugusto)
+- __Ementa:__ Classe, objeto e encapsulamento. Generalização, polimorfismo, interfaces, composição e agregação. Interface gráfica com o usuário (GUI) e seu uso no desenvolvimento de programas. Programação associada a eventos. Introdução a sistemas que utilizam persistência de dados.
+- __Linguagem:__ C++
 
 ## Breve Resumo
 O presente trabalho objetiva a apresentação do projeto desenvolvido para a disciplina de Programação Orientada a Objetos I, onde o tema definido para abordagem é simulação física 2D. Através de pesquisas a cerca de aspectos de programação como Orientação a Objetos e linguagem C++, juntamente do estudo de diversos aspectos matemáticos e físicos, é possível construir a simulação de um sistema elástico onde aplicam-se conhecimentos como integração para movimentação de um corpo físico a partir de uma função de aceleração conhecida, conservação de movimento e reflexão especular para cálculo de colisões. O desenvolvimento do projeto consiste na divisão desse em três pacotes, onde cada um é responsável por uma funcionalidade do sistema como um todo. Os pacotes podem ser brevemente separados em Base, Interface e Arquivo onde têm-se respectivamente componentes para representação e estruturação da base matemática, abstração e criação de uma interface gráfica e por fim, persistência de dados. Além da implementação desses pacotes obtêm-se como resultado final do projeto uma série de testes dessas componentes, bem como uma simulação final correlacionando a teoria matemática e física à programação desenvolvida. 
