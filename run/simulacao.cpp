@@ -52,7 +52,6 @@ int main(){
     Relogio relogio = Relogio(control);
     
     Janela janela = Janela("Movimento e Borda", 800, 600);
-    janela.iniciarSurface();
     
     Renderizador render = Renderizador(janela.ptr_janela);
 
@@ -106,7 +105,7 @@ int main(){
         }
 
         // Renderizar fundo gráfico da Simulação
-        janela.preencherFundo(branco);
+        render.limpar(branco);
         plano.desenharGrade(render);
 
         // Rendereização do Objeto - Circunferencia + Vetor velocidade
